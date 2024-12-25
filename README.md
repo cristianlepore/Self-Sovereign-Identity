@@ -1,1 +1,1 @@
-"# Self-Sovereign-Identity" 
+"Self-Sovereign-Identity analysis of principle from literature." 
