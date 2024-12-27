@@ -39,6 +39,9 @@ We selected the principles from the literature and analysed them.
         tr:nth-child(even) td:not(:first-child) {
             background-color: #f0f0f0; /* Grigio chiaro */
         }
+        tbody tr td:first-child {
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
@@ -748,7 +751,7 @@ We selected the principles from the literature and analysed them.
                 <td></td>
                 <td>✔</td>
                 <td></td>
-                <td>Functional</td>
+                <td>✔</td>
                 <td></td>
                 <td></td>
                 <td>Security</td>
@@ -916,7 +919,7 @@ We selected the principles from the literature and analysed them.
                 <td></td>
                 <td>✔</td>
                 <td></td>
-                <td>✔</td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td>Security</td>
@@ -1067,6 +1070,69 @@ We selected the principles from the literature and analysed them.
                 <td></td>
                 <td></td>
                 <td>Autonomy</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Identity Verification</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Secure Identity Transfer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Secure Transactions</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
