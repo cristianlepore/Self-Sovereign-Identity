@@ -1,43 +1,1099 @@
-"Self-Sovereign-Identity analysis of principle from literature." 
+# Self-Sovereign Identity 
 
-| **Principles (Allen)**               | **Tobin and Reed (2016)** | **Andrieu (2016)** | **Ferdous (2019)** | **Gilani (2020)** | **Sheldrake (2019)** | **eSSIF-Lab (2021)** | **ToIP (2021)** | **Sovrin (2022)** | **BkThDVr (2022)** | **Glöckler (2023)** | **Pava-Díaz (2024)** |
-|---------------------------------------|---------------------------|--------------------|--------------------|-------------------|----------------------|----------------------|-----------------|-------------------|-------------------|---------------------|---------------------|
-| Existence Representation             | Controllability           |                    | Foundational       | Foundation        | Foundational         |                      | ⭐               | Agency            | Personal Data      |                     | Controllability     |
-| Control                              | Controllability           |                    |                    | Foundation        | Foundational         | ⭐                   | ⭐               | Agency            | Control           | User                | Controllability     |
-| Access (Consistent)                  | Portability               |                    | Foundational       | Foundation        | Foundational         |                      | ⭐               | Agency            | Control           |                     | Portability         |
-| Transparency                         | Portability               |                    | Sustainability     | Sustainability    |                      |                      | ⭐               | Security          | Usability         |                     | Portability         |
-| Persistence                          | Security, Controllability |                    | Security           | Security          | Foundational         |                      | ⭐               | Security          | Personal Data     |                     | Security            |
-| Portability                          | Portability               |                    | Flexibility        | Flexibility       |                      |                      | ⭐               | Autonomy          | Personal Data     | Technology          | Portability         |
-| Interoperability                     | Portability               |                    | Flexibility        | Flexibility       |                      |                      | ⭐               | Autonomy          | Usability         | Technology          | Portability         |
-| Consent                              | Controllability           |                    | Controllability    | Foundation        |                      |                      | ⭐               |                   | Personal Data     |                     | Controllability     |
-| Protection (Decentralization)        | Security                  |                    | Security           | Security          |                      | ⭐                   | ⭐               | Autonomy          | Personal Data     |                     | Security            |
-| Minimization                         | Security                  | Control            | Flexibility        | Flexibility       |                      | ⭐                   | ⭐               | Security          | Personal Data     |                     | Security            |
-| Self-generatable and independent     |                           | Control            |                    |                   |                      | ⭐                   |                 |                   |                   |                     |                     |
-| Opt-in                               |                           | Control            |                    |                   |                      |                      |                 |                   |                   |                     |                     |
-| Non-participation                    |                           | Control            |                    |                   |                      |                      |                 |                   |                   |                     |                     |
-| Opt-out                              |                           | Control            |                    |                   |                      |                      |                 |                   |                   |                     |                     |
-| Recoverable                          |                           | Control            |                    |                   |                      |                      |                 |                   |                   |                     |                     |
-| Simple                               |                           | Acceptance         |                    |                   |                      |                      |                 |                   |                   | User                |                     |
-| Non-repudiatable                     |                           | Acceptance         |                    |                   |                      |                      |                 |                   |                   |                     |                     |
-| Reliable                             |                           | Acceptance         |                    |                   |                      |                      |                 |                   |                   |                     |                     |
-| Equivalent                           |                           | Acceptance         |                    |                   |                      |                      | ⭐               | Agency            |                   |                     |                     |
-| Autonomy                             |                           |                    | Foundational       |                   |                      | ⭐                   |                 |                   |                   | Operability         |                     |
-| Ownership                            |                           |                    | Foundational       |                   |                      |                      |                 |                   |                   |                     |                     |
-| Single Source                        |                           |                    | Foundational       |                   |                      |                      |                 |                   |                   |                     |                     |
-| Choosability                         |                           |                    | Controllability    |                   |                      |                      |                 |                   |                   |                     |                     |
-| Standard                             |                           | Acceptance         | Sustainability     | Sustainability    |                      |                      |                 |                   |                   | Technology          |                     |
-| Cost                                 |                           | Zero-cost          | Sustainability     | Sustainability    |                      |                      |                 |                   |                   | Operability         |                     |
-| Availability                         |                           |                    | Security           | Security          |                      |                      |                 |                   |                   | Operability         |                     |
-| Disclosure                           |                           |                    | Controllability    | Foundational      |                      |                      |                 |                   |                   |                     |                     |
-| Validity                             |                           |                    |                    | Security          |                      |                      |                 |                   |                   |                     |                     |
-| Freedom Information                  |                           |                    |                    |                   |                      | ⭐                   |                 |                   |                   |                     |                     |
-| Participation                        |                           |                    |                    |                   |                      |                      | ⭐               | Autonomy          |                   |                     |                     |
-| Auditability                         |                           |                    |                    |                   |                      |                      |                 |                   |                   | Security, Compliance |                     |
-| Compliance                           |                           |                    |                    |                   |                      |                      |                 |                   |                   | Security, Compliance |                     |
-| Integrity                            |                           |                    |                    |                   |                      |                      |                 |                   |                   | Security, Compliance |                     |
-| Security                             |                           |                    |                    |                   |                      |                      |                 |                   |                   | Security, Compliance |                     |
-| Effectiveness                        |                           |                    |                    |                   |                      |                      |                 |                   |                   | Operability         |                     |
-| Efficiency                           |                           |                    |                    |                   |                      |                      |                 |                   |                   | Operability         |                     |
-| Manageability                        |                           |                    |                    |                   |                      |                      |                 |                   |                   | Operability         |                     |
-| Privacy                              |                           |                    |                    |                   |                      |                      |                 |                   |                   | User                |                     |
-| Trust                                |                           |                    |                    |                   |                      |                      |                 |                   |                   | User                |                     |
+Self-Sovereign Identity (SSI) represents a new concept to manage digital identities, aiming to empower individuals by giving them control over their data [^1].
+
+## Analysis of Principles
+
+We selected the principles from the literature and analysed them.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabella SSI</title>
+    <style>
+        table {
+            font-size: 5px;
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+            text-align: left;
+            width: 100px;
+        }
+        th {
+            background-color: #d4f7d4;
+            font-weight: bold;
+        }
+        td:first-child, th:first-child {
+            position: sticky;
+            left: 0;
+            background-color: #d4f7d4; /* Verde chiaro per la prima colonna */
+            z-index: 1; /* Porta la colonna sopra le altre celle */
+        }
+        tr:nth-child(even) td:not(:first-child) {
+            background-color: #f0f0f0; /* Grigio chiaro */
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Principles</th>
+                <th>Tobin and Reed (2016)</a></th>
+                <th>Andrieu et al. (2016)</th>
+                <th>Ferdous et al. (2019)</th>
+                <th>Mühle et al.(2018) [5]</th>
+                <th>Gilani et al. (2020)</th>
+                <th>Naik and Jenkins (2020) [7]</th>
+                <th>Sheldrake (2019)</th>
+                <th>Toth and Kalman (2019) [9]</th>
+                <th>eSSIF-Lab (2021)</th>
+                <th>ToIP (2021)</th>
+                <th>Sovrin (2022)</th>
+                <th>BkThDVr (2022)</th>
+                <th>Glöckler et al. (2023)</th>
+                <th>Pava-Díaz et al. (2024)</th>
+                <th>Satybaldy et al. (2020) [16]</th>
+                <th>Stokkink and Pouwelse (2018) [17]</th>
+                <th>Čučko et al. (2022) [18]</th>
+                <th>Allen (2016) [19]</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Existence</td>
+                <td>Controllability</td>
+                <td></td>
+                <td>Foundational</td>
+                <td>Controllability</td>
+                <td>Foundational</td>
+                <td></td>
+                <td>Foundational</td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td>Personal Data</td>
+                <td></td>
+                <td>Controllability</td>
+                <td></td>
+                <td>✔</td>
+                <td>Controllability</td>
+                <td>✔</td>
+            </tr>
+            <tr>
+                <td>Control</td>
+                <td>Controllability</td>
+                <td></td>
+                <td></td>
+                <td>Controllability</td>
+                <td>Foundation</td>
+                <td>✔</td>
+                <td>Foundational</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td></td>
+                <td>Control</td>
+                <td>User</td> 
+                <td>Controllability</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>Controllability</td>
+                <td>✔</td>
+            </tr>
+            <tr>
+                <td>Access</td>
+                <td>Portability</td>
+                <td></td>
+                <td>Foundational</td>
+                <td>Portability</td>
+                <td>Foundational</td>
+                <td>✔</td>
+                <td>Foundational</td>
+                <td>✔</td>
+                <td></td>
+                <td>✔</td>
+                <td>Agency</td>
+                <td>Control</td>
+                <td></td>
+                <td>Portability</td>
+                <td></td>
+                <td>✔</td>
+                <td>Usability</td>
+                <td>✔</td>
+            </tr>
+            <tr>
+                <td>Transparency</td>
+                <td>Portability</td>
+                <td></td>
+                <td>Sustainability</td>
+                <td>Portability</td>
+                <td>Sustainability</td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td>Security</td>
+                <td>Usability</td>
+                <td></td>
+                <td>Portability</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>Adoption Sustainability</td>
+                <td>✔</td>
+            </tr>
+            <tr>
+                <td>Persistence</td>
+                <td>Security, Controllability</td>
+                <td></td>
+                <td>Security</td>
+                <td>Security</td>
+                <td>Security</td>
+                <td>✔</td>
+                <td>Foundational</td>
+                <td>✔</td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td>Personal Data</td>
+                <td></td>
+                <td>Security</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>Adoption Sustainability</td>
+                <td>✔</td>
+            </tr>
+            <tr>
+                <td>Portability</td>
+                <td>Portability</td>
+                <td></td>
+                <td>Flexibility</td>
+                <td></td>
+                <td>Flexibility</td>
+                <td>✔</td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td>✔</td>
+                <td>Autonomy</td>
+                <td>Personal Data</td>
+                <td>Technology</td>
+                <td>Portability</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>Adoption Sustainability</td>
+                <td>✔</td>
+            </tr>
+            <tr>
+                <td>Interoperability</td>
+                <td>Portability</td>
+                <td></td>
+                <td>Flexibility</td>
+                <td>Portability</td>
+                <td>Flexibility</td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td>Autonomy</td>
+                <td>Usability</td>
+                <td>Technology</td>
+                <td>Portability</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>Adoption Sustainability</td>
+                <td>✔</td>
+            </tr>
+            <tr>
+                <td>Consent</td>
+                <td>Controllability</td>
+                <td></td>
+                <td>Controllability</td>
+                <td>Controllability</td>
+                <td>Foundation</td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td>Personal Data</td>
+                <td></td>
+                <td>Controllability</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>Privacy</td>
+                <td>✔</td>
+            </tr>
+            <tr>
+                <td>Protection</td>
+                <td>Security</td>
+                <td></td>
+                <td>Security</td>
+                <td>Security</td>
+                <td>Security</td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td>✔</td>
+                <td></td>
+                <td>Personal Data</td>
+                <td></td>
+                <td>Security</td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>Security</td>
+                <td>✔</td>
+            </tr>
+            <tr>
+                <td>Minimization</td>
+                <td>Security</td>
+                <td>Control</td>
+                <td>Flexibility</td>
+                <td>Security</td>
+                <td>Flexibility</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td>✔</td>
+                <td>Security</td>
+                <td>Personal Data</td>
+                <td></td>
+                <td>Security</td>
+                <td></td>
+                <td>✔</td>
+                <td>Privacy</td>
+                <td>✔</td>
+            </tr>
+            <tr>
+                <td>Self-generatable and independent</td>
+                <td></td>
+                <td>Control</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Opt-in</td>
+                <td></td>
+                <td>Control</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Opt-out</td>
+                <td></td>
+                <td>Control</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Recoverable</td>
+                <td></td>
+                <td>Control</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Usability</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Simple</td>
+                <td></td>
+                <td>Acceptance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>User</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Non-repudiatable</td>
+                <td></td>
+                <td>Acceptance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Reliable</td>
+                <td></td>
+                <td>Acceptance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Equivalent</td>
+                <td></td>
+                <td>Acceptance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Autonomy</td>
+                <td></td>
+                <td></td>
+                <td>Foundational</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Operability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Controllability</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ownership</td>
+                <td></td>
+                <td></td>
+                <td>Foundational</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Controllability</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Single Source</td>
+                <td></td>
+                <td></td>
+                <td>Foundational</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Privacy</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Choosability</td>
+                <td></td>
+                <td></td>
+                <td>Controllability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Standard</td>
+                <td></td>
+                <td>Acceptance</td>
+                <td>Sustainability</td>
+                <td></td>
+                <td>Sustainability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Technology</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Adoption Sustainability</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Cost</td>
+                <td></td>
+                <td>Zero-cost</td>
+                <td>Sustainability</td>
+                <td></td>
+                <td>Sustainability</td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Operability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Adoption Sustainability</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Availability</td>
+                <td></td>
+                <td></td>
+                <td>Security</td>
+                <td></td>
+                <td>Security</td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Operability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Disclosure</td>
+                <td></td>
+                <td></td>
+                <td>Controllability</td>
+                <td></td>
+                <td>Foundational</td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td>Security</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Privacy</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Validity</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Security</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Freedom Information</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Participation</td>
+                <td></td>
+                <td>Control</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td>Autonomy</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Auditability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Security<br>Compliance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Compliance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Security<br>Compliance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Adoption Sustainability</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Integrity</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Security<br>Compliance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Security</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td>Functional</td>
+                <td></td>
+                <td></td>
+                <td>Security</td>
+                <td></td>
+                <td>Security<br>Compliance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Secrurity</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Effectiveness</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Operability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Efficiency</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Operability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Manageability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Operability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Privacy</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Security</td>
+                <td></td>
+                <td>User</td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td>Privacy</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Trust</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>User</td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Usability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td>Agency</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Identity Assurance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Verification</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td>Security</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td>Security</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Counterfait Prevention</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Scalable</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Operability</td>
+                <td></td>
+                <td>✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Representation</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Agency</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Equity and Inclusion</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Agency</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Consistency</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Agency</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Delegation</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Agency</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Decentralization</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>Autonomy</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
+
+# References
+
+[^1]: Lepore, Cristian, et al. "A Model For Assessing The Adherence of E-Identity Solutions To Self-Sovereign Identity." World Conference on Information Systems and Technologies. Cham: Springer Nature Switzerland, 2024.
+
+[5] Mühle, Alexander, et al. "A survey on essential components of a self-sovereign identity." Computer Science Review 30 (2018): 80-86.
+
+[7] Naik, Nitin, and Paul Jenkins. "Self-sovereign identity specifications: Govern your identity through your digital wallet using blockchain technology." 2020 8th IEEE International Conference on Mobile Cloud Computing, Services, and Engineering (MobileCloud). IEEE, 2020.
+
+[9] Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27.
+
+[16] Satybaldy, Abylay, Mariusz Nowostawski, and Jørgen Ellingsen. "Self-sovereign identity systems: Evaluation framework." Privacy and Identity Management. Data for Better Living: AI and Privacy: 14th IFIP WG 9.2, 9.6/11.7, 11.6/SIG 9.2. 2 International Summer School, Windisch, Switzerland, August 19–23, 2019, Revised Selected Papers 14 (2020): 447-461.
+
+[17] Stokkink, Quinten, and Johan Pouwelse. "Deployment of a blockchain-based self-sovereign identity." 2018 IEEE international conference on Internet of Things (iThings) and IEEE green computing and communications (GreenCom) and IEEE cyber, physical and social computing (CPSCom) and IEEE smart data (SmartData). IEEE, 2018.
+
+[18] Čučko, Špela, et al. "Towards the classification of self-sovereign identity properties." IEEE access 10 (2022): 88306-88329.
+
+[19] Allen, Christopher. "The path to self-sovereign identity." Life with Alacrity (2016).
