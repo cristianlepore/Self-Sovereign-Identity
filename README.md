@@ -4,7 +4,16 @@ Self-Sovereign Identity (SSI) represents a new concept to manage digital identit
 
 ## Defintion of SSI
 
-Allen has proposed ten guiding principles of the SSI, laying out the foundation for implementation of the concept, stating that the key properties of the SSI system are Existence, Control, Access, Transparency, Persistence, Portability, Interoperability, Consent, Minimalization, and Protection.[^3]
+Allen has proposed ten guiding principles of the SSI, laying out the foundation for implementation of the concept, stating that the key properties of the SSI system are *Existence, Control, Access, Transparency, Persistence, Portability, Interoperability, Consent, Minimalization, and Protection*.[^3]
+
+<!-- Online Image -->
+![Allen Principles Schema (Online)](https://github.com/cristianlepore/Self-Sovereign-Identity/blob/main/Images/Allen_principles/Allen_principles_schema.png)
+*Figure 1: User roles and data flow in the general SSI process, along with the associated properties proposed by Allen.[^3]*
+
+<!-- Local Image -->
+![Allen Principles Schema (Local)](Images/Allen_principles/Allen_principles_schema.png)
+*Figure 1: User roles and data flow in the general SSI process, along with the associated properties proposed by Allen.[^3]*
+
 
 ## Analysis of Principles
 
