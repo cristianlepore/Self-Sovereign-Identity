@@ -1,18 +1,64 @@
-# Self-Sovereign Identity 
+# A Model To Assess Digital Identity Solutions
 
-Self-Sovereign Identity (SSI) represents a new concept to manage digital identities, aiming to empower individuals by giving them control over their identity information.[^1] SSI is defined as a list of principles that extends the  original Laws of Identity.[^2]
+The purpose of this work is to extend the original contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI) [^lepore] by addressing the following research questions:
 
-## Defintion of SSI
+1. *RQ1: What are the principles of Self-Sovereign Identity?*
+2. *RQ2: Can we assess any SSI system based on these principles?*
 
-Allen has proposed ten guiding principles of the SSI, laying out the foundation for implementation of the concept, stating that the key properties of the SSI system are *Existence, Control, Access, Transparency, Persistence, Portability, Interoperability, Consent, Minimalization, and Protection*.[^3]
+[Section 1](#1-self-sovereign-identity) addresses RQ1 and provides a comprehensive definition of Self-Sovereign Identity, while Section 2 introduces the model for assessing e-Identity solutions.
+
+## 1. Self-Sovereign Identity 
+
+Self-Sovereign Identity (SSI) represents a new concept to manage digital identities, aiming to empower individuals by giving them control over their identity information.[^lepore] SSI is defined as a list of principles that extends the  original Laws of Identity.[^cameron]
+
+### 1. Defintion of Self-Sovereign Identity
+
+Allen has proposed ten guiding principles of the SSI, laying out the foundation for implementation of the concept, stating that the key properties of the SSI system are *Existence, Control, Access, Transparency, Persistence, Portability, Interoperability, Consent, Minimalization, and Protection*.[^allen]
+
+#### 1.1 Related works
+
+The schema below illustrates the data processing flow and the key roles within the general SSI model. It builds upon previous studies from the literature and incorporates the authentication process between users and verifiers (Relying Parties), as outlined in the Architecture and Reference Framework v1.4.1 of the EUDI Wallet.[^cucko][^ARF]
+
+The left side of the schema lacks specific details regarding wallet instances and stages, while the right side depicts the data flow associated with the request and presentation of assertions. The principles *Transparency* and *Persistence* are outside the schema,[^cucko] while the communication identified by letters A,B,C,D are optional for many solutions.
 
 ![Allen Principles Schema (Local)](Images/Allen_principles/Allen_principles_schema.png)
-*Figure 1: User roles and data flow in the general SSI process, along with the associated properties proposed by Allen.[^3]*
+*Figure 1: SSI properties mapped within the general SSI process flow.[^allen]*
+
+#### 1.2 Analysis
+
+Several works by academics and industry experts have redefined and extended the original principles of Self-Sovereign Identity (SSI). Unlike earlier studies that primarily utilized, critiqued, or extended Allen’s principles, our research analyzed and classified 51 properties identified in 18 works from the literature. Using heuristics, we converged on a shared set of properties and organized them based on prior grouping exercises described in the literature. To achieve this, we tested three clustering methods: Greedy, K-Means, and Graph Theory. This process resulted in a subset of highly relevant properties and an objective clustering of principles.
+
+We further refined the properties and conducted a questionnaire to address three key objectives I) Investigate the identified SSI properties and evaluate their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties. Our study gathered insights from experts in Decentralized and Self-Sovereign Identity Management across diverse roles and domains, including Computer Security and AI. These experts were interviewed during the ARES conference 2024, held from July 29 to August 2, 2024 in Vienna, Austria.
+
+##### 1.2.1 Methodology
+
+A systematic review provides a coarse-grained overview of the research field through several steps as follows.[^lepore][^badzek][^cushman]
+
+*1. Defining research questions.* We produced research questions *RQ1* as outlined in the [introduction](#a-model-to-assess-digital-identity-solutions). From keywording *RQ1* (which is the objective of this [Section 1](#1-self-sovereign-identity)), we provided the following search strings. 
+
+- *SSI AND principles*
+- *Self-Sovereign Identity AND properties*
+- *SSI AND definition*
+
+We shuffled keywords for better output and corrected strings to avoid wildcards (e.g., SSI and Self-Sovereign Identity).[^lepore]
+
+*2. Searching.* We used search strings to hit articles with relevant keywords in titles and abstracts from ACM, ArXiv, and IEEE Xplore, Scopus, and meta-search engines of academic sources like Google Scholar. That yielded 250 results.
+
+*3. Screening.* We screened abstracts and conclusions to filter out non-pertinent results through inclusion/exclusion criteria based on the subject matter of interest (SSI), publication year, originality of the work, and proofs-of-concept. We also excluded duplicate results, collecting 47 articles subject to full review. This were articles dealing with principles for SSI only. Considering that this is an eary topic, 47 articles cover a large amount of the existing literature from 2016 to 2024.
+
+*4. Classification.* We read the articles and pencilled out information of properties and their definitions according to the author. We obtained 18 papers for a total of 51 properties of SSI.
+
+*5. Data extraction.* Out of the 51 properties, some had similar meanings but different names in different papers. Properties with the same naming and similar definition were combined. We then used heuristics to select a subset of properties that were relevant for the majority of papers, e.g., only properties cited in at least >30% of the papers have been included to become final candidates. 
+
+*6. Refining.* The resulting properties have been clustered using their labels through a clustering algorithm (e.g., K-Means).
+
+*7. Eliminating, and adding properties.* To verify our decisions and finalize the list of properties (used in the questionnaire), interviews with experts were conducted, where the reasoning behind our decisions was discussed.
+
+*8. Designing* the final list and definitions for each property separately.
+
+##### 1.2.2 Results
 
 
-## Analysis of Principles
-
-We selected the principles from the literature and analysed them.
 
 <!DOCTYPE html>
 <html lang="en">
@@ -1156,11 +1202,19 @@ We selected the principles from the literature and analysed them.
 
 # References
 
-[^1]: Lepore, Cristian, et al. "A Model For Assessing The Adherence of E-Identity Solutions To Self-Sovereign Identity." World Conference on Information Systems and Technologies. Cham: Springer Nature Switzerland, 2024.
+[^lepore]: Lepore, Cristian, et al. "A Model For Assessing The Adherence of E-Identity Solutions To Self-Sovereign Identity." World Conference on Information Systems and Technologies. Cham: Springer Nature Switzerland, 2024.
 
-[^2]: Cameron, Kim. "The laws of identity." Microsoft Corp 12 (2005): 8-11.
+[^cameron]: Cameron, Kim. "The laws of identity." Microsoft Corp 12 (2005): 8-11.
 
-[^3]: Allen, Christopher. "The path to self-sovereign identity." Life with Alacrity (2016).
+[^allen]: Allen, Christopher. "The path to self-sovereign identity." Life with Alacrity (2016).
+
+[^cucko]: Čučko, Špela, et al. "Towards the classification of self-sovereign identity properties." IEEE access 10 (2022): 88306-88329.
+
+[^ARF]: EUDI Wallet. Architecture and Rererence Framework v 1.4.1 https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.4.0/ Accessed on December 28, 2024.
+
+[^badzek]: Badzek, Laurie, et al. "Ethical, legal, and social issues in the translation of genomics into health care." Journal of Nursing Scholarship 45.1 (2013): 15-24.
+
+[^cushman]: Cushman, Reid, et al. "Ethical, legal and social issues for personal health records and applications." Journal of biomedical informatics 43.5 (2010): S51-S55.
 
 [4] Mühle, Alexander, et al. "A survey on essential components of a self-sovereign identity." Computer Science Review 30 (2018): 80-86.
 
