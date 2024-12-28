@@ -1206,7 +1206,7 @@ Keywords were refined to optimize search results, and wildcards were avoided for
 
 *Table 1. Comparison of identified properties in various sources.*
 
-[View the HTML file](Tables/Complete_table_SSI.html)
+[View the live HTML file](https://github.com/cristianlepore/Self-Sovereign-Identity/blob/main/Tables/Complete_table_SSI.html)
 
 # References
 
