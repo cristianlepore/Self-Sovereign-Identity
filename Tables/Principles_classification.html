@@ -14,22 +14,28 @@
         th, td {
             border: 1px solid #ddd;
             padding: 8px;
-            text-align: center;
             text-align: left;
-            width: 100px;
+            width: 60px;
         }
         th {
             background-color: #d4f7d4;
             font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 2; /* Keeps header on top of regular cells */
         }
         td:first-child, th:first-child {
             position: sticky;
             left: 0;
-            background-color: #d4f7d4; /* Verde chiaro per la prima colonna */
-            z-index: 1; /* Porta la colonna sopra le altre celle */
+            background-color: #d4f7d4; /* Light green for the first column */
+            z-index: 1; /* Keeps first column above regular cells */
+            box-shadow: 2px 0 0 #ddd; /* Adds a visible left border effect */
+        }
+        thead th:first-child {
+            z-index: 3; /* Highest z-index for the top-left corner cell */
         }
         tr:nth-child(even) td:not(:first-child) {
-            background-color: #f0f0f0; /* Grigio chiaro */
+            background-color: #f0f0f0; /* Light gray for alternate rows */
         }
         tbody tr td:first-child {
             font-weight: bold;

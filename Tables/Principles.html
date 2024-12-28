@@ -1,0 +1,1149 @@
+<a id="table-1"></a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabella SSI</title>
+    <style>
+        table {
+            font-size: 8px;
+            border-collapse: collapse;
+            width: 100%;
+            table-layout: fixed;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+            width: 60px;
+        }
+        th {
+            background-color: #d4f7d4;
+            font-weight: bold;
+            position: sticky;
+            top: 0;
+            z-index: 2; /* Keeps header on top of regular cells */
+        }
+        td:first-child, th:first-child {
+            position: sticky;
+            left: 0;
+            background-color: #d4f7d4; /* Light green for the first column */
+            z-index: 1; /* Keeps first column above regular cells */
+            box-shadow: 2px 0 0 #ddd; /* Adds a visible left border effect */
+        }
+        thead th:first-child {
+            z-index: 3; /* Highest z-index for the top-left corner cell */
+        }
+        tr:nth-child(even) td:not(:first-child) {
+            background-color: #f0f0f0; /* Light gray for alternate rows */
+        }
+        tbody tr td:first-child {
+            font-weight: bold;
+        }
+        td.check {
+        background-color: #FFDAB9 !important;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Principles</th>
+                <th>Tobin and Reed [1]</a></th>
+                <th>Andrieu et al. [2]</th>
+                <th>Ferdous et al. [3]</th>
+                <th>Mühle et al. [4]</th>
+                <th>Gilani et al. [5]</th>
+                <th>Naik and Jenkins [6]</th>
+                <th>Sheldrake [7]</th>
+                <th>Toth and Kalman [8]</th>
+                <th>eSSIF-Lab [9]</th>
+                <th>ToIP [10]</th>
+                <th>Sovrin [11]</th>
+                <th>BkThDVr [12]</th>
+                <th>Glöckler et al. [13]</th>
+                <th>Pava-Díaz et al. [14]</th>
+                <th>Satybaldy et al. [15]</th>
+                <th>Stokkink and Pouwelse [16]</th>
+                <th>Čučko et al. [17]</th>
+                <th>Allen [18]</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Existence</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+            </tr>
+            <tr>
+                <td>Control</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td> 
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+            </tr>
+            <tr>
+                <td>Access</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+            </tr>
+            <tr>
+                <td>Transparency</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+            </tr>
+            <tr>
+                <td>Persistence</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+            </tr>
+            <tr>
+                <td>Portability</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+            </tr>
+            <tr>
+                <td>Interoperability</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+            </tr>
+            <tr>
+                <td>Consent</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+            </tr>
+            <tr>
+                <td>Protection</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+            </tr>
+            <tr>
+                <td>Minimization</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+            </tr>
+            <tr>
+                <td>Self-generatable and independent</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Opt-in</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Opt-out</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Recoverable</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Simple</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Non-repudiatable</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Reliable</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Equivalent</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Autonomy</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Ownership</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Single Source</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Choosability</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Standard</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Cost</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Availability</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Disclosure</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Validity</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Freedom Information</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Participation</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Auditability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Compliance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Integrity</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Security</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Effectiveness</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Efficiency</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Manageability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Privacy</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Trust</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Usability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Identity Assurance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Verification</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Counterfait Prevention</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Scalable</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Representation</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Equity and Inclusion</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Consistency</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Delegation</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Decentralization</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Identity Verification</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Secure Identity Transfer</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Secure Transactions</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
