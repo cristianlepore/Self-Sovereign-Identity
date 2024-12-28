@@ -1,6 +1,10 @@
 # Self-Sovereign Identity 
 
-Self-Sovereign Identity (SSI) represents a new concept to manage digital identities, aiming to empower individuals by giving them control over their data [^1].
+Self-Sovereign Identity (SSI) represents a new concept to manage digital identities, aiming to empower individuals by giving them control over their identity information.[^1] SSI is defined as a list of principles that extends the  original Laws of Identity.[^2]
+
+## Defintion of SSI
+
+Allen has proposed ten guiding principles of the SSI, laying out the foundation for implementation of the concept, stating that the key properties of the SSI system are Existence, Control, Access, Transparency, Persistence, Portability, Interoperability, Consent, Minimalization, and Protection.[^3]
 
 ## Analysis of Principles
 
@@ -49,24 +53,24 @@ We selected the principles from the literature and analysed them.
         <thead>
             <tr>
                 <th>Principles</th>
-                <th>Tobin and Reed (2016)</a></th>
-                <th>Andrieu et al. (2016)</th>
-                <th>Ferdous et al. (2019)</th>
-                <th>Mühle et al.(2018) [5]</th>
-                <th>Gilani et al. (2020)</th>
-                <th>Naik and Jenkins (2020) [7]</th>
-                <th>Sheldrake (2019)</th>
-                <th>Toth and Kalman (2019) [9]</th>
-                <th>eSSIF-Lab (2021)</th>
-                <th>ToIP (2021)</th>
-                <th>Sovrin (2022)</th>
-                <th>BkThDVr (2022)</th>
-                <th>Glöckler et al. (2023)</th>
-                <th>Pava-Díaz et al. (2024)</th>
-                <th>Satybaldy et al. (2020) [16]</th>
-                <th>Stokkink and Pouwelse (2018) [17]</th>
-                <th>Čučko et al. (2022) [18]</th>
-                <th>Allen (2016) [19]</th>
+                <th>Tobin and Reed [1]</a></th>
+                <th>Andrieu et al. [2]</th>
+                <th>Ferdous et al. [3]</th>
+                <th>Mühle et al. [4]</th>
+                <th>Gilani et al. [5]</th>
+                <th>Naik and Jenkins [6]</th>
+                <th>Sheldrake [7]</th>
+                <th>Toth and Kalman [8]</th>
+                <th>eSSIF-Lab [9]</th>
+                <th>ToIP [10]</th>
+                <th>Sovrin [11]</th>
+                <th>BkThDVr [12]</th>
+                <th>Glöckler et al. [13]</th>
+                <th>Pava-Díaz et al. [14]</th>
+                <th>Satybaldy et al. [15]</th>
+                <th>Stokkink and Pouwelse [16]</th>
+                <th>Čučko et al. [17]</th>
+                <th>Allen [18]</th>
             </tr>
         </thead>
         <tbody>
@@ -1150,16 +1154,18 @@ We selected the principles from the literature and analysed them.
 
 [^1]: Lepore, Cristian, et al. "A Model For Assessing The Adherence of E-Identity Solutions To Self-Sovereign Identity." World Conference on Information Systems and Technologies. Cham: Springer Nature Switzerland, 2024.
 
-[5] Mühle, Alexander, et al. "A survey on essential components of a self-sovereign identity." Computer Science Review 30 (2018): 80-86.
+[^2]: Cameron, Kim. "The laws of identity." Microsoft Corp 12 (2005): 8-11.
 
-[7] Naik, Nitin, and Paul Jenkins. "Self-sovereign identity specifications: Govern your identity through your digital wallet using blockchain technology." 2020 8th IEEE International Conference on Mobile Cloud Computing, Services, and Engineering (MobileCloud). IEEE, 2020.
+[^3]: Allen, Christopher. "The path to self-sovereign identity." Life with Alacrity (2016).
 
-[9] Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27.
+[4] Mühle, Alexander, et al. "A survey on essential components of a self-sovereign identity." Computer Science Review 30 (2018): 80-86.
 
-[16] Satybaldy, Abylay, Mariusz Nowostawski, and Jørgen Ellingsen. "Self-sovereign identity systems: Evaluation framework." Privacy and Identity Management. Data for Better Living: AI and Privacy: 14th IFIP WG 9.2, 9.6/11.7, 11.6/SIG 9.2. 2 International Summer School, Windisch, Switzerland, August 19–23, 2019, Revised Selected Papers 14 (2020): 447-461.
+[6] Naik, Nitin, and Paul Jenkins. "Self-sovereign identity specifications: Govern your identity through your digital wallet using blockchain technology." 2020 8th IEEE International Conference on Mobile Cloud Computing, Services, and Engineering (MobileCloud). IEEE, 2020.
 
-[17] Stokkink, Quinten, and Johan Pouwelse. "Deployment of a blockchain-based self-sovereign identity." 2018 IEEE international conference on Internet of Things (iThings) and IEEE green computing and communications (GreenCom) and IEEE cyber, physical and social computing (CPSCom) and IEEE smart data (SmartData). IEEE, 2018.
+[8] Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27.
 
-[18] Čučko, Špela, et al. "Towards the classification of self-sovereign identity properties." IEEE access 10 (2022): 88306-88329.
+[15] Satybaldy, Abylay, Mariusz Nowostawski, and Jørgen Ellingsen. "Self-sovereign identity systems: Evaluation framework." Privacy and Identity Management. Data for Better Living: AI and Privacy: 14th IFIP WG 9.2, 9.6/11.7, 11.6/SIG 9.2. 2 International Summer School, Windisch, Switzerland, August 19–23, 2019, Revised Selected Papers 14 (2020): 447-461.
 
-[19] Allen, Christopher. "The path to self-sovereign identity." Life with Alacrity (2016).
+[16] Stokkink, Quinten, and Johan Pouwelse. "Deployment of a blockchain-based self-sovereign identity." 2018 IEEE international conference on Internet of Things (iThings) and IEEE green computing and communications (GreenCom) and IEEE cyber, physical and social computing (CPSCom) and IEEE smart data (SmartData). IEEE, 2018.
+
+[17] Čučko, Špela, et al. "Towards the classification of self-sovereign identity properties." IEEE access 10 (2022): 88306-88329.
