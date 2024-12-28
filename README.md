@@ -60,14 +60,9 @@ Keywords were refined to optimize search results, and wildcards were avoided for
 
 Table 1 shows the results of the analysis, including the similarities and differences in naming between defined sets of properties. Each Table row represents one property according to the similarity of the collected definitions, while differences in naming can be observed between different authors.
 
-<iframe src="https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html" width="100%" height="600px" style="border: none;"></iframe>
+[Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html) *Comparison of identified properties in various sources.*
 
-*Table 1. Comparison of identified properties in various sources.*
-
-[Table 1 in full screen.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html)
-
-[View the table](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_classification.html)
-*Table 2. Comparison of identified properties in various sources.*
+[Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_classification.html)*Comparison of identified properties and correspondiing taxonomy from various sources.*
 
 # References
 
@@ -84,14 +79,6 @@ Table 1 shows the results of the analysis, including the similarities and differ
 [^badzek]: Badzek, Laurie, et al. "Ethical, legal, and social issues in the translation of genomics into health care." Journal of Nursing Scholarship 45.1 (2013): 15-24.
 
 [^cushman]: Cushman, Reid, et al. "Ethical, legal and social issues for personal health records and applications." Journal of biomedical informatics 43.5 (2010): S51-S55.
-
-[4] Mühle, Alexander, et al. "A survey on essential components of a self-sovereign identity." Computer Science Review 30 (2018): 80-86.
-
-[6] Naik, Nitin, and Paul Jenkins. "Self-sovereign identity specifications: Govern your identity through your digital wallet using blockchain technology." 2020 8th IEEE International Conference on Mobile Cloud Computing, Services, and Engineering (MobileCloud). IEEE, 2020.
-
-[8] Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27.
-
-[15] Satybaldy, Abylay, Mariusz Nowostawski, and Jørgen Ellingsen. "Self-sovereign identity systems: Evaluation framework." Privacy and Identity Management. Data for Better Living: AI and Privacy: 14th IFIP WG 9.2, 9.6/11.7, 11.6/SIG 9.2. 2 International Summer School, Windisch, Switzerland, August 19–23, 2019, Revised Selected Papers 14 (2020): 447-461.
 
 [16] Stokkink, Quinten, and Johan Pouwelse. "Deployment of a blockchain-based self-sovereign identity." 2018 IEEE international conference on Internet of Things (iThings) and IEEE green computing and communications (GreenCom) and IEEE cyber, physical and social computing (CPSCom) and IEEE smart data (SmartData). IEEE, 2018.
 
