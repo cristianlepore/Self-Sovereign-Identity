@@ -58,13 +58,16 @@ Keywords were refined to optimize search results, and wildcards were avoided for
 
 ##### 1.2.2 Results
 
-[Table 1](#table-1) shows the results of the analysis, including the similarities and differences in naming between defined sets of properties. Each Table row represents one property according to the similarity of the collected definitions, while differences in naming can be observed between different authors.
+Table 1 shows the results of the analysis, including the similarities and differences in naming between defined sets of properties. Each Table row represents one property according to the similarity of the collected definitions, while differences in naming can be observed between different authors.
 
-[View the live HTML file](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html)
+<iframe src="https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html" width="100%" height="600px" style="border: none;"></iframe>
 
 *Table 1. Comparison of identified properties in various sources.*
 
-[View the live HTML file]()
+[Table 1 in full screen.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html)
+
+[View the table](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_classification.html)
+*Table 2. Comparison of identified properties in various sources.*
 
 # References
 
