@@ -32,34 +32,35 @@ We further refined the properties and conducted a questionnaire to address three
 
 ##### 1.2.1 Methodology
 
-A systematic review provides a coarse-grained overview of the research field through several steps as follows.[^lepore][^badzek][^cushman]
+A systematic review offers a structured, comprehensive overview of a research field through the following steps.[^lepore][^badzek][^cushman]
 
-*1. Defining research questions.* We produced research questions *RQ1* as outlined in the [introduction](#a-model-to-assess-digital-identity-solutions). From keywording *RQ1* (which is the objective of this [Section 1](#1-self-sovereign-identity)), we provided the following search strings. 
+*1. Defining research questions.* We formulated research question RQ1, as introduced in the [introduction](#a-model-to-assess-digital-identity-solutions). To address *RQ1* (the focus of [Section 1](#1-self-sovereign-identity)), we generated the following search strings based on relevant keywords:
 
 - *SSI AND principles*
 - *Self-Sovereign Identity AND properties*
 - *SSI AND definition*
 
-We shuffled keywords for better output and corrected strings to avoid wildcards (e.g., SSI and Self-Sovereign Identity).[^lepore]
+Keywords were refined to optimize search results, and wildcards were avoided for clarity (e.g., "SSI" and "Self-Sovereign Identity").[^lepore]
 
-*2. Searching.* We used search strings to hit articles with relevant keywords in titles and abstracts from ACM, ArXiv, and IEEE Xplore, Scopus, and meta-search engines of academic sources like Google Scholar. That yielded 250 results.
+*2. Searching.* The search strings were used to identify articles containing relevant keywords in titles and abstracts across multiple academic databases, including ACM, ArXiv, IEEE Xplore, Scopus, and meta-search engines like Google Scholar. This yielded 250 initial results.
 
-*3. Screening.* We screened abstracts and conclusions to filter out non-pertinent results through inclusion/exclusion criteria based on the subject matter of interest (SSI), publication year, originality of the work, and proofs-of-concept. We also excluded duplicate results, collecting 47 articles subject to full review. This were articles dealing with principles for SSI only. Considering that this is an eary topic, 47 articles cover a large amount of the existing literature from 2016 to 2024.
+*3. Screening.* Abstracts and conclusions were screened to exclude irrelevant results based on inclusion/exclusion criteria such as subject relevance (SSI), publication year, originality, and proofs-of-concept. Duplicate results were removed, resulting in 47 articles selected for full review. These articles specifically addressed SSI principles. Despite being an emerging topic, the selection represents a significant portion of the literature from 2016 to 2024.
 
-*4. Classification.* We read the articles and pencilled out information of properties and their definitions according to the author. We obtained 18 papers for a total of 51 properties of SSI.
+*4. Classification.* The selected articles were analyzed to extract properties and their definitions as presented by the authors. This process identified 18 papers containing a total of 51 distinct properties of SSI.
 
-*5. Data extraction.* Out of the 51 properties, some had similar meanings but different names in different papers. Properties with the same naming and similar definition were combined. We then used heuristics to select a subset of properties that were relevant for the majority of papers, e.g., only properties cited in at least >30% of the papers have been included to become final candidates. 
+*5. Data extraction.* Among the 51 properties, many shared similar meanings but were labeled differently across papers. Properties with identical names and definitions were grouped, while heuristics were applied to identify the most commonly cited properties. Only those referenced in at least 30% of the papers were retained as final candidates.
 
-*6. Refining.* The resulting properties have been clustered using their labels through a clustering algorithm (e.g., K-Means).
+*6. Refining.* The identified properties were clustered based on their labels using a clustering algorithm, such as K-Means, to group related concepts systematically.
 
-*7. Eliminating, and adding properties.* To verify our decisions and finalize the list of properties (used in the questionnaire), interviews with experts were conducted, where the reasoning behind our decisions was discussed.
+*7. Eliminating and finalizing properties.* To validate the selection process and finalize the list of properties (used in the questionnaire), expert interviews were conducted. These discussions reviewed and justified the inclusion or exclusion of specific properties.
 
-*8. Designing* the final list and definitions for each property separately.
+*8. Designing.* The final step involved creating a definitive list of properties, accompanied by precise definitions for each.
 
 ##### 1.2.2 Results
 
+[Table 1](#table-1) shows the results of the analysis, including the similarities and differences in naming between defined sets of properties. Each Table row represents one property according to the similarity of the collected definitions, while differences in naming can be observed between different authors.
 
-
+<a id="table-1"></a>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -87,14 +88,17 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
         td:first-child, th:first-child {
             position: sticky;
             left: 0;
-            background-color: #d4f7d4; /* Verde chiaro per la prima colonna */
-            z-index: 1; /* Porta la colonna sopra le altre celle */
+            background-color: #d4f7d4;
+            z-index: 1;
         }
         tr:nth-child(even) td:not(:first-child) {
-            background-color: #f0f0f0; /* Grigio chiaro */
+            background-color: #f0f0f0;
         }
         tbody tr td:first-child {
             font-weight: bold;
+        }
+        td.check {
+        background-color: #FFDAB9 !important;
         }
     </style>
 </head>
@@ -126,225 +130,225 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
         <tbody>
             <tr>
                 <td>Existence</td>
-                <td>Controllability</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Foundational</td>
-                <td>Controllability</td>
-                <td>Foundational</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Foundational</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Personal Data</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Controllability</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
-                <td>Controllability</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
             </tr>
             <tr>
                 <td>Control</td>
-                <td>Controllability</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
-                <td>Controllability</td>
-                <td>Foundation</td>
-                <td>✔</td>
-                <td>Foundational</td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Control</td>
-                <td>User</td> 
-                <td>Controllability</td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>Controllability</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td> 
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
             </tr>
             <tr>
                 <td>Access</td>
-                <td>Portability</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Foundational</td>
-                <td>Portability</td>
-                <td>Foundational</td>
-                <td>✔</td>
-                <td>Foundational</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
-                <td>Agency</td>
-                <td>Control</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Portability</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
-                <td>Usability</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
             </tr>
             <tr>
                 <td>Transparency</td>
-                <td>Portability</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Sustainability</td>
-                <td>Portability</td>
-                <td>Sustainability</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
-                <td>Security</td>
-                <td>Usability</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Portability</td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>Adoption Sustainability</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
             </tr>
             <tr>
                 <td>Persistence</td>
-                <td>Security, Controllability</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Security</td>
-                <td>Security</td>
-                <td>Security</td>
-                <td>✔</td>
-                <td>Foundational</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Personal Data</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Security</td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>Adoption Sustainability</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
             </tr>
             <tr>
                 <td>Portability</td>
-                <td>Portability</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Flexibility</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Flexibility</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
-                <td>Autonomy</td>
-                <td>Personal Data</td>
-                <td>Technology</td>
-                <td>Portability</td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>Adoption Sustainability</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
             </tr>
             <tr>
                 <td>Interoperability</td>
-                <td>Portability</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Flexibility</td>
-                <td>Portability</td>
-                <td>Flexibility</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
-                <td>Autonomy</td>
-                <td>Usability</td>
-                <td>Technology</td>
-                <td>Portability</td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>Adoption Sustainability</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
             </tr>
             <tr>
                 <td>Consent</td>
-                <td>Controllability</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Controllability</td>
-                <td>Controllability</td>
-                <td>Foundation</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Personal Data</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Controllability</td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>Privacy</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
             </tr>
             <tr>
                 <td>Protection</td>
-                <td>Security</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Security</td>
-                <td>Security</td>
-                <td>Security</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Personal Data</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Security</td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>Security</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
             </tr>
             <tr>
                 <td>Minimization</td>
-                <td>Security</td>
-                <td>Control</td>
-                <td>Flexibility</td>
-                <td>Security</td>
-                <td>Flexibility</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
-                <td>✔</td>
-                <td>Security</td>
-                <td>Personal Data</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Security</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
-                <td>Privacy</td>
-                <td>✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
             </tr>
             <tr>
                 <td>Self-generatable and independent</td>
                 <td></td>
-                <td>Control</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -358,7 +362,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
             <tr>
                 <td>Opt-in</td>
                 <td></td>
-                <td>Control</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -379,7 +383,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
             <tr>
                 <td>Opt-out</td>
                 <td></td>
-                <td>Control</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -400,28 +404,28 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
             <tr>
                 <td>Recoverable</td>
                 <td></td>
-                <td>Control</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Usability</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
                 <td></td>
             </tr>
             <tr>
                 <td>Simple</td>
                 <td></td>
-                <td>Acceptance</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -432,7 +436,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>User</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -442,7 +446,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
             <tr>
                 <td>Non-repudiatable</td>
                 <td></td>
-                <td>Acceptance</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -463,7 +467,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
             <tr>
                 <td>Reliable</td>
                 <td></td>
-                <td>Acceptance</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -484,7 +488,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
             <tr>
                 <td>Equivalent</td>
                 <td></td>
-                <td>Acceptance</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -492,7 +496,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -506,28 +510,28 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td>Autonomy</td>
                 <td></td>
                 <td></td>
-                <td>Foundational</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Operability</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Controllability</td>
+                <td class="check">✔</td>
                 <td></td>
             </tr>
             <tr>
                 <td>Ownership</td>
                 <td></td>
                 <td></td>
-                <td>Foundational</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -541,14 +545,14 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Controllability</td>
+                <td class="check">✔</td>
                 <td></td>
             </tr>
             <tr>
                 <td>Single Source</td>
                 <td></td>
                 <td></td>
-                <td>Foundational</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -562,14 +566,14 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Privacy</td>
+                <td class="check">✔</td>
                 <td></td>
             </tr>
             <tr>
                 <td>Choosability</td>
                 <td></td>
                 <td></td>
-                <td>Controllability</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -589,60 +593,60 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
             <tr>
                 <td>Standard</td>
                 <td></td>
-                <td>Acceptance</td>
-                <td>Sustainability</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Sustainability</td>
-                <td></td>
-                <td></td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Technology</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Adoption Sustainability</td>
+                <td class="check">✔</td>
                 <td></td>
             </tr>
             <tr>
                 <td>Cost</td>
                 <td></td>
-                <td>Zero-cost</td>
-                <td>Sustainability</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Sustainability</td>
-                <td>✔</td>
-                <td></td>
-                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Operability</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Adoption Sustainability</td>
+                <td class="check">✔</td>
                 <td></td>
             </tr>
             <tr>
                 <td>Availability</td>
                 <td></td>
                 <td></td>
-                <td>Security</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Security</td>
-                <td>✔</td>
-                <td></td>
-                <td></td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Operability</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -653,21 +657,21 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td>Disclosure</td>
                 <td></td>
                 <td></td>
-                <td>Controllability</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Foundational</td>
-                <td></td>
-                <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
-                <td>Security</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Privacy</td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
                 <td></td>
             </tr>
             <tr>
@@ -676,7 +680,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Security</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -701,7 +705,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -715,7 +719,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
             <tr>
                 <td>Participation</td>
                 <td></td>
-                <td>Control</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -723,8 +727,8 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
-                <td>Autonomy</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -747,7 +751,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Security<br>Compliance</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -768,11 +772,11 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Security<br>Compliance</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Adoption Sustainability</td>
+                <td class="check">✔</td>
                 <td></td>
             </tr>
             <tr>
@@ -789,7 +793,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Security<br>Compliance</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -803,18 +807,18 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
-                <td></td>
-                <td></td>
-                <td>Security</td>
-                <td></td>
-                <td>Security<br>Compliance</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Secrurity</td>
+                <td class="check">✔</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="check">✔</td>
                 <td></td>
             </tr>
             <tr>
@@ -831,7 +835,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Operability</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -852,7 +856,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Operability</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -873,7 +877,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Operability</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -887,18 +891,18 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Security</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>User</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>Privacy</td>
+                <td class="check">✔</td>
                 <td></td>
             </tr>
             <tr>
@@ -915,9 +919,9 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>User</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -931,14 +935,14 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
-                <td>Agency</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -952,7 +956,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -971,18 +975,18 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Security</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
-                <td>Security</td>
+                <td class="check">✔</td>
+                <td class="check">✔</td>
                 <td></td>
             </tr>
             <tr>
@@ -994,7 +998,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1013,16 +1017,16 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Operability</td>
+                <td class="check">✔</td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1039,7 +1043,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Agency</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1060,7 +1064,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Agency</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1081,7 +1085,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Agency</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1102,7 +1106,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Agency</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1123,7 +1127,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>Autonomy</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1141,7 +1145,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1162,7 +1166,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1183,7 +1187,7 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
                 <td></td>
                 <td></td>
                 <td></td>
-                <td>✔</td>
+                <td class="check">✔</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -1199,6 +1203,10 @@ We shuffled keywords for better output and corrected strings to avoid wildcards 
     </table>
 </body>
 </html>
+
+*Table 1. Comparison of identified properties in various sources.*
+
+[View the HTML file](Tables/Complete_table_SSI.html)
 
 # References
 
