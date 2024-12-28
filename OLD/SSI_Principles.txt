@@ -1,0 +1,116 @@
+
+*******************************
+******** STEP 1 ***************
+*******************************
+
+Abbiamo preso i lavori della letteratura esistenti e abbiamo estratto i principi base per definire la SSI.
+In totale ci sono 11 lavori.
+Prendiamo i principi che sono citati in almeno il 30% dei lavori (4 colonne).
+Il risultato sono 12 principi:
+1 Access
+2 Existence
+3 Control
+4 Consent
+5 Minimization
+6 Persistence
+7 Protection
+8 Interoperability
+9 Portability
+10 Transparency
+11 Business models (costs)
+12 Standard
+
+*******************************
+******** STEP 2 ***************
+*******************************
+
+Abbiamo ridefinito questi principi sulla base dei lavori passati e sulla base dei modelli di identità esistenti.
+
+1 Existence. ...........The ability to establish and recognize an identity. Users present attributes to service providers.
+2 Persistence.  ........The ongoing validity and availability of the identity over time. Attributes are issued by multiple IdPs.
+3 Access.  .............The ability for users to view the list of identity providers and service providers.
+4 Consent. 	............Ensuring the user’s explicit agreement for identity-related actions, including opt-in and opt-out mechanisms.
+5 Control.	............Ensuring users can directly manage their identity, including negotiating their attributes from the agent/wallet.
+6 Minimization. ........Limiting shared data to the minimum required for functionality, giving users control over what is disclosed.
+7 Protection. ..........Protection against suppression or invalidation of the list of attributes, IdPs and SPs by any central authority.
+8 Transparency. ........Open policies and rules; transparent algorithms to manage ecosystem members.
+9 Interoperability.	....Aligning rules, policies, standards, and practices across jurisdictions or systems for consistency.
+10 Portability.  .......Allowing users to carry and use their digital identity across multiple platforms and contexts.
+11 Business models (costs)..The mechanisms for funding, maintaining, and sustaining the system, ensuring fairness and accessibility.
+12 Standard.   	............An e-identity system must use globally recognized standards.
+
+*******************************
+******** STEP 3 ROMAIN ********
+*******************************
+
+Categorizzazione dei principi fatta da me e Romain.
+
+Foundational
+1 Existence. ...........The ability to establish and recognize an identity. Users present attributes to service providers.
+2 Persistence.  ........The ongoing validity and availability of the identity over time. Attributes are issued by multiple IdPs.
+
+Control
+3 Access.  .............The ability for users to view the list of identity providers and service providers.
+4 Consent. 	............Ensuring the user’s explicit agreement for identity-related actions, including opt-in and opt-out mechanisms.
+5 Control.	............Ensuring users can directly manage their identity, including negotiating their attributes from the agent/wallet.
+6 Minimization. ........Limiting shared data to the minimum required for functionality, giving users control over what is disclosed.
+
+Security & trust
+7 Protection. ..........Protection against suppression or invalidation of the list of attributes, IdPs and SPs by any central authority.
+8 Transparency. ........Open policies and rules; transparent algorithms to manage ecosystem members.
+
+Flexibility
+9 Interoperability.	....Aligning rules, policies, standards, and practices across jurisdictions or systems for consistency.
+10 Portability.  .......Allowing users to carry and use their digital identity across multiple platforms and contexts.
+
+Sustainability
+11 Business models (costs)..The mechanisms for funding, maintaining, and sustaining the system, ensuring fairness and accessibility.
+12 Standard.   	............An e-identity system must use globally recognized standards.
+
+*******************************
+******** STEP 4 ***************
+*******************************
+
+File excel: 'Step4.xlsx'
+Contiene i 12 principi scelti con le istanze di ogni principio raggruppato per paper.
+
+Uso di algoritmo Greedy:
+I risultati sono nella cartella: 
+
+Uso di K-Means con parametro K=3 sono nella cartella: 
+Uso di K-Means con parametro K=4 sono nella cartella: 
+Uso di K-Means con parametro K=5 sono nella cartella: 
+Uso di K-Means con parametro K=6 sono nella cartella: 
+
+*******************************
+******** STEP 5 ***************
+*******************************
+
+Versione finale usando K-Means con un valore K=5.
+Abbiamo scelto K-Means invece di un algoritmo Greedy perchè il K-Means minimizza la distanza intra-cluster in ogni categoria.
+L'algoritmo Greedy invece, seleziona iterativamente la soluzione locale ottimale, cioè presa una categoria, minimizza la distanza tra le singole categorie.
+Sebbene sia più semplice, l'algoritmo Greedy non garantisce sempre una soluzione globale ottimale. Nel nostro caso, alcuni principi avevano categorie con lo stesso numero di istanze, ed era quindi importante minimizzare la distanza tra i clusters considerando più categorie.
+
+Usando K-Means otteniamo i 5 gruppi e forniamo un nome ad ogni gruppo basandoci sui nomi dei principi che hanno un maggior numero di istanze.
+
+Foundational
+1 Access.  .............The ability for users to view the list of identity providers and service providers.
+2 Existence. ...........The ability to establish and recognize an identity. Users present attributes to service providers.
+
+Controllability
+3 Consent. 	............Ensuring the user’s explicit agreement for identity-related actions, including opt-in and opt-out mechanisms.
+4 Control.	............Ensuring users can directly manage their identity, including negotiating their attributes from the agent/wallet.
+5 Persistence.  ........The ongoing validity and availability of the identity over time. Attributes are issued by multiple IdPs.
+
+Security
+6 Minimization. ........Limiting shared data to the minimum required for functionality, giving users control over what is disclosed.
+7 Protection. ..........Protection against suppression or invalidation of the list of attributes, IdPs and SPs by any central authority.
+
+Portability
+8 Interoperability.	....Aligning rules, policies, standards, and practices across jurisdictions or systems for consistency.
+9 Portability.  ........Allowing users to carry and use their digital identity across multiple platforms and contexts.
+
+Sustainability
+10 Business models (costs)..The mechanisms for funding, maintaining, and sustaining the system, ensuring fairness and accessibility.
+11 Standard.   	............An e-identity system must use globally recognized standards.
+12 Transparency.   .........Open policies and rules; transparent algorithms to manage ecosystem members.
