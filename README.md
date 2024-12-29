@@ -28,49 +28,49 @@ The peculiarity of Figure 1 is its depiction of Allen's principles as defined in
 ![Allen Principles Schema (Local)](Images/Allen_principles/Allen_principles_schema.png)
 *Figure 1: SSI properties mapped within the general SSI process flow.[^allen]*
 
-#### 1.1.1 Related works
-
-Several works by academics and industry experts have redefined and extended the original principles of Self-Sovereign Identity. Past contributions have sought to define a comprehensive set of principles for SSI. We collected works published between 2016, the year the term SSI was coined, and 2024. Some works extend the original list of principles, while others contribute through the categorization of these principles. Table 1 summarizes key contributions from the literature and their corresponding properties. Each row represents an SSI property, while the columns list the authors. Differences in naming conventions can be observed across different authors.
-
-[Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html) *Comparison of identified properties in various sources.*
-
 ### 1.2 Analysis
 
-Table 1 demonstrates significant disagreement regarding the properties of SSI. Despite being similar to the work in [^cucko], our contribution departs from it by incorporating a broader literature review (x5 the refereces from [^cucko]) and employing a clustering algorithm to achieve consensus on properties and classification. Specifically, our study analyzes and classifies 51 properties from 18 works to identify a subset of highly cited principles.
+Past tentative to converge to a list of SSI principles demonstrated significant disagreement regarding the properties of SSI. Despite being similar to the work in [^cucko], our contribution departs from it by incorporating a broader literature review (x5 the refereces from [^cucko]) and employing a clustering algorithm to achieve consensus on properties and classification., Furthermore, our objective is not to classify SSI principles, rather it is to set the ground for an assessment model of identity solutions. To the best of our knowlegde, this is the first time this type of exercise is done in a paper from academia. 
 
-Additionally, a questionnaire addresses three key objectives: I) Investigate the identified SSI properties and evaluate their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties.
+Specifically, our study analyzes and classifies 51 properties from 18 works to identify a subset of highly cited principles.Additionally, a questionnaire addresses three key objectives: I) Investigate the identified SSI properties and evaluate their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties.
 
 Our study gathers insights from experts in the Decentralized and Self-Sovereign Identity Management field, spanning diverse roles and domains, including Computer Security and AI. These experts were interviewed during the ARES Conference 2024, held from July 29 to August 2 in Vienna, Austria.
 
-##### 1.2.1 Methodology
+#### 1.2.1 Methodology
 
 A systematic review offers a structured, comprehensive overview of a research field through the following steps.[^lepore][^badzek][^cushman]
 
-*1. Defining research questions.* We formulated research question RQ1, as introduced in the [introduction](#a-model-to-assess-digital-identity-solutions). To address *RQ1* (the focus of [Section 1](#1-self-sovereign-identity)), we generated the following search strings based on relevant keywords:
+*1. Defining research questions.* We formulated research question RQ1 to explore past works on SSI principles, as introduced in the [introduction](#a-model-to-assess-digital-identity-solutions). To address RQ1 (the focus of [Section 1](#1-self-sovereign-identity)),  we generated the following search strings based on relevant keywords:
 
 - *SSI AND principles*
 - *Self-Sovereign Identity AND properties*
 - *SSI AND definition*
 
-Keywords were refined to optimize search results, and wildcards were avoided for clarity (e.g., "SSI" and "Self-Sovereign Identity").[^lepore]
+Keywords were refined to optimize search results and to avoid wildcards (e.g., "SSI" and "Self-Sovereign Identity").[^lepore] Keywords were shuffled to gather more results.
 
-*2. Searching.* The search strings were used to identify articles containing relevant keywords in titles and abstracts across multiple academic databases, including ACM, ArXiv, IEEE Xplore, Scopus, and meta-search engines like Google Scholar. This yielded 47 initial results.
+*2. Searching.* The search strings were used to identify articles containing relevant keywords in titles and abstracts across multiple academic databases, including ACM, ArXiv, IEEE Xplore, Scopus, and meta-search engines like Google Scholar. This process yielded 47 initial results.
 
-*3. Screening.* Abstracts and conclusions were screened to exclude irrelevant results based on inclusion/exclusion criteria such as publication year, originality, and if they presented a taxonomy of SSI principles. Duplicate results were removed, resulting in 18 articles containing a total of 51 features for SSI. Despite being an emerging topic, the selection represents a significant portion of the literature on SSI principles from 2016 to 2024.
+*3. Screening.* Abstracts and conclusions were screened to exclude irrelevant results based on inclusion/exclusion criteria such as publication year, originality, and whether they presented a taxonomy of SSI principles. Duplicate results were removed, resulting in 18 articles for SSI. Despite being an emerging topic, the selection represents a significant portion of the literature on SSI principles from 2016 to 2024.
 
-*4. Classification.* The selected articles were analyzed to extract properties and their definitions as presented by the authors. We gathered results in a table containing the papers and corresponding features of SSI.
+*4. Classification.* The selected articles were analyzed to extract properties and their definitions as presented by the authors. We compiled the results into a table containing the papers and corresponding features of SSI.
 
-*5. Data extraction.* Some properties shared similar meanings but were labeled differently across papers. Properties with same meanings were combined, while other eliminated using heuristics.
+*5. Data extraction.* Some properties shared similar meanings but had different labels across papers. Properties with identical meanings were combined, while others were eliminated using heuristics.
 
-*6. Clustering.* The identified properties were clustered based on their labels testing methods such as K-Means, Greedy, and Graph Theory.
+*6. Clustering.* The identified properties were clustered based on their labels, testing methods such as K-Means, Greedy, and Graph Theory.
 
 *7. Refining.* To validate the selection process and finalize the list of properties (used in the questionnaire), expert interviews were conducted. These discussions reviewed and justified the inclusion or exclusion of specific properties.
 
 *8. Final list.* The final step involved creating a definitive list of properties, accompanied by precise definitions for each.
 
-#### 1.3 Results
+Steps 1 and 2 are self-explanatory. In the next section, we describe the outcome of the remaining steps, starting from step 3 (Classification) onward. Step 3 also serves as the foundation for Related Works.
 
-Table 1 shows the results of the analysis, including the similarities and differences in naming between defined sets of properties. Each Table row represents one property according to the similarity of the collected definitions, while differences in naming can be observed between different authors.
+#### 1.2.2 Related works
+
+Several works by academics and industry experts have redefined and extended the original principles of Self-Sovereign Identity. Past contributions have sought to define a comprehensive set of principles for SSI. We collected works published between 2016, the year the term SSI was coined, and 2024. Some works extend the original list of principles, while others contribute through the categorization of these principles. Table 1 summarizes key contributions from the literature and their corresponding properties. Each row represents an SSI property, while the columns list the authors. Differences in naming conventions can be observed across different authors.
+
+[Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html) *Comparison of identified properties in various sources.*
+
+### 1.3 Classification
 
 [Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_classification.html) *Comparison of identified properties and correspondiing taxonomy from various sources.*
 
@@ -101,7 +101,6 @@ Tra gli altri principi, Cost è il più citato. 6 volte
 6
 1
 1
-1
 2
 1
 1
@@ -114,7 +113,7 @@ Tra gli altri principi, Cost è il più citato. 6 volte
 5
 5
 3
-Media 2.1 per i 26 principi rimanenti. 12%
+Media 2.1 per i 25 principi rimanenti. 9%
 Solo 4 principi con 5 o 6 citazioni in papers. Nessuno 4, la maggiorparte 1, 2 e pochi 3.
 
 # References
