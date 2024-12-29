@@ -42,27 +42,70 @@ A systematic review offers a structured, comprehensive overview of a research fi
 
 Keywords were refined to optimize search results, and wildcards were avoided for clarity (e.g., "SSI" and "Self-Sovereign Identity").[^lepore]
 
-*2. Searching.* The search strings were used to identify articles containing relevant keywords in titles and abstracts across multiple academic databases, including ACM, ArXiv, IEEE Xplore, Scopus, and meta-search engines like Google Scholar. This yielded 250 initial results.
+*2. Searching.* The search strings were used to identify articles containing relevant keywords in titles and abstracts across multiple academic databases, including ACM, ArXiv, IEEE Xplore, Scopus, and meta-search engines like Google Scholar. This yielded 47 initial results.
 
-*3. Screening.* Abstracts and conclusions were screened to exclude irrelevant results based on inclusion/exclusion criteria such as subject relevance (SSI), publication year, originality, and proofs-of-concept. Duplicate results were removed, resulting in 47 articles selected for full review. These articles specifically addressed SSI principles. Despite being an emerging topic, the selection represents a significant portion of the literature from 2016 to 2024.
+*3. Screening.* Abstracts and conclusions were screened to exclude irrelevant results based on inclusion/exclusion criteria such as publication year, originality, and if they presented a taxonomy of SSI principles. Duplicate results were removed, resulting in 18 articles containing a total of 51 features for SSI. Despite being an emerging topic, the selection represents a significant portion of the literature on SSI principles from 2016 to 2024.
 
-*4. Classification.* The selected articles were analyzed to extract properties and their definitions as presented by the authors. This process identified 18 papers containing a total of 51 distinct properties of SSI.
+*4. Classification.* The selected articles were analyzed to extract properties and their definitions as presented by the authors. We gathered results in a table containing the papers and corresponding features of SSI.
 
-*5. Data extraction.* Among the 51 properties, many shared similar meanings but were labeled differently across papers. Properties with identical names and definitions were grouped, while heuristics were applied to identify the most commonly cited properties. Only those referenced in at least 30% of the papers were retained as final candidates.
+*5. Data extraction.* Some properties shared similar meanings but were labeled differently across papers. Properties with same meanings were combined, while other eliminated using heuristics.
 
-*6. Refining.* The identified properties were clustered based on their labels using a clustering algorithm, such as K-Means, to group related concepts systematically.
+*6. Clustering.* The identified properties were clustered based on their labels testing methods such as K-Means, Greedy, and Graph Theory.
 
-*7. Eliminating and finalizing properties.* To validate the selection process and finalize the list of properties (used in the questionnaire), expert interviews were conducted. These discussions reviewed and justified the inclusion or exclusion of specific properties.
+*7. Refining.* To validate the selection process and finalize the list of properties (used in the questionnaire), expert interviews were conducted. These discussions reviewed and justified the inclusion or exclusion of specific properties.
 
-*8. Designing.* The final step involved creating a definitive list of properties, accompanied by precise definitions for each.
+*8. Final list.* The final step involved creating a definitive list of properties, accompanied by precise definitions for each.
 
-##### 1.2.2 Results
+#### 1.3 Results
 
 Table 1 shows the results of the analysis, including the similarities and differences in naming between defined sets of properties. Each Table row represents one property according to the similarity of the collected definitions, while differences in naming can be observed between different authors.
 
 [Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html) *Comparison of identified properties in various sources.*
 
-[Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_classification.html)*Comparison of identified properties and correspondiing taxonomy from various sources.*
+[Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_classification.html) *Comparison of identified properties and correspondiing taxonomy from various sources.*
+
+10
+15
+14
+12
+13
+13
+13
+13
+16
+16
+La media è 13.5 out of 18: 75%
+Minimization e protection i più citati, seguiti da Control. Existence è il meno citato.
+
+Tra gli altri principi, Cost è il più citato. 6 volte
+2
+1
+1
+3
+2
+1
+1
+2
+2
+5
+6
+1
+1
+1
+2
+1
+1
+1
+1
+2
+3
+1
+1
+5
+5
+3
+Media 2.1 per i 26 principi rimanenti. 12%
+Solo 4 principi con 5 o 6 citazioni in papers. Nessuno 4, la maggiorparte 1, 2 e pochi 3.
 
 # References
 
@@ -79,7 +122,3 @@ Table 1 shows the results of the analysis, including the similarities and differ
 [^badzek]: Badzek, Laurie, et al. "Ethical, legal, and social issues in the translation of genomics into health care." Journal of Nursing Scholarship 45.1 (2013): 15-24.
 
 [^cushman]: Cushman, Reid, et al. "Ethical, legal and social issues for personal health records and applications." Journal of biomedical informatics 43.5 (2010): S51-S55.
-
-[16] Stokkink, Quinten, and Johan Pouwelse. "Deployment of a blockchain-based self-sovereign identity." 2018 IEEE international conference on Internet of Things (iThings) and IEEE green computing and communications (GreenCom) and IEEE cyber, physical and social computing (CPSCom) and IEEE smart data (SmartData). IEEE, 2018.
-
-[17] Čučko, Špela, et al. "Towards the classification of self-sovereign identity properties." IEEE access 10 (2022): 88306-88329.
