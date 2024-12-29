@@ -1,34 +1,46 @@
 # A Model To Assess Digital Identity Solutions
 
-The purpose of this work is to extend the original contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI) [^lepore] by addressing the following research questions:
+The purpose of this work is to extend the contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI) [^lepore] by addressing the following research questions:
 
-1. *RQ1: What are the principles of Self-Sovereign Identity?*
-2. *RQ2: Can we assess any SSI system based on these principles?*
+*1. RQ1: What are the principles of Self-Sovereign Identity?*
+*2. RQ2: Can we use these principles to assess any SSI system?*
 
-[Section 1](#1-self-sovereign-identity) addresses RQ1 and provides a comprehensive definition of Self-Sovereign Identity, while Section 2 introduces the model for assessing e-Identity solutions.
+[Section 1](#1-self-sovereign-identity) proposes a solid definition of Self-Sovereign Identity and addresses RQ1, while Section 2 leverages this definition to propose a model for assessing e-Identity solutions. Finally, Section 3 delves into a testing stage where the model is tested against existing solutions in the field of identity.
+
+Besides taking inspiration from past exercises that define SSI principles [^allen][^ferdous][^toip][^toth][^cucko], this work departs from past contributions because it is not limited to defining SSI but is instrumental in exploiting a model to assess identity solutions. On the other hand, other SSI-based assessments fail to describe the methodology [^pava] or lack precision in their analysis [^bokkem][^omar].
+
+Additionally, we make our list of principles consistent through interviews with experts participating at the ARES conference 2024.
+
+Hereafter, we use the term principles for SSI interchangeably with the terms property and features. For the sake of clarity, they will all refer to the same concept. We often abbreviate the term Self-Sovereign Identity as SSI.
 
 ## 1. Self-Sovereign Identity 
 
-Self-Sovereign Identity (SSI) represents a new concept to manage digital identities, aiming to empower individuals by giving them control over their identity information.[^lepore] SSI is defined as a list of principles that extends the  original Laws of Identity.[^cameron]
+Self-Sovereign Identity (SSI) is a novel approach that aims to provide users with an identity they can control. However, the concept also encompasses additional principles. The first to propose a list of principles extending the original Laws of Identity[^cameron] was Christopher Allen.[^allen]
 
-### 1. Defintion of Self-Sovereign Identity
+Allen outlined ten guiding principles for SSI, laying the foundation for its implementation. He stated that the key properties of an SSI system are Existence, Control, Access, Transparency, Persistence, Portability, Interoperability, Consent, Minimalization, and Protection.[^allen]
 
-Allen has proposed ten guiding principles of the SSI, laying out the foundation for implementation of the concept, stating that the key properties of the SSI system are *Existence, Control, Access, Transparency, Persistence, Portability, Interoperability, Consent, Minimalization, and Protection*.[^allen]
+### 1.1 Backgournd
 
-#### 1.1 Related works
+Figure 1 illustrates the data flow of identity information and key roles within the general SSI model. Data moves from left to right, where issuers provide data to holders, who collect personal information within their wallet components. To access a service, users present a combination of assertions as proof of their identity to a verifier. Roles are not static, and each entity can become an issuer or verifier depending on the context. Sometimes the general model is complemented with a verifiable data registry, such as a blockchain or a registering CA, as depicted on the right-hand side of Figure 1.
 
-The schema below illustrates the data processing flow and the key roles within the general SSI model. It builds upon previous studies from the literature and incorporates the authentication process between users and verifiers (Relying Parties), as outlined in the Architecture and Reference Framework v1.4.1 of the EUDI Wallet.[^cucko][^ARF]
-
-The left side of the schema lacks specific details regarding wallet instances and stages, while the right side depicts the data flow associated with the request and presentation of assertions. The principles *Transparency* and *Persistence* are outside the schema,[^cucko] while the communication identified by letters A,B,C,D are optional for many solutions.
+The peculiarity of Figure 1 is its depiction of Allen's principles as defined in a classification of SSI properties.[^cucko] On the other hand, the communication flow on the right combines optional information through letters A, B, C, D directly from the Architecture and Reference Framework v1.4.1 of the EUDI Wallet solution.[^ARF] Occasionally, instead of a registering authority, a different type of trust anchor can be used for authentication.
 
 ![Allen Principles Schema (Local)](Images/Allen_principles/Allen_principles_schema.png)
 *Figure 1: SSI properties mapped within the general SSI process flow.[^allen]*
 
-#### 1.2 Analysis
+#### 1.1.1 Related works
 
-Several works by academics and industry experts have redefined and extended the original principles of Self-Sovereign Identity (SSI). Unlike earlier studies that primarily utilized, critiqued, or extended Allen’s principles, our research analyzed and classified 51 properties identified in 18 works from the literature. Using heuristics, we converged on a shared set of properties and organized them based on prior grouping exercises described in the literature. To achieve this, we tested three clustering methods: Greedy, K-Means, and Graph Theory. This process resulted in a subset of highly relevant properties and an objective clustering of principles.
+Several works by academics and industry experts have redefined and extended the original principles of Self-Sovereign Identity. Past contributions have sought to define a comprehensive set of principles for SSI. We collected works published between 2016, the year the term SSI was coined, and 2024. Some works extend the original list of principles, while others contribute through the categorization of these principles. Table 1 summarizes key contributions from the literature and their corresponding properties. Each row represents an SSI property, while the columns list the authors. Differences in naming conventions can be observed across different authors.
 
-We further refined the properties and conducted a questionnaire to address three key objectives I) Investigate the identified SSI properties and evaluate their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties. Our study gathered insights from experts in Decentralized and Self-Sovereign Identity Management across diverse roles and domains, including Computer Security and AI. These experts were interviewed during the ARES conference 2024, held from July 29 to August 2, 2024 in Vienna, Austria.
+[Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html) *Comparison of identified properties in various sources.*
+
+### 1.2 Analysis
+
+Table 1 demonstrates significant disagreement regarding the properties of SSI. Despite being similar to the work in [^cucko], our contribution departs from it by incorporating a broader literature review (x5 the refereces from [^cucko]) and employing a clustering algorithm to achieve consensus on properties and classification. Specifically, our study analyzes and classifies 51 properties from 18 works to identify a subset of highly cited principles.
+
+Additionally, a questionnaire addresses three key objectives: I) Investigate the identified SSI properties and evaluate their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties.
+
+Our study gathers insights from experts in the Decentralized and Self-Sovereign Identity Management field, spanning diverse roles and domains, including Computer Security and AI. These experts were interviewed during the ARES Conference 2024, held from July 29 to August 2 in Vienna, Austria.
 
 ##### 1.2.1 Methodology
 
@@ -59,8 +71,6 @@ Keywords were refined to optimize search results, and wildcards were avoided for
 #### 1.3 Results
 
 Table 1 shows the results of the analysis, including the similarities and differences in naming between defined sets of properties. Each Table row represents one property according to the similarity of the collected definitions, while differences in naming can be observed between different authors.
-
-[Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html) *Comparison of identified properties in various sources.*
 
 [Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_classification.html) *Comparison of identified properties and correspondiing taxonomy from various sources.*
 
@@ -122,3 +132,15 @@ Solo 4 principi con 5 o 6 citazioni in papers. Nessuno 4, la maggiorparte 1, 2 e
 [^badzek]: Badzek, Laurie, et al. "Ethical, legal, and social issues in the translation of genomics into health care." Journal of Nursing Scholarship 45.1 (2013): 15-24.
 
 [^cushman]: Cushman, Reid, et al. "Ethical, legal and social issues for personal health records and applications." Journal of biomedical informatics 43.5 (2010): S51-S55.
+
+[^toth]: Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27. 
+
+[^toip]: Trust Over IP Foundation. Principles of self-sovereign identity (ssi). https://trustoverip.org/wp-content/uploads/2021/10/ ToIP-Principles-of-SSI.pdf, 2024. Accessed: 2024-12-24 
+
+[^ferdous]: Ferdous, Md Sadek, Farida Chowdhury, and Madini O. Alassafi. "In search of self-sovereign identity leveraging blockchain technology." IEEE access 7 (2019): 103059-103079.
+
+[^pava]: Pava-Díaz, Roberto A., Jesús Gil-Ruiz, and Danilo A. López-Sarmiento. "Self-sovereign identity on the blockchain: contextual analysis and quantification of SSI principles implementation." Frontiers in Blockchain 7 (2024): 1443362.
+
+[^bokkem]: Van Bokkem, Dirk, et al. "Self-sovereign identity solutions: The necessity of blockchain technology." arXiv preprint arXiv:1904.12816 (2019).
+
+[^omar]: Dib, Omar, and Baha Rababah. "Decentralized identity systems: Architecture, challenges, solutions and future directions." Annals of Emerging Technologies in Computing (AETiC) 4.5 (2020): 19-40.
