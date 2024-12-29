@@ -30,7 +30,7 @@ The peculiarity of Figure 1 is its depiction of Allen's principles as defined in
 
 ### 1.2 Analysis
 
-Past tentative to converge to a list of SSI principles demonstrated significant disagreement regarding the properties of SSI. Despite being similar to the work in [^cucko], our contribution departs from it by incorporating a broader literature review (x5 the refereces from [^cucko]) and employing a clustering algorithm to achieve consensus on properties and classification., Furthermore, our objective is not to classify SSI principles, rather it is to set the ground for an assessment model of identity solutions. To the best of our knowlegde, this is the first time this type of exercise is done in a paper from academia. 
+Past tentative to converge to a list of SSI principles demonstrated significant disagreement regarding the properties of SSI. Our contribution departs from previous works[^cucko] as it incorporates a broader literature review (x5 the references of [^cucko]) and a clustering algorithm to achieve consensus on properties and their classification. Based on our literature review, this is the first time this type of exercise has been done in a paper from academia.
 
 Specifically, our study analyzes and classifies 51 properties from 18 works to identify a subset of highly cited principles.Additionally, a questionnaire addresses three key objectives: I) Investigate the identified SSI properties and evaluate their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties.
 
@@ -48,13 +48,13 @@ A systematic review offers a structured, comprehensive overview of a research fi
 
 Keywords were refined to optimize search results and to avoid wildcards (e.g., "SSI" and "Self-Sovereign Identity").[^lepore] Keywords were shuffled to gather more results.
 
-*2. Searching.* The search strings were used to identify articles containing relevant keywords in titles and abstracts across multiple academic databases, including ACM, ArXiv, IEEE Xplore, Scopus, and meta-search engines like Google Scholar. This process yielded 47 initial results.
+*2. Searching.* The search strings were used to identify articles containing relevant keywords in titles and abstracts across multiple academic databases, including ACM, ArXiv, IEEE Xplore, Scopus, and the meta-search engine of Google Scholar. This process yielded 47 initial results.
 
 *3. Screening.* Abstracts and conclusions were screened to exclude irrelevant results based on inclusion/exclusion criteria such as publication year, originality, and whether they presented a taxonomy of SSI principles. Duplicate results were removed, resulting in 18 articles for SSI. Despite being an emerging topic, the selection represents a significant portion of the literature on SSI principles from 2016 to 2024.
 
-*4. Classification.* The selected articles were analyzed to extract properties and their definitions as presented by the authors. We compiled the results into a table containing the papers and corresponding features of SSI.
+*4. Recording of properties.* The selected articles were analyzed to extract properties and their definitions as presented by the authors. We compiled the results into a table containing the papers and corresponding features of SSI.
 
-*5. Data extraction.* Some properties shared similar meanings but had different labels across papers. Properties with identical meanings were combined, while others were eliminated using heuristics.
+*5. Comparison of properties.* Some properties shared similar meanings but had different labels across papers. Properties with identical meanings were combined, while others were eliminated using heuristics.
 
 *6. Clustering.* The identified properties were clustered based on their labels, testing methods such as K-Means, Greedy, and Graph Theory.
 
@@ -62,18 +62,19 @@ Keywords were refined to optimize search results and to avoid wildcards (e.g., "
 
 *8. Final list.* The final step involved creating a definitive list of properties, accompanied by precise definitions for each.
 
-Steps 1 and 2 are self-explanatory. In the next section, we describe the outcome of the remaining steps, starting from step 3 (Classification) onward. Step 3 also serves as the foundation for Related Works.
+Steps 1 and 3 are instrumental in reaching the Classification step, which may also serve to raise awareness of past works from the literature. In the following section, we detail the results from steps 4 to 8.
 
-#### 1.2.2 Related works
+#### 1.2.2 Recording of properties
 
-Several works by academics and industry experts have redefined and extended the original principles of Self-Sovereign Identity. Past contributions have sought to define a comprehensive set of principles for SSI. We collected works published between 2016, the year the term SSI was coined, and 2024. Some works extend the original list of principles, while others contribute through the categorization of these principles. Table 1 summarizes key contributions from the literature and their corresponding properties. Each row represents an SSI property, while the columns list the authors. Differences in naming conventions can be observed across different authors.
+Several works by academics and industry experts have redefined and extended the original principles of Allen in the tentative to converge to a comprehensive list of principles for SSI. We collected 18 notorious works published between 2016 (the year the term SSI was coined) and 2024. Table 1 summarizes their key contributions. Each row represents an SSI property, while columns list the authors. Differences in naming conventions can be observed across different authors.
 
 [Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html) *Comparison of identified properties in various sources.*
 
-### 1.3 Classification
+#### 1.2.3 Classification
 
 [Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_classification.html) *Comparison of identified properties and correspondiing taxonomy from various sources.*
 
+#### 1.2.4
 10
 15
 14
