@@ -30,15 +30,13 @@ The peculiarity of Figure 1 is its depiction of Allen's principles as defined in
 
 ### 1.2 Related works
 
-Several works by academics and industry experts have redefined and extended Allen's original principles in an attempt to converge on a comprehensive list of principles for SSI. We collected 18 research studies published between 2016 (the year the term 'SSI' was coined) and 2024. Table 1 summarizes their key contributions: each row represents an SSI property, while the columns list the corresponding authors. Differences in naming conventions can be observed across the various authors.
-
-[Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles.html) *Comparison of identified properties in various sources.*
+Several works by academics and industry experts have redefined and extended Allen's original principles in an attempt to converge on a comprehensive list of principles for SSI. We collected 18 research studies published between 2016 (the year the term 'SSI' was coined) and 2024.
 
 ### 1.3 Analysis
 
 Past tentative to converge to a list of SSI principles demonstrated significant disagreement regarding the properties of SSI. Our contribution departs from previous works[^cucko] as it incorporates a broader literature review (x5 the references of [^cucko]) and a clustering algorithm to achieve consensus on properties and their classification. Based on our literature review, this is the first time this type of exercise has been done in a paper from academia.
 
-Specifically, our study analyzes and classifies 51 properties from 18 works to identify a subset of highly cited principles.Additionally, a questionnaire addresses three key objectives: I) Investigate the identified SSI properties and evaluate their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties.
+Specifically, our study analyzes and classifies 52 properties from 18 works to identify a subset of highly cited principles.Additionally, a questionnaire addresses three key objectives: I) Investigate the identified SSI properties and evaluate their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties.
 
 Our study gathers insights from experts in the Decentralized and Self-Sovereign Identity Management field, spanning diverse roles and domains, including Computer Security and AI. These experts were interviewed during the ARES Conference 2024, held from July 29 to August 2 in Vienna, Austria.
 
@@ -72,9 +70,9 @@ Steps 1 and 3 are instrumental in reaching the Classification step, which may al
 
 #### 1.3.2 Recording of properties
 
-Table 2 presents the information already provided in [Related Works](#12-related-works), with additional details, whenever possible, about the grouping from each article. Differences in naming conventions can be observed among the various authors. Notably, the 18 works describe a total of 51 properties, some of which convey similar meanings.
+Table 1 summarizes their key contributions: each row represents an SSI property, while the columns list the corresponding authors. Differences in naming conventions can be observed across the various authors. Notably, the 18 works describe a total of 52 properties, some of which convey similar meanings.
 
-[Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_classification.html) *Comparison of identified properties and grouping from various sources.*
+[Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles/Principles1.html) *Comparison of identified properties in various sources.*
 
 #### 1.3.3 Comparison of properties.
 
@@ -85,11 +83,18 @@ Differences in naming can be observed between different authors. However, these 
 
 In particular, we used the same approach described in[^cucko], but we renamed Legacy System with Compliance; we merged Usability, Consistency and Accessibility with Consistency and Usability, while linking Recoverability with Usability. This allows us to have an objective analysis of properties that is based on literature.
 
-Table 3 shows the result of combining properties. From this table we notice a significant difference between the original principles from Allen and the extended 28 principles. About the 80% of authors convey to use the principles from Allen, while less than 8% converge on the remaining 28 principles, with only 5 properties above the 25% of share.
+Table 2 shows the result of combining properties. From this table we notice a significant difference between the original principles from Allen and the extended 24 principles. About the 80% of authors convey to use the principles from Allen, while less than 8% converge on the remaining 24 principles, with only 5 properties above the 25% of share.
 
-Thus, our rationale to define principles of SSI move forward to select all principles from Table 3 that are cited by 5 or more authors. The final list contains all principles from Allen extended with 5 new principles as depicted in Figure 2, on the right.
+[Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles/Principles_semplification2.html) *Comparison of identified properties grouping from various sources*
 
-[Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_semplification_2.html) *Revision of Table 2 after combining principles.*
+Thus, our rationale to define a final set of principles of SSI move forward to select all principles from Table 2 that are cited by 5 or more authors. The final list contains all principles from Allen extended with 5 new principles as depicted in Figure 2, on the right.
+
+[Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles/Principles_semplification1.html) *Comparison of identified properties grouping from various sources and final list of properties.*
+
+#### 1.3.4 Clustering
+
+Table 2 presents the information already provided in [Related Works](#12-related-works), with additional details, whenever possible, about the grouping from each article. Differences in naming conventions can be observed among the various authors. 
+
 
 # References
 
