@@ -85,11 +85,11 @@ In particular, we used the same approach described in[^cucko], but we renamed Le
 
 Table 2 shows the result of combining properties. From this table we notice a significant difference between the original principles from Allen and the extended 24 principles. About the 80% of authors convey to use the principles from Allen, while less than 8% converge on the remaining 24 principles, with only 5 properties above the 25% of share.
 
-[Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles/Principles_semplification2.html) *Comparison of identified properties grouping from various sources*
+[Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_semplification/Principles_semplification2.html) *Comparison of identified properties grouping from various sources*
 
 Thus, our rationale to define a final set of principles of SSI move forward to select all principles from Table 2 that are cited by 5 or more authors. The final list contains all principles from Allen extended with 5 new principles as depicted in Figure 2, on the right.
 
-[Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles/Principles_semplification1.html) *Comparison of identified properties grouping from various sources and final list of properties.*
+[Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_semplification/Principles_semplification1.html) *Comparison of identified properties grouping from various sources and final list of properties.*
 
 #### 1.3.4 Clustering
 
