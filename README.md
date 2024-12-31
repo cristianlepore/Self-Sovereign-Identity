@@ -98,7 +98,18 @@ Thus, our rationale to define a final set of principles of SSI move forward to s
 
 #### 1.3.4 Clustering
 
-Table 2 presents the information already provided in [Related Works](#12-related-works), with additional details, whenever possible, about the grouping from each article. Differences in naming conventions can be observed among the various authors. 
+Other than extending Allen's principles of SSI, some works provide a taxonomy of their properties, offering insights into the definition itself. In Table 4, we extend the information previously given in Table 1, detailing each principle in the first column after using the causal loop diagram in Figure 2. Similar to the principles, differences in the naming of the taxonomy can also be observed among various authors.
+
+[Click to view the table 4.](https://cristianlepore.github.io/Self-Sovereign-Identity/Definition/Tables/Principles_classification/Principles_classification1) *The taxonomy of principles provided by various authors.*
+
+Thus, unlike the combination of principles, we cannot rely on past literature contributions to provide our taxonomy. Indeed, all works base their taxonomization of principles on their own interpretations. To avoid subjectivity, we decided to use a clustering technique to base our grouping on what has already been done by other authors. We tested three main methods: 
+
+1) Greedy, which iteratively selects the local optimal solution, meaning that for a given category, it minimizes the distance between the categories. Despite its simplicity, the Greedy algorithm does not always guarantee a globally optimal solution. In cases where some principles have categories with the same number of instances, it is crucial to minimize the distance between clusters by considering multiple categories.
+
+2) K-Means, which minimizes intra-cluster distance.
+
+3) Finally, we used a graph representation to visually verify the results. 
+
 
 
 # References
