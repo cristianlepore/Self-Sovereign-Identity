@@ -72,24 +72,29 @@ Steps 1 and 3 are instrumental in reaching the Classification step, which may al
 
 Table 1 summarizes their key contributions: each row represents an SSI property, while the columns list the corresponding authors. Differences in naming conventions can be observed across the various authors. Notably, the 18 works describe a total of 52 properties, some of which convey similar meanings.
 
-[Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles/Principles1.html) *Comparison of identified properties in various sources.*
+[Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/Definition/Tables/Principles/Principles1.html) *Comparison of identified properties in various sources.*
 
 #### 1.3.3 Comparison of properties.
 
 Differences in naming can be observed between different authors. However, these properties often convey the same meaning. Consequently, the following properties were combined: (i) Existence and Representation, (ii) Ownership and Control, (iii) Access and Availability, (iv) Security and Protection, (v) Privacy and Minimal Disclosure, (vi) Decentralization and Autonomy, (vii) Verifiability and Authenticity, and (viii) Usability and Consistency. On the other hand, the properties Equity and Inclusion, as well as Recoverability, were eliminated. Thus, our rationale is based on previous works that combine these properties to create a classification of SSI principles. Figure 2 illustrates the SSI properties causal loop diagram, which shows the merging of properties across different authors.
 
-![Casual Loop Diagram Properties (Local)](/Images/Casual_loop_diagram/)
+![Casual Loop Diagram Properties (Local)](/Definition/Diagram/Casual_loop_diagram.png)
 *Figure 2: Casual loop diagram of the set of SSI properties, defined by different authors on the left. The final set of properties on the right.*
 
 In particular, we used the same approach described in[^cucko], but we renamed Legacy System with Compliance; we merged Usability, Consistency and Accessibility with Consistency and Usability, while linking Recoverability with Usability. This allows us to have an objective analysis of properties that is based on literature.
 
-Table 2 shows the result of combining properties. From this table we notice a significant difference between the original principles from Allen and the extended 24 principles. About the 80% of authors convey to use the principles from Allen, while less than 8% converge on the remaining 24 principles, with only 5 properties above the 25% of share.
+Table 2 shows the result of combining properties. From this table we notice a significant difference between the original principles from Allen and the extended 24 principles. The 80% of authors adopt the principles from Allen; on avarage, they share 8 principles of the 10 from the original definition of SSI. Situation slightly change among the remaining 24 extending principles, shared by less than 10% of authors.
 
-[Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_semplification/Principles_semplification2.html) *Comparison of identified properties grouping from various sources*
+[Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/Definition/Tables/Principles_semplification/Principles_semplification2.html) *Comparison of identified properties grouping from various sources*
+
+| **Category**                          | **Adoption Rate** | **Details**                                      |
+|---------------------------------------|-------------------|-------------------------------------------------|
+| Authors adopting Allen's principles   | 80%               | Share an average of 8 out of 10 SSI principles. |
+| Extended principles (24 total)        | < 10%             | Less than 10% of authors share these principles.  |
 
 Thus, our rationale to define a final set of principles of SSI move forward to select all principles from Table 2 that are cited by 5 or more authors. The final list contains all principles from Allen extended with 5 new principles as depicted in Figure 2, on the right.
 
-[Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/Tables/Principles_semplification/Principles_semplification1.html) *Comparison of identified properties grouping from various sources and final list of properties.*
+[Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/Definition/Tables/Principles_semplification/Principles_semplification1.html) *Comparison of identified properties grouping from various sources and final list of properties.*
 
 #### 1.3.4 Clustering
 
