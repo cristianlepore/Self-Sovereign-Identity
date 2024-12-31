@@ -37,7 +37,7 @@ def kmeans_clustering(file_path, n_clusters):
 if __name__ == "__main__":
     # Percorso della cartella Download
     # Settare il percorso corretto per la propria configurazione
-    download_folder = os.path.join(os.path.expanduser("~"), "Downloads/SSI_principles/Definition/Program")
+    download_folder = os.path.join(os.path.expanduser("~"), "Downloads/SSI_principles/Program")
     file_path = os.path.join(download_folder, "Input.csv")
     
     # Numero di cluster (k)
