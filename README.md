@@ -25,7 +25,7 @@ Figure 1 illustrates the data flow of identity information and key roles within 
 
 The peculiarity of Figure 1 is its depiction of Allen's principles as defined in a classification of SSI properties.[^cucko] On the other hand, the communication flow on the right combines optional information through letters A, B, C, D directly from the Architecture and Reference Framework v1.4.1 of the EUDI Wallet solution.[^ARF] Occasionally, instead of a registering authority, a different type of trust anchor can be used for authentication.
 
-![Allen Principles Schema (Local)](Images/Allen_principles/Allen_principles_schema.png)
+![Allen Principles Schema (Local)](/Definition/Images/Allen_principles/Allen_principles_schema.png)
 *Figure 1: SSI properties mapped within the general SSI process flow.[^allen]*
 
 ### 1.2 Related works
