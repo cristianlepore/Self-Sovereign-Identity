@@ -62,7 +62,7 @@ Keywords were refined to optimize search results and to avoid wildcards (e.g., "
 
 *6. Clustering.* The identified properties were clustered based on their labels, testing methods such as K-Means, Greedy, and Graph Theory.
 
-*7. Refining.* To validate the selection process and finalize the list of properties (used in the questionnaire), expert interviews were conducted. These discussions reviewed and justified the inclusion or exclusion of specific properties.
+*7. Expert validation.* To validate the selection process and finalize the list of properties (used in the questionnaire), expert interviews were conducted. These discussions reviewed and justified the inclusion or exclusion of specific properties.
 
 *8. Final list.* The final step involved creating a definitive list of properties, accompanied by precise definitions for each.
 
@@ -78,7 +78,7 @@ Table 1 summarizes their key contributions: each row represents an SSI property,
 
 Differences in naming can be observed between different authors. However, these properties often convey the same meaning. Consequently, the following properties were combined: (i) Existence and Representation, (ii) Ownership and Control, (iii) Access and Availability, (iv) Security and Protection, (v) Privacy and Minimal Disclosure, (vi) Decentralization and Autonomy, (vii) Verifiability and Authenticity, and (viii) Usability and Consistency. On the other hand, the properties Equity and Inclusion, as well as Recoverability, were eliminated. Thus, our rationale is based on previous works that combine these properties to create a classification of SSI principles. Figure 2 illustrates the SSI properties causal loop diagram, which shows the merging of properties across different authors.
 
-![Casual Loop Diagram Properties (Local)](/Definition/Diagram/Casual_loop_diagram.png)
+![Casual Loop Diagram Properties (Local)](/Definition/Images/Casual_loop_diagram/Casual_loop_diagram.png)
 *Figure 2: Casual loop diagram of the set of SSI properties, defined by different authors on the left. The final set of properties on the right.*
 
 In particular, we used the same approach described in[^cucko], but we renamed Legacy System with Compliance; we merged Usability, Consistency and Accessibility with Consistency and Usability, while linking Recoverability with Usability. This allows us to have an objective analysis of properties that is based on literature.
@@ -109,6 +109,26 @@ Thus, unlike the combination of principles, we cannot rely on past literature co
 2) K-Means, which minimizes intra-cluster distance.
 
 3) Finally, we used a graph representation to visually verify the results. 
+
+Results are reported within different sheets of the excel file located in: https://cristianlepore.github.io/Self-Sovereign-Identity/Definition/Tables/Principles_classification/Summary.xlsx
+
+The three methods lead to the same conslusion. We authomatize the process through the following [python program](https://cristianlepore.github.io/Self-Sovereign-Identity/Definition/Program/Compute_K-Means.py).
+
+- The program reads data from a CSV file 
+`data = pd.read_csv(file_path)`
+- Fills black cells with zeroes 
+`cleaned_data = numerical_columns.fillna(0)`
+- Applies the K-Means clustering 
+`kmeans = KMeans(n_clusters=n_clusters, init='k-means++', random_state=42)`
+For reproducibility of results, we used the same seed to calculate the starting centroid through `random_state=42`
+- Save results. `print(f"Clustering completed! Results saved in: {output_file}")`
+
+We tested several combination of parameter K (number of clustering), to eventually end up with K=5. This value K allows to have a fair number of elements in each cluster. Figure 3 shows the final result. The group's name is based on literature.
+
+![Final list of principles and clustering (Local)](/Definition/Images/Final_list_principles/Final_list_properties.png)
+*Figure 3: The final set of principles and its grouping.*
+
+#### 1.3.5 Expert validation
 
 
 

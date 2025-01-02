@@ -11,7 +11,7 @@ def kmeans_clustering(file_path, n_clusters):
     :param file_path: Percorso al file CSV.
     :param n_clusters: Numero di cluster (k).
     """
-    # Carica i dati dal file CSV
+    # Read and load data
     data = pd.read_csv(file_path)
     
     # Seleziona colonne numeriche
@@ -30,7 +30,7 @@ def kmeans_clustering(file_path, n_clusters):
     # Salva il dataset con i cluster in un nuovo file
     output_file = "Output.csv"
     data.to_csv(output_file, index=False)
-    print(f"Clustering completato! Risultati salvati in: {output_file}")
+    print(f"Clustering completed! Results saved in: {output_file}")
     print(data[['Clustering']].value_counts().sort_index())
 
 # Esegui il programma
