@@ -62,9 +62,11 @@ Keywords were refined to optimize search results and to avoid wildcards (e.g., "
 
 *6. Clustering.* The identified properties were clustered based on their labels, testing methods such as K-Means, Greedy, and Graph Theory.
 
-*7. Expert validation.* To validate the selection process and finalize the list of properties (used in the questionnaire), expert interviews were conducted. These discussions reviewed and justified the inclusion or exclusion of specific properties.
+*7. Refining principles.* We provide the table with the list of principles and corresponding definition. We shorten the definition as much as possible, while trying to keep their essence.
 
-*8. Final list.* The final step involved creating a definitive list of properties, accompanied by precise definitions for each.
+*8. Expert validation.* To validate the selection process and finalize the list of properties (used in the questionnaire), expert interviews were conducted. These discussions reviewed and justified the inclusion or exclusion of specific properties.
+
+*9. Final list.* The final step involved creating a definitive list of properties, accompanied by precise definitions for each.
 
 Steps 1 and 3 are instrumental in reaching the Classification step, which may also serve to raise awareness of past works from the literature. In the following section, we detail the results from steps 4 to 8.
 
@@ -108,7 +110,7 @@ Thus, unlike the combination of principles, we cannot rely on past literature co
 
 2) K-Means, which minimizes intra-cluster distance.
 
-3) Finally, we used a graph representation to visually verify the results. 
+3) Finally, we used a graph representation to visually verify the results.
 
 Results are reported within different sheets of the excel file located in: https://cristianlepore.github.io/Self-Sovereign-Identity/Definition/Tables/Principles_classification/Summary.xlsx
 
@@ -123,16 +125,38 @@ The three methods lead to the same conslusion. We authomatize the process throug
 For reproducibility of results, we used the same seed to calculate the starting centroid through `random_state=42`
 - Save results. `print(f"Clustering completed! Results saved in: {output_file}")`
 
-We tested several combination of parameter K (number of clustering), to eventually end up with K=5. This value K allows to have a fair number of elements in each cluster. Figure 3 shows the final result. The group's name is based on literature.
+We tested several combinations of parameter KK (number of clusters) and eventually settled on K=5K=5. This value of KK ensures a fair number of elements in each cluster. Figure 3 shows the final result. The group's name is based on literature.
 
 ![Final list of principles and clustering (Local)](/Definition/Images/Final_list_principles/Final_list_properties.png)
 *Figure 3: The final set of principles and its grouping.*
 
-#### 1.3.5 Expert validation
+#### 1.3.5 Refining principles
+
+The final set of 15 properties and their definitions can be found in Table 5. The definitions come from the combination of the 18 works from the literature. However, we shorten the definitions as much as possible, maintaining their essence for the questionnaire.
+
+| Property | Definition |
+|----------|----------|
+| Existence and representation   | The ability to establish and recognize an independent existence through the assertion of attributes to services as proof of their identity. Additionally, individuals should be able to creare as many identities as required presenting attributes to service providers.[^lepore] |
+| Consent  | It is the permission individuals give to collect, use, and share their data. Ensuring the user’s explicit consent for the usage of their identity data, including opt-in and opt-out mechanisms. |
+| Ownership and control   | Ensuring users can directly manage their identity, including negotiating their attributes from the agent/wallet.[^cameron] |
+| Persistence    | An identity must persist and being valid over time. Individuals may present the same attributes from multiple sources.[^allen] |
+| Privacy and minimal disclosure    |  Individuals should be able to protect their provicy through selective disclosure and data minimization.[^cucko] |
+| Security and protection    |  Identity should be secured and protected against suppression or invalidation of the list of attributes, IdPs and SPs by any central authority.  |
+| Decentralization and autonomy    | Entities should have autonomy of their identity data without relying on any third party. |
+| Usability and consistency    | Agents and other identity components should be easy to use and their information should be consistent among different domains. Aligning rules, policies, practices across jurisdictions or systems for consistency. |
+| Verifiability and authenticity    |  Entities should be able to reliably verify their identities and must provide proof of the authenticity of their personal data.[^cucko] |
+| Access and availability   | Entities must have unrestricted access to the list of identity providers and service providers. |
+| Cost   | The mechanisms for creating, maintaining, and sustain the system should have a minimal cost. |
+| Interoperability   | Entities must be as widely usable available as possible and not limited to a specific domain. |
+| Portability   | Allowing users to carry and use their digital identity across multiple platforms and contexts. Attributes can be transported to other ecosystems. |
+| Standard   | An e-identity system must use globally recognized standards. |
+| Transparency | Policies, rules, protocols and algorithms to manage the ecosystem members must be transparent. Open policies and rules; transparent algorithms to manage ecosystem members. |
+
+#### 1.3.6 Expert validation
 
 
 
-# References
+## References
 
 [^lepore]: Lepore, Cristian, et al. "A Model For Assessing The Adherence of E-Identity Solutions To Self-Sovereign Identity." World Conference on Information Systems and Technologies. Cham: Springer Nature Switzerland, 2024.
 
