@@ -139,23 +139,24 @@ The final set of 15 properties and their definitions can be found in Table 5. Th
 | Existence and Representation | Entities and individuals must be able to prove their existence through the assertion of attributes to services. Additionally, individuals should be able to create as many identities as they wish.[^lepore] | 
 | Consent | Entities must explicitly agree to the collection, use, and sharing of their identity data, including opt-in and opt-out options for consent. | 
 | Ownership and Control | Entities can directly manage their identity, including control and negotiation of attributes from the agent/wallet to the service provider.[^cameron] | 
+| Security and Protection | Entities should be protected by the use of the most cutting-edge technology. Identity should be secured and protected against suppression or invalidation of the list of attributes, IdPs, and SPs. | 
 | Persistence | Individuals' identities must persist as long as the users wish, remaining valid over that period regardless of the identity provider.[^allen] Hence, individuals may present the same attributes from multiple sources.[^allen] |
 | Privacy and Minimal Disclosure | The privacy of entities should be guaranteed by the use of protocols for the selective disclosure and data minimization of attributes.[^cucko] | 
-| Security and Protection | Entities should be protected by the use of the most cutting-edge technology. Identity should be secured and protected against suppression or invalidation of the list of attributes, IdPs, and SPs. | 
-| Decentralization and Autonomy | Entities should have autonomy over their identity data without relying on any third party. | 
-| Usability and Consistency | Agents and other identity components should be easy to use, and their information should be delivered through rules, policies, and best practices that align across jurisdictions for system consistency. | 
-| Verifiability and Authenticity | Entities should be able to reliably verify their identities and must provide proof of the authenticity of their personal data.[^cucko] | 
 | Access and Availability | Entities must have unrestricted access to the list of identity providers and service providers. | 
-| Cost | The mechanisms for creating, maintaining, and sustaining the system should have minimal costs. | 
-| Interoperability | Entities must be able to interoperate across domains and not be limited to a specific domain. | 
-| Portability | Allowing users to carry and use their digital identity across multiple platforms and contexts. Attributes can be transported to other ecosystems. | 
-| Standard | An e-identity system must use globally recognized standards. | 
 | Transparency | Policies, rules, protocols, and algorithms to manage the ecosystem members must be transparent. |
+| Portability | Allowing users to carry and use their digital identity across multiple platforms and contexts. Attributes can be transported to other ecosystems. |
+| Interoperability | Entities must be able to interoperate across domains and not be limited to a specific domain. | 
+| Cost | The mechanisms for creating, maintaining, and sustaining the system should have minimal costs. | 
+| Standard | An e-identity system must use globally recognized standards. | 
+| Decentralization and Autonomy | Entities should have autonomy over their identity data without relying on any third party. | 
+| Verifiability and Authenticity | Entities should be able to reliably verify users' identities and must provide proof of the authenticity of their personal data.[^cucko] |
+| Usability and Consistency | Agents and other identity components should be easy to use, and their information should be delivered through rules, policies, and best practices that align across jurisdictions for system consistency. | 
 
 #### 1.3.6 Expert validation
 
-![Survey (Local)](/Definition/Survey/Survey.png)
 
+
+![Survey (Local)](/Definition/Survey/Survey.png)
 
 ## References
 
