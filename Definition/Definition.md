@@ -147,29 +147,31 @@ The ARES conference was held in Vienna between July 29th and August 2nd, 2024. I
 
 **Questionnaire structure**
 
-The questionnaire accounts for a total of 37 questions that follow the fifteen principles defined in [Section 1.3.5](#135-refining-principles) along the line. The first part of the questionnaire was instrumental to get familiar with the candidates knowledge of identity. In the second part, questions were instrumental to test the validity of the SSI properties and questions followed the order of our 15 proposed principles. Besides other contributions of the same type attached the list of principles for evaluation, requireing respondents to spend a significant amount of time goind through all the defintiions, we believe that the time spent for the completition of the questionnaire was an active part of the syrvey, and influenced the total percentage of respondents. Hence, we decided to decreese the time to engage of respondents as much as possible by shortening the time to completition in order to increase the number of respondents and decreae the dropout rate. For this reason, we decided to create a question for each principle, and embed the definition of the principles directly within the question, while keeping awarness in the respondents. The [Appendix A](#appendix-a) contains a sample of the part 1 of the questionnaire, while [Appendix B](#appendix-b) contains the second half of the questionnaire.
+The questionnaire accounts for a total of 37 questions that follow the fifteen principles defined in [Section 1.3.5](#135-refining-principles) along the line. The first part of the questionnaire was instrumental to get familiar with the candidates knowledge of identity. In the second part, questions were instrumental to test the validity of the SSI properties and questions followed the order of our 15 proposed principles. Besides other contributions of the same type attached the list of principles for evaluation, requireing respondents to spend a significant amount of time goind through all the defintiions, we believe that the time spent for the completition of the questionnaire was an active part of the syrvey, and influenced the total percentage of respondents. Hence, we decided to decreese the time to engage of respondents as much as possible by shortening the time to completition in order to increase the number of respondents and decreae the dropout rate. For this reason, we decided to create a question for each principle, and embed the definition of the principles directly within the question, while keeping awarness in the respondents. The [Appendix A](#appendix-a) contains a sample of the questionnaire related with the questions about principles of Self.
 
 Each question aims to measure the perceived level of importance of each property with a Likert scale consisting of the following Likert items (i) Irrelevant, (ii) Slightly relevant (Unnecessary), (iii) Moderately relevant (Useful), (iv) Relevant (Desirable), (v) Very relevant (Mandatory).[^joshi] In this question, we were trying to determine if our definition in [Section 1.3.5](#135-refining-principles) were appropriate or not. Thus, the respondents had the opportunity to agree with the proposed definition. 
 
 **Partecipants**
 
-We broadcasted the survey among participants of the International Workshop on Emerging Digital Identities at the ARES conference 2024.[^ares] The track lasted for the entire morning and we collected result at the end of the morning session. Therefore, the questionnaire was sent to experts in the field of Decentralized and Self-Sovereign Identity Management in anonypus fashion, with expertiese from the academia and industry.
+We broadcasted the survey among participants of the International Workshop on Emerging Digital Identities at the ARES conference 2024.[^ares] The track lasted for the entire morning and we collected result at the end of the session. Therefore, the questionnaire was sent to experts in the field of Decentralized and Self-Sovereign Identity Management in anonypus fashion, and aprticipants were from the academia and the industry.
 
-Twenty-seven respondents participated to the survey and completed it in full. For those who completed the survey online, the estimated time for completintion was on avarage of 11.48 minutes, with the quickest to complete the survey in 10.27 minutes and the slowest in 15.02 minutes. 15 participants held an identity wallet in their mobile device; more than 50% of respondents.
+Twenty-seven responded to the survey and completed it in full. While all preferred to stay anonymous, we have collected their responses and analysised results. For those who completed the survey online, the avarage time for completintion was of 11.48 minutes; the fastest completed the survey in 10.27 minutes and the slowest in 15.02 minutes. 15 participants held an identity wallet in their mobile device; more than 50% of respondents. Besides we did not track any of their job positions, roles, and affiliation, we know they were interested in identity and half of them have an identity wallet on their mobile device, even tough 56% of them do not present certificates through a digital wallet. 48% of respondent believe that governments should pay for the design of the wallet, and 59% agree that government should pay for the deployement of the ecosystem of services and infrastructure that surround the identity wallet. 37% agree that identity wallet are a more secure means to authenticate with services, while authentication happens generally through biometrics (fingerprintings and facial recognition). Finally, the majority of respondents would be willing to pay for a wallet rather than receiving advertisements. The full list of this first set of questions and answers is available in the [Appendix B](#appendix-b).
+
+**Limitations**
+
+The study was limited to 15 properties that were included in the questionnaire and presented in Section III-A. It was also limited to the classifications presented in [Section 1.3.5](#135-refining-principles). The number of respondents that took part in the questionnaire (27) presents another limitation. Therefore, a larger number of respondents would mean a greater validity of the results and a greater possibility of generalization. Nevertheless, as the field of SSI is a young research field, we were striving to receive truly experts in it, thus not forcing the increase of respondents by broadening the experts’ scope, although further discussion and research will be needed to be able to offer bulletproof/solid definitions.
+
+**Results and discusison**
+
+
 
 ## Appendix A
 
 A copy of the survey given to respondents at the International Workshop on Emerging Digital Identities at ARES 2024.[^ares]
 
-![Survey part 1](survey/part1/Survey.png)
-
-## Appendix B
-
-A copy of the survey given to respondents at the International Workshop on Emerging Digital Identities at ARES 2024.[^ares]
-
 ![Survey part 2](survey/part2/Survey.png)
 
-## Appendix C
+## Appendix B
 
 Results of the first part of the Survey.
 
