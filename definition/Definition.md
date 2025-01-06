@@ -8,7 +8,7 @@ Allen outlined ten guiding principles for SSI, laying the foundation for its imp
 
 Figure 1 illustrates the data flow of identity information and key roles within the general SSI model. Data moves from left to right, where issuers provide data to holders, who collect personal information within their wallet components. To access a service, users present a combination of assertions as proof of their identity to a verifier. Roles are not static, and each entity can become an issuer or verifier depending on the context. Sometimes the general model is complemented with a verifiable data registry, such as a blockchain or a registering CA, as depicted on the right-hand side of Figure 1.
 
-The peculiarity of Figure 1 is its depiction of Allen's principles as defined in a classification of SSI properties.[^cucko] On the other hand, the communication flow on the right combines optional information through letters A, B, C, D directly from the Architecture and Reference Framework v1.4.1 of the EUDI Wallet solution.[^ARF] Occasionally, instead of a registering authority, a different type of trust anchor can be used for authentication.
+The peculiarity of Figure 1 is its depiction of Allen's principles as defined in a classification of SSI properties[^toip]. On the other hand, the communication flow on the right combines optional information through letters A, B, C, D directly from the Architecture and Reference Framework v1.4.1 of the EUDI Wallet solution.[^ARF] Occasionally, instead of a registering authority, a different type of trust anchor can be used for authentication.
 
 ![Allen Principles Schema (Local)](/definition/images/allen_principles/Allen_principles_schema.png)
 *Figure 1: SSI properties mapped within the general SSI process flow.[^allen]*
@@ -19,7 +19,7 @@ Several works by academics and industry experts have redefined and extended Alle
 
 ## 1.3 Analysis
 
-Past tentative to converge to a list of SSI principles demonstrated significant disagreement regarding the properties of SSI. Our contribution departs from previous works[^cucko] as it incorporates a broader literature review (x5 the references of [^cucko]) and a clustering algorithm to achieve consensus on properties and their classification. Based on our literature review, this is the first time this type of exercise has been done in a paper from academia.
+Past tentative to converge to a list of SSI principles demonstrated significant disagreement regarding the properties of SSI. Our contribution departs from previous works as it incorporates a broader literature review and a clustering algorithm to achieve consensus on properties and their classification. Based on our literature review, this is the first time this type of exercise has been done in a paper from academia.
 
 Specifically, our study analyzes and classifies 52 properties from 18 works to identify a subset of highly cited principles.Additionally, a questionnaire addresses three key objectives: I) Investigate the identified SSI properties and evaluate their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties.
 
@@ -68,7 +68,7 @@ Differences in naming can be observed between different authors. However, these 
 ![Casual Loop Diagram Properties (Local)](/definition/images/casual_loop_diagram/Casual_loop_diagram.png)
 *Figure 2: Casual loop diagram of the set of SSI properties, defined by different authors on the left. The final set of properties on the right.*
 
-In particular, we used the same approach described in[^cucko], but we renamed Legacy System with Compliance; we merged Usability, Consistency and Accessibility with Consistency and Usability, while linking Recoverability with Usability. This allows us to have an objective analysis of properties that is based on literature.
+In particular, we renamed Legacy System with Compliance; we merged Usability, Consistency and Accessibility with Consistency and Usability, while linking Recoverability with Usability. This allows us to have an objective analysis of properties that is based on literature.
 
 Table 2 shows the result of combining properties. From this table we notice a significant difference between the original principles from Allen and the extended 24 principles. The 80% of authors adopt the principles from Allen; on avarage, they share 8 principles of the 10 from the original definition of SSI. Situation slightly change among the remaining 24 extending principles, shared by less than 10% of authors.
 
@@ -126,7 +126,7 @@ The final set of 15 properties and their definitions can be found below. The def
 | Ownership and Control | Entities can directly manage their identity, including control and negotiation of attributes from the agent/wallet to the service provider.[^cameron] | 
 | Security and Protection | Entities should be protected by the use of the most cutting-edge technology. Identity should be secured and protected against suppression or invalidation of the list of attributes, IdPs, and SPs. | 
 | Persistence | Individuals' identities must persist as long as the users wish, remaining valid over that period regardless of the identity provider.[^allen] Hence, individuals may present the same attributes from multiple sources.[^allen] |
-| Privacy and Minimal Disclosure | The privacy of entities should be guaranteed by the use of protocols for the selective disclosure and data minimization of attributes.[^cucko] | 
+| Privacy and Minimal Disclosure | The privacy of entities should be guaranteed by the use of protocols for the selective disclosure and data minimization of attributes. | 
 | Access and Availability | Entities must have unrestricted access to the list of identity providers and service providers. | 
 | Transparency | Policies, rules, protocols, and algorithms to manage the ecosystem members must be transparent. |
 | Portability | Allowing users to carry and use their digital identity across multiple platforms and contexts. Attributes can be transported to other ecosystems. |
@@ -134,42 +134,48 @@ The final set of 15 properties and their definitions can be found below. The def
 | Cost | The mechanisms for creating, maintaining, and sustaining the system should have minimal costs. | 
 | Standard | An e-identity system must use globally recognized standards. | 
 | Decentralization and Autonomy | Entities should have autonomy over their identity data without relying on any third party. | 
-| Verifiability and Authenticity | Entities should be able to reliably verify users' identities and must provide proof of the authenticity of their personal data.[^cucko] |
+| Verifiability and Authenticity | Entities should be able to reliably verify users' identities and must provide proof of the authenticity of their personal data. |
 | Usability and Consistency | Agents and other identity components should be easy to use, and their information should be delivered through rules, policies, and best practices that align across jurisdictions for system consistency. | 
 
 ### 1.3.6 Expert validation
 
-To further validate our results, we conducted a survey on the proposing principles, questioning expertes in the field of decentralized identity and Self-Sovereign Identity. Experts were reached in person at the ARES conference 2024, between July 29th and August 2nd, 2024. The goal was to gain a broader understanding of the perception of the SSI concept (part 1) and its associated properties (part 2). The goal of the survey was to investigate if our identified properties, their naming, and definition, were consistent with the opinion of the respondents. Moreover, the goal was to determine the perceived level of importance of the identified properties, determining the most and least important property. Furthermore, while obtaining experts' opinions, the goal was to identify additional concerns, inconsistencies, misunderstandings, and properties that might have been overlooked.
+To further validate our results, we conducted a survey on the proposed principles, targeting experts in the field of decentralized identity and Self-Sovereign Identity (SSI). The experts were approached in person during the ARES Conference 2024, held from July 29 to August 2, 2024. The survey aimed to gain a broader understanding of the perception of the SSI concept (Part 1) and its associated properties (Part 2). Specifically, the objective was to assess whether the identified properties, along with their naming and definitions, aligned with the opinions of the respondents. Additionally, the survey sought to determine the perceived level of importance of these properties, identifying the most and least critical ones. Moreover, by gathering expert insights, we aimed to uncover any additional concerns, inconsistencies, misunderstandings, or properties that might have been overlooked in our analysis.
 
 **Methodology**
 
-The ARES conference was held in Vienna between July 29th and August 2nd, 2024. It held the International Workshop on Emerging Digital Identities[^ares]. Partecipants in the room were aked to answer a list of 37 questions divided in two parts; the first 20 questions were relevant to get insights in the field of decentralized identity, and were general. The second part aimed to frame our properties defined in [Section 1.3.5](#135-refining-principles). The questionnaire was given on a voluntary basis to the candidates in the room, while a digital version of the same list of quesitons was available through a QR code for those who preferred to answer electronically. The online version was made available to them from a QR code and designed using Microsoft Forms[^microsoft], during the entire lenght of the conference between 29 July 2024 and 2 August 2024.
+The ARES Conference hosted the International Workshop on Emerging Digital Identities[^ares]. Participants in the room were invited to answer a list of 37 questions divided into two sections. The first 20 questions aimed to gather insights into the field of decentralized identity. The second list of questions focused on evaluating the properties defined in [Section 1.3.5](#135-refining-principles). The questionnaire was provided on a voluntary basis to participants in the room, while a digital version of the same questions was accessible via a QR code for those who preferred to respond electronically. The online version, created using Microsoft Forms[^microsoft], was available throughout the entire duration of the conference, from July 29 to August 2, 2024.
 
 **Questionnaire structure**
 
-The questionnaire accounts for a total of 37 questions that follow the fifteen principles defined in [Section 1.3.5](#135-refining-principles) along the line. The first part of the questionnaire was instrumental to get familiar with the candidates knowledge of identity. In the second part, questions were instrumental to test the validity of the SSI properties and questions followed the order of our 15 proposed principles. Besides other contributions of the same type attached the list of principles for evaluation, requireing respondents to spend a significant amount of time goind through all the defintiions, we believe that the time spent for the completition of the questionnaire was an active part of the syrvey, and influenced the total percentage of respondents. Hence, we decided to decreese the time to engage of respondents as much as possible by shortening the time to completition in order to increase the number of respondents and decreae the dropout rate. For this reason, we decided to create a question for each principle, and embed the definition of the principles directly within the question, while keeping awarness in the respondents. The [Appendix A](#appendix-a) contains a sample of the questionnaire related with the questions about principles of Self.
+The first part of the questionnaire aimed to familiarize participants with the candidates' knowledge of identity. In the second part, the questions were designed to validate the SSI properties, following the order of the 15 proposed principles. While similar contributions often required respondents to invest significant time reviewing definitions alongside the list of principles for evaluation, we recognized that the time spent completing the questionnaire was an active component of the survey and could affect the overall response rate. To minimize the time burden on respondents and reduce dropout rates, we shortened the questionnaire's completion time. This was achieved by creating a single question for each principle and embedding the principle's definition directly within the question, maintaining respondent awareness throughout the process. [Appendix A](#appendix-a) contains a sample of the questionnaire related to the principles of Self.
 
-Each question aims to measure the perceived level of importance of each property with a Likert scale consisting of the following Likert items (i) Irrelevant, (ii) Slightly relevant (Unnecessary), (iii) Moderately relevant (Useful), (iv) Relevant (Desirable), (v) Very relevant (Mandatory).[^joshi] In this question, we were trying to determine if our definition in [Section 1.3.5](#135-refining-principles) were appropriate or not. Thus, the respondents had the opportunity to agree with the proposed definition. 
+Each question was designed to measure the perceived importance of each property using a Likert scale with the following items: (i) Irrelevant, (ii) Slightly Relevant (Unnecessary), (iii) Moderately Relevant (Useful), (iv) Relevant (Desirable), and (v) Very Relevant (Mandatory).[^joshi] These questions also aimed to evaluate whether our definitions in [Section 1.3.5](#135-refining-principles) were appropriate. Respondents were given the opportunity to express their agreement with the proposed definitions.
 
 **Partecipants**
 
-We broadcasted the survey among participants of the International Workshop on Emerging Digital Identities at the ARES conference 2024.[^ares] The track lasted for the entire morning and we collected result at the end of the session. Therefore, the questionnaire was sent to experts in the field of Decentralized and Self-Sovereign Identity Management in anonypus fashion, and aprticipants were from the academia and the industry.
-
-Twenty-seven responded to the survey and completed it in full. While all preferred to stay anonymous, we have collected their responses and analysised results. For those who completed the survey online, the avarage time for completintion was of 11.48 minutes; the fastest completed the survey in 10.27 minutes and the slowest in 15.02 minutes. 15 participants held an identity wallet in their mobile device; more than 50% of respondents. Besides we did not track any of their job positions, roles, and affiliation, we know they were interested in identity and half of them have an identity wallet on their mobile device, even tough 56% of them do not present certificates through a digital wallet. 48% of respondent believe that governments should pay for the design of the wallet, and 59% agree that government should pay for the deployement of the ecosystem of services and infrastructure that surround the identity wallet. 37% agree that identity wallet are a more secure means to authenticate with services, while authentication happens generally through biometrics (fingerprintings and facial recognition). Finally, the majority of respondents would be willing to pay for a wallet rather than receiving advertisements. The full list of this first set of questions and answers is available in the [Appendix B](#appendix-b).
+We broadcasted the survey among participants of the International Workshop on Emerging Digital Identities at the ARES Conference 2024.[^ares] The workshop track lasted the entire morning, and we collected results at the end of the session. The questionnaire was distributed anonymously to experts in the room, including participants from academia and industry. A total of 27 participants responded to the survey and completed it in full. Although all respondents chose to remain anonymous, we collected their responses and analyzed the results. For those who completed the survey online, the average completion time was 11.48 minutes, with the fastest completion recorded at 10.27 minutes and the slowest at 15.02 minutes. Of the respondents, 15 (more than 50%) reported having an identity wallet on their mobile device. While we did not track participants' job positions, roles, or affiliations, we know they were interested in identity-related topics. Despite the high number of respondents with identity wallets, 56% indicated they do not use them to present certificates digitally. Additionally, 48% of respondents believed that governments should fund the design of identity wallets, and 59% agreed that governments should also cover the deployment of the ecosystem of services and infrastructure surrounding identity wallets. Furthermore, 37% of respondents agreed that identity wallets provide a more secure means of authentication with services, where authentication is generally performed using biometrics such as fingerprinting and facial recognition. Finally, the majority of respondents expressed a preference for paying for an identity wallet rather than receiving advertisements. A detailed list of the questions and answers from this first set of the survey is available in [Appendix B](#appendix-b).
 
 **Limitations**
 
-The study was limited to 15 properties that were included in the questionnaire and presented in Section III-A. It was also limited to the classifications presented in [Section 1.3.5](#135-refining-principles). The number of respondents that took part in the questionnaire (27) presents another limitation. Therefore, a larger number of respondents would mean a greater validity of the results and a greater possibility of generalization. Nevertheless, as the field of SSI is a young research field, we were striving to receive truly experts in it, thus not forcing the increase of respondents by broadening the experts’ scope, although further discussion and research will be needed to be able to offer bulletproof/solid definitions.
+The study was limited to the 15 properties included in the questionnaire, as presented in Section III-A, and to the classifications outlined in [Section 1.3.5](#135-refining-principles). Another limitation was the number of respondents (27) who participated in the questionnaire. A larger sample size would enhance the validity of the results and improve the potential for generalization. However, as the field of SSI is still emerging, our focus was on engaging true experts in the domain. We intentionally refrained from broadening the scope of participants to increase the number of respondents. Nevertheless, further discussion and research will be necessary to refine and solidify the definitions, ensuring they are both robust and comprehensive.
 
 **Results and discusison**
 
-[Click to view the table 5.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/part2/Survey.html) *Comparison of identified properties in various sources.*
+Table 5 shows the results of respondend related to the 15 proposed properties and its ranking. For each of row, we calculated the avarage and the standard deviation.
+
+[Click to view the table 5.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/part2/Survey.html) *Ranking of identified properties.*
+
+The figure below shows a breakdown of the votes for each property.
 
 ![Level of importance](survey/part2/LevelOfImportance.png)
+
+The most and least important properties, as well as their intersection, is presented below.
 
 ![Important properties](survey/part2/ImportantProperties.png)
 
 ### 1.3.7 Final list
+
+
 
 ## Appendix A
 
@@ -190,8 +196,6 @@ Results of the first part of the Survey.
 [^cameron]: Cameron, Kim. "The laws of identity." Microsoft Corp 12 (2005): 8-11.
 
 [^allen]: Allen, Christopher. "The path to self-sovereign identity." Life with Alacrity (2016).
-
-[^cucko]: Čučko, Špela, et al. "Towards the classification of self-sovereign identity properties." IEEE access 10 (2022): 88306-88329.
 
 [^ARF]: EUDI Wallet. Architecture and Rererence Framework v 1.4.1 https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.4.0/ Accessed on December 28, 2024.
 
