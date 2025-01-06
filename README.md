@@ -3,6 +3,7 @@
 The purpose of this work is to extend the contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI) [^lepore] by addressing the following research questions:
 
 *1. RQ1: What are the principles of Self-Sovereign Identity?*
+
 *2. RQ2: Can we use these principles to assess any SSI system?*
 
 [Section 1](definition/Definition.md) proposes a definition of Self-Sovereign Identity and addresses RQ1, while [Section 2](model/Model.md) leverages this definition to propose a model for assessing e-identity solutions. Finally, [Section 3](testing/Testing.md) delves into a testing stage where the model is tested against existing solutions in the field of identity.
