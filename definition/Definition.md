@@ -161,7 +161,7 @@ The study was limited to the 15 properties included in the questionnaire, as pre
 
 **Results and discusison**
 
-Table 5 shows the results of respondend related to the 15 proposed properties and its ranking. For each of row, we calculated the avarage and the standard deviation.
+Table 5 shows the results of respondend related to the 15 proposed properties and their ranking based on the avarage and the standard deviation.
 
 [Click to view the table 5.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/part2/Survey.html) *Ranking of identified properties.*
 
@@ -175,7 +175,26 @@ The most and least important properties, as well as their intersection, is prese
 
 ### 1.3.7 Final list
 
+The definitions presented in [Section 1.3.5](#135-refining-principles) were abbreviated as much as possible intentionally, due to their use in the questionnaire. In this Section, we want to enhance them in accordance with the results of the respondents, as we obtained valuable insights from experts in the fields of IdM and SSI, expressing their concerns and possible misunderstandings of an individual property. Below you can find the corretion of properties that have either (i) obtained an avarage level below 3.75 with a high Standard Deviation, or (ii) Have required additional discussion reflecting the obtained results, while other properties are omitted intentionally.  Changes are bold, while the parts that need to be removed are crossed out.
 
+In particular, many of the properties that achieved a low ranking were simplified, and their content narrowed to include a single concept (e.g., Access and Availability, Security and Protection). This does not come with a loss of specificity but rather with a simplified definition. Whenever necessary, we split the property into two properties.
+
+| Property | Definition | Classification |
+|----------|----------|----------|
+| Existence ~~and Representation~~ | **Entities must have an independent existence.** They should be able to create as many identities **as required** and must be able to prove their existence through the assertion of attributes to services. | Controllability |
+| ~~Ownership and~~ Control | **Entities must control their digital identity and corresponding personal data.** They can directly manage their attributes, including control the negotiation of attributes from the agent/wallet to the service provider. | Controllability |
+| Consent | Entities must give deliberate consent for the collection, use, and share of identity data. Additionally, they should be able to ~~opt-in and~~ opt-out for consent **at a later date**. | Controllability |
+| Persistence | ~~Individuals'~~ Identity must persist as long as the users wish, remaining valid over that period regardless of the identity provider. **To achieve this, individuals must be able to self assert attributes as well as receive attributes potentially from multiple sources.** | Security |
+| Security ~~and protection~~ | Entities should be protected by the use of the most cutting-edge technology against suppression or invalidation of the list of attributes, as well as identity providers and service providers. | Security |
+| Privacy **protection**~~and Minimal Disclosure~~ | The privacy of entities should be protected through the use of **technique that allow to minimize the disclosure of personal information**. | Security |
+| Access ~~and Availability~~ | Entities must have unrestricted access to the list of identity providers and service providers. **They must be able to retrieve information about those entities.** | Mobility |
+| Transparency | **The identity system, algorithms,** policies, rules, and protocols to manage the ecosystem members must be **free, open-soure, well-known, and independent of any specific architecture**. | Sustainability | 
+| Portability | **Identity must be portable.** Users must be able to carry and use their digital identity across multiple platforms and multiple jurisdictions. Attributes and architectures must be transportable to other domains and ecosystems. | Sustainability | 
+| Interoperability | Entities must be able to interoperate across domains and not be limited to a specific domain. **Idnetities must be widely usable.** | Sustainability | 
+| Cost | **Entities must be able to performe crucial operation without cost barriers.** Mechanisms for creating, maintaining, and sustaining the system should have minimal or no costs. | Sustainability | 
+| Standard | An e-identity system must use globally recognized standards. | Sustainability |
+| ~~Decentralization and~~ Autonomy | Entities should have autonomy over their identity data without relying on any third party. **They must be the only one being resposible for all operations about their identity.** | Usability | 
+| Verifiability ~~and Authenticity~~ | Entities should be able to reliably verify users' identities and must provide proof of the authenticity of their personal data. | Usability |
 
 ## Appendix A
 
