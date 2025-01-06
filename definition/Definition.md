@@ -117,7 +117,7 @@ We tested several combinations of parameter K (number of clusters) and eventuall
 
 ### 1.3.5 Refining principles
 
-The final set of 15 properties and their definitions can be found in Table 5. The definitions come from the combination of the 18 works from the literature. However, we shorten the definitions as much as possible, maintaining their essence for the questionnaire.
+The final set of 15 properties and their definitions can be found below. The definitions come from the combination of the 18 works from the literature. However, we shorten the definitions as much as possible, maintaining their essence for the questionnaire.
 
 | Property | Definition |
 |----------|----------|
@@ -163,7 +163,13 @@ The study was limited to 15 properties that were included in the questionnaire a
 
 **Results and discusison**
 
+[Click to view the table 5.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/part2/Survey.html) *Comparison of identified properties in various sources.*
 
+![Level of importance](survey/part2/LevelOFImportance.png)
+
+![Important properties](survey/part2/ImportantProperties.png)
+
+### 1.3.7 Final list
 
 ## Appendix A
 
