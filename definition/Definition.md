@@ -165,7 +165,7 @@ The study was limited to 15 properties that were included in the questionnaire a
 
 [Click to view the table 5.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/part2/Survey.html) *Comparison of identified properties in various sources.*
 
-![Level of importance](survey/part2/LevelOFImportance.png)
+![Level of importance](survey/part2/LevelOfImportance.png)
 
 ![Important properties](survey/part2/ImportantProperties.png)
 
