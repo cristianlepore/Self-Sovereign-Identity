@@ -202,6 +202,11 @@ A copy of the survey given to respondents at the International Workshop on Emerg
 
 ![Survey part 2](survey/part2/Survey.png)
 
+As a last thing we position these principles within the same process flow of Figure 1. We used our new definition of principles.
+
+![Allen Principles Schema (Local)](/definition/images/SSI_process_flow/SSI_process_flow_raw.png)
+*SSI properties mapped within the general SSI process flow.[^allen]*
+
 ## Appendix B
 
 Results of the first part of the Survey.
