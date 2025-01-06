@@ -196,16 +196,16 @@ In particular, many of the properties that achieved a low ranking were simplifie
 | ~~Decentralization and~~ Autonomy | Entities should have autonomy over their identity data without relying on any third party. **They must be the only one being resposible for all operations about their identity.** | Usability | 
 | Verifiability ~~and Authenticity~~ | Entities should be able to reliably verify users' identities and must provide proof of the authenticity of their personal data. | Usability |
 
+As a last thing we position these principles within the same process flow of Figure 1. We used our new definition of principles.
+
+![Allen Principles Schema (Local)](/definition/images/SSI_process_flow/SSI_process_flow_raw.png)
+*SSI properties mapped within the general SSI process flow.[^allen]*
+
 ## Appendix A
 
 A copy of the survey given to respondents at the International Workshop on Emerging Digital Identities at ARES 2024.[^ares]
 
 ![Survey part 2](survey/part2/Survey.png)
-
-As a last thing we position these principles within the same process flow of Figure 1. We used our new definition of principles.
-
-![Allen Principles Schema (Local)](/definition/images/SSI_process_flow/SSI_process_flow_raw.png)
-*SSI properties mapped within the general SSI process flow.[^allen]*
 
 ## Appendix B
 
