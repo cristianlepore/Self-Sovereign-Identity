@@ -112,7 +112,7 @@ For reproducibility of results, we used the same seed to calculate the starting 
 
 We tested several combinations of parameter K (number of clusters) and eventually settled on `K=5`. This value of K ensures a fair number of elements in each cluster. Figure 3 shows the final result. The group's name is based on literature.
 
-![Final list of principles and clustering (Local)](/definition/images/Final_list_principles/Final_list_properties.png)
+![Final list of principles and clustering (Local)](/definition/images/final_list_principles/Final_list_properties.png)
 *Figure 3: The final set of principles and its grouping.*
 
 ### 1.3.5 Refining principles
