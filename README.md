@@ -1,6 +1,12 @@
 # A Model To Assess Digital Identity Solutions
 
-The purpose of this work is to extend the contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI) [^lepore] by addressing the following research questions:
+Traditional identity management relied on cryptographic primitives that allowed users to authenticate themselves to their online accounts. Information retrieval was based on a client-server paradigm, which established secure communication between parties. This paradigm remains prevalent in older systems and in other systems where users need to access to multiple accounts and services, requiring each individual to authenticate separately to each service provider. Despite its simplicity, a more efficient architectural approach involves deploying an Identity Provider (IdP) as an intermediary between users and services. The IdP orchestrates access to services and manages authentication across multiple service providers with a single login.
+
+When services and identity providers are loosely decoupled across different domains, federated identity systems emerge to transcend local boundaries, linking entities across domains. The traditional client-server paradigm with secure channel establishment proved inadequate for this task. To address the challenges of loosely coupled entities, protocols were developed in the late 2000s to extend the client-server paradigm, enabling federation between services and identity providers. First came Kerberos, followed by widely adopted protocols such as SAML, OAuth, and OIDC, which remain in use today.
+
+Since 2016, a new approach to identity management has gained traction, emphasizing principles that include individual interactions, their representation in the world, and how others perceive their identity. This paradigm, known as Self-Sovereign Identity (SSI), serves as a blueprint for the next generation of digital identity systems.
+
+However, despite nearly a decade of experimentation with the SSI concept and related technologies, its definition remains elusive. The lack of a clear definition has led to misunderstandings about SSI's role within existing identity models and opened the door to speculation. This work seeks to clarify the qualities of identity management systems and to distinguish between effective and flawed implementations of Self-Sovereign Identity systems. For this purpose, we aim to extend the contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI), previously introduced in [^lepore], by addressing the following research questions:
 
 *1. RQ1: What are the principles of Self-Sovereign Identity?*
 
