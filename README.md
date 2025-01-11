@@ -1,5 +1,7 @@
 # A Model To Assess Digital Identity Solutions
 
+## Introduction
+
 Traditional identity management relied on cryptographic primitives that allowed users to authenticate themselves to their online accounts. Information retrieval was based on a client-server paradigm, which established secure communication between parties. This paradigm remains prevalent in older systems and in other systems where users need to access to multiple accounts and services, requiring each individual to authenticate separately to each service provider. Despite its simplicity, a more efficient architectural approach involves deploying an Identity Provider (IdP) as an intermediary between users and services. The IdP orchestrates access to services and manages authentication across multiple service providers with a single login.
 
 When services and identity providers are loosely decoupled across different domains, federated identity systems emerge to transcend local boundaries, linking entities across domains. The traditional client-server paradigm with secure channel establishment proved inadequate for this task. To address the challenges of loosely coupled entities, protocols were developed in the late 2000s to extend the client-server paradigm, enabling federation between services and identity providers. First came Kerberos, followed by widely adopted protocols such as SAML, OAuth, and OIDC, which remain in use today.
@@ -14,11 +16,9 @@ However, despite nearly a decade of experimentation with the SSI concept and rel
 
 [Section 1](definition/Definition.md) proposes a definition of Self-Sovereign Identity and addresses RQ1, while [Section 2](model/Model.md) leverages this definition to propose a model for assessing e-identity solutions. Finally, [Section 3](testing/Testing.md) delves into a testing stage where the model is tested against existing solutions in the field of identity.
 
-Besides taking inspiration from past exercises that define SSI principles,[^allen][^ferdous][^toip][^toth] this work departs from past contributions because it is not limited to defining SSI but is instrumental in exploiting a model to assess identity solutions. On the other hand, other SSI-based assessments fail to describe the methodology[^pava] or lack precision in their analysis.[^bokkem][^omar] Additionally, we make our list of principles consistent through a questionnaire with experts participating at the ARES conference 2024.
-
-Hereafter, we use the term principles for SSI interchangeably with the terms property and features. For the sake of clarity, they will all refer to the same concept. We often abbreviate the term Self-Sovereign Identity as SSI.
-
 ## Related works
+
+Besides taking inspiration from past exercises that define SSI principles,[^allen][^ferdous][^toip][^toth] this work departs from past contributions because it is not limited to defining SSI but is instrumental in exploiting a model to assess identity solutions. On the other hand, other SSI-based assessments fail to describe the methodology[^pava] or lack precision in their analysis.[^bokkem][^omar] Additionally, we make our list of principles consistent through a questionnaire with experts participating at the ARES conference 2024.
 
 We explored diffrent ways to lift answers for our research questions looking at similar exercises in the field of software projects, food ranking and index of quality of life. We took three examples to ground our work. The first was a method to evaluate Free and Open-Source  Software (FOSS) projects.
 
@@ -31,11 +31,13 @@ Quantitative evaluation is proposed in OpenBRR (Open Business Readiness Rating) 
 
 
 
-## Table of Contents
+## Paper structure
 
 1. [Definition of Self-Sovereign Identity](definition/Definition.md)
 2. [Model to assess e-identity solutions](model/Model.md)
 3. [Testing](testing/Testing.md)
+
+Hereafter, we use the term principles for SSI interchangeably with the terms property and features. For the sake of clarity, they will all refer to the same concept. We often abbreviate the term Self-Sovereign Identity as SSI.
 
 ## References
 
