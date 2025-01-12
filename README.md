@@ -8,28 +8,15 @@ When services and identity providers are loosely decoupled across different doma
 
 Since 2016, a new approach to identity management has gained traction, emphasizing principles that include individual interactions, their representation in the world, and how others perceive their identity. This paradigm, known as Self-Sovereign Identity (SSI), serves as a blueprint for the next generation of digital identity systems.
 
-However, despite nearly a decade of experimentation with the SSI concept and related technologies, its definition remains elusive. The lack of a clear definition has led to misunderstandings about SSI's role within existing identity models and opened the door to speculation. This work seeks to clarify the qualities of identity management systems and to distinguish between effective and flawed implementations of Self-Sovereign Identity systems. For this purpose, we aim to extend the contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI), previously introduced in [^lepore], by addressing the following research questions:
+## Research questions
+
+Despite nearly a decade of experimentation with the SSI concept and related technologies, its definition remains elusive. The lack of a clear definition has led to misunderstandings about SSI's role within existing identity models and opened the door to speculation. This work seeks to clarify the qualities of identity management systems and to distinguish between effective and flawed implementations of Self-Sovereign Identity systems. For this purpose, we aim to extend the contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI), previously introduced in [^lepore], by addressing the following research questions:
 
 *1. RQ1: What are the principles of Self-Sovereign Identity?*
 
 *2. RQ2: Can we use these principles to assess any SSI system?*
 
 [Section 1](definition/Definition.md) proposes a definition of Self-Sovereign Identity and addresses RQ1, while [Section 2](model/Model.md) leverages this definition to propose a model for assessing e-identity solutions. Finally, [Section 3](testing/Testing.md) delves into a testing stage where the model is tested against existing solutions in the field of identity.
-
-## Related works
-
-With respect to RQ1, this work is inspired by past exercises that define SSI principles[^allen][^ferdous][^toip][^toth]. However, we depart from previous contributions because the scope of our analysis is instrumental in developing a model to assess identity solutions based on the promise of user control over information. While this is not the first contribution aimed at assessing the quality of identity systems, other SSI-based assessments have either failed to describe their methodology[^pava], lacked extensive precision in their analysis[^bokkem], or did not explain how they derived the criteria for system analysis[^omar]. We make it clear that our list of principles is consistent with past exercises from the literature. Furthermore, the exercise we conducted is fully replicable, as we employed an objective method to select properties and categorize them. Additionally, a survey was conducted among experts participating in the ARES conference 2024 to refine our results.
-
-On the other hand, concerning RQ2, we explored diffrent ways to lift answers for our research questions by looking at three examples in the field of 1) open source projects, 2) food ranking and 3) index of quality of life.
-
-*Empirical studies on FOSS evaluation.* 
-Several empirical studies have examined the evolution of Free and Open Source Software (FOSS), providing valuable insights into their growth patterns and development dynamics. The work in[^foss] defines general criteria and then solicits these criteria to forge specific ways to evaluate each project. OpenMRS provides a good example for evaluating each criterion for projects on GitHub. Projects on other forges will require different approaches to evaluate many of the criteria. Similarly, the Project Evaluation Rubric uses a score-based system to the same criteria to evaluate Free and open source projects.[^foss_rubric] In a similar way, the[^evaluation_activity] walks through of an evaluation of the Mifos project defining mission critical criteria (primary) and secondary criteria for evaluation, in order to for a project to be considered suitable for student participation.
-
-The Onion model provides a structured view of the FOSS development community, emphasizing the roles and interactions within the community.[^onion] The evaluation of Free and Open Source Software (FOSS) using the Onion model provides a comprehensive understanding of the community-driven development process. The blog on[^foss_project] describes methods to evaluate the contribution of developers on free and open code.
-
-Quantitative evaluation is proposed in OpenBRR (Open Business Readiness Rating) as an evaluation method proposed with the goal to provide an objective manner to assess community-driven projects, offering a way to measure the readiness of a project to be deployed in a business environment. The OpenBRR involves a multi-step evaluation process, that can be adjusted by the evaluator to adapt the assessment to the specific needs of the organization that wants to deploy the software under study. it is based on gathering metrics and factual data on ten categories. For each category, a set of criteria and metrics are proposed. These inputs are then weighted and each of the above introduced categories are given a rating that ranges from 1 to 5. Then, depending on the final usage the software will be given, adopters may weight these categories, obtaining an overall rating of the project. Hence, not all categories are weighted equally, and for some scenarios a category may not be considered at all for the final rating (in that case, its weight factor would be 0%). The first step in the process is to select and weigh the criteria to be use in the evaluation process. In the following step, each criteria is evaluated on its own. In order to obtain a total score for the functionality criteria, the total weights of the standard functionality items is summed up in W. Then the score for the assessed tool is obtained by adding all the scores, both from the standard and extended functionality, as T. Depending on the completeness of T related to W (in percentage), a final rating score is provided, using the cutoff values.
-
-
 
 ## Paper structure
 
@@ -39,9 +26,32 @@ Quantitative evaluation is proposed in OpenBRR (Open Business Readiness Rating) 
 
 Hereafter, we use the term principles for SSI interchangeably with the terms property and features. For the sake of clarity, they will all refer to the same concept. We often abbreviate the term Self-Sovereign Identity as SSI.
 
+## Related works
+
+With respect to RQ1, this work is inspired by past exercises that define SSI principles[^allen][^ferdous][^toip][^toth]. However, we depart from previous contributions because the scope of our analysis is instrumental in developing a model to assess identity solutions based on the promise of user control over information. While this is not the first contribution aimed at assessing the quality of identity systems, other SSI-based assessments have either failed to describe their methodology[^pava], lacked extensive precision in their analysis[^bokkem], or did not explain how they derived the criteria for system analysis[^omar]. We make it clear that our list of principles is consistent with past exercises from the literature. Furthermore, the exercise we conducted is fully replicable, as we employed an objective method to select properties and categorize them. Additionally, a survey was conducted among experts participating in the ARES conference 2024 to refine our results.
+
+On the other hand, concerning RQ2, we explored diffrent ways to lift answers for our research questions by looking at three examples in the field of 1) open source projects, 2) food ranking and 3) index of quality of life. The first provides some background in the tech-related field, the second is an experimental ranking that is trying to gather attention within EU countries, while the third is a global ranking system that gathers several human and societal factors.
+
+*1. FOSS projects evaluation*
+Wikipedia has a comparison of source code hosting sites at [^wikipedia_foss_projects]. The point is that there are many different places to look for projects. Empirical studies define criteria for the evaluation of FOSS projects and solicits these criteria to forge specific ways to evaluate each project.[^foss] OpenMRS make use of the work in [^foss] to evaluate projects on GitHub. The appropriateness of a project is determined, for the most part, by the answers to a set of important questions.[^hunter] Some of these questions are more important than others in terms of whether the project is a good choice or not. Some researchers in this field have even suggested that the questions that should be asked fall into three categories related to the project: viability, approachability, and suitability,[^heidi] and that some should be tagged as critical whereas others are not as critical and are tagged as secondary. For example, the Project Evaluation Rubric uses a score-based system to evaluate Free and open source projects,[^foss_rubric] while the work in [^evaluation_activity] defines principles and split them into two subclasses: mission critical criteria (primary) and secondary criteria. These criteria are later tested against the evaluation of student participation within the Mifos project. An Onion model for the development of FOSS projects emphasizes the roles and interactions of the community in FOSS.[^onion] Using the Onion model, users have a comprehensive understanding of the community-driven development process. The blog post on[^foss_project] describes methods to evaluate the contribution of developers on free and open code. Finally, Alami [^alami] proposed a qualitative method with experts interviews to define criteria to evaluate weather a pull request should be accepted in an open source projects.
+
+
+Other attempts to quantitatively evaluate the contribution of open source projects is proposed by the OpenBRR (Open Business Readiness Rating), as an evaluation method that provides an objective manner to assess community-driven projects. The Open BRR offers a way to measure the readiness of a project to be deployed in a business environment. At this regard, the evaluation involves a multi-step process that can be adjusted by the evaluator to adapt the assessment to the specific needs of the organization that wants to deploy the software under study. A quantitative analysis is based on gathering metrics and factual data on ten categories, and in each category, a set of criteria and metrics are proposed. The first step in the process is to select and weight criteria to be use in the evaluation process. In the following step, each criteria is evaluated on its own. Inputs are then weighted and each category is given a rating ranging from 1 to 5. In order to obtain a total score for the functionality criteria, the total weights of the standard functionality items is summed up in W. Then, depending on the final usage the software, adopters may even weight the categories, thus obtaining the overall rating for the project. Then the score for the assessed tool is obtained by adding all the scores, both from the standard and extended functionality. As we may understand, not all categories are weighted equally, or for some scenarios a category may not be considered at all for the final rating.
+
+The Qualification and Selection of Open Source Software (QSOS) is a structured methodology designed to evaluate software projects systematically.[^evaluating_foss] It includes a defined workflow and a suite of tools to facilitate the evaluation process. The QSOS process is divided into four iterative steps, which can be applied with varying levels of granularity.The first step involves defining evaluation criteria across three key axes: functionality, license compliance, and community dynamics. In the second step, projects are evaluated by assigning a score between 0 and 2 to each criterion. These scores are then weighted based on the specific context and requirements for the intended use of the software. The final step is the selection of the most suitable software solution, achieved by comparing the results of multiple candidate projects. The outcomes of the QSOS process can be visualized and compared graphically, with one popular format being a radar chart.
+
+A last example in the field of open source that combines qualitative and quantitative evaluation is given by the OSSpal project,[^Wasserman] which is aimed at helping companies, government agencies, and other organizations find high-quality free and open-source software that meets their needs. Instead of a purely numeric calculated score, OSSpal adds curation of high-quality FOSS projects and individual user reviews of these criteria. OSSpal has an operational, publicly available website where users may search by project name or category and enter ratings and reviews for projects.
+
+*2. Food ranking*
+
+*3. Index of quality of life*
+
+
 ## References
 
 [^lepore]: Lepore, Cristian, et al. "A Model For Assessing The Adherence of E-Identity Solutions To Self-Sovereign Identity." World Conference on Information Systems and Technologies. Cham: Springer Nature Switzerland, 2024.
+
+[^hunter]: Accessed on January 10 2025. https://www.cs.hunter.cuny.edu/~sweiss/course_materials/cs_ossd/assignments/assignment_10_project_evaluation.pdf
 
 [^cameron]: Cameron, Kim. "The laws of identity." Microsoft Corp 12 (2005): 8-11.
 
@@ -54,6 +64,8 @@ Hereafter, we use the term principles for SSI interchangeably with the terms pro
 [^cushman]: Cushman, Reid, et al. "Ethical, legal and social issues for personal health records and applications." Journal of biomedical informatics 43.5 (2010): S51-S55.
 
 [^toth]: Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27. 
+
+[^wikipedia_foss_projects]: Wikipedia FOSS projects, accessed on 10 January 2025. https://en.wikipedia.org/wiki/Comparison_of_source_code_hosting_facilities
 
 [^toip]: Trust Over IP Foundation. Principles of self-sovereign identity (ssi). https://trustoverip.org/wp-content/uploads/2021/10/ ToIP-Principles-of-SSI.pdf, 2024. Accessed: 2024-12-24 
 
@@ -80,3 +92,13 @@ Hereafter, we use the term principles for SSI interchangeably with the terms pro
 [^onion]: The Onion Model of FOSS Development, https://medium.com/@deprasadini/evaluation-of-free-open-source-software-foss-371306d94b1f, accessed on 8th January 2025.
 
 [^foss_project]: I hire people to work on a FOSS project. Here's how I evaluate GitHub profiles, https://ondsel.com/blog/evaluating-github-profile/, accessed on 8th January, 2025.
+
+[^Wasserman]: Wasserman, Anthony I., et al. "OSSpal: finding and evaluating open source software." Open Source Systems: Towards Robust Practices: 13th IFIP WG 2.13 International Conference, OSS 2017, Buenos Aires, Argentina, May 22-23, 2017, Proceedings 13. Springer International Publishing, 2017.
+
+[^evaluating_foss]: Evaluating FOSS, accessed on 12 January 2025. https://jgbarah.gitbooks.io/evaluating-foss-projects/content/evaluation_models.html
+
+[^heidi]: Heidi J.C. Ellis, Michelle Purcell, and Gregory W. Hislop. An approach for evaluating foss projects
+for student participation. In Proceedings of the 43rd ACM Technical Symposium on Computer Science
+Education, SIGCSE ’12, pages 415–420, New York, NY, USA, 2012. ACM
+
+[^alami]: Alami, Adam, Marisa Leavitt Cohn, and Andrzej Wąisowski. "How do foss communities decide to accept pull requests?." Proceedings of the 24th International Conference on Evaluation and Assessment in Software Engineering. 2020.
