@@ -166,11 +166,7 @@ We broadcasted the survey among participants of the International Workshop on Em
 
 The study was limited to the 15 properties included in the questionnaire, as presented in Section III-A, and to the classifications outlined in [Section 1.3.5](#135-refining-principles). Another limitation was the number of respondents (27) who participated in the questionnaire. A larger sample size would enhance the validity of the results and improve the potential for generalization. However, as the field of SSI is still emerging, our focus was on engaging true experts in the domain. We intentionally refrained from broadening the scope of participants to increase the number of respondents. Nevertheless, further discussion and research will be necessary to refine and solidify the definitions, ensuring they are both robust and comprehensive.
 
-**Interpreting Likert scales**
-
-
-
-**Results and discusison**
+**Results and discussion**
 
 Table 5 shows the results of respondend related to the 15 proposed properties and their ranking based on the avarage and the standard deviation.
 
@@ -186,9 +182,9 @@ The most and least important properties, as well as their intersection, is prese
 
 ### 1.3.7 Final list
 
-The definitions presented in [Section 1.3.5](#135-refining-principles) were abbreviated as much as possible intentionally, due to their use in the questionnaire. In this Section, we want to enhance them in accordance with the results of the respondents, as we obtained valuable insights from experts in the fields of IdM and SSI, expressing their concerns and possible misunderstandings of an individual property. Below you can find the corretion of properties that have either (i) obtained an avarage level below 3.75 with a high Standard Deviation, or (ii) Have required additional discussion reflecting the obtained results, while other properties are omitted intentionally.  Changes are bold, while the parts that need to be removed are crossed out.
+The definitions presented in [Section 1.3.5](#135-refining-principles) were abbreviated as much as possible intentionally, due to their use in the questionnaire. In this Section, we want to enhance them in accordance with the results of the respondents, as we obtained valuable insights from experts in the fields of IdM and SSI, expressing their concerns and possible misunderstandings of an individual property. 
 
-In particular, many of the properties that achieved a low ranking were simplified, and their content narrowed to include a single concept (e.g., Access and Availability, Security and Protection). This does not come with a loss of specificity but rather with a simplified definition. Whenever necessary, we split the property into two properties.
+As a result of the survey, properties that received at least one vote as irrelevant have been modified or simplified (access and availability, cost, verifiability, and authenticity). Properties for which 50% of voters did not consider them at least desirable have been removed (usability and consistency). Meanwhile, the remaining properties were subject to minor or no modifications. Those that were modified did not lose specificity or consistency; rather, the purpose was to simplify their content. The following table reports the our final list of properties. Changes are bold, while the parts that need to be removed are crossed out.
 
 | Property | Definition | Classification |
 |----------|----------|----------|
@@ -201,7 +197,7 @@ In particular, many of the properties that achieved a low ranking were simplifie
 | Access ~~and Availability~~ | Entities must have unrestricted access to the list of identity providers and service providers. **They must be able to retrieve information about those entities.** | Mobility |
 | Transparency | **The identity system, algorithms,** policies, rules, and protocols to manage the ecosystem members must be **free, open-soure, well-known, and independent of any specific architecture**. | Sustainability | 
 | Portability | **Identity must be portable.** Users must be able to carry and use their digital identity across multiple platforms and multiple jurisdictions. Attributes and architectures must be transportable to other domains and ecosystems. | Sustainability | 
-| Interoperability | Entities must be able to interoperate across domains and not be limited to a specific domain. **Idnetities must be widely usable.** | Sustainability | 
+| Interoperability | Entities must be able to interoperate across domains and not be limited to a specific domain. **Identities must be widely usable.** | Sustainability | 
 | Cost | **Entities must be able to performe crucial operation without cost barriers.** Mechanisms for creating, maintaining, and sustaining the system should have minimal or no costs. | Sustainability | 
 | Standard | An e-identity system must use globally recognized standards. | Sustainability |
 | ~~Decentralization and~~ Autonomy | Entities should have autonomy over their identity data without relying on any third party. **They must be the only one being resposible for all operations about their identity.** | Usability | 
