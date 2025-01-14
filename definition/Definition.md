@@ -149,7 +149,14 @@ The ARES Conference hosted the International Workshop on Emerging Digital Identi
 
 The first part of the questionnaire aimed to familiarize participants with the candidates' knowledge of identity. In the second part, the questions were designed to validate the SSI properties, following the order of the 15 proposed principles. While similar contributions often required respondents to invest significant time reviewing definitions alongside the list of principles for evaluation, we recognized that the time spent completing the questionnaire was an active component of the survey and could affect the overall response rate. To minimize the time burden on respondents and reduce dropout rates, we shortened the questionnaire's completion time. This was achieved by creating a single question for each principle and embedding the principle's definition directly within the question, maintaining respondent awareness throughout the process. [Appendix A](#appendix-a) contains a sample of the questionnaire related to the principles of Self.
 
-Each question was designed to measure the perceived importance of each property using a Likert scale with the following items: (i) Irrelevant, (ii) Slightly Relevant (Unnecessary), (iii) Moderately Relevant (Useful), (iv) Relevant (Desirable), and (v) Very Relevant (Mandatory).[^joshi] These questions also aimed to evaluate whether our definitions in [Section 1.3.5](#135-refining-principles) were appropriate. Respondents were given the opportunity to express their agreement with the proposed definitions.
+Each question was designed to measure the perceived importance of each property using a Likert scale, which consists of one or more statements or questions accompanied by a range of response options.[^south] The values for the likert scale are: (i) Strongly Disagree	(ii) Disagree (iii) Neutral	(iv) Agree (v) Strongly Agree or they can be: (i) Irrelevant, (ii) Slightly Relevant (Unnecessary), (iii) Moderately Relevant (Useful), (iv) Relevant (Desirable), and (v) Very Relevant (Mandatory).[^joshi] Figure 4 shows the typical template of a likert scale questionnaire, while [Appendix A](#appendix-a) reports the factual questionnaire presented at the conference where the likert anchor my change to better fit the questions, but conveys the same approach. Various aspects of Likert item construction can affect how participants interpret and answer a subjective questionnaire, including the number of response options, the text anchors assigned to each option, the wording of individual Likert items, and the numerical values associated with each response option. There is no universally ideal approach for all situations; typically, the appropriate design of a Likert item is determined by the specific context of the study. These questions also aimed to evaluate whether our definitions in [Section 1.3.5](#135-refining-principles) were appropriate. Respondents were given the opportunity to express their agreement with the proposed definitions.
+
+![Likert scale image](/definition/images/likert_scale/Likert_scale.png)
+*Figure 4: A Likert scale consists of a series of Likert items, each accompanied by numbered response options and text anchors.*
+
+Key aspects of constructing Likert items that influence responses are: (i) Number of choices: The response options that the participant has to choose from. (ii) Text anchors: The written descriptors that accompany each numeric response option on the Likert scale. (iii) Question phrasing: The statement that participants are asked to respond to. (iv) Numerical representation: The characteristics of the numbers used to distinguish response options.
+
+Proper reporting of Likert scale design is critical to enabling future replication studies, as each of the four elements described above can affect how participants respond to a Likert scale. Without detailed descriptions of Likert scale implementations, it would be impossible to know whether contradictory results from a replication study truly repudiate the effect found in the original study or if participants simply responded differently to the construction of a given Likert item. For this reason, along with the questionnaire, we have attached a document explaining how to deal with the likert scale which can be found in [Appendix A](#appendix-a)
 
 **Partecipants**
 
@@ -158,6 +165,10 @@ We broadcasted the survey among participants of the International Workshop on Em
 **Limitations**
 
 The study was limited to the 15 properties included in the questionnaire, as presented in Section III-A, and to the classifications outlined in [Section 1.3.5](#135-refining-principles). Another limitation was the number of respondents (27) who participated in the questionnaire. A larger sample size would enhance the validity of the results and improve the potential for generalization. However, as the field of SSI is still emerging, our focus was on engaging true experts in the domain. We intentionally refrained from broadening the scope of participants to increase the number of respondents. Nevertheless, further discussion and research will be necessary to refine and solidify the definitions, ensuring they are both robust and comprehensive.
+
+**Interpreting Likert scales**
+
+
 
 **Results and discusison**
 
@@ -205,6 +216,7 @@ As a last thing we position these principles within the same process flow of Fig
 
 A copy of the survey given to respondents at the International Workshop on Emerging Digital Identities at ARES 2024.[^ares]
 
+![Survey part 2](survey/part2/Likert_scale.png)
 ![Survey part 2](survey/part2/Survey.png)
 
 ## Appendix B
@@ -214,6 +226,8 @@ Results of the first part of the Survey.
 ![Survey results (Local)](survey/part1/Results.png)
 
 ## References
+
+[^south]: South, Laura, et al. "Effective use of Likert scales in visualization evaluations: A systematic review." Computer Graphics Forum. Vol. 41. No. 3. 2022.
 
 [^lepore]: Lepore, Cristian, et al. "A Model For Assessing The Adherence of E-Identity Solutions To Self-Sovereign Identity." World Conference on Information Systems and Technologies. Cham: Springer Nature Switzerland, 2024.
 
