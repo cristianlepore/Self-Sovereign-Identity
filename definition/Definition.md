@@ -212,7 +212,7 @@ As a last thing we position these principles within the same process flow of Fig
 
 A copy of the survey given to respondents at the International Workshop on Emerging Digital Identities at ARES 2024.[^ares]
 
-![Survey part 2](survey/part2/Likert_scale.png)
+![Survey part 1](survey/part2/Likert_scale.PNG)
 ![Survey part 2](survey/part2/Survey.png)
 
 ## Appendix B
