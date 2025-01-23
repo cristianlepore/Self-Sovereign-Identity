@@ -20,7 +20,7 @@ Despite nearly a decade of experimentation with the SSI concept and related tech
 
 ## Paper structure
 
-1. [Definition of Self-Sovereign Identity](definition/Definition.md)
+1. [Definition of Self-Sovereign Identity](definition/Definition.md) [togliere la survey, e mettere i veri risultati.]
 2. [Model to assess e-identity solutions](model/Model.md)
 3. [Testing](testing/Testing.md)
 
