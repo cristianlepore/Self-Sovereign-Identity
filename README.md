@@ -1,20 +1,35 @@
 # A Model To Assess Digital Identity Solutions
 
-## History
+## Identity Management
 
-Traditional identity management relied on cryptographic primitives that allowed users to authenticate themselves to their online accounts. Information retrieval was based on a client-server paradigm, which established secure communication between parties. This paradigm remains prevalent in older systems and in other systems where users need to access to multiple accounts and services, requiring each individual to authenticate separately to each service provider. Despite its simplicity, a more efficient architectural approach involves deploying an Identity Provider (IdP) as an intermediary between users and services. The IdP orchestrates access to services and manages authentication across multiple service providers with a single login.
+The internet was built without a trust layer, and digital identity was perceived as a patchwork to address the lack of online trust. From the early days, the design of identity models has been closely intertwined with evolving definitions of identity, with each influencing the other.
 
-When services and identity providers are loosely decoupled across different domains, federated identity systems emerge to transcend local boundaries, linking entities across domains. The traditional client-server paradigm with secure channel establishment proved inadequate for this task. To address the challenges of loosely coupled entities, protocols were developed in the late 2000s to extend the client-server paradigm, enabling federation between services and identity providers. First came Kerberos, followed by widely adopted protocols such as SAML, OAuth, and OIDC, which remain in use today.
+Traditional identity leverages cryptographic primitives to authenticate users to their online accounts. The information retrieval is based on the client-server paradigm, which is still today the backbone of the Internet, and ensures the establishment of a secure channel between parties. Once authenticated, identity corresponds to online accounts as *"a set of claims made by one digital subject about itself."*[^cameron]
 
-Since 2016, a new approach to identity management has gained traction, emphasizing principles that include individual interactions, their representation in the world, and how others perceive their identity. This paradigm, known as Self-Sovereign Identity (SSI), serves as a blueprint for the next generation of digital identity systems.
+The rise of online services and accounts has led organizations to develop identity management systems to handle authentication and authorization for various services. However, users often authenticate separately to each service, frequently reusing the same password across multiple accounts.
+
+To streamline the management of identities, organizations deployed Identity Providers (IdPs) capable of orchestrating multiple accounts and granting users access to services within the same organization. Users could now authenticate once to access all services within the organization. In this paradigm, the definition of identity was expanded to encompass attributes from multiple accounts.
+
+Fast forward to the spread of mobile applications, which created a market of services and Identity Providers (IdPs) loosely decoupled across different domains and organizations. In other words, services operated outside the boundaries of traditional IdPs, while classical authentication methods proved inadequate to describe the relationships between users, IdPs, and Service Providers (SPs) across different domains. As a solution, new federated protocols emerged to connect services beyond organizational boundaries, such as Kerberos, SAML, Shibboleth, OAuth, OpenID Connect, and others. A new definition of identity emerged to describe relationships and interactions with others.
+
+The problem of trust online was solved, but at the price of giving up our data to IdPs, who constitute a bottleneck to data control. The IdPs are generally the gatekeepers of the web; big tech that create large chunks of repositories holding citizens' data.
+
+Government concerns about data sovereignty, along with a resurgence of decentralized technology, paved the way for new policies such as the GDPR and the California Consumer Privacy Act. A new approach to identity management emerged, shaping a definition of identity based on principles that encompass individual interactions, relationships, and representation in the digital world. This paradigm, known as Self-Sovereign Identity (SSI), aims to guide the next generation of digital identity systems.
 
 ## Research questions
 
-Despite nearly a decade of experimentation with the SSI concept and related technologies, its definition remains elusive. The lack of a clear definition has led to misunderstandings about SSI's role within existing identity models and opened the door to speculation. In many industries, a model to rate the state-of-the-art is instrumental to clear the fog in a specific field of study, and we witnessed the development of methods to evaluate open source projects, classifying the nutritional value of food and cosmetics, as well as to provide indexes for the country quality of life index. Clearing the fog in a narrowed field like Self-Sovereign Identity is important to clarify the quality of identity management systems and to distinguish between effective and flawed implementations of Self-Sovereign Identity. For this purpose, we aim to extend the contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI), previously introduced in [^lepore], by addressing the following research questions:
+Aftermath nearly a decade of experimenting with SSI-related technology, a definition for SSI remains still elusive. The lack of a clear definition opens to speculation, where manies take advantage of the positive outlook of the market on data sovereignity to create their identity solutions. They eventually leap their product as being self sovereign, counting on the fact that is a non-trivial task to proove whether it is really sovereign.
+
+At this regard, a model to rate the state-of-the-art was instrumental in many industries to clear the fog of consumers expectations. For example, evaluation frameowrks have been proposed for open source projects to help discriminate whether a project follows the principles defined by the free and Open Source Software. Thanks to it, it is now possible to understand whther the the latest smartwatch from Pine64 respect the FOSS principles. We will discuss further example in the [Related Works section](#related-works). 
+
+When a market is overwelmed by products, an assessment model provides a rationale to 1) discriminate solutions based on shared principles; 2) validate the effectiveness of products; 3) assure that products meet the users' expectations. Eventualy, an assessment model can help designing a 4) competitive profile of identity systems and 5) provides prescriptive insights as to how to strengthen the identity systems.[^landrum]
+
+For these reasons, we aim to expand the contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI),[^lepore] by enlarging the literature review and combining a qunttitative analysis of SSI principles with a qualitative analysis, still maintaining their research questions that seem plausible to us.
 
 *1. RQ1: What are the principles of Self-Sovereign Identity?*
-
 *2. RQ2: Can we use these principles to assess any SSI system?*
+
+The reason for these questions are::::
 
 [Section 1](definition/Definition.md) proposes a definition of Self-Sovereign Identity and addresses RQ1, while [Section 2](model/Model.md) leverages this definition to propose a model for assessing e-identity solutions. Finally, [Section 3](testing/Testing.md) delves into a testing stage where the model is tested against existing solutions in the field of identity.
 
@@ -151,3 +166,7 @@ for student participation. In Proceedings of the 43rd ACM Technical Symposium on
 Education, SIGCSE ’12, pages 415–420, New York, NY, USA, 2012. ACM
 
 [^alami]: Alami, Adam, Marisa Leavitt Cohn, and Andrzej Wąisowski. "How do foss communities decide to accept pull requests?." Proceedings of the 24th International Conference on Evaluation and Assessment in Software Engineering. 2020.
+
+[^cameron]: Cameron, K. (2005). The laws of identity. Microsoft Corp, 12, 8-11.
+
+[^landrum]: Landrum, R. E., Turrisi, R., & Harless, C. (1999). University image: the benefits of assessment and modeling. Journal of marketing for Higher Education, 9(1), 53-68.
