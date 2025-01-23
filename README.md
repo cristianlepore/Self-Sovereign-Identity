@@ -1,6 +1,6 @@
 # A Model To Assess Digital Identity Solutions
 
-## Identity Management
+## Identity management
 
 The internet was built without a trust layer, and digital identity was perceived as a patchwork to address the lack of online trust. From the early days, the design of identity models has been closely intertwined with evolving definitions of identity, with each influencing the other.
 
@@ -18,20 +18,20 @@ Government concerns about data sovereignty, along with a resurgence of decentral
 
 ## Research questions
 
-Aftermath nearly a decade of experimenting with SSI-related technology, a definition for SSI remains still elusive. The lack of a clear definition opens to speculation, where manies take advantage of the positive outlook of the market on data sovereignity to create their identity solutions. They eventually leap their product as being self sovereign, counting on the fact that is a non-trivial task to proove whether it is really sovereign.
+After nearly a decade of experimenting with SSI-related concepts, numerous scholars and working groups have contributed to defining a set of principles for SSI. However, disagreements over the precise list of principles and their vague definitions have created room for speculation. As a result, many identity systems - motivated by the growing demand for identity verification and data sovereignty - could claim adherence to self-sovereignty, with little means to prove otherwise.  
 
-At this regard, a model to rate the state-of-the-art was instrumental in many industries to clear the fog of consumers expectations. For example, evaluation frameowrks have been proposed for open source projects to help discriminate whether a project follows the principles defined by the free and Open Source Software. Thanks to it, it is now possible to understand whther the the latest smartwatch from Pine64 respect the FOSS principles. We will discuss further example in the [Related Works section](#related-works). 
+In parallel industries, an artifact to evaluate the state of the art has proven instrumental in clearing the fog of consumer expectations. For example, the food and cosmetic industry implements labeling systems to mark the quality of products. These efforts are based on previous research and nutrient ratings from academics. Evaluation frameworks have also been proposed for open-source projects to help determine whether a consumer product follows the principles of Free and Open Source Software. We will discuss further examples in the [Related Works section](#related-works).  
 
-When a market is overwelmed by products, an assessment model provides a rationale to 1) discriminate solutions based on shared principles; 2) validate the effectiveness of products; 3) assure that products meet the users' expectations. Eventualy, an assessment model can help designing a 4) competitive profile of identity systems and 5) provides prescriptive insights as to how to strengthen the identity systems.[^landrum]
+Past research has summarized the benefits of having an assessment model as follows: 1) designing a competitive profile of the products of interest; 2) validating their effectiveness; and 3) providing prescriptive insights on how to strengthen solutions.[^landrum]  
 
-For these reasons, we aim to expand the contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI),[^lepore] by enlarging the literature review and combining a qunttitative analysis of SSI principles with a qualitative analysis, still maintaining their research questions that seem plausible to us.
+Confident in these benefits, we aim to strengthen the contribution of a model for assessing the adherence of e-Identity solutions to Self-Sovereign Identity (SSI),[^lepore] by expanding the literature review of past works to include 18 studies over the past 10 years that define SSI and categorize principles.  
+
+We build on the past exercise from [^lepore] by conducting both quantitative and qualitative analyses of SSI principles, enabling us to identify the most widely agreed-upon set of principles compared to previous studies, limited to our literature review. Additionally, our review of past evaluation frameworks, discussed in the [Related Works section](#related-works), supports our decision to adopt the same research questions:
 
 *1. RQ1: What are the principles of Self-Sovereign Identity?*
-*2. RQ2: Can we use these principles to assess any SSI system?*
+*2. RQ2: Can we assess any identity system based on these principles?*
 
-The reason for these questions are::::
-
-[Section 1](definition/Definition.md) proposes a definition of Self-Sovereign Identity and addresses RQ1, while [Section 2](model/Model.md) leverages this definition to propose a model for assessing e-identity solutions. Finally, [Section 3](testing/Testing.md) delves into a testing stage where the model is tested against existing solutions in the field of identity.
+[Section 1](definition/Definition.md) combines past works to present widely agreed-upon list of principles for Self-Sovereign Identity and categorize them using an objective method. This addresses RQ1. [Section 2](model/Model.md) introduces a model for assessing e-identity solutions, focusing on the promise of user control over information. The idea is to find an answer for RQ2. Finally, [Section 3](testing/Testing.md) explores the testing phase, where the model is applied to evaluate existing solutions in the field of identity.
 
 ## Paper structure
 
@@ -39,7 +39,7 @@ The reason for these questions are::::
 2. [Model to assess e-identity solutions](model/Model.md)
 3. [Testing](testing/Testing.md)
 
-Hereafter, we use the term principles for SSI interchangeably with the terms property and features. For the sake of clarity, they will all refer to the same concept. We often abbreviate the term Self-Sovereign Identity as SSI.
+From here on, we will use the terms 'principle' and 'property' interchangeably to refer to the principles of SSI. The meaning will be clear to the reader based on the context, and any ambiguity will be addressed as needed. For brevity, we will also frequently abbreviate 'Self-Sovereign Identity' as SSI.
 
 ## Related works
 
