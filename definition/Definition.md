@@ -1,21 +1,19 @@
-# 1. Self-Sovereign Identity 
+# 1. Self-Sovereign Identity
 
-Self-Sovereign Identity (SSI) is a novel approach that aims to provide users with an identity they can control. However, the concept also encompasses additional principles. The first to propose a list of principles extending the original Laws of Identity[^cameron] was Christopher Allen.[^allen]
+Self-Sovereign Identity (SSI) is an innovative approach to identity management that empowers users with full control over their identities. Beyond control, SSI encompasses several fundamental principles. The first to define a set of principles was Allen[^allen], and since then, academics and working groups have contributed to expanding this list to create a more comprehensive framework. Some of the key features of SSI include *Existence, Control, Access, Transparency, Persistence, Portability, Interoperability, Consent, Minimalization, and Protection.*
 
-Allen outlined ten guiding principles for SSI, laying the foundation for its implementation. He stated that the key properties of an SSI system are Existence, Control, Access, Transparency, Persistence, Portability, Interoperability, Consent, Minimalization, and Protection.[^allen]
+## 1.1 Background
 
-## 1.1 Backgournd
+Figure 1 illustrates the flow of identity information and key roles within the SSI model. Data moves from left to right, with issuers providing data to holders, who collect claims and later present them as assertions to service providers. Assertions may consist of claims combined in various ways and formats. The roles within the data flow are not fixed; each entity can act as an issuer or a verifier depending on the context. For example, the holder may occasionally issue claims to the verifier, while the verifier can also issue claims to holders upon request. In some cases, a verifiable data registry, such as a blockchain registry or a certificate authority (CA), can be integrated into the model, as shown in Figure 1.
 
-Figure 1 illustrates the data flow of identity information and key roles within the general SSI model. Data moves from left to right, where issuers provide data to holders, who collect personal information within their wallet components. To access a service, users present a combination of assertions as proof of their identity to a verifier. Roles are not static, and each entity can become an issuer or verifier depending on the context. Sometimes the general model is complemented with a verifiable data registry, such as a blockchain or a registering CA, as depicted on the right-hand side of Figure 1.
-
-The peculiarity of Figure 1 is its depiction of Allen's principles as defined in a classification of SSI properties[^toip]. On the other hand, the communication flow on the right combines optional information through letters A, B, C, D directly from the Architecture and Reference Framework v1.4.1 of the EUDI Wallet solution.[^ARF] Occasionally, instead of a registering authority, a different type of trust anchor can be used for authentication.
+The same figure systematically positions Allen's principles within the Users and Roles schema and the data flow. Specifically, the data flow on the right integrates information from [^cucko], the Trust Over IP Foundation [^toip], and the Architecture and Reference Framework v1.4.1 of the EUDI Wallet solution [^ARF] to build the most comprehensive model possible for the SSI data flow. The use of a registering CA—or another form of centrally managed or decentralized repository—can be replaced with a different type of trust anchor to validate certificates.
 
 ![Allen Principles Schema (Local)](/definition/images/allen_principles/Allen_principles_schema.png)
-*Figure 1: SSI properties mapped within the general SSI process flow.[^allen]*
+*Figure 1: Systematic positioning of Allen's properties within the SSI process workflow.[^allen]*
 
 ## 1.2 Related works
 
-Several works by academics and industry experts have redefined and extended Allen's original principles in an attempt to converge on a comprehensive list of principles for SSI. We collected 18 research studies published between 2016 (the year the term 'SSI' was coined) and 2024.
+Several works by academics and industry leaders have experimenting and extended with Allen's principles in the attempt to converge to a comprehensive set of properties for SSI. The new list of principles consider a social analysis of SSI by~\cite{JoeAndrieu2016, gilani2020survey}, and technical considerations~\cite{ferdous2019search}. Subsequent columns present a taxonomy of principles from other papers, where each row reports the name of the taxonomy that the corresponding principle in the first column belongs. The paired principle is in the first column, same row. For example, the Sovrin Foundation (second column) gathered principles into a three-way taxonomy of Control, Portability, and Security (2016)~\cite{tobin2016inevitable}. Control is a category that contains the principles of Existence, Control, Persistence, and Consent. Indeed, each instance of Control in the second column matches the principles in the first column: Existence, Control, Persistence, and Consent. In the same way, Portability is a category that includes the principles of Access, Transparency, Portability, and Interoperability. Finally, Security consists of Persistence, Protection, and Minimization. One principle may pertain to several categories (e.g., Persistence). Thereof, the same approach is for the remaining works. Andrieu provided a tech-free categorization with Control, Acceptance, and Costs (2016)~\cite{JoeAndrieu2016}. Other papers extend principles to cover blockchain-based e-identity systems (2019)~\cite{ferdous2019search} and add Validity as a further security property (2020)~\cite{gilani2020survey}. Sheldrake considers only essential principles of Self (2019)~\cite{Sheldrake2019}. Lastly, a business-oriented analysis emphasizes Personal Data, Control, and Usability (2022)~\cite{BlockTechDiVer}.
 
 ## 1.3 Analysis
 
@@ -222,6 +220,8 @@ Results of the first part of the Survey.
 ![Survey results (Local)](survey/part1/Results.png)
 
 ## References
+
+[^cucko]: Čučko, Š., Bećirović, Š., Kamišalić, A., Mrdović, S., & Turkanović, M. (2022). Towards the classification of self-sovereign identity properties. IEEE access, 10, 88306-88329.
 
 [^south]: South, Laura, et al. "Effective use of Likert scales in visualization evaluations: A systematic review." Computer Graphics Forum. Vol. 41. No. 3. 2022.
 
