@@ -13,45 +13,42 @@ The same figure systematically positions Allen's principles within the Users and
 
 ## 1.2 Related works
 
-Several works by academics and industry leaders have experimenting and extended with Allen's principles in the attempt to converge to a comprehensive set of properties for SSI. The new list of principles consider a social analysis of SSI by~\cite{JoeAndrieu2016, gilani2020survey}, and technical considerations~\cite{ferdous2019search}. Subsequent columns present a taxonomy of principles from other papers, where each row reports the name of the taxonomy that the corresponding principle in the first column belongs. The paired principle is in the first column, same row. For example, the Sovrin Foundation (second column) gathered principles into a three-way taxonomy of Control, Portability, and Security (2016)~\cite{tobin2016inevitable}. Control is a category that contains the principles of Existence, Control, Persistence, and Consent. Indeed, each instance of Control in the second column matches the principles in the first column: Existence, Control, Persistence, and Consent. In the same way, Portability is a category that includes the principles of Access, Transparency, Portability, and Interoperability. Finally, Security consists of Persistence, Protection, and Minimization. One principle may pertain to several categories (e.g., Persistence). Thereof, the same approach is for the remaining works. Andrieu provided a tech-free categorization with Control, Acceptance, and Costs (2016)~\cite{JoeAndrieu2016}. Other papers extend principles to cover blockchain-based e-identity systems (2019)~\cite{ferdous2019search} and add Validity as a further security property (2020)~\cite{gilani2020survey}. Sheldrake considers only essential principles of Self (2019)~\cite{Sheldrake2019}. Lastly, a business-oriented analysis emphasizes Personal Data, Control, and Usability (2022)~\cite{BlockTechDiVer}.
+Several works by academics and industry leaders have experimenting and extended with Allen's principles in the attempt to converge to a comprehensive set of properties for SSI. However, past contributions have shown a significant disagreement on the definition and categorization of principles across authors. Among the first to provide a new list of principles was Andrieu who considered a social analysis of SSI~\cite{JoeAndrieu2016, gilani2020survey}, with later technical considerations~\cite{ferdous2019search}. Subsequent columns present a taxonomy of principles from other papers, where each row reports the name of the taxonomy that the corresponding principle in the first column belongs. The paired principle is in the first column, same row. For example, the Sovrin Foundation (second column) gathered principles into a three-way taxonomy of Control, Portability, and Security (2016)~\cite{tobin2016inevitable}. Control is a category that contains the principles of Existence, Control, Persistence, and Consent. Indeed, each instance of Control in the second column matches the principles in the first column: Existence, Control, Persistence, and Consent. In the same way, Portability is a category that includes the principles of Access, Transparency, Portability, and Interoperability. Finally, Security consists of Persistence, Protection, and Minimization. One principle may pertain to several categories (e.g., Persistence). Thereof, the same approach is for the remaining works. Andrieu provided a tech-free categorization with Control, Acceptance, and Costs (2016)~\cite{JoeAndrieu2016}. Other papers extend principles to cover blockchain-based e-identity systems (2019)~\cite{ferdous2019search} and add Validity as a further security property (2020)~\cite{gilani2020survey}. Sheldrake considers only essential principles of Self (2019)~\cite{Sheldrake2019}. Lastly, a business-oriented analysis emphasizes Personal Data, Control, and Usability (2022)~\cite{BlockTechDiVer}.
 
-## 1.3 Analysis
+## 1.3 Methodology
 
-Past tentative to converge to a list of SSI principles demonstrated significant disagreement regarding the properties of SSI. Our contribution departs from previous works as it incorporates a broader literature review and a clustering algorithm to achieve consensus on properties and their classification. Based on our literature review, this is the first time this type of exercise has been done in a paper from academia.
+The process that led to the selection of the final list of properties is fully replicable. Initially, we selected 52 properties from 18 works, using heuristics to focus on a subset of principles in our final list. We further categorized these properties through a clustering algorithm and proposed a questionnaire to experts in the Decentralized and Self-Sovereign Identity community participating in the ARES 2024 conference. The questionnaire aimed to: I) Investigate the identified SSI properties and assess their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties.
 
-Specifically, our study analyzes and classifies 52 properties from 18 works to identify a subset of highly cited principles.Additionally, a questionnaire addresses three key objectives: I) Investigate the identified SSI properties and evaluate their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties.
+To gather relevant articles and refine our principles, we conducted a systematic review, which provides a structured overview of a research field by adapting the steps presented in [^lepore][^badzek][^cushman].
 
-Our study gathers insights from experts in the Decentralized and Self-Sovereign Identity Management field, spanning diverse roles and domains, including Computer Security and AI. These experts were questioned during the ARES Conference 2024, held from July 29 to August 2 in Vienna, Austria.
+*1. Defining research questions.* We formulated the research question RQ1: *What are the principles of Self-Sovereign Identity?* From RQ1, we derived the following keywords:
 
-### 1.3.1 Methodology
+- *"Self-Sovereign Identity" AND "principles"*
 
-A systematic review offers a structured, comprehensive overview of a research field through the following steps.[^lepore][^badzek][^cushman]
+To optimize search results and avoid wildcards, the keywords were refined; for instance, Self-Sovereign Identity was sometimes replaced with SSI. We used principles and properties interchangeably.[^lepore] Finally, the keywords were rearranged to ensure comprehensive coverage of the research scope.
 
-*1. Defining research questions.* We formulated research question RQ1 to explore past works on SSI principles, as introduced in the [introduction](#a-model-to-assess-digital-identity-solutions). To address RQ1 (the focus of [Section 1](#1-self-sovereign-identity)),  we generated the following search strings based on relevant keywords:
+*2. Searching.* Search strings were used to retrieve relevant papers from databases, including ACM, ArXiv, IEEE Xplore, Scopus, and the meta-search engine Google Scholar. This process initially yielded 47 results.
 
-- *SSI AND principles*
-- *Self-Sovereign Identity AND properties*
-- *SSI AND definition*
+*3. Screening.* Abstracts and conclusions were reviewed to exclude irrelevant results, particularly those not addressing SSI principles. Papers that did not explain the methodology for system analysis were also removed, along with duplicate entries. The final selection consists of 18 papers. Despite being an emerging topic, this selection represents a significant portion of the literature on SSI principles from 2016 to 2024.
 
-Keywords were refined to optimize search results and to avoid wildcards (e.g., "SSI" and "Self-Sovereign Identity").[^lepore] Keywords were shuffled to gather more results.
+*4. Recording of properties.* The selected articles were analyzed to extract 52 property labels as presented by the authors. The results were compiled into a table that lists the papers along with their corresponding features for SSI.
 
-*2. Searching.* The search strings were used to identify articles containing relevant keywords in titles and abstracts across multiple academic databases, including ACM, ArXiv, IEEE Xplore, Scopus, and the meta-search engine of Google Scholar. This process yielded 47 initial results.
+*5. Merge and selection.* Some properties had similar meanings but were labeled differently across various papers. To minimize subjectivity, we first reviewed past literature to consolidate labels representing identical properties, adopting the names suggested by previous studies. This approach allowed us to create a list that aligns with established terminology in the field of identity. We then applied heuristics to extract the most relevant properties, resulting in a list of 15 principles.
 
-*3. Screening.* Abstracts and conclusions were screened to exclude irrelevant results based on inclusion/exclusion criteria such as publication year, originality, and whether they presented a taxonomy of SSI principles. Duplicate results were removed, resulting in 18 articles for SSI. Despite being an emerging topic, the selection represents a significant portion of the literature on SSI principles from 2016 to 2024.
+*6. Clustering.* The property labels were clustered using various methods, including K-Means, Greedy (local), and Graph Theory. We compared and discussed the rationale behind the number of clusters and their names.
 
-*4. Recording of properties.* The selected articles were analyzed to extract properties and their definitions as presented by the authors. We compiled the results into a table containing the papers and corresponding features of SSI.
+*7. Definition of principles.* We summarized the definitions of properties, shortening them as much as possible while retaining their essence.
 
-*5. Comparison of properties.* Some properties shared similar meanings but had different labels across papers. Properties with identical meanings were combined, while others were eliminated using heuristics.
+*8. Expert validation.* We proposed a questionnaire to experts in the field of decentralized identity to validate the final list of properties and refine their definitions.
 
-*6. Clustering.* The identified properties were clustered based on their labels, testing methods such as K-Means, Greedy, and Graph Theory.
+*9. Final list.* The final step involved creating an agreed-upon list of properties, accompanied by precise definitions for each.
 
-*7. Refining principles.* We provide the table with the list of principles and corresponding definition. We shorten the definition as much as possible, while trying to keep their essence.
+Figure shows the process to validate properties.
 
-*8. Expert validation.* To validate the selection process and finalize the list of properties used in the questionnaire. These discussions reviewed and justified the inclusion or exclusion of specific properties.
+![Casual Loop Diagram Properties (Local)](/definition/images/literature_review/literature_review.png)
+*Figure 1. The process of our literature review. Squares putlines the main process. Rounded squares are outputs. They intertwine in a process where the output feeds the next step.*
 
-*9. Final list.* The final step involved creating a definitive list of properties, accompanied by precise definitions for each.
-
-Steps 1 and 3 are instrumental in reaching the Classification step, which may also serve to raise awareness of past works from the literature. In the following section, we detail the results from steps 4 to 8.
+Steps 1 to 3 have already been detailed in the list. Therefore, we will now focus on explaining the remaining steps.
 
 ### 1.3.2 Recording of properties
 
