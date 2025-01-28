@@ -83,21 +83,18 @@ We use these findings to support our rationale and define a final set of princip
 
 ### 1.3.3 Clustering
 
-An important question is whether we can cluster the labels to somehow categorize them. A categorization *"illuminates a relationship between the subjects and objects of knowledge."*[^mahalakshmi] In the context of SSI properties, a categorization may serve to orient properties on a specific SSI definition. However, some past works have already clusterd principles. [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) reports the categorization of principles from our study sample of 18 papers, where differences in the naming can be observed among authors.
+A relevant question is: can we cluster labels to create categories? In the context of SSI properties, categorization is useful to "illuminate a relationship between the subjects and objects of knowledge."[^mahalakshmi] In this regard, we aimed to provide a categorization of works that illustrates their relationship with Self-Sovereign Identity. Some of the previously cited works have already clustered principles, as discussed in [Related Works](#12-related-works). To build on this, we gathered further information about their categorization of principles and reported it in [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), where differences in naming conventions among authors can be observed.
 
 [Click to view the table 4.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) *The categorization of principles provided by various authors.*
 
-To keep the categorization objective, we leveraged the information from the same table and created 5 groups of principles. We used heuristics based on greedy models, K-Means clustering and Graph Theory to reach our clustering.
+To better illustrate the relationship between properties and key aspects of SSI, we created five groups of principles based on past definitions. We applied heuristics from previous works to guide our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx).
+In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
 
-Beforehand, we created a table presented in the first sheet of the excel file: https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx
+**Clustering techniques**
 
-Where the rows represent the 15 properties, and columns are the categorization of principles as from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers represent the occurences by author.
+1) Greedy models iteratively select the locally optimal solution, minimizing the distance between clusters. The process begins by selecting the column from the [excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx) (second sheet) with the highest number of occurrences and grouping rows that minimize the distance from that column. The Greedy approach has the advantage that is easy to use and simple. Despite its simplicity, it does not always guarantee a globally optimal solution because part of the result depend from the starting point. If not properly chosed, the local optimal does not coincide with the global optimal. Therefor, when multiple categories have the same number of instances, it is essential to minimize the distance between clusters by considering multiple categories.
 
-**Techniques**
-
-1) Greedy models iteratively select the local optimal solution, meaning the one that minimizes the distance between clusters. It starts by selecting the column with the highest number of occurences and grouping by rows that minimize the distance from that column. Despite its simplicity, the Greedy does not always guarantee a globally optimal solution. In cases where some principles have categories with the same number of instances, it is crucial to minimize the distance between clusters by considering multiple categories.
-
-2) K-Means aims to minimize the intra-cluster distance. Graphically, K-means creates a centroid at a random point on the chart, then expands to search for the nearest points. It can be customized with a different number of centraids K. We authomatize the process through the following [Python Program](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/program/Compute_K-Means.py) whose main steps are as follows:
+2) K-Means aims to minimize intra-cluster distances. Graphically, it initializes a centroid at a random point on the chart and iteratively adjusts to find the nearest points. The number of centroids, K, significantly affects the result. We automate the process through the following steps: [Python Program](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/program/Compute_K-Means.py) whose main steps are as follows:
 
 - The program reads data from a CSV file 
 `data = pd.read_csv(file_path)`
@@ -109,9 +106,9 @@ For reproducibility of results, we used the same seed to calculate the starting 
 We tested several combinations of parameter K (number of clusters) and eventually settled on `K=5`. This value of K ensures a fair number of elements in each cluster.
 - Write output and save results. `print(f"Clustering completed! Results saved in: {output_file}")`
 
-3) Graph Theory represents vertices and edges. Edges are weighted with the instances of articles from authors. For example, if three articles use the category Controllability, that edge will hold weight three.
+3) Graph theory represents points as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
 
-Figure 3 shows the final result of our grouping process. The group's name derived from the literature.
+Figure 3 shows the final result of our grouping process. The group's name is derived from the literature.
 
 ![Final list of principles and clustering (Local)](/definition/images/final_list_principles/Final_list_properties.png)
 *Figure 3: The final grouping.*
