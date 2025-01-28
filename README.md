@@ -39,7 +39,7 @@ We build on the past exercise from [^lepore] by conducting both quantitative and
 2. [Model to assess e-identity solutions](model/Model.md)
 3. [Testing](testing/Testing.md)
 
-From here on, we will use the terms 'principle', 'property', and 'criterion' interchangeably to refer to the principles of SSI. The meaning will be clear to the reader based on the context, and any ambiguity will be addressed as needed. For brevity, we will also frequently abbreviate 'Self-Sovereign Identity' as SSI.
+From here on, we will use the terms 'principle', 'property', and 'criterion' interchangeably to refer to the instance of the principles of SSI. The meaning will be clear to the reader based on the context, and any ambiguity will be addressed as needed. For brevity, we will also frequently abbreviate 'Self-Sovereign Identity' as SSI.
 
 ## Related works
 
