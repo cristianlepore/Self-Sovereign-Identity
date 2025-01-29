@@ -35,7 +35,7 @@ We build on the past exercise from [^lepore] by conducting both quantitative and
 
 ## Paper structure
 
-1. [Definition of Self-Sovereign Identity](definition/Definition.md) [togliere la survey, e mettere i veri risultati.]
+1. [Definition of Self-Sovereign Identity](definition/Definition.md)
 2. [Model to assess e-identity solutions](model/Model.md)
 3. [Testing](testing/Testing.md)
 
