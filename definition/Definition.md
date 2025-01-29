@@ -164,18 +164,14 @@ Regarding wallet usage, more than 50% of respondents hold an identity wallet, an
 As for business models for wallet and service deployment, 48% of respondents would like to see direct government involvement in the deployment of identity wallets, while 59% would like governments to contribute to developing the necessary infrastructure. The majority of respondents expressed a preference for paying for an identity wallet rather than receiving advertisements.
 
 **Pitfalls**
-The study was limited to the 15 properties included in the questionnaire, as presented in Section III-A, and to the classifications outlined in [Section 1.3.5](#135-refining-principles). Another limitation was the number of respondents (27) who participated in the questionnaire. A larger sample size would enhance the validity of the results and improve the potential for generalization. However, as the field of SSI is still emerging, our focus was on engaging true experts in the domain. We intentionally refrained from broadening the scope of participants to increase the number of respondents. Nevertheless, further discussion and research will be necessary to refine and solidify the definitions, ensuring they are both robust and comprehensive.
+The study limited the analysis of properties to only a subset of them because, at the time of the ARES conference, our data collection exercise on properties had not yet been completed.
 
-Contribution is limited to validate a number of principles.
+Additionally, the number of respondents (27) can be considered a small sample, which is a limitation of our analysis. A larger sample would strengthen our study. However, our sample is significant if we consider that they had experience working on identity.
 
-27 people is a small sample
-
-While we did not track participants' job positions, roles, or affiliations,
-We do not recorded data on drpout surveys.
-
+Moreover, we did not track job positions, roles, or affiliations of participants. This was a deliberate choice to keep our survey short, at the expense of retrieving this information. In the future, further effort should be made to complement this work with comprehensive data collection from respondents, including tracking the dropout rate, which we did not collect in this study
 
 **Results and discussion**
- A detailed list of the questions and answers from this first set of the survey is available in [Appendix B](#appendix-b).
+A detailed list of the questions and answers from this first set of the survey is available in [Appendix B](#appendix-b).
 
 Table 5 shows the results of respondend related to the 15 proposed properties and their ranking based on the avarage and the standard deviation.
 
