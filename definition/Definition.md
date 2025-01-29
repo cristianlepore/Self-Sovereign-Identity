@@ -113,27 +113,27 @@ Figure 3 shows the final result of our grouping process. The group's name is der
 ![Final list of principles and clustering (Local)](/definition/images/final_list_principles/Final_list_properties.png)
 *Figure 3: The final grouping.*
 
-### 1.3.4 Refining principles
+### 1.3.4 Definition of principles
 
-The final set of 15 properties and their definitions can be found below. The definitions come from the combination of the 18 works from the literature. However, we shorten the definitions as much as possible, maintaining their essence for the questionnaire.
+We have combined the definitions of principles from 18 works, condensing them for quick comprehension while preserving their essence. This merging was done by referring to the authors' definitions as summarized in [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html). By combining definitions from at least two authors, we aimed to give a concise defintion. In some cases, we encountered similar definitions from more than two authors. To ensure consistency during the merging phase, we used uniform wording and synonyms. For example, we standardized the terms "users", "individuals", and roles like "holder" by referring to them as "entities."
 
 | Property | Definition |
 |----------|----------|
-| Existence and Representation | Entities and individuals must be able to prove their existence through the assertion of attributes to services. Additionally, individuals should be able to create as many identities as they wish.[^lepore] | 
-| Consent | Entities must explicitly agree to the collection, use, and sharing of their identity data, including opt-in and opt-out options for consent. | 
-| Ownership and Control | Entities can directly manage their identity, including control and negotiation of attributes from the agent/wallet to the service provider.[^cameron] | 
-| Security and Protection | Entities should be protected by the use of the most cutting-edge technology. Identity should be secured and protected against suppression or invalidation of the list of attributes, IdPs, and SPs. | 
-| Persistence | Individuals' identities must persist as long as the users wish, remaining valid over that period regardless of the identity provider.[^allen] Hence, individuals may present the same attributes from multiple sources.[^allen] |
-| Privacy and Minimal Disclosure | The privacy of entities should be guaranteed by the use of protocols for the selective disclosure and data minimization of attributes. | 
-| Access and Availability | Entities must have unrestricted access to the list of identity providers and service providers. | 
-| Transparency | Policies, rules, protocols, and algorithms to manage the ecosystem members must be transparent. |
-| Portability | Allowing users to carry and use their digital identity across multiple platforms and contexts. Attributes can be transported to other ecosystems. |
-| Interoperability | Entities must be able to interoperate across domains and not be limited to a specific domain. | 
-| Cost | The mechanisms for creating, maintaining, and sustaining the system should have minimal costs. | 
-| Standard | An e-identity system must use globally recognized standards. | 
-| Decentralization and Autonomy | Entities should have autonomy over their identity data without relying on any third party. | 
-| Verifiability and Authenticity | Entities should be able to reliably verify users' identities and must provide proof of the authenticity of their personal data. |
-| Usability and Consistency | Agents and other identity components should be easy to use, and their information should be delivered through rules, policies, and best practices that align across jurisdictions for system consistency. | 
+| Existence and Representation | Entities must be able to verify their existence by presenting attributes to service providers and generating multiple identities as needed.[^allen][^sheldrake] |
+| Consent | Entities must provide explicit consent for the collection, use, and sharing of their identity data, with the option to opt in or opt out at a later time.[^cucko][^allen] |
+| Ownership and Control | Entities must have full control and ultimate ownership of their self-sovereign identity. This includes secure algorithms that maintain the validity of the identity and its claims, whether self-asserted or issued by a third party.[^allen][^ferdous] | 
+| Security and Protection | The security of an identity and its related communication is paramount for any SSI solution. The system must prioritizing censorship-resistant methods that promote individual rights and freedom through cryptographically secure connections and communications.[^naik][^pava] | 
+| Persistence | Identities must be long-lived. A self-sovereign identity must ensuring that identities endure for as long as needed by the owner.[^pava][^allen] |
+| Privacy and Minimal Disclosure | The SSI solution should not include any method for associating biometric data with an underlying identity. Personal and confidential identity-related data should only be shared with the owner’s consent, and only the minimum necessary information should be shared with third parties.[^naik][^toth] | 
+| Access and Availability | Identity must always be available to entities, which in turn must have unrestricted access to their identity information. Entities should be able to retrieve all information, including claims and assertions.[^ferdous][^tobin] | 
+| Transparency | Systems and algorithms must be transparent.[^stokkink] The systems used to manage and operate a network of identities should be open, both in terms of their functionality and in how they are managed and updated.[^allen] |
+| Portability | Identities must be portable. Entities should be able to securely transfer or move their identity data to agents or systems of their choice.[^cucko][^glockler] |
+| Interoperability | Identities  should  be  as  widely  usable as possible.[^stokkink] The systems shall enable digital identity data for an entity to be represented, exchanged, secured, protected, and verified interoperably.[^toip][^allen] | 
+| Cost | An identity should be provided to general users free of charge, with no hidden costs, licensing fees, or other financial charges.[^naik] Any proposed standard for self-sovereign identity must be adoptable at an extremely low cost.[^andrieu] | 
+| Standard | A self-sovereign identity must be based onopen standards to ensure maximum portability,[^cucko] interoperability and adoption as well as sustainability.[^ferdous] | 
+| Decentralization and Autonomy | A Self-Sovereign Identity must enable complete autonomy in managing and administering identity information, without relying on a centralized system to represent, control, or verify an entity's digital identity data.[^sovrin][^essif][^ferdous] | 
+| Verifiability and Authenticity | Entities should be able to reliably prove their identity.[^cucko] Any identity should be verifiable through its credentials on the Web, in a manner similar to how a physical credential represents a real-world identity.[^naik] |
+| Usability and Consistency | Entities should be able to count on a consistent experience across various technology platforms and services, with the system prioritizing the usability and accessibility of agents and other SSI components.[^satybaldy][^sovrin] |
 
 ### 1.3.6 Expert validation
 
@@ -253,6 +253,8 @@ Results of the first part of the Survey.
 
 [^omar]: Dib, Omar, and Baha Rababah. "Decentralized identity systems: Architecture, challenges, solutions and future directions." Annals of Emerging Technologies in Computing (AETiC) 4.5 (2020): 19-40.
 
+[^glockler]: Glöckler, J., Sedlmeir, J., Frank, M., & Fridgen, G. (2024). A systematic review of identity and access management requirements in enterprises and potential contributions of self-sovereign identity. Business & Information Systems Engineering, 66(4), 421-440.
+
 [^joshi]: Joshi, Ankur, et al. "Likert scale: Explored and explained." British journal of applied science & technology 7.4 (2015): 396-403.
 
 [^microsoft]: Microsoft Forms. https://en.wikipedia.org/wiki/Microsoft_Forms, accessed on January 2nd, 2024.
@@ -264,3 +266,13 @@ Results of the first part of the Survey.
 [^stokkink]: Stokkink, Quinten, and Johan Pouwelse. "Deployment of a blockchain-based self-sovereign identity." 2018 IEEE international conference on Internet of Things (iThings) and IEEE green computing and communications (GreenCom) and IEEE cyber, physical and social computing (CPSCom) and IEEE smart data (SmartData). IEEE, 2018. 
 
 [^sovrin]: Sovrin Foundation. Principles of self-sovereign identity (ssi). https://sovrin.org/principles-of-ssi/, 2024. Accessed: 2024-12-2 
+
+[^naik]: Naik, Nitin, and Paul Jenkins. "Self-sovereign identity specifications: Govern your identity through your digital wallet using blockchain technology." 2020 8th IEEE International Conference on Mobile Cloud Computing, Services, and Engineering (MobileCloud). IEEE, 2020.
+
+[^sheldrake]: Sheldrake, Philip. "Generative identity—beyond self-sovereignty." 2019,
+
+[^essif]: eSSIF-Lab Principles, https://essif-lab.github.io/framework/docs/essifLab-principles, accessed on 2025-01-29.
+
+[^tobin]: Tobin, A., & Reed, D. (2016). The inevitable rise of self-sovereign identity. The Sovrin Foundation, 29(2016), 18.
+
+[^satybaldy]: Satybaldy, A., Nowostawski, M., & Ellingsen, J. (2020). Self-sovereign identity systems: Evaluation framework. Privacy and Identity Management. Data for Better Living: AI and Privacy: 14th IFIP WG 9.2, 9.6/11.7, 11.6/SIG 9.2. 2 International Summer School, Windisch, Switzerland, August 19–23, 2019, Revised Selected Papers 14, 447-461.
