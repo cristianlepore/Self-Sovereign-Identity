@@ -182,7 +182,7 @@ The breakdown of responses to the 20 questions in the questionnaire is available
 
 The figure below shows a breakdown of the votes for each property.
 
-![Level of importance](survey/part2/LevelOfImportance.png)
+![Level of importance](survey/LevelOfImportance.png)
 
 The most and least important properties, as well as their intersection, is presented below.
 
