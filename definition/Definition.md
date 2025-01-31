@@ -176,9 +176,9 @@ As for business models of wallets and service deployment, 48% of respondents wou
 **Results and discussion**
 The breakdown of responses to the 20 questions in the questionnaire is available in [Appendix B](#appendix-b).
 
-Table 5 shows the results of respondend related to the 15 proposed properties and their ranking based on the avarage and the standard deviation.
+[Table 5](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/Survey.html) shows the results of respondend related to the 15 proposed properties and their ranking based on the avarage and the standard deviation.
 
-[Click to view the table 5.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/part2/Survey.html) *Ranking of identified properties.*
+[Click to view the table 5.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/Survey.html) *Ranking of identified properties.*
 
 The figure below shows a breakdown of the votes for each property.
 
