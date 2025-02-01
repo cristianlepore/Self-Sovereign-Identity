@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0" version="26.0.10">
+  <diagram name="Page-1" id="dL-Z2z13uD8_r4Ht-EaJ">
+    <mxGraphModel dx="1419" dy="1237" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="weFOgzEomuFqTalq-CIN-23" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="1300" y="300" width="1000" height="460" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-17" value="" style="rounded=1;whiteSpace=wrap;html=1;arcSize=0;fillColor=#ffe6cc;strokeColor=#d79b00;opacity=50;" parent="1" vertex="1">
+          <mxGeometry x="1370" y="40" width="1000" height="490" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-3" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Ownership and control&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1370" y="680" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-4" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Access and availability&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1810" y="220" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-5" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Transparency&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1420" y="440" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-6" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Persistence&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2055" y="110" width="140" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-7" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Portability&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1810" y="110" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-8" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Interoperability&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2060" y="570" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-9" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Consent&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2120" y="340" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-10" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Security and protection&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1810" y="340" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-11" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Privacy and minimal disclosure&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1420" y="110" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-12" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Standard&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1815" y="570" width="110" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-13" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Cost&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1420" y="220" width="70" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-14" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Usability and consistency&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1420" y="340" width="260" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-15" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Decentralization and Autonomy&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1370" y="570" width="310" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-16" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Verifiability and Authenticity&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1810" y="440" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-20" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;font style=&quot;font-size: 20px; line-height: 200%;&quot;&gt;Existence and representation&lt;/font&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1815" y="680" width="290" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-26" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;span style=&quot;color: rgb(255, 153, 51);&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;MOST IMPORTANT&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1400" width="240" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="weFOgzEomuFqTalq-CIN-27" value="&lt;div style=&quot;line-height: 200%;&quot; align=&quot;right&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 20px; color: rgb(51, 153, 255);&quot;&gt;LEAST IMPORTANT&lt;/font&gt;&lt;span style=&quot;color: rgba(0, 0, 0, 0);&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/b&gt;&lt;/div&gt;" style="text;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="2040" y="760" width="240" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

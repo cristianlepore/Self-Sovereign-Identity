@@ -186,7 +186,7 @@ The figure below shows a breakdown of the votes for each property.
 
 The most and least important properties, as well as their intersection, is presented below.
 
-![Important properties](survey/part2/ImportantProperties.png)
+![Important properties](survey/ImportantProperties.png)
 
 ### 1.3.6 Final list
 
