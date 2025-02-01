@@ -187,8 +187,55 @@ The figure below shows a breakdown of the votes for each property.
 
 The most and least important properties, as well as their intersection, is presented below.
 
-![Important properties](survey/ImportantProperties.png)
+![Properties ranking](survey/ImportantProperties.png)
 *Figure 7. The most and least important properties of both rankings.*
+
+As last think, we have leveraged the findings from our survey to analyze the importance of clusters. For this objective, we have assigned a weight to the properties in the most important and least important frames. A weight of three to the most important properties, and one to the least important properties. As a consequence, a weight of two is assigned to properties at the intersection of the two frames.
+
+Hence, we go through the five clusters, sum up results for each property and normalize to obtain a comparable result.
+
+Controllability:  
+| Property | Weight |
+|-----------|-----------|
+| Consent | 1 |
+| Existence and representation | 1 |
+| Ownership and control | 2 |
+| AVG | 1.3 |
+
+Security
+| Property | Weight |
+|-----------|-----------|
+| Persistence | 3 |
+| Privacy and minimal disclosure | 3 |
+| Security and protection | 3 |
+| AVG | 3 |
+
+Usability and Agency
+| Property | Weight |
+|-----------|-----------|
+| Decentralization and Autonomy | 2 |
+| Usability and consistency | 2 |
+| Verifiability and Authenticity | 2 |
+| AVG | 2 |
+
+Mobility
+| Property | Weight |
+|-----------|-----------|
+| Access and availability | 2 |
+| AVG | 2 |
+
+Sustainability and Adoption
+| Property | Weight |
+|-----------|-----------|
+| Cost | 2 |
+| Interoperability | 1 |
+| Portability | 3 |
+| Standard | 1 |
+| Transparency | 1 |
+| AVG | 1.6 |
+
+![Properties ranking and grouping](/definition/images/importance_group/ImportantGroups.png)
+*Figure 8. The most and least important group.*
 
 ### 1.3.6 Final list
 
