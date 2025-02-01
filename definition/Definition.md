@@ -1,12 +1,16 @@
 # 1. Self-Sovereign Identity
 
-Self-Sovereign Identity (SSI) is an innovative approach to identity management that empowers users with full control over their identities. Beyond control, SSI encompasses several fundamental principles. The first to define a set of principles was Allen[^allen], and since then, academics and working groups have contributed to expanding this list to create a more comprehensive framework. Some of the key features of SSI include *Existence, Control, Access, Transparency, Persistence, Portability, Interoperability, Consent, Minimalization, and Protection.*
+Self-Sovereign Identity (SSI) is an innovative approach to identity management that empowers users with full control over their identities. With SSI, users can devide what information to share with whom. However, describing SSI as control of information is just a part of its essense; the rest incorporates several core principles. The first to frame a list of principles for SSI was Allen[^allen]; since its list, numerous academics and working groups have further refined and expanded upon them to create a more comprehensive list of properties. As of today, there is no agreed-upon list of what those properties are, nor their definition. This chapter shed light on the debate surrounding SSI and we aim to converge to a comprehensive list of principles. We provide rationale for those principles combining a quantitative and a qualitative analysis.
 
 ## 1.1 Background
 
-Figure 1 illustrates the flow of identity information and key roles within the SSI model. Data moves from left to right, with issuers providing data to holders, who collect claims and later present them as assertions to service providers. Assertions may consist of claims combined in various ways and formats. The roles within the data flow are not fixed; each entity can act as an issuer or a verifier depending on the context. For example, the holder may occasionally issue claims to the verifier, while the verifier can also issue claims to holders upon request. In some cases, a verifiable data registry, such as a blockchain registry or a certificate authority (CA), can be integrated into the model, as shown in Figure 1.
+In 2016 Allen defined the properties of SSI through ten core properties which include *Existence, Control, Access, Transparency, Persistence, Portability, Interoperability, Consent, Minimalization, and Protection.*[^allen] These properties reflects back to the way individuals mange their digital identity and share personal credentials online.
 
-The same figure systematically positions Allen's principles within the Users and Roles schema and the data flow. Specifically, the data flow on the right integrates information from [^cucko], the Trust Over IP Foundation [^toip], and the Architecture and Reference Framework v1.4.1 of the EUDI Wallet solution [^ARF] to build the most comprehensive model possible for the SSI data flow. The use of a registering CA—or another form of centrally managed or decentralized repository—can be replaced with a different type of trust anchor to validate certificates.
+With time, the philosophical approach found consistency, merging with many of the concepts of the decentralized identity community. A standardized way to represent SSI as a data flow between key roles emerged to the point that it depicted an archetype for SSI. The archetype proposed by the W3C community foresees three entities: issuer, holder, and verifier, with issuers providing data to holders, who collect claims and later present them as assertions to service providers. Assertions may consist of claims combined in various ways and formats. The roles within the data flow are not fixed; each entity can act as an issuer or a verifier depending on the context. For example, the holder may occasionally issue claims to the verifier, while the verifier can also issue claims to holders upon request. In some cases, a verifiable data registry, such as a blockchain registry or a certificate authority (CA), can be integrated into the model, as shown in Figure 1.
+
+While SSI principles inspired this archetype, a phisiological intertwine of principles and technical items appeared in some contributions.[^cucko] For this reason, we have elaborated an infographic of the potential positioning of principles into the data flow and key roles of SSI.
+
+We have integrated information from [^cucko], the Trust Over IP Foundation [^toip], the W3C,[^braun] and the Architecture and Reference Framework v1.4.1 of the EUDI Wallet solution [^ARF] with the hope to build the most comprehensive infographic of the SSI properties within its architecture. The posistion of properties is consistent with the information from [^cucko], and we did not infer other information about the position of properties. The use of a registering CA — or another form of centrally managed or decentralized repository — can be replaced with a different type of trust anchor to validate certificates.
 
 ![Allen Principles Schema (Local)](/definition/images/allen_principles/Allen_principles_schema.png)
 *Figure 1: Systematic positioning of Allen's properties within the SSI process workflow.[^allen]*
@@ -17,9 +21,9 @@ Several works by academics and industry leaders have experimenting and extended 
 
 ## 1.3 Methodology
 
-The process that led to the selection of the final list of properties is fully replicable. Initially, we selected 52 properties from 18 works, using heuristics to focus on a subset of principles in our final list. We further categorized these properties through a clustering algorithm and proposed a questionnaire to experts in the Decentralized and Self-Sovereign Identity community participating in the ARES 2024 conference. The questionnaire aimed to: I) Investigate the identified SSI properties and assess their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties.
+The process that led to the selection of the final list of properties is fully replicable. Initially, we selected 52 properties from 18 works, using heuristics to focus on a subset of principles in our final list. We further categorized these properties through a clustering algorithm and proposed a questionnaire to experts in the Decentralized and Self-Sovereign Identity community participating in the ARES 2024 conference. The questionnaire aimed to: I) Investigate the identified SSI properties and assess their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties and IV) refine the principles defintion.
 
-To gather relevant articles and refine our principles, we conducted a systematic review, which provides a structured overview of a research field by adapting the steps presented in [^lepore][^badzek][^cushman].
+To gather relevant articles, we conducted a systematic review, which provides a structured overview of a research field by adapting the steps presented in [^lepore][^badzek][^cushman].
 
 *1. Defining research questions.* We formulated the research question RQ1: *What are the principles of Self-Sovereign Identity?* From RQ1, we derived the following keywords:
 
@@ -39,7 +43,7 @@ To optimize search results and avoid wildcards, the keywords were refined; for i
 
 *7. Definition of principles.* We summarized the definitions of properties, shortening them as much as possible while retaining their essence.
 
-*8. Expert validation.* We proposed a questionnaire to experts in the field of decentralized identity to validate the final list of properties and refine their definitions.
+*8. Expert validation.* We proposed a questionnaire to investigate the identified SSI properties and assess their importance. The outcome served also to refine their definitions.
 
 *9. Final list.* The final step involved creating an agreed-upon list of properties, accompanied by precise definitions for each.
 
@@ -137,7 +141,9 @@ We have combined the definitions of principles from 18 works, condensing them fo
 
 ### 1.3.5 Expert validation
 
-To validate the proposed principles, we conducted a survey targeting experts attending the digital identity keynote at the ARES Conference 2024, held from July 29 to August 2 in Vienna, Austria. Participants were approached in person and asked to complete a survey available both online and on paper. Before choosing a survey, we considered other methods of gathering input, such as interviews. Despite the need for careful design to achieve a good response rate,[^ward] we preferred surveys over interviews because they allow participants to share their opinions without bias or fear of judgment, making them more likely to select their preferred options freely.[^mol] Additionally, since ARES is an international conference, conducting interviews in English could introduce biases due to language barriers, wording issues, and potential misunderstandings. Time was another critical factor we considered. Indeed, conference attendees may not have been willing to dedicate significant time to interviews. In contrast, a survey could reach a broader audience and allow participants to complete the questionnaire at their convenience. Due to these factors, we ultimately opted for a survey.
+To validate the proposed principles, we conducted a survey targeting experts attending the digital identity keynote at the ARES Conference 2024, held from July 29 to August 2 in Vienna, Austria. In parallel to a survey, we considered other methods of gathering input from participants, for example interviews. Despite the need for careful design to achieve a good response rate,[^ward] we preferred surveys over interviews because they allow participants to share their opinions without bias or fear of judgment, making them more likely to select their preferred options freely.[^mol] Additionally, since ARES is an international conference, conducting interviews in English could introduce biases due to language barriers, wording issues, and potential misunderstandings. Time was another critical factor we considered. Indeed, conference attendees may not have been willing to dedicate significant time to interviews. In contrast, a survey could reach a broader audience and allow participants to complete the questionnaire at their convenience. Due to these factors, we ultimately opted for a survey.
+
+Participants were approached in person and asked to complete an online questionnaire.
 
 The purpose of a survey was to gain a broader understanding of the perception of the SSI concept and its associated properties. Specifically, we invited respondents to complete an online questionnaire to: I) Investigate the identified SSI properties and their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties. The survey aimed to assess the perceived importance of these properties, highlighting the most and least critical ones. Additionally, by gathering expert insights, we sought to uncover any overlooked concerns, inconsistencies, misunderstandings, or missing properties in our analysis.
 
@@ -235,9 +241,9 @@ Sustainability and Adoption
 | AVG | 1.6 |
 
 ![Properties ranking and grouping](/definition/images/importance_group/ImportantGroups.png)
-*Figure 8. The most and least important group.*
+*Figure 8. The most and least important group according to our survey.*
 
-### 1.3.6 Final list
+### 1.3.6 Final defintion of properties
 
 The definitions presented in [Section 1.3.5](#135-refining-principles) were abbreviated as much as possible intentionally, due to their use in the questionnaire. In this Section, we want to enhance them in accordance with the results of the respondents, as we obtained valuable insights from experts in the fields of IdM and SSI, expressing their concerns and possible misunderstandings of an individual property. 
 
@@ -339,3 +345,5 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^ward]: Ward, C. D., Welch, B., Conley, A., Smith, P. J., & Greby, S. (2017). It’s About Time: Examining the Effect of Interviewer-Quoted Survey Completion Time Estimates on Survey Efficiency. Survey practice, 10(2).
 
 [^mol]:Van Mol, C. (2017). Improving web survey efficiency: the impact of an extra reminder and reminder content on web survey response. International Journal of social research Methodology, 20(4), 317-327.
+
+[^braun]: Braun, Christoph H-J., et al. "SSI, from Specifications to Protocol? Formally verify security!." Proceedings of the ACM on Web Conference 2024. 2024.
