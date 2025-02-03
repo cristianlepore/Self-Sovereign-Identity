@@ -74,18 +74,25 @@ This approach aligns our list with established terminology in the field of ident
 
 The merging process has shrinked the list of properties by 34%, leading to a total of 34 principles. The new list is presented in [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html).
 
-The analysis of [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) shows that Allen's principles are generally shared by 13 authors out of the 18, while the remaining 24 principles are shared by less than 2 authors on avarage.
+The analysis of [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) shows that Allen's principles are, on average, shared by 13 out of 18 authors, while the remaining 24 principles are shared by fewer than 2 authors on average.
 
-[Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) *Comparison of identified properties grouping from various sources*
+[Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) *Comparison of identified properties grouping from various sources.*
 
-| **Category**                          | **Adoption Rate** |
+The following table summarizes what has already been mentioned. The original set of principles is cited by at least 60% of authors, while the extended principles are typically shared by only one or two authors. Figure 3 visually represents this phenomenon. The first ten principles on the left originate from Allen’s initial definition, while the remaining ones are derived from later works. One possible interpretation is that Allen’s principles have been established for a longer time.
+
+| **Category**                          | **Adoption Rate (AVG)** |
 |---------------------------------------|-------------------|
 | Allen's principles   | adopted by ≈ 80% of authors |
 | Other 24 principles  | adopted by < 10% of authors |
 
-We use these findings to extract a subset of principles for SSI. To achieve this, we selected principles from [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) that are cited by at least five authors, representing at least 25% of the total. The final list includes 15 principles, grouped as follows: 10 principles from Allen's original work and 5 principles from extended contributions. Additionally, we can analyze some further numbers: 19 out of the 34 principles - and 19 out of the 24 extended principles - were cited by fewer than five authors. Notably, the majority of these 19 principles were shared on avarage by two authors. Our final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html).
+![Principles selection](/definition/images/principles_selection/Principles_selection.png)
+*Figure 3: The graph shows the distribution of authors by property, indicating how many adopted each corresponding principle.*
 
-[Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html) *Our final list of properties and their respective names.*
+We took this into account and used the findings to extract a subset of principles for SSI. To achieve this, we applied a straightforward heuristic: selecting principles cited by at least 25% of the authors. This heuristic of 25% is a simplified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] The final list includes principles that surpass the red threshold in Figure 3 - 10 principles from Allen and 5 from extended contributions. Additionally, some further analysis reveals that 19 out of the 24 extended principles, were cited by fewer than five authors. Notably, most of these 19 principles were, on average, shared by only two authors.
+
+Our final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html).
+
+[Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html) *Our final list of properties and their namings.*
 
 ### 1.3.3 Clustering
 
@@ -117,7 +124,7 @@ We tested several combinations of parameter K (number of clusters) and eventuall
 Figure 3 shows the final result of our grouping process. The group's name is derived from the literature.
 
 ![Final list of principles and clustering (Local)](/definition/images/final_list_principles/Final_list_properties.png)
-*Figure 3: The final grouping.*
+*Figure 4: The final grouping.*
 
 ### 1.3.4 Definition of principles
 
@@ -356,4 +363,6 @@ The breakdown of responses to the 20 questions in the questionnaire.
 
 [^sheldrake]: Sheldrake, Philip. "Generative identity—beyond self-sovereignty." 2019, 
 
-[^essif]: ESSIF-Lab. Essif-lab principles. https://essif-lab.github.io/framework/docs/essifLab-principles, 2024. Accessed: 2024-12- 24. 
+[^essif]: ESSIF-Lab. Essif-lab principles. https://essif-lab.github.io/framework/docs/essifLab-principles, 2024. Accessed: 2024-12- 24.
+
+[^heuristic]: heuristic definition. Cambridge dictionary. https://dictionary.cambridge.org/dictionary/english/heuristic, accessed on 2024-02-03.
