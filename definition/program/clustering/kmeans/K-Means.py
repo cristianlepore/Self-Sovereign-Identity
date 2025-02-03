@@ -3,45 +3,45 @@ from sklearn.cluster import KMeans
 import numpy as np
 import os
 
-# Funzione principale
+# Main function
 def kmeans_clustering(file_path, n_clusters):
     """
-    Applica l'algoritmo K-Means a un dataset CSV.
+    Applies the K-Means algorithm to a CSV dataset.
 
-    :param file_path: Percorso al file CSV.
-    :param n_clusters: Numero di cluster (k).
+    :param file_path: Path to the CSV file.
+    :param n_clusters: Number of clusters (k).
     """
     # Read and load data
     data = pd.read_csv(file_path)
     
-    # Seleziona colonne numeriche
+    # Select numerical columns
     numerical_columns = data.select_dtypes(include=[np.number]).dropna(axis=1, how='all')
     
-    # Riempi i valori NaN con 0 (se necessario)
+    # Fill NaN values with 0 (if necessary)
     cleaned_data = numerical_columns.fillna(0)
     
-    # Applica K-Means
+    # Apply K-Means
     kmeans = KMeans(n_clusters=n_clusters, init='k-means++', random_state=42)
     clusters = kmeans.fit_predict(cleaned_data)
     
-    # Aggiungi i risultati dei cluster al dataset originale
+    # Add cluster results to the original dataset
     data['Clustering'] = clusters
     
-    # Salva il dataset con i cluster in un nuovo file
+    # Save the dataset with clusters in a new file
     output_file = "Output.csv"
     data.to_csv(output_file, index=False)
     print(f"Clustering completed! Results saved in: {output_file}")
     print(data[['Clustering']].value_counts().sort_index())
 
-# Esegui il programma
+# Run the program
 if __name__ == "__main__":
-    # Percorso della cartella Download
-    # Settare il percorso corretto per la propria configurazione
+    # Path to the Downloads folder
+    # Set the correct path for your configuration
     download_folder = os.path.join(os.path.expanduser("~"), "Downloads/SSI_principles/Definition/Program")
     file_path = os.path.join(download_folder, "Input.csv")
     
-    # Numero di cluster (k)
+    # Number of clusters (k)
     n_clusters = 5
     
-    # Esegui la funzione
+    # Execute the function
     kmeans_clustering(file_path, n_clusters)
