@@ -43,7 +43,7 @@ Keywords were refined and shuffled to avoid wildcards; for instance, Self-Sovere
 
 *5. Selection.* Some properties had similar meanings but were labeled differently by different authors. We referenced past works to merge labels representing identical properties and extracted the most relevant ones using heuristics.
 
-*6. Clustering.* We grouped principles into five groups.
+*6. Clustering.* Clustering allows us to answer the quesiton: *can we cluster principles based on their labels to create categories?*
 
 *7. Definition of principles.* We summarized the definitions of properties from authors while retaining their essence.
 
@@ -90,18 +90,23 @@ The following table summarizes what has already been mentioned. The original set
 
 We took this into account and used the findings to extract a subset of principles for SSI. To achieve this, we applied a straightforward heuristic: selecting principles cited by at least 25% of the authors. This heuristic of 25% is a simplified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] The final list includes principles that surpass the red threshold in Figure 3 - 10 principles from Allen and 5 from extended contributions. Additionally, some further analysis reveals that 19 out of the 24 extended principles, were cited by fewer than five authors. Notably, most of these 19 principles were, on average, shared by only two authors.
 
-Our final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html).
+The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html).
 
 [Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html) *Our final list of properties and their namings.*
 
 ### 1.3.3 Clustering
 
-A relevant question is: can we cluster labels to create categories? In the context of SSI properties, categorization is useful to "illuminate a relationship between the subjects and objects of knowledge."[^mahalakshmi] In this regard, we aimed to provide a categorization of works that illustrates their relationship with Self-Sovereign Identity. Some of the previously cited works have already clustered principles, as discussed in [Related Works](#12-related-works). To build on this, we gathered further information about their categorization of principles and reported it in [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), where differences in naming conventions among authors can be observed.
+We aim now to answer the question: can we cluster principles based on their labels to create categories? 
+A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] For this reason, we aimed to provide a categorization of properties that illuminates the relationship with Self-Sovereign Identity. Some of the above mentioned works have already clustered principles, as discussed in [Related Works](#12-related-works), but they lack to recon the methodology for their systemaica categorization. We waould like to emphasize that our clustering is based on the naming of properties, and on past exercercises, rather than on principles' defintions, which for the moment, has not been considered.
 
-[Click to view the table 4.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) *The categorization of principles provided by various authors.*
+As we aim to avoid subjective analysis, we have further gatherred information about past categorizations as reported on [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1). Each cell of the Table, contains the name of the category, to which the principles pertains.
 
-To better illustrate the relationship between properties and key aspects of SSI, we created five groups of principles based on past definitions. We applied heuristics from previous works to guide our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx).
-In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
+[Click to view the table 4 with 15 properties only.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) *The categorization of principles provided by various authors.*
+[Table 4 with the complete list of 34 properties.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification2) *The categorization of principles provided by various authors.*
+
+We applied clustering techniques to group principles  our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx). In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
+
+To better illustrate the relationship between properties and key aspects of SSI, we created five groups of principles based on past definitions. 
 
 **Clustering techniques**
 
