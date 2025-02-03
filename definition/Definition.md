@@ -25,67 +25,65 @@ Eleven of the eighteen works considered in our contribution complement the list 
 
 ## 1.3 Methodology
 
-The process that led to the selection of the final list of properties is fully replicable. Initially, we selected 52 properties from 18 works, using heuristics to focus on a subset of principles in our final list. We further categorized these properties through a clustering algorithm and proposed a questionnaire to experts in the Decentralized and Self-Sovereign Identity community participating in the ARES 2024 conference. The questionnaire aimed to: I) Investigate the identified SSI properties and assess their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the classification and grouping of properties and IV) refine the principles defintion.
+A coarse-grained overview of the research topic provides a comprehensive perspective of works on the SSI principles. An initial selection of 18 works from the literature review outlined 52 properties, which were then filtered throgh heuristics. In addition to the list of properties, our work introduces a unique categorization through clustering techniques. Finally, we proposed a questionnaire for experts to: I) Investigate the identified SSI properties and assess their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the grouping of properties. IV) Refine the principles.
 
 To gather relevant articles, we conducted a systematic review, which provides a structured overview of a research field by adapting the steps presented in [^lepore][^badzek][^cushman].
 
-*1. Defining research questions.* We formulated the research question RQ1: *What are the principles of Self-Sovereign Identity?* From RQ1, we derived the following keywords:
+*1. Defining search strings.* We formulated the research question *RQ1: What are the principles of Self-Sovereign Identity?* From RQ1, we extracted keywords and create the following search string:
 
 - *"Self-Sovereign Identity" AND "principles"*
 
-To optimize search results and avoid wildcards, the keywords were refined; for instance, Self-Sovereign Identity was sometimes replaced with SSI. We used principles and properties interchangeably.[^lepore] Finally, the keywords were rearranged to ensure comprehensive coverage of the research scope.
+Keywords were refined and shuffled to avoid wildcards; for instance, Self-Sovereign Identity was replaced with SSI.[^lepore]
 
-*2. Searching.* Search strings were used to retrieve relevant papers from databases, including ACM, ArXiv, IEEE Xplore, Scopus, and the meta-search engine Google Scholar. This process initially yielded 47 results.
+*2. Searching.* Search strings were used to retrieve papers from databases, including ACM, ArXiv, IEEE Xplore, Scopus, and the meta-search engine Google Scholar. This process yielded 47 results.
 
-*3. Screening.* Abstracts and conclusions were reviewed to exclude irrelevant results, particularly those not addressing SSI principles. Papers that did not explain the methodology for system analysis were also removed, along with duplicate entries. The final selection consists of 18 papers. Despite being an emerging topic, this selection represents a significant portion of the literature on SSI principles from 2016 to 2024.
+*3. Screening.* Abstractss were reviewed to exclude results not concerning with our research question RQ1. Duplicate entries were removed. The final selection consists of 18 papers published from 2016 to 2024.
 
-*4. Recording of properties.* The selected articles were analyzed to extract 52 property labels as presented by the authors. The results were compiled into a table that lists the papers along with their corresponding features for SSI.
+*4. Recording of properties.* We extracted 52 property labels from the literature and organized them into a table to provide a comprehensive overview.
 
-*5. Merge and selection.* Some properties had similar meanings but were labeled differently across various papers. To minimize subjectivity, we first reviewed past literature to consolidate labels representing identical properties, adopting the names suggested by previous studies. This approach allowed us to create a list that aligns with established terminology in the field of identity. We then applied heuristics to extract the most relevant properties, resulting in a list of 15 principles.
+*5. Selection.* Some properties had similar meanings but were labeled differently by different authors. We referenced past works to merge labels representing identical properties and extracted the most relevant ones using heuristics.
 
-*6. Clustering.* The property labels were clustered using various methods, including K-Means, Greedy (local), and Graph Theory. We compared and discussed the rationale behind the number of clusters and their names.
+*6. Clustering.* We grouped principles into five groups.
 
-*7. Definition of principles.* We summarized the definitions of properties, shortening them as much as possible while retaining their essence.
+*7. Definition of principles.* We summarized the definitions of properties from authors while retaining their essence.
 
 *8. Expert validation.* We proposed a questionnaire to investigate the identified SSI properties and assess their importance. The outcome served also to refine their definitions.
 
-*9. Final list.* The final step involved creating an agreed-upon list of properties, accompanied by precise definitions for each.
-
-Figure shows the process to validate properties.
+*9. Final list.* We framed the final list of properties, accompanied by precise definitions for each.
 
 ![Casual Loop Diagram Properties (Local)](/definition/images/literature_review/literature_review.png)
-*Figure 1. The process of our literature review. Squares putlines the main process. Rounded squares are outputs. They intertwine in a process where the output feeds the next step.*
+*Figure 1. The process of our literature review. Squares putlines the main process. Rounded squares are outputs. In the process, the output feeds the next step.*
 
-Steps 1 to 3 have already been detailed in the list. Therefore, we will now focus on explaining the remaining steps.
+The next part details steps 4 to 9.
 
 ### 1.3.1 Recording of properties
 
-Table 1 summarizes the names of the properties and contributions identified through the search and screening process. The rows represent contributions, while the columns correspond to the principle labels established by each author. Notably, some works propose alternative sets of principles, and variations in naming conventions can be observed across different authors. Our literature review examined a total of 18 relevant works in the field of identity, covering 52 properties. The checkmarks indicate the properties addressed by the respective author(s).
+Table 1 summarizes the names of the properties and contributions identified through the search and screening process. The rows represent principles of SSI, while the columns correspond to contributions. Our literature review examined a total of 18 relevant works in the field of identity, covering 52 properties. The checkmarks indicate the properties addressed by the respective author(s). Notably, some works propose alternative sets of principles, and variations in naming conventions can be observed across different authors.
 
 [Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles/Principles1.html) *Comparison of identified properties in various sources.*
-[Table 1 alternative version.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles/Principles2.html) 
+[Table 1 alternative version.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles/Principles2.html)
 
-### 1.3.2 Merge and selection
+### 1.3.2 Selection
 
-Differences in the naming of properties across various authors can be observed. However, many of these properties convey the same or similar meanings. To avoid pitfalls and subjective merging of labels, we have consolidated property labels based on previous works by [^cucko][^sovrin][^toth][^stokkink][^ferdous][^andrieu]. This resulted in the following merges: (i) Existence and Representation, (ii) Ownership and Control, (iii) Ownership and Choosability, (iv) Access and Availability, (v) Portability and Secure Identity Transfer, (vi) Interoperability and Compliance, (vii) Consent and Participation, (viii) Protection and Secure Transactions, (ix) Protection and Security, (x) Protection and Counterfeit Prevention, (xi) Minimization and Privacy, (xii) Minimization and Disclosure Minimization, (xiii) Usability and Consistency, (xiv) Consistency and Recoverability, (xv) Decentralization and Autonomy, (xvi) Provability and Identity Assurance, (xvii) Provability, Verifiability, and Authentication, and (xviii) Identity Assurance and Identity Verification.
+Difference in the naming of properties across various authors can be observed. However, many of these properties convey the same or similar meanings. To avoid pitfalls, we have consolidated property labels based on previous works by [^cucko][^sovrin][^toth][^stokkink][^ferdous][^andrieu]. This resulted in the following merges: (i) Existence and Representation, (ii) Ownership and Control, (iii) Ownership and Choosability, (iv) Access and Availability, (v) Portability and Secure Identity Transfer, (vi) Interoperability and Compliance, (vii) Consent and Participation, (viii) Protection and Secure Transactions, (ix) Protection and Security, (x) Protection and Counterfeit Prevention, (xi) Minimization and Privacy, (xii) Minimization and Disclosure Minimization, (xiii) Usability and Consistency, (xiv) Consistency and Recoverability, (xv) Decentralization and Autonomy, (xvi) Provability and Identity Assurance, (xvii) Provability, Verifiability, and Authentication, and (xviii) Identity Assurance and Identity Verification.
 
-This approach aligns our list with established terminology in the field of identity, ensuring that the names for the final list of properties correspond to combinations of labels used in the referenced papers. Additionally, we slightly adjusted the work of [^cucko] to reflect updates in our literature review. Specifically, we removed the properties of Equity and Inclusion, as well as Recoverability. Furthermore, we renamed Legacy System with Compliance; we eliminated the links between Control and Agency, Access and Usability, and Availability and Recoverability. Figure 2 visualizes the results through a Causal Loop Diagram based on these papers. This diagram includes only the properties that have been modified or merged, while the complete list of properties, as presented in [Table 1](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles/Principles1.html), is omitted for clarity.
+This approach aligns our list with established terminology in the field of identity, and ensures a coherent naming across works. Additionally, we slightly adjusted the work of [^cucko] to reflect updates in a more recent literature review. Specifically, we removed the properties of Equity and Inclusion, as well as Recoverability. Furthermore, we renamed Legacy System with Compliance; we eliminated the links between Control and Agency, Access and Usability, and Availability and Recoverability. Figure 2 visualizes the results through a Causal Loop Diagram based on these papers. The diagram includes only the properties subject to modification or merging, while the complete list of properties is presented in [Table 1](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles/Principles1.html).
 
 ![Casual Loop Diagram Properties (Local)](/definition/images/casual_loop_diagram/Casual_loop_diagram.png)
-*Figure 2: Casual loop diagram of the set of properties, defined by different authors on the left. The final set of properties on the right.*
+*Figure 2: Casual loop diagram of the set of properties, defined by different authors.*
 
-[Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) shows the entire list of properties, the one that we have merged, and the others, with, when needed, their new names. The merging process has shrinked the initial list by a 34%, leading to a total of 34 principles, still a high number for a summary of properties.
+The merging process has shrinked the list of properties by 34%, leading to a total of 34 principles. The new list is presented in [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html).
 
-Additionally, [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) shows that Allen's principles are generally shared by 80% of authors, while the remaining 24 principles are shared by less than 10% of authors. This means that, on average, each of these principles, apart from Allen's principles, is shared by fewer than three authors.
+The analysis of [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) shows that Allen's principles are generally shared by 13 authors out of the 18, while the remaining 24 principles are shared by less than 2 authors on avarage.
 
 [Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) *Comparison of identified properties grouping from various sources*
 
-| **Category**                          | **Adoption Rate** | **Details**                                      |
-|---------------------------------------|-------------------|-------------------------------------------------|
-| Authors adopting Allen's principles   | ≈ 80%  | Share an average of 8 out of 10 SSI principles. |
-| Remaining principles (24 total)       | < 10%  | Share an average of 2 out of 24 principles. |
+| **Category**                          | **Adoption Rate** |
+|---------------------------------------|-------------------|
+| Allen's principles   | adopted by ≈ 80% of authors |
+| Other 24 principles  | adopted by < 10% of authors |
 
-We use these findings to support our rationale and define a final set of principles for SSI. To achieve this, we selected principles from [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) that are cited by at least five authors, representing at least 25% of the total. The final list includes 15 principles, grouped as follows: 10 principles from Allen's original work and 5 principles from extended contributions. Additionally, we can analyze some further numbers: 19 out of the 34 principles - and 19 out of the 24 extended principles - were cited by fewer than five authors. Notably, the majority of these 19 principles were shared on avarage by two authors. Our final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html).
+We use these findings to extract a subset of principles for SSI. To achieve this, we selected principles from [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) that are cited by at least five authors, representing at least 25% of the total. The final list includes 15 principles, grouped as follows: 10 principles from Allen's original work and 5 principles from extended contributions. Additionally, we can analyze some further numbers: 19 out of the 34 principles - and 19 out of the 24 extended principles - were cited by fewer than five authors. Notably, the majority of these 19 principles were shared on avarage by two authors. Our final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html).
 
 [Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html) *Our final list of properties and their respective names.*
 
