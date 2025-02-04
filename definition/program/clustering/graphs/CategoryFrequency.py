@@ -30,11 +30,13 @@ categories = [
 
 df = pd.DataFrame(data, index=categories)
 
+df_normalized = (df / 98) * 100
+
 # Creating the Grouped Bar Chart
-df.sum(axis=1).plot(kind="bar", figsize=(12, 6), color="skyblue", edgecolor="black")
+df_normalized.sum(axis=1).plot(kind="bar", figsize=(12, 6), color="skyblue", edgecolor="black")
 plt.title("")
 plt.xlabel("Categories")
-plt.ylabel("Total Frequency")
+plt.ylabel("Frequency (%)")
 plt.xticks(rotation=45, ha="right")
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 plt.show()

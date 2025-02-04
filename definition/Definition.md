@@ -74,7 +74,7 @@ This approach aligns our list with established terminology in the field of ident
 ![Casual Loop Diagram Properties (Local)](/definition/images/casual_loop_diagram/Casual_loop_diagram.png)
 *Figure 2: Casual loop diagram of the set of properties, defined by different authors.*
 
-The merging process has shrinked the list by 34%, leading to a total of 34 principles. The new list, presented in [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html), shows that Allen's principles are, on average, shared by 13 out of 17 authors, while the remaining 24 principles are shared by fewer than 2 authors on average.
+The merging process has collapsed some of the principles naming together and shrinked the list by 34%, leading to a total of 34 principles. The new list, presented in [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html), shows that Allen's principles are, on average, shared by 13 out of 17 authors, while the remaining 24 principles are shared by fewer than 2 authors on average.
 
 [Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) *Comparison of identified properties grouping from various sources.*
 
@@ -85,33 +85,31 @@ The merging process has shrinked the list by 34%, leading to a total of 34 princ
 
 ### 1.3.3 Selection
 
-Figure 3 puts into perspective the list of principles (horizontal axis) with their occurrence by authors (vertical axis). It represents the number of papers citing each principle. The first ten principles on the left originate from Allen’s initial definition, while the remaining ones are derived from later works. We notice that the original set of principles from Allen is cited by at least 60% of authors, while the extended principles are referenced by significantly fewer authors on average. One possible interpretation is that Allen’s principles have been established for a longer time. Additionally, the chart reveals that 19 out of the 24 extended principles, were cited by fewer than five authors. Notably, most of these 19 principles were, on average, shared only two authors.
+Figure 3 puts into perspective the list of principles (horizontal axis) with their occurrence by authors (vertical axis). It represents the number of papers citing each principle. The first ten principles are cited by at least 60% of authors, while the extended principles are referenced by significantly fewer authors on average. A possible interpretation is that Allen’s principles have been established for a longer time. Additionally, the chart reveals that 19 out of the 24 extended principles, were cited by fewer than five authors. Notably, most of these 19 principles were, on average, shared only two authors.
 
 ![Principles selection](/definition/images/principles_selection/Principles_selection.png)
 *Figure 3: The graph shows the distribution of authors by property, indicating how many adopted each corresponding principle.*
 
-We used the findings to extract a subset of principles for SSI, and applying a heuristic based on the number of citations; namely, we selected principles cited by at least the 25% of the authors. This heuristic of 25% is a typified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] Thus, the final list includes principles that surpass the red threshold in Figure 3. The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html), and accounts for 15 principles.
+We used this finding to extract a subset of principles for SSI, and applying a heuristic based on the number of citations; namely, we selected principles cited by at least the 25% of the authors. This heuristic of 25% is a typified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] Thus, the final list includes principles that surpass the red threshold in Figure 3. The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html), and accounts for 15 principles - 10 from Allen plus five. Note that the merging process has collapsed some of their names within the same cell.
 
 [Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html) *Our final list of properties and their namings.*
 
-### 1.3.3 Clustering
+### 1.3.4 Clustering
 
-A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] For this reason, we aimed to provide a categorization of properties that illuminates the relationship between properties and Self-Sovereign Identity. However, we aim to cluster principles by using the existing labelling for properties. Some of the above mentioned works have already clustered principles, as discussed in [Related Works](#12-related-works), but they lack to recon the methodology for their systematic categorization. Note that for the clustering, we based our exercise on the names of properties and categories from other authors, rather than on their content defintiion.
+A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] For this reason, we aimed to provide a categorization of properties that illuminates the relationship between properties and Self-Sovereign Identity. However, we aim to cluster principles using the existing labeling from the literature, and we do not focus on the defintion of classes. Some of the above-mentioned works have already clustered principles, as discussed in [Related Works](#12-related-works), but we aim to combine past exercises from various authors.
 
-Instrumental to this exercise, is [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which gathers information about past categorizations from authors. Each cell of the Table corresponds to a name of the category, while principles are in the first column.
+Instrumental to this exercise is [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which gathers information about past categorizations from authors. Each cell of the table corresponds to the name of a category, while principles are listed in the first column.
 
 [Click to view the table 4 with 15 properties only.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) *The categorization of principles provided by various authors about the 15 skimmed principles.*
 [Table 4 with the complete list of 34 properties.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification2) *The categorization of principles provided by various authors concerning the total of 34 principles.*
 
-Table 4 shows how heterogeneous is the categorization of principles from various authors. Indeed, it does not exist two works with the same exact list of classes (or categories). However, Table 4 breakdowns classes by author, but they are not easily comparable in the broader picture. Hence, as first step we wanted to analyze rthe information about classes.
+Table 4 breaks down classes by author and shows how heterogeneous the categorization of principles from various authors is. Indeed, no two works have the exact same list of classes (or categories). However, their content analysis is not straightforward. To clarify the conveyed information, we analyze five information from the list of fifteen principles. We aim to address, for each class:
+1. How many principles overall pertain to that class?
+2. How many contributions cite that class?
+3. How many unique principles for each author?
+4. How many unique authors?
 
-We aim to check five types of information:
-1. How many principles pertain to each class?
-2. How many authors for each principle?
-3. How many different principles for each class?
-4. How many authors for each principle?
-
-While analysing this information, we refer to the list of 15 principles, as result of the filtering from the previous step.
+Questions 1 and 2 are addressed by Figure 4. Questions 3 and 4 are addressed in Figure 5.
 
 
 
