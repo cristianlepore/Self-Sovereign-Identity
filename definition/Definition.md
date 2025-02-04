@@ -106,6 +106,8 @@ As we aim to avoid subjective analysis, we have further gatherred information ab
 
 We applied clustering techniques to group principles  our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx). In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
 
+INSERIRE APPENDICE CON I PROGRAMMI USATI ED IL CODICE;
+
 ![Category frequency](/definition/images/clusters/CategoryFrequency.png)
 *Figure 4: *
 
@@ -140,7 +142,7 @@ We tested several combinations of parameter K (number of clusters) and eventuall
 
 Figure 3 shows the final result of our grouping process. The group's name is derived from the literature.
 
-![Final list of principles and clustering (Local)](/definition/images/final_list_principles/Final_list_properties.png)
+![Final list of principles and clustering (Local)](/definition/images/final_list_properties/Final_list_properties.png)
 *Figure 4: The final grouping.*
 
 ### 1.3.4 Definition of principles
@@ -269,6 +271,8 @@ Sustainability and Adoption
 ![Properties ranking and grouping](/definition/images/importance_group/ImportantGroups.png)
 *Figure 8. The most and least important group according to our survey.*
 
+SCRIVERE IL GRAFICO 3 CON IL CONFRONTO CON I PRECEDENTI PAPERS.
+
 ### 1.3.6 Final defintion of properties
 
 The definitions presented in [Section 1.3.5](#135-refining-principles) were abbreviated as much as possible intentionally, due to their use in the questionnaire. In this Section, we want to enhance them in accordance with the results of the respondents, as we obtained valuable insights from experts in the fields of IdM and SSI, expressing their concerns and possible misunderstandings of an individual property. 
@@ -293,6 +297,8 @@ As a result of the survey, properties that received at least one vote as irrelev
 | Verifiability ~~and Authenticity~~ | Entities should be able to reliably verify users' identities and must provide proof of the authenticity of their personal data. | Usability |
 
 As a last thing we position these principles within the same process flow of Figure 1. We used our new definition of principles.
+
+INSERIRE I RANKING DELLE PROPRIETA4 ALL4INTERNO DI QUESTA IMMAGINE
 
 ![Allen Principles Schema (Local)](/definition/images/SSI_process_flow/SSI_process_flow_raw.png)
 *SSI properties mapped within the general SSI process flow.[^allen]*
