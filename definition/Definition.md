@@ -41,75 +41,87 @@ Keywords were refined and shuffled to avoid wildcards; for instance, Self-Sovere
 
 *4. Recording of properties.* We extracted 52 property labels from the literature and organized them into a table to provide a comprehensive overview.
 
-*5. Selection.* Some properties had similar meanings but were labeled differently by different authors. We referenced past works to merge labels representing identical properties and extracted the most relevant ones using heuristics.
+*5. Merge.* Some properties had similar meanings but were labeled differently by different authors. The merging process allows for merging labels that represent identical properties. The output is a list of 34 properties.
 
-*6. Clustering.* Clustering allows us to answer the quesiton: *can we cluster principles based on their labels to create categories?*
+*6. Selection.* We have extracted the most relevant properties using a heuristic.
 
-*7. Definition of principles.* We summarized the definitions of properties from authors while retaining their essence.
+*7. Clustering.* Clustering allows us to answer the quesiton: *can we cluster principles based on their labels to create categories?*. We used results to further analyze the state of play.
 
-*8. Expert validation.* We proposed a questionnaire to investigate the identified SSI properties and assess their importance. The outcome served also to refine their definitions.
+*8. Definition of principles.* We summarized the definitions of properties from authors while retaining their essence.
 
-*9. Final list.* We framed the final list of properties, accompanied by precise definitions for each.
+*9. Expert validation.* We proposed a questionnaire to investigate the identified SSI properties and assess their importance. The outcome served also to refine their definitions.
+
+*10. Final list.* We framed the final list of properties, accompanied by precise definitions for each.
 
 ![Casual Loop Diagram Properties (Local)](/definition/images/literature_review/literature_review.png)
 *Figure 1. The process of our literature review. Squares putlines the main process. Rounded squares are outputs. In the process, the output feeds the next step.*
 
-The next part details steps 4 to 9.
+The next part details steps 4 to 10.
 
 ### 1.3.1 Recording of properties
 
 Table 1 summarizes the names of the properties and contributions identified through the search and screening process. The rows represent principles of SSI, while the columns correspond to contributions. Our literature review examined a total of 18 relevant works in the field of identity, covering 52 properties. The checkmarks indicate the properties addressed by the respective author(s). Notably, some works propose alternative sets of principles, and variations in naming conventions can be observed across different authors.
 
 [Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles/Principles1.html) *Comparison of identified properties in various sources.*
-[Table 1 alternative version.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles/Principles2.html)
+[Table 1 alternative version.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles/Principles2.html) *Alternative view of Table 1. It conveys the same information.*
 
-### 1.3.2 Selection
+### 1.3.2 Merging
 
 Difference in the naming of properties across various authors can be observed. However, many of these properties convey the same or similar meanings. To avoid pitfalls, we have consolidated property labels based on previous works by [^cucko][^sovrin][^toth][^stokkink][^ferdous][^andrieu]. This resulted in the following merges: (i) Existence and Representation, (ii) Ownership and Control, (iii) Ownership and Choosability, (iv) Access and Availability, (v) Portability and Secure Identity Transfer, (vi) Interoperability and Compliance, (vii) Consent and Participation, (viii) Protection and Secure Transactions, (ix) Protection and Security, (x) Protection and Counterfeit Prevention, (xi) Minimization and Privacy, (xii) Minimization and Disclosure Minimization, (xiii) Usability and Consistency, (xiv) Consistency and Recoverability, (xv) Decentralization and Autonomy, (xvi) Provability and Identity Assurance, (xvii) Provability, Verifiability, and Authentication, and (xviii) Identity Assurance and Identity Verification.
 
-This approach aligns our list with established terminology in the field of identity, and ensures a coherent naming across works. Additionally, we slightly adjusted the work of [^cucko] to reflect updates in a more recent literature review. Specifically, we removed the properties of Equity and Inclusion, as well as Recoverability. Furthermore, we renamed Legacy System with Compliance; we eliminated the links between Control and Agency, Access and Usability, and Availability and Recoverability. Figure 2 visualizes the results through a Causal Loop Diagram based on these papers. The diagram includes only the properties subject to modification or merging, while the complete list of properties is presented in [Table 1](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles/Principles1.html).
+This approach aligns our list with established terminology in the field of identity, and ensures a coherent naming across works. Additionally, we slightly adjusted the work of [^cucko] to reflect updates in a more recent literature review. Specifically, we removed the properties of Equity and Inclusion, as well as Recoverability. Furthermore, we renamed Legacy System with Compliance; we eliminated the links between Control and Agency, Access and Usability, and Availability and Recoverability. Figure 2 visualizes the results through a Causal Loop Diagram based on these papers. The diagram includes only the properties subject to modification or merging.
 
 ![Casual Loop Diagram Properties (Local)](/definition/images/casual_loop_diagram/Casual_loop_diagram.png)
 *Figure 2: Casual loop diagram of the set of properties, defined by different authors.*
 
-The merging process has shrinked the list of properties by 34%, leading to a total of 34 principles. The new list is presented in [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html).
-
-The analysis of [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) shows that Allen's principles are, on average, shared by 13 out of 18 authors, while the remaining 24 principles are shared by fewer than 2 authors on average.
+The merging process has shrinked the list by 34%, leading to a total of 34 principles. The new list, presented in [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html), shows that Allen's principles are, on average, shared by 13 out of 17 authors, while the remaining 24 principles are shared by fewer than 2 authors on average.
 
 [Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) *Comparison of identified properties grouping from various sources.*
 
-The following table summarizes what has already been mentioned. The original set of principles is cited by at least 60% of authors, while the extended principles are typically shared by only one or two authors. Figure 3 visually represents this phenomenon. The first ten principles on the left originate from Allen’s initial definition, while the remaining ones are derived from later works. One possible interpretation is that Allen’s principles have been established for a longer time.
+| **Category**                          | **Frequency** | **Authors** |
+|---------------------------------------|-------------------|-------------------|
+| Allen's principles   | ≈ 80% of authors | ≈ 13 autors |
+| Extending 24 principles  | < 10% of authors | < 2 authors |
 
-| **Category**                          | **Adoption Rate (AVG)** |
-|---------------------------------------|-------------------|
-| Allen's principles   | adopted by ≈ 80% of authors |
-| Other 24 principles  | adopted by < 10% of authors |
+### 1.3.3 Selection
+
+Figure 3 puts into perspective the list of principles (horizontal axis) with their occurrence by authors (vertical axis). It represents the number of papers citing each principle. The first ten principles on the left originate from Allen’s initial definition, while the remaining ones are derived from later works. We notice that the original set of principles from Allen is cited by at least 60% of authors, while the extended principles are referenced by significantly fewer authors on average. One possible interpretation is that Allen’s principles have been established for a longer time. Additionally, the chart reveals that 19 out of the 24 extended principles, were cited by fewer than five authors. Notably, most of these 19 principles were, on average, shared only two authors.
 
 ![Principles selection](/definition/images/principles_selection/Principles_selection.png)
 *Figure 3: The graph shows the distribution of authors by property, indicating how many adopted each corresponding principle.*
 
-We took this into account and used the findings to extract a subset of principles for SSI. To achieve this, we applied a straightforward heuristic: selecting principles cited by at least 25% of the authors. This heuristic of 25% is a simplified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] The final list includes principles that surpass the red threshold in Figure 3 - 10 principles from Allen and 5 from extended contributions. Additionally, some further analysis reveals that 19 out of the 24 extended principles, were cited by fewer than five authors. Notably, most of these 19 principles were, on average, shared by only two authors.
-
-The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html).
+We used the findings to extract a subset of principles for SSI, and applying a heuristic based on the number of citations; namely, we selected principles cited by at least the 25% of the authors. This heuristic of 25% is a typified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] Thus, the final list includes principles that surpass the red threshold in Figure 3. The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html), and accounts for 15 principles.
 
 [Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html) *Our final list of properties and their namings.*
 
 ### 1.3.3 Clustering
 
-We aim now to answer the question: can we cluster principles based on their labels to create categories? 
-A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] For this reason, we aimed to provide a categorization of properties that illuminates the relationship with Self-Sovereign Identity. Some of the above mentioned works have already clustered principles, as discussed in [Related Works](#12-related-works), but they lack to recon the methodology for their systemaica categorization. We waould like to emphasize that our clustering is based on the naming of properties, and on past exercercises, rather than on principles' defintions, which for the moment, has not been considered.
+A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] For this reason, we aimed to provide a categorization of properties that illuminates the relationship between properties and Self-Sovereign Identity. However, we aim to cluster principles by using the existing labelling for properties. Some of the above mentioned works have already clustered principles, as discussed in [Related Works](#12-related-works), but they lack to recon the methodology for their systematic categorization. Note that for the clustering, we based our exercise on the names of properties and categories from other authors, rather than on their content defintiion.
 
-As we aim to avoid subjective analysis, we have further gatherred information about past categorizations as reported on [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1). Each cell of the Table, contains the name of the category, to which the principles pertains.
+Instrumental to this exercise, is [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which gathers information about past categorizations from authors. Each cell of the Table corresponds to a name of the category, while principles are in the first column.
 
-[Click to view the table 4 with 15 properties only.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) *The categorization of principles provided by various authors.*
-[Table 4 with the complete list of 34 properties.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification2) *The categorization of principles provided by various authors.*
+[Click to view the table 4 with 15 properties only.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) *The categorization of principles provided by various authors about the 15 skimmed principles.*
+[Table 4 with the complete list of 34 properties.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification2) *The categorization of principles provided by various authors concerning the total of 34 principles.*
 
-We applied clustering techniques to group principles  our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx). In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
+Table 4 shows how heterogeneous is the categorization of principles from various authors. Indeed, it does not exist two works with the same exact list of classes (or categories). However, Table 4 breakdowns classes by author, but they are not easily comparable in the broader picture. Hence, as first step we wanted to analyze rthe information about classes.
+
+We aim to check five types of information:
+1. How many principles pertain to each class?
+2. How many authors for each principle?
+3. How many different principles for each class?
+4. How many authors for each principle?
+
+While analysing this information, we refer to the list of 15 principles, as result of the filtering from the previous step.
+
+
 
 INSERIRE APPENDICE CON I PROGRAMMI USATI ED IL CODICE;
 
 ![Category frequency](/definition/images/clusters/CategoryFrequency.png)
 *Figure 4: *
+
+We applied clustering techniques to group principles our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx). In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
+
 
 ![Clustering](/definition/images/clusters/Heatmap.png)
 *Figure 5: *
