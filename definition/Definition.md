@@ -92,6 +92,9 @@ Figure 3 puts into perspective the list of principles (horizontal axis) with the
 
 We used this finding to extract a subset of principles for SSI, and applying a heuristic based on the number of citations; namely, we selected principles cited by at least the 25% of the authors. This heuristic of 25% is a typified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] Thus, the final list includes principles that surpass the red threshold in Figure 3. The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html), and accounts for 15 principles - 10 from Allen plus five. Note that the merging process has collapsed some of their names within the same cell.
 
+![Category frequency](/definition/images/recording_of_principles/Bubble.png)
+*Figure 4: *
+
 [Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html) *Our final list of properties and their namings.*
 
 ### 1.3.4 Clustering
@@ -114,6 +117,8 @@ Questions 1 and 2 are addressed by Figure 4. Questions 3 and 4 are addressed in 
 
 
 INSERIRE APPENDICE CON I PROGRAMMI USATI ED IL CODICE;
+PER OGNI PRINCIPIO? QUALI ARTICOLO LO CITA
+PER OGNI CLASSE, QUALI ARTICOLI LO CITA
 
 ![Category frequency](/definition/images/clusters/CategoryFrequency.png)
 *Figure 4: *

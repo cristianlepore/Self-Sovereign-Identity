@@ -23,8 +23,8 @@ y = np.arange(len(concepts))
 plt.figure(figsize=(12, 8))
 
 # Horizontal bars (bidirectional with positive values)
-bars1 = plt.barh(y, principles, color='skyblue', edgecolor='black', label="Unique principles", height=0.6)
-bars2 = plt.barh(y, -articles, color='salmon', edgecolor='black', label="Unique articles", height=0.6)  # Flipping direction
+bars1 = plt.barh(y, principles, color='skyblue', edgecolor='black', label="Principles", height=0.6)
+bars2 = plt.barh(y, -articles, color='salmon', edgecolor='black', label="Articles", height=0.6)  # Flipping direction
 
 # Add dashed grid lines for each row
 for i in y:
@@ -42,7 +42,7 @@ for bar in bars2:
 # Labels and title
 plt.xlabel("")  # Remove X-axis label
 plt.ylabel("Categories")
-plt.title("Number of occurrences")
+plt.title("Number of unique occurrences")
 plt.yticks(y, concepts)
 plt.xticks([])  # Remove X-axis numbers
 plt.axvline(0, color='black', linewidth=1)  # Vertical reference line at 0
