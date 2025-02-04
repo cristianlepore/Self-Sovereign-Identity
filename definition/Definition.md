@@ -118,6 +118,9 @@ INSERIRE APPENDICE CON I PROGRAMMI USATI ED IL CODICE;
 ![Category frequency](/definition/images/clusters/CategoryFrequency.png)
 *Figure 4: *
 
+![Category frequency](/definition/images/clusters/Distribution_of_Principles_and_Articles_Occurrences_by_Category.png)
+*Figure 4: *
+
 We applied clustering techniques to group principles our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx). In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
 
 

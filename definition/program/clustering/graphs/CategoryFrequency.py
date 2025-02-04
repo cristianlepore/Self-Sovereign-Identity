@@ -28,15 +28,16 @@ categories = [
     "Autonomy", "Technology", "Operability", "Zero-cost", "Acceptance", "Adoption", "Compliance", "Privacy",
 ]
 
-df = pd.DataFrame(data, index=categories)
+occurrence = [7, 7, 6, 3, 2, 4, 5, 5, 5, 3, 4, 3, 3, 1, 1, 6, 2, 1]
 
-df_normalized = (df / 98) * 100
+df = pd.DataFrame(data, index=categories)
+# df_normalized = (df / 98) * 100
 
 # Creating the Grouped Bar Chart
-df_normalized.sum(axis=1).plot(kind="bar", figsize=(12, 6), color="skyblue", edgecolor="black")
+df.sum(axis=1).plot(kind="bar", figsize=(12, 6), color="skyblue", edgecolor="black")
 plt.title("")
 plt.xlabel("Categories")
-plt.ylabel("Frequency (%)")
+plt.ylabel("Occurrence")
 plt.xticks(rotation=45, ha="right")
 plt.grid(axis="y", linestyle="--", alpha=0.7)
 plt.show()
