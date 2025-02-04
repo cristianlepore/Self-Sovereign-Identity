@@ -106,7 +106,19 @@ As we aim to avoid subjective analysis, we have further gatherred information ab
 
 We applied clustering techniques to group principles  our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx). In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
 
-To better illustrate the relationship between properties and key aspects of SSI, we created five groups of principles based on past definitions. 
+![Category frequency](/definition/images/clusters/CategoryFrequency.png)
+*Figure 4: *
+
+![Clustering](/definition/images/clusters/Heatmap.png)
+*Figure 5: *
+
+![Clustering](/definition/images/clusters/Bubble.png)
+*Figure 6: *
+
+![Clustering](/definition/images/clusters/Graph_theory.png)
+*Figure 7: *
+
+To better illustrate the relationship between properties and key aspects of SSI, we created five groups of principles based on past definitions.
 
 **Clustering techniques**
 
