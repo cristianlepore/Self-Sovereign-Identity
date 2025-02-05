@@ -33,7 +33,9 @@ df = pd.DataFrame(data, index=categories).T
 # Creating the Heatmap
 plt.figure(figsize=(12, 6))
 sns.heatmap(df, cmap="Blues", annot=True, fmt="d", linewidths=0.5, cbar=True)
-plt.title("Heatmap of the Table")
+plt.title("")
+plt.ylabel("Principles")
+plt.xlabel("Categories")
 plt.xticks(rotation=45, ha="right")
 plt.yticks(rotation=0)
 plt.show()

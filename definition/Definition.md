@@ -85,14 +85,14 @@ The merging process has collapsed some of the principles naming together and shr
 
 ### 1.3.3 Selection
 
-Figure 3 puts into perspective the list of principles (horizontal axis) with their occurrence by authors (vertical axis). It represents the number of papers citing each principle. The first ten principles are cited by at least 60% of authors, while the extended principles are referenced by significantly fewer authors on average. A possible interpretation is that Allen’s principles have been established for a longer time. Additionally, the chart reveals that 19 out of the 24 extended principles, were cited by fewer than five authors. Notably, most of these 19 principles were, on average, shared only two authors.
+Figure 3 puts into perspective the list of principles (horizontal axis) with their occurrence by authors (vertical axis). It represents the number of papers citing each principle. The first ten principles are cited by at least twelve authors, while the extended principles are referenced by significantly fewer authors on average. A possible interpretation is that Allen’s principles have been established for a longer time. Additionally, the chart reveals that 19 out of the 24 extending principles, were cited by fewer than five authors. Notably, most of these 19 principles were, on average, shared only two authors.
 
 ![Principles selection](/definition/images/principles_selection/Principles_selection.png)
-*Figure 3: The graph shows the distribution of authors by property, indicating how many adopted each corresponding principle.*
+*Figure 3: The graph indicates how many authors have adopted the principles.*
 
 We used this finding to extract a subset of principles for SSI, and applying a heuristic based on the number of citations; namely, we selected principles cited by at least the 25% of the authors. This heuristic of 25% is a typified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] Thus, the final list includes principles that surpass the red threshold in Figure 3. The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html), and accounts for 15 principles - 10 from Allen plus five. Note that the merging process has collapsed some of their names within the same cell.
 
-Figure 4 shows the distribution of principles across authors, where each point represents an instance of a principle used by an author.
+Figure 4 shows the distribution of principles across authors, where each point represents an instance of a principle used by an author. The x-axis represents the final set of principles, while the y-axis displays the contributions from the authors.
 
 ![Category frequency](/definition/images/recording_of_principles/Bubble.png)
 *Figure 4: Principle distribution bubble chart.*
@@ -129,6 +129,8 @@ PER OGNI CLASSE, QUALI ARTICOLI LO CITA
 
 We applied clustering techniques to group principles our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx). In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
 
+![Category frequency](/definition/images/clusters/Distribution_authors_contribution.png)
+*Figure 6: *
 
 ![Clustering](/definition/images/clusters/Heatmap.png)
 *Figure 5: *

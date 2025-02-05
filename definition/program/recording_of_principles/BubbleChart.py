@@ -39,7 +39,7 @@ ax.set_yticks(range(len(autori)))
 ax.set_yticklabels(autori)
 
 ax.set_title("")
-plt.xlabel("Categories")
+plt.xlabel("Principles")
 plt.ylabel("Authors")
 
 plt.grid(True, linestyle='--', alpha=0.5)
