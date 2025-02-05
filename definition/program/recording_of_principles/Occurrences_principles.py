@@ -27,7 +27,7 @@ dati = np.array([
 sum_values = np.sum(dati[::-1], axis=1)
 
 plt.figure(figsize=(10, 6))
-bars = plt.barh(range(len(autori)), sum_values, color='skyblue', edgecolor="black")
+bars = plt.barh(range(len(autori)), sum_values, color='skyblue', edgecolor="black", height=0.6)
 plt.xlabel("Occurrences of principles")
 plt.ylabel("Authors")
 plt.title("")
