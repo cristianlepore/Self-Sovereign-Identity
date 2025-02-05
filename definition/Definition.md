@@ -85,25 +85,32 @@ The merging process has collapsed some of the principles naming together and shr
 
 ### 1.3.3 Selection
 
-Figure 3 puts into perspective the list of principles (horizontal axis) with their occurrence by authors (vertical axis). It represents the number of papers citing each principle. The first ten principles are cited by at least twelve authors, while the extended principles are referenced by significantly fewer authors on average. A possible interpretation is that Allen’s principles have been established for a longer time. Additionally, the chart reveals that 19 out of the 24 extending principles, were cited by fewer than five authors. Notably, most of these 19 principles were, on average, shared only two authors.
+The chart in Figure 3 illustrates the frequency of citation for different principles by authors, distinguishing between *Allen Principles* (in blue) and *Extending Principles* (in yellow). The *Allen Principles* show a significantly higher occurrence, indicating a strong foundation in existing literature, maybe based on the fact that those principles have been around longer. In contrast, the *Extending Principles* appear less frequently; for example, 19 out of the 24 extending principles, were cited by fewer than five authors. The analysis suggests that while core principles remain dominant, emerging principles contribute to the evolving discourse in the field.
 
 ![Principles selection](/definition/images/principles_selection/Principles_selection.png)
-*Figure 3: The graph indicates how many authors have adopted the principles.*
+*Figure 3: The occurrence of citations for authors across the 34 principles.*
 
-We used this finding to extract a subset of principles for SSI, and applying a heuristic based on the number of citations; namely, we selected principles cited by at least the 25% of the authors. This heuristic of 25% is a typified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] Thus, the final list includes principles that surpass the red threshold in Figure 3. The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html), and accounts for 15 principles - 10 from Allen plus five. Note that the merging process has collapsed some of their names within the same cell.
+The average value of citation occurrences is slightly above 25%, where we placed a red threshold line as a reference for comparison. We used this finding to extract a subset of principles for SSI; namely, we selected principles cited by at least the 25% of the authors. This heuristic of 25% is a typified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] Thus, the final list includes principles that surpass the red threshold in Figure 3. The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html), and accounts for 15 principles - 10 from Allen plus five extending principles. Note that the merging process has collapsed some of their names within the same cell, and we consider it for future analysis with charts.
 
-Figure 4 shows the distribution of principles across authors, where each point represents an instance of a principle used by an author. The x-axis represents the final set of principles, while the y-axis displays the contributions from the authors.
+[Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html) *Our final list of properties and their namings.*
+
+A shorten list of principles opens for a comparative analysis of the distribution of principles and publications. For this reason, the Figure 4 presents the number of times different authors cite principles in their work. The horizontal bars represent the occurrences of principles attributed to each author, showing variations in the emphasis placed on specific principles across different studies. Allen and some other authors, such as Čučko et al. and Ferdous et al., exhibit higher citation counts, indicating their significant contribution to the discussion on principles. Conversely, some authors reference fewer principles, suggesting either a more selective approach or a narrower research scope. This analysis helps visualize the distribution of principle adoption across various sources.
+
+![Occurrences of principles](/definition/images/principles_selection/Occurrences_principles.png)
+*Figure 4: Occurrences of Principles Cited by Different Authors.*
+
+Figure 4 conveys a double informtion; on one side, it shows the list of  
+
+this infirmation shows the distribution of principles across authors, where each point represents an instance of a principle used by an author. The x-axis represents the final set of principles, while the y-axis displays the contributions from the authors.
 
 ![Category frequency](/definition/images/recording_of_principles/Bubble.png)
 *Figure 4: Principle distribution bubble chart.*
 
-[Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html) *Our final list of properties and their namings.*
+Even in this graphical representation, we notice a difference in the number of citations between the first ten principles and the last five. Specifically, Standard, Cost, Usability, Decentralization, and Verifiability are cited sporadically compared to the other ten principles. Cucko is the only work that leverages all principles.[^cucko]
 
 ### 1.3.4 Clustering
 
-A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] For this reason, we aimed to provide a categorization of properties that illuminates the relationship between properties and Self-Sovereign Identity. However, we aim to cluster principles using the existing labeling from the literature, and we do not focus on the defintion of classes. Some of the above-mentioned works have already clustered principles, as discussed in [Related Works](#12-related-works), but we aim to combine past exercises from various authors.
-
-Instrumental to this exercise is [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which gathers information about past categorizations from authors. Each cell of the table corresponds to the name of a category, while principles are listed in the first column.
+A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] For this reason, we aimed to provide a categorization of properties that illuminates the relationship between properties and Self-Sovereign Identity. However, we aim to cluster principles using the existing labeling from the literature, and we do not focus on the defintion of classes. Some of the above-mentioned works have already clustered principles, as discussed in [Related Works](#12-related-works). We aim to build on past work to reach a mutually agreed-upon categorization of principles. Instrumental to this exercise is [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which gathers information about past categorizations from authors. Each cell of the table corresponds to the name of a category, while principles are listed in the first column.
 
 [Click to view the table 4 with 15 properties only.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) *The categorization of principles provided by various authors about the 15 skimmed principles.*
 [Table 4 with the complete list of 34 properties.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification2) *The categorization of principles provided by various authors concerning the total of 34 principles.*
@@ -119,7 +126,6 @@ Questions 1 and 2 are addressed by Figure 4. Questions 3 and 4 are addressed in 
 
 
 INSERIRE APPENDICE CON I PROGRAMMI USATI ED IL CODICE;
-PER OGNI CLASSE, QUALI ARTICOLI LO CITA
 
 ![Category frequency](/definition/images/clusters/CategoryFrequency.png)
 *Figure 5: *
