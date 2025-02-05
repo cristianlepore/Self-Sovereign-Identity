@@ -85,28 +85,28 @@ The merging process has collapsed some of the principles naming together and shr
 
 ### 1.3.3 Selection
 
-The chart in Figure 3 illustrates the frequency of citation for different principles by authors, distinguishing between *Allen Principles* (in blue) and *Extending Principles* (in yellow). The *Allen Principles* show a significantly higher occurrence, indicating a strong foundation in existing literature, maybe based on the fact that those principles have been around longer. In contrast, the *Extending Principles* appear less frequently; for example, 19 out of the 24 extending principles, were cited by fewer than five authors. The analysis suggests that while core principles remain dominant, emerging principles contribute to the evolving discourse in the field.
+The chart in Figure 3 illustrates the frequency of citation for different principles across the 18 authors, distinguishing between *Allen Principles* (in blue) and *Extending Principles* (in yellow). The *Allen Principles* show a significantly higher occurrence, indicating a strong foundation in existing literature, maybe based on the fact that those principles have been around longer. In contrast, the *Extending Principles* appear less frequently; for example, 19 out of the 24 extending principles, were cited by fewer than five authors. The analysis suggests that while core principles remain dominant, emerging principles contribute to the evolving discourse in the field.
 
 ![Principles selection](/definition/images/principles_selection/Principles_selection.png)
-*Figure 3: The occurrence of citations for authors across the 34 principles.*
+*Figure 3: The number of citations per principle across the 18 authors.*
 
 The average value of citation occurrences is slightly above 25%, where we placed a red threshold line as a reference for comparison. We used this finding to extract a subset of principles for SSI; namely, we selected principles cited by at least the 25% of the authors. This heuristic of 25% is a typified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] Thus, the final list includes principles that surpass the red threshold in Figure 3. The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html), and accounts for 15 principles - 10 from Allen plus five extending principles. Note that the merging process has collapsed some of their names within the same cell, and we consider it for future analysis with charts.
 
 [Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html) *Our final list of properties and their namings.*
 
-A shorten list of principles opens for a comparative analysis of the distribution of principles and publications. For this reason, the Figure 4 presents the number of times different authors cite principles in their work. The horizontal bars represent the occurrences of principles attributed to each author, showing variations in the emphasis placed on specific principles across different studies. Allen and some other authors, such as Čučko et al. and Ferdous et al., exhibit higher citation counts, indicating their significant contribution to the discussion on principles. Conversely, some authors reference fewer principles, suggesting either a more selective approach or a narrower research scope. This analysis helps visualize the distribution of principle adoption across various sources.
+A shorten list of principles opens for a comparative analysis of the distribution of principles and publications with respect to our shortened list of principles. For example, Figure 5 visualizes the distribution of principle adoption across various studies. It presents the number of principles referenced by authors in their work. For this reason, the horizontal bars represent the occurrences of principles attributed to each author, showing variations in the emphasis placed on specific principles across different studies. Allen and other authors exhibit higher citation counts, possibly indicating their significant contribution to the discussion on principles.[^allen][^cucko][^ferdous] Conversely, other authors reference fewer principles, suggesting either a more selective approach or a narrower research scope.[^sheldrake][^andrieu]
 
 ![Occurrences of principles](/definition/images/principles_selection/Occurrences_principles.png)
-*Figure 4: Occurrences of Principles Cited by Different Authors.*
+*Figure 4: The number of principles by author.*
 
-Figure 4 conveys a double informtion; on one side, it shows the list of  
+The information conveyed by the previous charts (Figure 3 and Figure 4) are detailed from the chart in Figure 5, which provides a comparative overview of how different contributors emphasize specific principles. Differently from the previous charts, this chart gives insights on the alignment of various authors with principles. The rows represent different authors or studies, while the columns represent specific principles, such as transparency, interoperability, and decentralization. Blue dots indicate which principles are addressed by each author.
 
-this infirmation shows the distribution of principles across authors, where each point represents an instance of a principle used by an author. The x-axis represents the final set of principles, while the y-axis displays the contributions from the authors.
+What is possible to highlights in this chart is the clustering of dots around principles like transparency, interoperability, and privacy. These are clearly seen as essential by most contributors. On the other hand, principles like cost, decentralization, and usability do not have as much attention, suggesting these are less emphasized or considered secondary by many.
+
+Some authors, like Sovrin and eSSIF-Lab, address a wide range of principles, showing a comprehensive approach. Others focus more narrowly, highlighting specific areas of interest. This chart shows not just the priorities of individual authors but also the broader trends in the SSI field, helping us see what matters most as this framework evolves.
 
 ![Category frequency](/definition/images/recording_of_principles/Bubble.png)
-*Figure 4: Principle distribution bubble chart.*
-
-Even in this graphical representation, we notice a difference in the number of citations between the first ten principles and the last five. Specifically, Standard, Cost, Usability, Decentralization, and Verifiability are cited sporadically compared to the other ten principles. Cucko is the only work that leverages all principles.[^cucko]
+*Figure 5: A comparative overview of how different contributors emphasize specific principles.*
 
 ### 1.3.4 Clustering
 
