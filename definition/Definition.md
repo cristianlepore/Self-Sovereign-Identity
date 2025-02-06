@@ -155,7 +155,7 @@ The chart also reveals additional insights into the number of categories per aut
 ![Category frequency](/definition/images/clusters/Distribution_authors_contribution.png)
 *Figure 8: Distribution of principles across categories by authors.*
 
-The study of literature through questions highlights how scattered the domain of interest is and how loosely connected the principles and categorizations proposed by different authors are. In the absence of predefined features for categorization, we can leverage a clustering technique to identify groups and assign names to them based on heuristics.[^rai] Clustering helps uncover similarities between objects that initially appear dissimilar. To achieve this, we treat our data as a cluster—a set of points where each point is closer (or more similar) to one or more other points within the cluster than to any point outside of it.[^rai]
+The study of literature highlighted how scattered the domain of interest is and how loosely connected the principles and categorizations proposed by different authors are. In the absence of predefined features for categorization, we can leverage a clustering technique to identify groups and assign names to them based on heuristics.[^rai] Clustering helps uncover similarities between objects that initially appear dissimilar. To achieve this, we treat our data as a cluster—a set of points where each point is closer (or more similar) to one or more other points within the cluster than to any point outside of it.[^rai]
 
 #### Clustering techniques
 We aim to divide data into groups of similar objects by using information from authors and their categories. To achieve this, we first showcase the alignment of principles and categories through the lens of author mentions. Traditionally clustering techniques are not straightforward, nor canonical, so we have compared three different clustering techniques described in [^bishop][^park][^saxena][^rai]: Greedy Clustering,[^park] K-Means,[^saxena][^rai] and Graph Theory.[^saxena] We selected Greedy Clustering for its simplicity, K-Means for its ability to analyze intra-cluster distances, and Graph Theory for its suitability in representing clusters as graphs. However, they all have limitations that we will discuss in the different subsections; for example, the Graph Theory has limitations in handling outliers and detecting overlapping clusters.[^saxena] We finally compared results from the three different techniques to decide our final categories.
@@ -180,21 +180,32 @@ Despite being efficient and effective for certain problems, the greedy local app
 *Figure 9: Author mentions across principles and categories.*
 
 ##### B) K-Means
-K-Means aims to minimize intra-cluster distances, namely the distance between objects of the same cluster. Graphically, it initializes a centroid at a random point on the chart and iteratively adjusts to find the nearest points. The number of centroids, K, significantly affects the result. We automate the process through the following steps: [Python Program](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/program/Compute_K-Means.py) whose main steps are as follows:
+K-Means is one of the most popular and simple clustering algorithms, which generates clusters in the form of centroids surrounded by the points within a cluster.[^rai] The letter k in K-Means stands for the number of centroids for the clustering, and is a parameter defined at priori. Subsequently, each point is assigned to the cluster with the closest centroid, which leads to minimize the intra-cluster distances; namely, the distance between objects of the same cluster. The procedure of K-Means follows the steps:[^saxena]
+1. Initialization: Choose the number of clusters K. 
+2. Select k random points as initial centroids. These points represent initial group centroids.
+3. Calculate the objects distance to centroids.
+4. Group the objects based on their minimal distance.
+5. Repeat steps 2 and 4 until the centroids no longer move.
 
-RIPORTARE I PROGRAMMI
+This produces a separation of the objects into groups from which the metric to be minimized can be calculated.
 
-- The program reads data from a CSV file 
-`data = pd.read_csv(file_path)`
-- Fills black cells with zeroes 
-`cleaned_data = numerical_columns.fillna(0)`
-- Applies the K-Means clustering 
-`kmeans = KMeans(n_clusters=n_clusters, init='k-means++', random_state=42)` with a pre-established value `K=5`
-For reproducibility of results, we used the same seed to calculate the starting centroid through `random_state=42`
-We tested several combinations of parameter K (number of clusters) and eventually settled on `K=5`. This value of K ensures a fair number of elements in each cluster.
-- Write output and save results. `print(f"Clustering completed! Results saved in: {output_file}")`
+![K-Means](/definition/images/clusters/K-Means_flow/K-Means_flow.png)
+*Figure 10: Flow diagram of K-means.*
 
-![Clustering](/definition/images/clusters/Bubble.png)
+The program detailed in the [Appendix A](#appendix-a) automate the process. We tested values 2 - 7 for k, obtaining the results depicted in Figure 11. For reproducibility of results, we used the same seeds to generate the centroids.
+
+###### Discussion and limitations
+Although K- Means clustering is still one of
+the most popular clustering algorithms yet few limitation are associated with K Means clustering
+include: (a) There is no efficient and universal method for identifying the initial partitions and the
+number of clusters K and (b) K-means is sensitive to outliers and noise[^saxena]
+
+K-means has problems when clusters are of differing
+Sizes,Densities,Non-globular shapes and K-means has
+problems when the data contains outliers[^rai]
+
+CORREGGERE GRAFICO E PROGRAMMA IN APPENDICE;
+![Bubble K-Means](/definition/images/clusters/Bubble.png)
 *Figure 6: *
 
 ![Clustering](/definition/images/clusters/Graph_theory.png)
@@ -365,6 +376,18 @@ INSERIRE I RANKING DELLE PROPRIETA4 ALL4INTERNO DI QUESTA IMMAGINE
 
 ![Allen Principles Schema (Local)](/definition/images/SSI_process_flow/SSI_process_flow_raw.png)
 *SSI properties mapped within the general SSI process flow.[^allen]*
+
+## Appendix A
+
+- The program reads data from a CSV file 
+`data = pd.read_csv(file_path)`
+- Fills black cells with zeroes 
+`cleaned_data = numerical_columns.fillna(0)`
+- Applies the K-Means clustering 
+`kmeans = KMeans(n_clusters=n_clusters, init='k-means++', random_state=42)` with a pre-established value `K=5`
+For reproducibility of results, we used the same seed to calculate the starting centroid through `random_state=42`
+We tested several combinations of parameter K (number of clusters) and eventually settled on `K=5`. This value of K ensures a fair number of elements in each cluster.
+- Write output and save results. `print(f"Clustering completed! Results saved in: {output_file}")`
 
 ## Appendix A
 
