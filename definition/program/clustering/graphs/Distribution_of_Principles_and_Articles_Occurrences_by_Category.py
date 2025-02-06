@@ -10,11 +10,11 @@ concepts = [
 concepts = concepts[::-1]
 
 # Occurrence of unique principles (right side)
-principles = np.array([7, 7, 6, 3, 2, 4, 5, 5, 5, 3, 4, 3, 3, 1, 1, 6, 2, 1])
+principles = np.array([7, 7, 6, 3, 2, 4, 5, 8, 4, 3, 4, 3, 3, 1, 1, 6, 2, 2])
 principles = principles[::-1]
 
 # Occurrence of unique articles (left side, but positive values)
-articles = np.array([6, 5, 1, 2, 1, 5, 7, 8, 2, 2, 2, 1, 1, 1, 1, 1, 2, 1])
+articles = np.array([7, 3, 1, 1, 1, 3, 3, 7, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1])
 articles = articles[::-1]
 
 # Indices for the Y-axis

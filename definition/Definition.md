@@ -156,12 +156,12 @@ The chart also reveals additional insights into the number of categories per aut
 ![Category frequency](/definition/images/clusters/Distribution_authors_contribution.png)
 *Figure 8: Distribution of principles across categories by authors.*
 
-**Clustering techniques**
+#### Clustering techniques
 
 At this stage, we aim to use information from authors and categories to cluster principles. To achieve this, we first showcase the alignment of principles and categories through the lens of author mentions. Then, we have applied three of the clustering techniques described in [^bishop][^park][^saxena][^rai]: Greedy Clustering,[^park] K-Means,[^saxena][^rai] and Graph Theory.[^saxena] We selected Greedy Clustering for its simplicity, K-Means for its ability to analyze intra-cluster distances, and Graph Theory for its suitability in representing clusters as graphs. However, they all have limitations that we will discuss in the different subsections; for example, the Graph Theory has limitations in handling outliers and detecting overlapping clusters.[^saxena] We finally compared results from the three different techniques to decide our final categories.
 
-#### A) 
-Greedy models iteratively select the locally optimal solution, minimizing the distance between clusters through a combination of local information and greedy heuristics.[^bishop] We have manually applied this technique to the heatmap shown in Figure 9. This heatmap showcases the alignment of principles and categories through the lens of author mentions, visualized as a matrix where the intensity of blue represents the frequency of authors. Principles are listed along the rows, while categories span the columns, with the values in each cell signifying the number of authors supporting that specific combination. A gradient from white to dark blue indicates the range of values, from 0 (no mentions) to 8 (highest mentions).
+##### A) Greedy clustering
+Greedy models iteratively select the locally optimal solution, minimizing the distance between clusters through a combination of local information and greedy heuristics.[^bishop] We have manually applied this technique to the heatmap shown in Figure 9. This heatmap showcases the alignment of principles and categories through the lens of author mentions, visualized as a matrix where the intensity of blue represents the frequency of authors. Principles are listed along the rows, while categories span the columns, with the values in each cell signifying the number of authors supporting that specific combination. A gradient from white to dark blue indicates the range of values, from 0 (no mentions) to 7 (highest mentions).
 
 At its core, the chart underscores the prominence of "Security," with the "Security and protection" principle achieving the highest author consensus at 8 mentions. Related principles like "Access and availability" and "Persistence" also align closely with the "Security" category, reflecting its pivotal role in the framework. Additionally, principles such as "Ownership and control," "Consent," and "Privacy and minimal disclosure" emerge as crucial themes, strongly linked to foundational elements like "Personal Data" and "Security."
 
@@ -171,6 +171,8 @@ The process begins by selecting the column from the [excel file](https://cristia
 
 ![Clustering](/definition/images/clusters/Heatmap.png)
 *Figure 9: *
+
+##### B) K-Means
 
 ![Clustering](/definition/images/clusters/Bubble.png)
 *Figure 6: *
