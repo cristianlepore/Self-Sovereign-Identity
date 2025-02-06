@@ -90,7 +90,7 @@ The merging process has collapsed some of the principles naming together and shr
 The chart in Figure 3 illustrates the frequency of citation for the 34 principles across the studies that we have considered, distinguishing between *Allen Principles* (in blue) and *Extending Principles* (in yellow). The x-axis lists the principles, while the y-axis represents their frequency of occurrence. The *Allen Principles*, such as "Existence and Representation," "Ownership and Control," "Transparency," and "Interoperability, show a significantly higher occurrence, indicating a strong foundation in existing literature, maybe based on the fact that those principles have been around for longer. In contrast, the *Extending Principles*, including "Cost," "Scalable," "Trust," and "Verifiability and Authenticity," show greater variability; for example, 19 out of the 24 extending principles, were cited by fewer than five authors. The analysis suggests the centrality of the Allen Principles which remain dominant, while emerging principles contribute to the evolving discourse in the field.
 
 ![Principles selection](/definition/images/principles_selection/Principles_selection.png)
-*Figure 3: The number of citations per principle across the 18 authors.*
+*Figure 3: The distribution of principles.*
 
 The average value of citation occurrences is 27%, where we placed a red threshold line as a reference for comparison (we used 25% for simplicity). We used this threashold line to extract a subset of principles for SSI; namely, we selected principles cited by at least the 25% of the authors. This heuristic of 25% is a typified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] Thus, the final list includes principles that surpass the red threshold in Figure 3. The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html), and accounts for 15 principles - 10 from Allen plus five extending principles. Note that the merging process has collapsed some of the original names within the same cell.
 
@@ -107,7 +107,7 @@ A key highlight of this chart is the clustering of dots around principles like t
 
 Some authors address a broad range of principles, demonstrating a comprehensive approach, while others focus more narrowly, emphasizing specific areas of interest. This chart not only reveals the priorities of individual authors but also illustrates broader trends in the SSI field, offering insights into what is most valued as this framework continues to evolve.6
 ![Category frequency](/definition/images/recording_of_principles/Bubble.png)
-*Figure 5: A comparative overview of the distribution of principles and authors.*
+*Figure 5: The distribution of principles and authors.*
 
 ### 1.3.4 Clustering
 
@@ -120,25 +120,37 @@ However, the Table 4 provides a scattered analysis of categorizations. Hence, be
 
 1. What are the most frequently discussed categories in the context of Self-Sovereign Identity?
 2. How do principles and articles align across different categories?
-3. 
-4. 
+3. How are principles distributed across categories by authors?
 
-Figure 6 addresses the first question, while questions ... are addressed by Figure ...
+Figure 6 answers the first question, while Figure 7 and 8 aim to address question 2 and 3 respectively.
 
-The next chart highlights the distribution of principles across categories, emphasizing key areas of focus and identifying gaps. For example, "Security" and "Controllability" dominate, reflecting their critical role in building trust and establishing the core framework for SSI systems. Moderately emphasized categories, such as "Portability," "Sustainability," and "Usability," suggest attention to practicality and user experience. However, categories like "Agency," "Compliance," and "Zero Cost" show minimal occurrences, indicating potential areas for further exploration. Modest representation in "Adoption" and "Technology" signals their growing importance as SSI solutions transition toward broader implementation. Privacy, while essential, appears less explicitly emphasized, possibly being subsumed under broader principles like security. Overall, the chart reveals the dominance of controllability, foundational and security concerns while highlighting underexplored aspects that may shape future SSI research and development.
+The next chart highlights the distribution of principles across categories, emphasizing key areas of focus and identifying gaps. For example, "Security" and "Controllability" dominate, reflecting their critical role in building trust and establishing the core framework for SSI systems. Moderately emphasized categories, such as "Portability," "Sustainability," and "Usability," suggest attention to practicality and user experience. However, categories like "Agency," "Compliance," and "Zero Cost" show minimal occurrences, indicating potential areas for further exploration. Modest representation in "Adoption" and "Technology" signals their growing importance as SSI solutions transition toward broader implementation. Privacy, while essential, appears less explicitly emphasized, possibly being subsumed under broader principles like security. Overall, the chart reveals the dominance of "Controllability" and "Security" concerns while highlighting underexplored aspects that may shape future SSI research and development.
 
 ![Category frequency](/definition/images/clusters/CategoryFrequency.png)
-*Figure 6: Distribution of principles across categories.*
+*Figure 6: Occurrence of principles per category.*
 
-The chart compares the number of unique occurrences across various categories in SSI principles and articles, highlighting areas of emphasis and alignment. Categories like "Controllability" and "Foundational" are equally represented, with both principles and articles scoring high (7 occurrences each). "Security" and "Sustainability" receive more focus in articles (8 and 7 occurrences, respectively) than in principles (5 each), indicating stronger attention in literature discussions. Moderately represented categories, such as "Personal Data," "Portability," and "Autonomy," show minor differences between principles and articles. In contrast, underrepresented categories like "Zero-cost," "Acceptance," and "Compliance" exhibit minimal occurrences in both domains, revealing potential opportunities for further exploration. Overall, the analysis identifies alignment in addressing foundational SSI aspects while showcasing discrepancies and less-explored areas for future development.
+This next chart in Figure 7, provides insight into which categories are most frequently discussed in academic or professional literature (articles) and whether they align with the principles being cited or emphasized within each category. Compared to the previous chart, Figure 7 considers only distinct principles. This allows for the identification of potential gaps, overlaps, or priorities in research and application.
+
+The y-axis lists the categories, such as "Controllability," "Foundational," "Security," "Usability," "Portability," and others, representing key aspects of SSI. The x-axis quantifies the number of unique occurrences for each category, with blue bars indicating occurrences in formal principles of SSI and red bars representing occurrences in academic or technical articles. This layout allows for a clear comparison of how frequently each category is addressed in these two distinct sources. For example, "Personal data" is cited only by one article (red bar), but contains 6 different principles (blue bar).
+
+Categories such as "Controllability" and "Foundational" express similar emphasis in both articles and principles. "Security" stands out as the most referenced category in articles, with 8 occurrences, and accounts for 5 different principles. Similarly, "Sustainability" receives more attention in articles (7 occurrences) than in principles (5 occurrences).
+
+Moderately represented categories, such as "Usability" and "Agency", exhibit comparable but slightly varying occurrences between articles and principles. In contrast, less-referenced categories, including "Zero-cost," "Acceptance," and "Compliance," have minimal mentions across both articles and principles.  
+
+This comparison underscores the alignment and divergence in focus between the articles and principles, highlighting key areas like "Security" and "Sustainability" where articles place greater emphasis and identifying underexplored categories that could benefit from further research and integration.
 
 ![Category frequency](/definition/images/clusters/Distribution_of_Principles_and_Articles_Occurrences_by_Category.png)
-*Figure 7: Comparative analysis of SSI principles and article occurrences across categories.*
+*Figure 7: The number of distinct principles and articles per category.*
+
+The Figure 8 answers the question: *How are principles distributed across categories by authors?*
+
+The bubble plot illustrates the relationship between authors and categories based on the number of principles they address. The Y-axis lists the authors, such as Allen, Čučko et al., while the X-axis displays various categories, including "Controllability," "Foundational," "Personal Data," "Sustainability," and others. Each bubble represents the number of principles an author has covered in a specific category, with the size of the bubble corresponding to the number of principles. Larger bubbles indicate more principles, while smaller bubbles represent fewer. The numerical values inside the bubbles specify the exact count. Key insights include that categories like "Controllability," "Foundational," and "Sustainability" receive significant attention from multiple authors, with BkThDvr notably addressing 6 principles under "Foundational." In contrast, categories like "Acceptance," "Adoption," "Zero-cost," "Compliance," and "Privacy" are less frequently covered, with minimal or no bubbles. This chart effectively highlights authors' focus areas and reveals trends in principle coverage across different categories. Notably, some authors did not mention any category, for example the Trust Over IP, Naik and Jenkins, Stokkink and Pouwelse, Allen, etc.
+
+![Category frequency](/definition/images/clusters/Distribution_authors_contribution.png)
+*Figure 8: Distribution of principles across categories by authors.*
 
 We applied clustering techniques to group principles our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx). In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
 
-![Category frequency](/definition/images/clusters/Distribution_authors_contribution.png)
-*Figure 6: *
 RIPORTARE I PROGRAMMI
 ![Clustering](/definition/images/clusters/Heatmap.png)
 *Figure 5: *
