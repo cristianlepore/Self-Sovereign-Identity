@@ -32,7 +32,11 @@ df = pd.DataFrame(data, index=categories).T
 
 # Creating the Heatmap
 plt.figure(figsize=(12, 6))
-sns.heatmap(df, cmap="Blues", annot=True, fmt="d", linewidths=0.5, cbar=True)
+ax= sns.heatmap(df, cmap="Blues", annot=True, fmt="d", linewidths=0.5, cbar=True)
+
+colorbar = ax.collections[0].colorbar
+colorbar.set_label("Number of authors", fontsize=10)
+
 plt.title("")
 plt.ylabel("Principles")
 plt.xlabel("Categories")

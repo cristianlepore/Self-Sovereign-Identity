@@ -123,7 +123,7 @@ However, the Table 4 provides a scattered analysis of categorizations. Hence, be
 3. How many categories are relayed by each author?
 4. How are principles distributed across categories by authors?
 
-Figure 6 answers the first question, while Figures 7, 8, and 9 each address one of the remaining questions.
+Figure 6 answers the first question, Figures 7 addresses the second question, and finally, Figure 8 addresses the remaining questions.
 
 The next chart highlights the distribution of principles across categories, emphasizing key areas of focus and identifying gaps. For example, "Security" and "Controllability" dominate, reflecting their critical role in building trust and establishing the core framework for SSI systems. Moderately emphasized categories, such as "Portability," "Sustainability," and "Usability," suggest attention to practicality and user experience. However, categories like "Agency," "Compliance," and "Zero Cost" show minimal occurrences, indicating potential areas for further exploration. Modest representation in "Adoption" and "Technology" signals their growing importance as SSI solutions transition toward broader implementation. Privacy, while essential, appears less explicitly emphasized, possibly being subsumed under broader principles like security. Overall, the chart reveals the dominance of "Controllability" and "Security" concerns while highlighting underexplored aspects that may shape future SSI research and development.
 
@@ -143,22 +143,34 @@ This comparison underscores the alignment and divergence in focus between the ar
 ![Category frequency](/definition/images/clusters/Distribution_of_Principles_and_Articles_Occurrences_by_Category.png)
 *Figure 7: The number of distinct principles and articles per category.*
 
-The Figure 8 answers the question: *How are principles distributed across categories by authors?* The bubble plot provides a comprehensive overview of how various authors address different categories by mapping the number of principles they cover. The Y-axis lists the authors, such as Allen, Čučko et al., Stokkink and Pouwelse, and others, while the X-axis features categories like "Controllability," "Foundational," "Personal Data," "Sustainability," "Security," "Usability," and more. Each bubble represents the number of principles an author has discussed in a specific category, with the size of the bubble visually indicating the magnitude. Larger bubbles signify a greater number of principles, while smaller bubbles represent fewer principles. The exact count of principles is also displayed inside each bubble, providing precise data for analysis.
+The next chart aims to answer two questions: *How many categories are relayed by each author? How are principles distributed across categories by authors?* 
+
+The bubble plot provides a comprehensive overview of how various authors address different categories by mapping the number of principles they cover. The Y-axis lists the authors, such as Allen, Čučko et al., Stokkink and Pouwelse, and others, while the X-axis features categories like "Controllability," "Foundational," "Personal Data," "Sustainability," "Security," "Usability," and more. Each bubble represents the number of principles an author has discussed in a specific category, with the size of the bubble visually indicating the magnitude. Larger bubbles signify a greater number of principles, while smaller bubbles represent fewer principles. The exact count of principles is also displayed inside each bubble, providing precise data for analysis.
 
 The chart reveals significant patterns and trends. Certain categories like "Controllability," "Foundational," and "Sustainability" receive substantial attention, as evidenced by larger bubbles for authors such as Gilani et al., which for instance, addresses 5 principles under the "Foundational" category. Even Čučko demonstrates significant engagement across multiple categories, such as "Controllability," "Sustainability," and "Adoption."
 
 In contrast, categories like "Acceptance," "Zero-cost," "Compliance," and "Privacy" are sparsely addressed. Few or no bubbles appear in these areas, indicating limited focus by the authors. For example, "Acceptance" and "Zero-cost" are each covered by only one principle from a single author, demonstrating these categories' low prioritization compared to others. This may also be because we have already filtered out principles from the previous stage.
 
-The chart also highlights diversity in author contributions. Indeed, reading by row we can see the categories by each author. Some authors provide many categories, reflecting a broad and comprehensive approach. On the other hand, other authors, such as Naik and Jenkins, Stokkink and Pouwelse, Allen, etc., did not convey any categorization. Finally, this visualization provides valuable insights into the distribution of attention among different categories and authors, helping to identify both heavily discussed topics and underexplored areas. It also emphasizes the pivotal role of authors in shaping discussions across critical categories, especially those with the most significant bubbles.
+The chart also reveals additional insights into the number of categories per author. By reading the rows, one can see the different categories presented by authors. For example, some authors provide many categories, reflecting a broad and comprehensive approach to SSI. Among them, Čučko provides six categories, Ferdous five, and Sheldrake one. On the other hand, other authors, such as Naik and Jenkins, Stokkink and Pouwelse, Allen, etc., did not convey any categorization, and they preferred to focus only on the defintion of principles. Finally, this visualization provides valuable insights into the distribution of attention among different categories and authors, helping to identify both heavily discussed topics and underexplored areas. It also emphasizes the pivotal role of authors in shaping discussions across critical categories, especially those with the most significant bubbles.
 
 ![Category frequency](/definition/images/clusters/Distribution_authors_contribution.png)
 *Figure 8: Distribution of principles across categories by authors.*
 
-We applied clustering techniques to group principles our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx). In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
+**Clustering techniques**
 
-RIPORTARE I PROGRAMMI
+At this stage, we aim to use information from authors and categories to cluster principles. To achieve this, we first showcase the alignment of principles and categories through the lens of author mentions. Then, we have applied three of the clustering techniques described in [^bishop][^park][^saxena][^rai]: Greedy Clustering,[^park] K-Means,[^saxena][^rai] and Graph Theory.[^saxena] We selected Greedy Clustering for its simplicity, K-Means for its ability to analyze intra-cluster distances, and Graph Theory for its suitability in representing clusters as graphs. However, they all have limitations that we will discuss in the different subsections; for example, the Graph Theory has limitations in handling outliers and detecting overlapping clusters.[^saxena] We finally compared results from the three different techniques to decide our final categories.
+
+#### A) 
+Greedy models iteratively select the locally optimal solution, minimizing the distance between clusters through a combination of local information and greedy heuristics.[^bishop] We have manually applied this technique to the heatmap shown in Figure 9. This heatmap showcases the alignment of principles and categories through the lens of author mentions, visualized as a matrix where the intensity of blue represents the frequency of authors. Principles are listed along the rows, while categories span the columns, with the values in each cell signifying the number of authors supporting that specific combination. A gradient from white to dark blue indicates the range of values, from 0 (no mentions) to 8 (highest mentions).
+
+At its core, the chart underscores the prominence of "Security," with the "Security and protection" principle achieving the highest author consensus at 8 mentions. Related principles like "Access and availability" and "Persistence" also align closely with the "Security" category, reflecting its pivotal role in the framework. Additionally, principles such as "Ownership and control," "Consent," and "Privacy and minimal disclosure" emerge as crucial themes, strongly linked to foundational elements like "Personal Data" and "Security."
+
+Conversely, categories such as "Compliance," "Adoption," and "Zero-cost" show limited engagement, signaling potential areas for deeper inquiry or innovation. Meanwhile, principles like "Transparency" and "Decentralization and Autonomy" exhibit focused but modest attention across select categories, hinting at their niche relevance.
+
+The process begins by selecting the column from the [excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx) (second sheet) with the highest number of occurrences and grouping rows that minimize the distance from that column. The Greedy approach has the advantage that is easy to use and simple. Despite its simplicity, it does not always guarantee a globally optimal solution because part of the result depend from the starting point. If not properly chosed, the local optimal does not coincide with the global optimal. Therefor, when multiple categories have the same number of instances, it is essential to minimize the distance between clusters by considering multiple categories.
+
 ![Clustering](/definition/images/clusters/Heatmap.png)
-*Figure 5: *
+*Figure 9: *
 
 ![Clustering](/definition/images/clusters/Bubble.png)
 *Figure 6: *
@@ -168,11 +180,9 @@ RIPORTARE I PROGRAMMI
 
 To better illustrate the relationship between properties and key aspects of SSI, we created five groups of principles based on past definitions.
 
-**Clustering techniques**
+1) K-Means aims to minimize intra-cluster distances. Graphically, it initializes a centroid at a random point on the chart and iteratively adjusts to find the nearest points. The number of centroids, K, significantly affects the result. We automate the process through the following steps: [Python Program](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/program/Compute_K-Means.py) whose main steps are as follows:
 
-1) Greedy models iteratively select the locally optimal solution, minimizing the distance between clusters. The process begins by selecting the column from the [excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx) (second sheet) with the highest number of occurrences and grouping rows that minimize the distance from that column. The Greedy approach has the advantage that is easy to use and simple. Despite its simplicity, it does not always guarantee a globally optimal solution because part of the result depend from the starting point. If not properly chosed, the local optimal does not coincide with the global optimal. Therefor, when multiple categories have the same number of instances, it is essential to minimize the distance between clusters by considering multiple categories.
-
-2) K-Means aims to minimize intra-cluster distances. Graphically, it initializes a centroid at a random point on the chart and iteratively adjusts to find the nearest points. The number of centroids, K, significantly affects the result. We automate the process through the following steps: [Python Program](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/program/Compute_K-Means.py) whose main steps are as follows:
+RIPORTARE I PROGRAMMI
 
 - The program reads data from a CSV file 
 `data = pd.read_csv(file_path)`
@@ -435,3 +445,11 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^essif]: ESSIF-Lab. Essif-lab principles. https://essif-lab.github.io/framework/docs/essifLab-principles, 2024. Accessed: 2024-12- 24.
 
 [^heuristic]: heuristic definition. Cambridge dictionary. https://dictionary.cambridge.org/dictionary/english/heuristic, accessed on 2024-02-03.
+
+[^saxena]: Saxena, Amit, et al. "A review of clustering techniques and developments." Neurocomputing 267 (2017): 664-681.
+
+[^rai]: Rai, Pradeep, and Shubha Singh. "A survey of clustering techniques." International Journal of Computer Applications 7.12 (2010): 1-5.
+
+[^park]: Park, Dohyung, Constantine Caramanis, and Sujay Sanghavi. "Greedy subspace clustering." Advances in neural information processing systems 27 (2014).
+
+[^bishop]: Bishop, Christopher M. Pattern recognition and machine learning by Christopher M. Bishop. Springer Science+ Business Media, LLC, 2006.
