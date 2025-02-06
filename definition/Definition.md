@@ -56,7 +56,9 @@ Keywords were refined and shuffled to avoid wildcards; for instance, Self-Sovere
 ![Casual Loop Diagram Properties (Local)](/definition/images/literature_review/literature_review.png)
 *Figure 1. The process of our literature review. Squares putlines the main process. Rounded squares are outputs. In the process, the output feeds the next step.*
 
-The next part details steps 4 to 10.
+The next part complements the discussion of steps 4 to 10, with insights and analysis through charts created in Python and available at the following repository: https://cristianlepore.github.io/Self-Sovereign-Identity/. Static visualization are created through the `pyplot` module, which is imported from the `matplotlib` library. A convention is to adopt alias as `plt` to make function calls more concise, such as `plt.plot()` and `plt.show()`. Finally, `import numpy as np` imports the `numpy` library, which is a numerical computing library used for handling arrays and performing mathematical operations efficiently. Again, we used the alias `np` to make function calls shorter (e.g., `np.array()`, `np.arange()`).
+
+Together, these libraries are frequently used in data visualization and analysis tasks, where `numpy` helps manipulate data and `matplotlib.pyplot` is used to plot it.
 
 ### 1.3.1 Recording of properties
 
@@ -90,7 +92,7 @@ The chart in Figure 3 illustrates the frequency of citation for the 34 principle
 ![Principles selection](/definition/images/principles_selection/Principles_selection.png)
 *Figure 3: The number of citations per principle across the 18 authors.*
 
-The average value of citation occurrences is slightly above 25%, where we placed a red threshold line as a reference for comparison. We used this threashold line to extract a subset of principles for SSI; namely, we selected principles cited by at least the 25% of the authors. This heuristic of 25% is a typified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] Thus, the final list includes principles that surpass the red threshold in Figure 3. The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html), and accounts for 15 principles - 10 from Allen plus five extending principles. Note that the merging process has collapsed some of the original names within the same cell.
+The average value of citation occurrences is 27%, where we placed a red threshold line as a reference for comparison (we used 25% for simplicity). We used this threashold line to extract a subset of principles for SSI; namely, we selected principles cited by at least the 25% of the authors. This heuristic of 25% is a typified strategy that aids in making decisions efficiently by relying on practical rules.[^heuristic] Thus, the final list includes principles that surpass the red threshold in Figure 3. The final list is reported in [Table 3](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html), and accounts for 15 principles - 10 from Allen plus five extending principles. Note that the merging process has collapsed some of the original names within the same cell.
 
 [Click to view the table 3.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification1.html) *The final list of properties and their namings.*
 
@@ -103,41 +105,41 @@ The information presented in the previous charts (Figure 3 and Figure 4) is furt
 
 A key highlight of this chart is the clustering of dots around principles like transparency, interoperability, and privacy, which most contributors clearly consider essential. In contrast, principles such as cost, decentralization, and usability receive less attention, suggesting they are either less emphasized or considered secondary by many.
 
-Some authors address a broad range of principles, demonstrating a comprehensive approach, while others focus more narrowly, emphasizing specific areas of interest. This chart not only reveals the priorities of individual authors but also illustrates broader trends in the SSI field, offering insights into what is most valued as this framework continues to evolve.
-
+Some authors address a broad range of principles, demonstrating a comprehensive approach, while others focus more narrowly, emphasizing specific areas of interest. This chart not only reveals the priorities of individual authors but also illustrates broader trends in the SSI field, offering insights into what is most valued as this framework continues to evolve.6
 ![Category frequency](/definition/images/recording_of_principles/Bubble.png)
 *Figure 5: A comparative overview of the distribution of principles and authors.*
 
 ### 1.3.4 Clustering
 
-A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] For this reason, we aimed to provide a categorization of properties that illuminates the relationship between properties and Self-Sovereign Identity. However, we aim to cluster principles using the existing labeling from the literature, and we do not focus on the defintion of classes. Some of the above-mentioned works have already clustered principles, as discussed in [Related Works](#12-related-works). We aim to build on past work to reach a mutually agreed-upon categorization of principles. Instrumental to this exercise is [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which gathers information about past categorizations from authors. Each cell of the table corresponds to the name of a category, while principles are listed in the first column.
+A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] In our case, the subjects and the objects are the principles and the SSI field respectively. Some of the studies discussed in [Related Works](#12-related-works) already include a form of categorization. Building on these past studies, our goal is to establish a mutually agreed-upon categorization of principles, and instrumental to this effort is the [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which outlines the framework for our categorization. In table 4 each cell represents a category.
 
-[Click to view the table 4 with 15 properties only.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) *The categorization of principles provided by various authors about the 15 skimmed principles.*
-[Table 4 with the complete list of 34 properties.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification2) *The categorization of principles provided by various authors concerning the total of 34 principles.*
+[Click to view the table 4 with 15 properties only.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) *The principles and their categories.*
+[Table 4 with the complete list of 34 properties.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification2) *The principles and their categories.*
 
-Table 4 breaks down classes by author and shows how heterogeneous the categorization of principles from various authors is. Indeed, no two works have the exact same list of classes (or categories). However, their content analysis is not straightforward. To clarify the conveyed information, we analyze five information from the list of fifteen principles. We aim to address, for each class:
-1. How many principles overall pertain to that class?
-2. How many contributions cite that class?
-3. How many unique principles for each author?
-4. How many unique authors?
+However, the Table 4 provides a scattered analysis of categorizations. Hence, before proceding with the clustering, we aim to gather insights into some of the information conveyed by the table, by addressing the following questions:
 
-Questions 1 and 2 are addressed by Figure 4. Questions 3 and 4 are addressed in Figure 5.
+1. What are the most frequently discussed categories in the context of Self-Sovereign Identity?
+2. How do principles and articles align across different categories?
+3. 
+4. 
 
+Figure 6 addresses the first question, while questions ... are addressed by Figure ...
 
-
-INSERIRE APPENDICE CON I PROGRAMMI USATI ED IL CODICE;
+The next chart highlights the distribution of principles across categories, emphasizing key areas of focus and identifying gaps. For example, "Security" and "Controllability" dominate, reflecting their critical role in building trust and establishing the core framework for SSI systems. Moderately emphasized categories, such as "Portability," "Sustainability," and "Usability," suggest attention to practicality and user experience. However, categories like "Agency," "Compliance," and "Zero Cost" show minimal occurrences, indicating potential areas for further exploration. Modest representation in "Adoption" and "Technology" signals their growing importance as SSI solutions transition toward broader implementation. Privacy, while essential, appears less explicitly emphasized, possibly being subsumed under broader principles like security. Overall, the chart reveals the dominance of controllability, foundational and security concerns while highlighting underexplored aspects that may shape future SSI research and development.
 
 ![Category frequency](/definition/images/clusters/CategoryFrequency.png)
-*Figure 5: *
+*Figure 6: Distribution of principles across categories.*
+
+The chart compares the number of unique occurrences across various categories in SSI principles and articles, highlighting areas of emphasis and alignment. Categories like "Controllability" and "Foundational" are equally represented, with both principles and articles scoring high (7 occurrences each). "Security" and "Sustainability" receive more focus in articles (8 and 7 occurrences, respectively) than in principles (5 each), indicating stronger attention in literature discussions. Moderately represented categories, such as "Personal Data," "Portability," and "Autonomy," show minor differences between principles and articles. In contrast, underrepresented categories like "Zero-cost," "Acceptance," and "Compliance" exhibit minimal occurrences in both domains, revealing potential opportunities for further exploration. Overall, the analysis identifies alignment in addressing foundational SSI aspects while showcasing discrepancies and less-explored areas for future development.
 
 ![Category frequency](/definition/images/clusters/Distribution_of_Principles_and_Articles_Occurrences_by_Category.png)
-*Figure 6: *
+*Figure 7: Comparative analysis of SSI principles and article occurrences across categories.*
 
 We applied clustering techniques to group principles our clustering process. The resulting table is presented in the first sheet of the [Excel file](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Summary.xlsx). In this table, rows represent the 15 properties, columns correspond to the categorization of principles from [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), and cell numbers indicate occurrences by author. We employed three clustering techniques: Greedy, K-Means, and Graph Theory.
 
 ![Category frequency](/definition/images/clusters/Distribution_authors_contribution.png)
 *Figure 6: *
-
+RIPORTARE I PROGRAMMI
 ![Clustering](/definition/images/clusters/Heatmap.png)
 *Figure 5: *
 

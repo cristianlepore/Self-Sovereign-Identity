@@ -42,12 +42,16 @@ for bar in bars2:
 # Labels and title
 plt.xlabel("")  # Remove X-axis label
 plt.ylabel("Categories")
-plt.title("Number of unique occurrences")
+plt.title("")
 plt.yticks(y, concepts)
 plt.xticks([])  # Remove X-axis numbers
 plt.axvline(0, color='black', linewidth=1)  # Vertical reference line at 0
 plt.legend()
 plt.grid(axis='x', linestyle='--', alpha=0.7)
+
+# Add half-chart titles more centrally
+plt.text(-max(articles) / 2, len(concepts) + 0.5, "Articles occurrence", fontsize=14, fontweight='bold', color='salmon', ha='center')
+plt.text(max(principles) / 2, len(concepts) + 0.5, "Principles occurrence", fontsize=14, fontweight='bold', color='skyblue', ha='center')
 
 # Show the chart
 plt.show()
