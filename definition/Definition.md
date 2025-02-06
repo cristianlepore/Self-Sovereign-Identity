@@ -25,7 +25,7 @@ Eleven of the eighteen works considered in our contribution complement the list 
 
 ## 1.3 Methodology
 
-A coarse-grained overview of the research topic provides a comprehensive perspective of works on the SSI principles. An initial selection of 18 works from the literature review outlined 52 properties, which were then filtered throgh heuristics. In addition to the list of properties, our work introduces a unique categorization through clustering techniques. Finally, we proposed a questionnaire for experts to: I) Investigate the identified SSI properties and assess their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the grouping of properties. IV) Refine the principles.
+A coarse-grained overview of the research topic provides a comprehensive perspective of works on the SSI principles. An initial selection of 18 works from the literature review outlined 52 properties, which were then filtered throgh heuristics. In addition to the list of properties, our work introduces a novel categorization of principles based on heuristics. Finally, we proposed a questionnaire for experts to: I) Investigate the identified SSI properties and assess their importance. II) Identify the most and least critical properties, including non-repudiable ones. III) Validate the grouping of properties. IV) Refine the principles.
 
 To gather relevant articles, we conducted a systematic review, which provides a structured overview of a research field by adapting the steps presented in [^lepore][^badzek][^cushman].
 
@@ -45,7 +45,7 @@ Keywords were refined and shuffled to avoid wildcards; for instance, Self-Sovere
 
 *6. Selection.* We have extracted the most relevant properties using a heuristic.
 
-*7. Clustering.* Clustering allows us to answer the quesiton: *can we cluster principles based on their labels to create categories?*. We used results to further analyze the state of play.
+*7. Categorization.* We propose a categorization of properties that illuminates the relationship between the principles and Self-Sovereign Identity.
 
 *8. Definition of principles.* We summarized the definitions of properties from authors while retaining their essence.
 
@@ -109,14 +109,13 @@ Some authors address a broad range of principles, demonstrating a comprehensive 
 ![Category frequency](/definition/images/recording_of_principles/Bubble.png)
 *Figure 5: The distribution of principles and authors.*
 
-### 1.3.4 Clustering
-
-A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] In our case, the subjects and the objects are the principles and the SSI field respectively. Some of the studies discussed in [Related Works](#12-related-works) already include a form of categorization. Building on these past studies, our goal is to establish a mutually agreed-upon categorization of principles, and instrumental to this effort is the [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which outlines the framework for our categorization. In table 4 each cell represents a category.
+### 1.3.4 Categorization
+A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] In our case, the subjects and the objects are the principles and the SSI field respectively. However, we do not have categorical attributes nor specific properties to label our principles. We do not have criteria definitions, rather we can rely only on past studies that categorize the SSI principles as reported in the [Related Works](#12-related-works). On top of this, our goal is analyze past studies to see if objects exhibit any similarity between themselves and dissimilar to objects of other authors.[^rai] Instrumental for this job is the creation of [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which outlines the categories from our literature review. From here, we aim to find similarities between bjects.
 
 [Click to view the table 4 with 15 properties only.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) *The principles and their categories.*
 [Table 4 with the complete list of 34 properties.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification2) *The principles and their categories.*
 
-However, the Table 4 provides a scattered analysis of categorizations. Hence, before proceding with the clustering, we aim to gather insights into some of the information conveyed by the table, by addressing the following questions:
+However, the knowledge provided in Table 4 is only scattered and, before proceeding, we aim to analyze data by addressing the following questions:
 
 1. What are the most frequently discussed categories in the context of Self-Sovereign Identity?
 2. How do principles and articles align across different categories?
@@ -156,9 +155,10 @@ The chart also reveals additional insights into the number of categories per aut
 ![Category frequency](/definition/images/clusters/Distribution_authors_contribution.png)
 *Figure 8: Distribution of principles across categories by authors.*
 
-#### Clustering techniques
+The study of literature through questions highlights how scattered the domain of interest is and how loosely connected the principles and categorizations proposed by different authors are. In the absence of predefined features for categorization, we can leverage a clustering technique to identify groups and assign names to them based on heuristics.[^rai] Clustering helps uncover similarities between objects that initially appear dissimilar. To achieve this, we treat our data as a cluster—a set of points where each point is closer (or more similar) to one or more other points within the cluster than to any point outside of it.[^rai]
 
-At this stage, we aim to use information from authors and categories to cluster principles. To achieve this, we first showcase the alignment of principles and categories through the lens of author mentions. Then, we have applied three of the clustering techniques described in [^bishop][^park][^saxena][^rai]: Greedy Clustering,[^park] K-Means,[^saxena][^rai] and Graph Theory.[^saxena] We selected Greedy Clustering for its simplicity, K-Means for its ability to analyze intra-cluster distances, and Graph Theory for its suitability in representing clusters as graphs. However, they all have limitations that we will discuss in the different subsections; for example, the Graph Theory has limitations in handling outliers and detecting overlapping clusters.[^saxena] We finally compared results from the three different techniques to decide our final categories.
+#### Clustering techniques
+We aim to divide data into groups of similar objects by using information from authors and their categories. To achieve this, we first showcase the alignment of principles and categories through the lens of author mentions. Then, we have applied three of the clustering techniques described in [^bishop][^park][^saxena][^rai]: Greedy Clustering,[^park] K-Means,[^saxena][^rai] and Graph Theory.[^saxena] We selected Greedy Clustering for its simplicity, K-Means for its ability to analyze intra-cluster distances, and Graph Theory for its suitability in representing clusters as graphs. However, they all have limitations that we will discuss in the different subsections; for example, the Graph Theory has limitations in handling outliers and detecting overlapping clusters.[^saxena] We finally compared results from the three different techniques to decide our final categories.
 
 ##### A) Greedy clustering
 The greedy local approach makes decisions based on the best immediate (local) choice at each step, aiming to achieve a globally optimal solution.[^bishop] it is simple and ease of use, so we manually applied this technique to the heatmap shown in Figure 9. This heatmap illustrates the alignment of principles and categories through the lens of author mentions. It is visualized as a matrix, where the intensity of blue represents the frequency of author mentions. Principles are listed along the rows, while categories span the columns. The values in each cell indicate the number of authors supporting a specific combination. A gradient from white to dark blue represents the range of values, from 0 (no mentions) to 7 (highest mentions).
@@ -180,16 +180,7 @@ Despite being efficient and effective for certain problems, the greedy local app
 *Figure 9: Author mentions across principles and categories.*
 
 ##### B) K-Means
-
-![Clustering](/definition/images/clusters/Bubble.png)
-*Figure 6: *
-
-![Clustering](/definition/images/clusters/Graph_theory.png)
-*Figure 7: *
-
-To better illustrate the relationship between properties and key aspects of SSI, we created five groups of principles based on past definitions.
-
-1) K-Means aims to minimize intra-cluster distances. Graphically, it initializes a centroid at a random point on the chart and iteratively adjusts to find the nearest points. The number of centroids, K, significantly affects the result. We automate the process through the following steps: [Python Program](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/program/Compute_K-Means.py) whose main steps are as follows:
+K-Means aims to minimize intra-cluster distances. Graphically, it initializes a centroid at a random point on the chart and iteratively adjusts to find the nearest points. The number of centroids, K, significantly affects the result. We automate the process through the following steps: [Python Program](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/program/Compute_K-Means.py) whose main steps are as follows:
 
 RIPORTARE I PROGRAMMI
 
@@ -203,7 +194,13 @@ For reproducibility of results, we used the same seed to calculate the starting 
 We tested several combinations of parameter K (number of clusters) and eventually settled on `K=5`. This value of K ensures a fair number of elements in each cluster.
 - Write output and save results. `print(f"Clustering completed! Results saved in: {output_file}")`
 
-3) Graph theory represents points as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
+![Clustering](/definition/images/clusters/Bubble.png)
+*Figure 6: *
+
+![Clustering](/definition/images/clusters/Graph_theory.png)
+*Figure 7: *
+
+1) Graph theory represents points as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
 
 Figure 3 shows the final result of our grouping process. The group's name is derived from the literature.
 
