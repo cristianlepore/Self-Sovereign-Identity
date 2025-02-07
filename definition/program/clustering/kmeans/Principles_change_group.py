@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-# Definizione dei principi e degli step
+# Definition of principles and steps
 principles = [
     "Access and availability", "Existence and persistence", "Security and protection", "Interoperability", 
     "Ownership and control", "Persistence", "Cost", "Standard", "Usability and consistency", "Transparency", 
@@ -28,28 +28,34 @@ group_assignments = [
     [0,1,1,3,3,5,5,3,3,3,3,3,3,3,3]  # Portability
 ]
 
-# Identifica i cambiamenti tra step e step
+# Identify changes between steps
 change_points = []
 for step in range(len(steps) - 1):
     for i, principle in enumerate(principles):
         if group_assignments[i][step] != group_assignments[i][step + 1]:
             change_points.append((step + 1, i))
 
-# Visualizza i cambiamenti in un grafico
+# Visualize changes in a graph
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.scatter([x[0] for x in change_points], [x[1] for x in change_points], color='red', label='Changes')
+ax.scatter([x[0] for x in change_points], [x[1] for x in change_points], color='blue', label='Principle that changes groups from\nthe current step to the next one.')  
 ax.set_xticks(steps)
 ax.set_yticks(range(len(principles)))
 ax.set_yticklabels(principles)
-ax.set_xlabel("Steps")
+ax.set_xlabel("Values of the parameter k")
 ax.set_ylabel("Principles")
-ax.set_title("Changes in Principles Across Steps")
-ax.legend()
+ax.set_title("")
+
+# Force the legend to the top-right corner on two lines
+ax.legend(loc='upper right', fontsize=10, frameon=True)
+
+# Add grid for better readability
+ax.grid(True, linestyle='--', alpha=0.6)
+
 plt.xticks(rotation=45, ha='right')
 plt.tight_layout()
 plt.show()
 
-# Stampa i cambiamenti
+# Print the changes
 changes = {}
 for step in range(len(steps) - 1):
     changed_principles = []

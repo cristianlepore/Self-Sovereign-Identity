@@ -171,12 +171,12 @@ In contrast, categories such as "Compliance," "Adoption," and "Zero-cost" show l
 
 The local greedy algorithm begins by selecting the column in the heatmap with the highest number of occurrences and grouping rows that minimize the distance from that column. In this case, the darkest cell—representing the highest value—lies at the intersection of "Security and protection" and "Security." From there, we move up and down within the same column, selecting principles that close the gap, namely "Persistence," "Privacy and minimal disclosure," and "Verifiability and authenticity." These principles form the "Security" category, named after the column.
 
-We then repeat the process, moving to the first column and selecting the two rows with the highest values. Continuing to move up and down, we include the closest value: "Existence and representation." This group is named after its corresponding column: "Controllability." At the end of these steps, we defined five groups of principles, as shown in Table 5.
+We then repeat the process, moving to the first column and selecting the two rows with the highest values. Continuing to move up and down, we include the closest value: "Existence and representation." This group is named after its corresponding column: "Controllability." The final list of groups is presented in Table 5, along with a comparison of the other clustering results.
 
 ###### Discussion and limitations
 Although the greedy approach is efficient and effective for certain problems, it has a rigid structure that relies on the next local best step to find a locally optimal solution, while it may not account for the overall problem structure.[^rai] Since we do not know the data distribution, a locally optimal solution may differ from the globally optimal one.[^park] Furthermore, the greedy approach lacks backtracking or global adjustments - it considers only the present step without planning ahead, which can lead to suboptimal results. Therefore, we aim to explore alternative techniques that have a less rigid structure and may lead to different clustering.
 
-![Heatmap](/definition/images/clusters/Heatmap.png)
+![Heatmap](/definition/images/clusters/greedy/Heatmap.png)
 *Figure 9: Author mentions across principles and categories.*
 
 ##### B) K-Means
@@ -189,16 +189,26 @@ K-Means is an iterative method that can find a local minimum but has a less rigi
 
 This produces a separation of the objects into groups from which the metric to be minimized can be calculated.
 
-![K-Means](/definition/images/clusters/K-Means_flow/K-Means_flow.png)
-*Figure 10: Flow diagram of K-means.*
+Despites K-Means is simple it shares a few limitations with the greedy method. (a) K-Means may converge to a local suboptimal and (b) there is no efficient and universal method to tune the value k.[^rai] To mitigate both problems, we have created a program as in the [Appendix A](#appendix-a-k-means-clustering-program-explanation), which instantiates the K-Means by using a specific `init='k-means++'` method to strategically initialize the centroid. This methods reduces the risk to converge to a local suboptimal. Results are reproduceble because all tests have been carried out using the same seed to generate the centroids. Thus, anyone can download the program, the input file from the dispatcher and obtain our same results.
 
-Despites K-Means is simple it shares a few limitations with the greedy method. (a) K-Means may converge to a local suboptimal and (b) there is no efficient and universal method for identifying the value k for clustering tuning.[^rai] To mitigate both problems, we automatize the process through a program detailed in the [Appendix A](#appendix-a-k-means-clustering-program-explanation), which instantiates the K-Means by using a specific `init='k-means++'` method to strategically initialize the centroid. This methods reduces the risk to converge to a local suboptimal. Additionally, for reproducibility of results, all tests have been carried out using the same seed to generate the centroids. Thus, anyone can download the program, the input file from the dispatcher and obtain our same results.
+So, we have tested results with different values for k, and collected retsults.
+
+![Numerb of principles changing group](/definition/images/clusters/k-means/Number_principles_changing_group.png)
+*Figure 10: *
+
+![Principles change group](/definition/images/clusters/k-means/Principles_change_group.png)
+*Figure 11: *
+
+![Principles change group](/definition/images/clusters/k-means/Principles_workflow_groups.png)
+*Figure 12: *
 
 ###### Discussion and limitations
 (b) It is affected by the shape, size, density of clusters; (c) It is sensitive to outliers.[^saxena][^rai]
 
+
+
 SPIEGARE IL GRAFICO FINALE
-![Bubble K-Means](/definition/images/clusters/Bubble.png)
+![Bubble K-Means](/definition/images/clusters/k-means/Bubble.png)
 *Figure 12: *
 
 ![Clustering](/definition/images/clusters/Graph_theory.png)
