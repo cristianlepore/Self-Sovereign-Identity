@@ -202,6 +202,9 @@ So, we have tested results with different values for k, and collected retsults.
 ![Principles change group](/definition/images/clusters/k-means/Principles_workflow_groups.png)
 *Figure 12: *
 
+![Principles change group](/definition/images/clusters/k-means/Flowchart_principles.png)
+*Figure 13: *
+
 ###### Discussion and limitations
 (b) It is affected by the shape, size, density of clusters; (c) It is sensitive to outliers.[^saxena][^rai]
 

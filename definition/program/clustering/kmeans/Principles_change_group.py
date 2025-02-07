@@ -8,7 +8,7 @@ principles = [
     "Consent", "Decentralization and Autonomy", "Privacy and minimal disclosure", "Verifiability and Authenticity", "Portability"
 ]
 
-steps = list(range(1, 16))
+steps = list(range(0, 15))
 
 group_assignments = [
     [0,1,1,3,4,4,4,4,4,4,4,4,4,4,4],  # Access and availability
@@ -22,9 +22,9 @@ group_assignments = [
     [0,1,1,1,1,1,1,1,1,1,1,1,1,1,1],  # Usability and consistency
     [0,1,1,3,3,3,3,6,6,6,6,6,6,6,6],  # Transparency
     [0,1,2,2,2,2,2,2,2,2,10,10,10,10,10],  # Consent
-    [0,1,1,1,1,1,1,1,8,8,8,8,8,8,8],  # Decentralization and Autonomy
+    [0,1,1,1,1,1,1,1,8,8,8,8,8,8,8],  # Decentralization and autonomy
     [0,0,0,0,0,0,0,0,0,0,0,11,11,11,11],  # Privacy and minimal disclosure
-    [0,1,1,1,1,1,1,1,1,9,9,9,9,9,9],  # Verifiability and Authenticity
+    [0,1,1,1,1,1,1,1,1,9,9,9,9,9,9],  # Verifiability and authenticity
     [0,1,1,3,3,5,5,3,3,3,3,3,3,3,3]  # Portability
 ]
 
@@ -37,7 +37,7 @@ for step in range(len(steps) - 1):
 
 # Visualize changes in a graph
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.scatter([x[0] for x in change_points], [x[1] for x in change_points], color='blue', label='Principle that changes groups from\nthe current step to the next one.')  
+ax.scatter([x[0] for x in change_points], [x[1] for x in change_points], color='blue', label='Principle that changed groups\nfrom the previous step.')  
 ax.set_xticks(steps)
 ax.set_yticks(range(len(principles)))
 ax.set_yticklabels(principles)
