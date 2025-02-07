@@ -41,4 +41,10 @@ plt.title("")
 plt.xlabel("Principles")
 plt.ylabel("Categories")
 plt.grid(True, linestyle="--", alpha=0.5)
+
+# Adding a legend for bubble size
+legend_sizes = [1, 3, 5]  # Example article counts
+legend_bubbles = [plt.scatter([], [], s=size * 90, alpha=0.6, c="blue", edgecolors="black") for size in legend_sizes]
+plt.legend(legend_bubbles, [f"{size} articles" for size in legend_sizes], title="Number of Articles", loc="upper right")
+
 plt.show()

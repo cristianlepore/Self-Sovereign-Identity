@@ -192,21 +192,14 @@ This produces a separation of the objects into groups from which the metric to b
 ![K-Means](/definition/images/clusters/K-Means_flow/K-Means_flow.png)
 *Figure 10: Flow diagram of K-means.*
 
-The program detailed in the [Appendix A](#appendix-a) automate the process. We tested values 2 - 7 for k, obtaining the results depicted in Figure 11. For reproducibility of results, we used the same seeds to generate the centroids.
+Despites K-Means is pretty simple, it carries a few limitations. One and foremost, (a) there is no efficient and universal method for identifying the number of clusters K; (b) It is affected by the shape, size, density of clusters; (c) It is sensitive to outliers.[^saxena][^rai]
+
+To mitigate problem (a), we have automatize the process to test various values for k through a program detailed in the [Appendix A](#appendix-a). Results are depicted in Figure 11. For reproducibility of results, we used the same seeds to generate the centroids.
 
 ###### Discussion and limitations
-Although K- Means clustering is still one of
-the most popular clustering algorithms yet few limitation are associated with K Means clustering
-include: (a) There is no efficient and universal method for identifying the initial partitions and the
-number of clusters K and (b) K-means is sensitive to outliers and noise[^saxena]
 
-K-means has problems when clusters are of differing
-Sizes,Densities,Non-globular shapes and K-means has
-problems when the data contains outliers[^rai]
-
-CORREGGERE GRAFICO E PROGRAMMA IN APPENDICE;
 ![Bubble K-Means](/definition/images/clusters/Bubble.png)
-*Figure 6: *
+*Figure 12: *
 
 ![Clustering](/definition/images/clusters/Graph_theory.png)
 *Figure 7: *
@@ -377,17 +370,130 @@ INSERIRE I RANKING DELLE PROPRIETA4 ALL4INTERNO DI QUESTA IMMAGINE
 ![Allen Principles Schema (Local)](/definition/images/SSI_process_flow/SSI_process_flow_raw.png)
 *SSI properties mapped within the general SSI process flow.[^allen]*
 
-## Appendix A
+## Appendix: K-Means Clustering Program Explanation
 
-- The program reads data from a CSV file 
-`data = pd.read_csv(file_path)`
-- Fills black cells with zeroes 
-`cleaned_data = numerical_columns.fillna(0)`
-- Applies the K-Means clustering 
-`kmeans = KMeans(n_clusters=n_clusters, init='k-means++', random_state=42)` with a pre-established value `K=5`
-For reproducibility of results, we used the same seed to calculate the starting centroid through `random_state=42`
-We tested several combinations of parameter K (number of clusters) and eventually settled on `K=5`. This value of K ensures a fair number of elements in each cluster.
-- Write output and save results. `print(f"Clustering completed! Results saved in: {output_file}")`
+### Overview
+
+This Python program applies the K-Means Clustering algorithm to a dataset stored in a CSV file. The processed dataset is then saved with an additional column indicating the cluster assignment for each data point. The files are dispatched under the following repository: [/definition/program/clustering/kmeans/](/definition/program/clustering/kmeans/).
+
+### Libraries Used
+
+- `pandas` – For handling and processing tabular data.
+- `sklearn.cluster.KMeans` – For applying the K-Means clustering algorithm.
+- `numpy` – For handling numerical data.
+- `os` – For handling file paths.
+
+### Function: `kmeans_clustering(file_path, n_clusters)`
+
+This function performs the following steps:
+
+1. **Load Data:** Reads the CSV file into a pandas DataFrame.
+2. **Select Numerical Columns:** Filters out only the numerical columns for clustering.
+3. **Handle Missing Values:** Replaces NaN values with 0 to ensure compatibility with K-Means.
+4. **Apply K-Means Clustering:**
+   - Uses `KMeans` from `sklearn.cluster`.
+   - Initializes clusters using the `k-means++` method.
+   - Assigns cluster labels to each data point.
+5. **Save the Result:**
+   - Adds a new column named `Clustering` with the assigned cluster labels.
+   - Saves the modified dataset as `Output.csv`.
+   - Prints the count of data points in each cluster.
+
+### Code Explanation
+
+```python
+import pandas as pd
+from sklearn.cluster import KMeans
+import numpy as np
+import os
+```
+
+- Importing the necessary libraries.
+
+```python
+def kmeans_clustering(file_path, n_clusters):
+```
+
+- Defines the function, which takes the **file path** and the **number of clusters** as inputs.
+
+```python
+    data = pd.read_csv(file_path)
+```
+
+- Reads the CSV file into a pandas DataFrame.
+
+```python
+    numerical_columns = data.select_dtypes(include=[np.number]).dropna(axis=1, how='all')
+```
+
+- Selects only numerical columns and drops columns that contain all NaN values.
+
+```python
+    cleaned_data = numerical_columns.fillna(0)
+```
+
+- Fills any remaining NaN values with `0`.
+
+```python
+    kmeans = KMeans(n_clusters=n_clusters, init='k-means++', random_state=42)
+    clusters = kmeans.fit_predict(cleaned_data)
+```
+
+- Initializes the K-Means model with `n_clusters`.
+- Uses `k-means++` initialization for better convergence.
+- Predicts cluster assignments for the dataset.
+
+```python
+    data['Clustering'] = clusters
+```
+
+- Adds a new column **Clustering** to the original dataset.
+
+```python
+    output_file = "Output.csv"
+    data.to_csv(output_file, index=False)
+```
+
+- Saves the updated dataset as `Output.csv` without row indices.
+
+```python
+    print(f"Clustering completed! Results saved in: {output_file}")
+    print(data[['Clustering']].value_counts().sort_index())
+```
+
+- Prints a success message and displays the count of data points in each cluster.
+
+### Execution Block
+
+```python
+if __name__ == "__main__":
+```
+
+- Ensures that the script runs only when executed directly.
+
+```python
+    download_folder = os.path.join(os.path.expanduser("~"), "Downloads/SSI_principles/Definition/Program")
+    file_path = os.path.join(download_folder, "Input.csv")
+```
+
+- Constructs the file path dynamically based on the user's home directory.
+
+```python
+    n_clusters = 5
+    kmeans_clustering(file_path, n_clusters)
+```
+
+- Specifies the number of clusters (`k=5`) and runs the function.
+
+### Output
+
+- The script prints the message **"Clustering completed! Results saved in: Output.csv"**.
+- Displays the count of data points assigned to each cluster.
+- Saves the clustered data to `Output.csv`.
+
+### Summary
+
+This program efficiently applies K-Means Clustering to a dataset and saves the results. It is particularly useful for unsupervised learning tasks where grouping similar data points is required.
 
 ## Appendix A
 
