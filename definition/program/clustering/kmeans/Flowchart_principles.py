@@ -65,25 +65,25 @@ for i, principle in enumerate(principles_left):
     # Add scatter points
     for step_idx, step in enumerate(steps):
         group = group_assignments[i, step_idx]
-        ax.scatter(step, y_positions[step_idx], color=color_map[group], marker='o', s=40, zorder=3)
+        ax.scatter(step, y_positions[step_idx], color=color_map[group], marker='o', s=20, zorder=3)  # Reduced size
 
 # Left-side labels (original order)
 ax.set_yticks(range(len(principles_left)))
-ax.set_yticklabels(principles_left, fontsize=10)
+ax.set_yticklabels(principles_left, fontsize=6)
 ax.set_ylabel("")
 
 # Right-side labels (desired order)
 ax2 = ax.twinx()
 ax2.set_ylim(ax.get_ylim())  
 ax2.set_yticks(range(len(principles_right)))
-ax2.set_yticklabels(principles_right, fontsize=10)
+ax2.set_yticklabels(principles_right, fontsize=6)
 ax2.set_ylabel("")
 ax2.yaxis.set_label_position("right")
 ax2.yaxis.tick_right()
 
 # Graph title and labels
 ax.set_title("", fontsize=14, weight='bold')
-ax.set_xlabel("Values of the parameter k", fontsize=12)
+ax.set_xlabel("Values of the parameter k", fontsize=10)
 ax.set_xticks(steps)
 ax.grid(visible=True, alpha=0.3)
 
