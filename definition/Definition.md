@@ -158,7 +158,7 @@ The chart also reveals additional insights into the number of categories per aut
 The study of literature highlighted how scattered the domain of interest is and how loosely connected the principles and categorizations proposed by different authors are. In the absence of predefined features for categorization, we can leverage a clustering technique to identify groups and assign names to them based on heuristics.[^rai] Clustering helps uncover similarities between objects that initially appear dissimilar. To achieve this, we treat our data as a cluster—a set of points where each point is closer (or more similar) to one or more other points within the cluster than to any point outside of it.[^rai]
 
 #### Clustering techniques
-We aim to divide data into groups of similar objects by using information from authors and their categories. To achieve this, we first showcase the alignment of principles and categories through the lens of author mentions. Traditionally clustering techniques are not straightforward, nor canonical, so we have compared three different clustering techniques described in [^bishop][^park][^saxena][^rai]: Greedy Clustering,[^park] K-Means,[^saxena][^rai] and Graph Theory.[^saxena] We selected Greedy Clustering for its simplicity, K-Means for its ability to analyze intra-cluster distances, and Graph Theory for its suitability in representing clusters as graphs. However, they all have limitations that we will discuss in the different subsections; for example, the Graph Theory has limitations in handling outliers and detecting overlapping clusters.[^saxena] We finally compared results from the three different techniques to decide our final categories.
+We aim to divide data into groups of similar objects by using information from authors and their categories. To achieve this, we first showcase the alignment of principles and categories through the lens of author mentions. Traditionally clustering techniques are not straightforward, nor canonical, so we have compared three different clustering techniques described in [^bishop][^park][^saxena][^rai]: Greedy Clustering,[^park] K-Means,[^saxena][^rai] and Graph Theory.[^saxena] We selected Greedy Clustering for its simplicity, K-Means for its ability to analyze intra-cluster distances and convenience in working with numericar values. Finally, the Graph Theory represents clusters as graphs. However, they all have limitations that we will discuss in the different subsections; for example, the K-Means has limitation in handling outliers and  Graph Theory in detecting overlapping clusters.[^saxena] We finally compared results from the three different techniques to decide our final categories.
 
 ##### A) Greedy clustering
 The greedy local approach makes decisions based on the best immediate (local) choice at each step, aiming to achieve a globally optimal solution.[^bishop] it is simple and ease of use, so we manually applied this technique to the heatmap shown in Figure 9. This heatmap illustrates the alignment of principles and categories through the lens of author mentions. It is visualized as a matrix, where the intensity of blue represents the frequency of author mentions. Principles are listed along the rows, while categories span the columns. The values in each cell indicate the number of authors supporting a specific combination. A gradient from white to dark blue represents the range of values, from 0 (no mentions) to 7 (highest mentions).
@@ -171,16 +171,16 @@ In contrast, categories such as "Compliance," "Adoption," and "Zero-cost" show l
 
 The local greedy algorithm begins by selecting the column in the heatmap with the highest number of occurrences and grouping rows that minimize the distance from that column. In this case, the darkest cell—representing the highest value—lies at the intersection of "Security and protection" and "Security." From there, we move up and down within the same column, selecting principles that close the gap, namely "Persistence," "Privacy and minimal disclosure," and "Verifiability and authenticity." These principles form the "Security" category, named after the column.
 
-We then repeat the process, moving to the first column and selecting the two rows with the highest values. Continuing to move up and down, we include the closest value: "Existence and representation." This group is named after its corresponding column: "Controllability." At the end of these steps, we define five groups of principles, as shown in Table 5.
+We then repeat the process, moving to the first column and selecting the two rows with the highest values. Continuing to move up and down, we include the closest value: "Existence and representation." This group is named after its corresponding column: "Controllability." At the end of these steps, we defined five groups of principles, as shown in Table 5.
 
 ###### Discussion and limitations
-Despite being efficient and effective for certain problems, the greedy local approach does not account for the overall problem structure, often leading to solutions that are locally optimal but globally suboptimal.[^park] In our case, part of the result depends on the starting point, and since the greedy approach lacks backtracking or global adjustments, it only considers the present step without planning ahead, which can result in poor outcomes. Therefore, while a greedy local approach is fast and simple, it often sacrifices accuracy for efficiency, making it unsuitable for global optimization. For this reason, our next choice aims to minimize the distance between objects within the same cluster, and reports the result.
+Although the greedy approach is efficient and effective for certain problems, it has a rigid structure that relies on the next local best step to find a locally optimal solution, while it may not account for the overall problem structure.[^rai] Since we do not know the data distribution, a locally optimal solution may differ from the globally optimal one.[^park] Furthermore, the greedy approach lacks backtracking or global adjustments - it considers only the present step without planning ahead, which can lead to suboptimal results. Therefore, we aim to explore alternative techniques that have a less rigid structure and may lead to different clustering.
 
 ![Heatmap](/definition/images/clusters/Heatmap.png)
 *Figure 9: Author mentions across principles and categories.*
 
 ##### B) K-Means
-K-Means is one of the most popular and simple clustering algorithms, which generates clusters in the form of centroids surrounded by the points within a cluster.[^rai] The letter k in K-Means stands for the number of centroids for the clustering, and is a parameter defined at priori. Subsequently, each point is assigned to the cluster with the closest centroid, which leads to minimize the intra-cluster distances; namely, the distance between objects of the same cluster. The procedure of K-Means follows the steps:[^saxena]
+K-Means is an iterative method that can find a local minimum but has a less rigid structure compared to a purely local greedy search. It generates clusters in the form of centroids and minimize the intra-cluster distances; namely, the distance between objects of the same cluster.[^rai] It is popular for its simplicity and works conveniently with numerical attributes.[^rai] These are the reasons why we have choosen this algorithm as next clustering technique. The letter k in K-Means stands for the number of centroids, and is a parameter defined at priori, minimizing the sum of squared distances between points and centroids. Steps are then iterated as follows:[^saxena]
 1. Initialization: Choose the number of clusters K. 
 2. Select k random points as initial centroids. These points represent initial group centroids.
 3. Calculate the objects distance to centroids.
@@ -192,12 +192,12 @@ This produces a separation of the objects into groups from which the metric to b
 ![K-Means](/definition/images/clusters/K-Means_flow/K-Means_flow.png)
 *Figure 10: Flow diagram of K-means.*
 
-Despites K-Means is pretty simple, it carries a few limitations. One and foremost, (a) there is no efficient and universal method for identifying the number of clusters K; (b) It is affected by the shape, size, density of clusters; (c) It is sensitive to outliers.[^saxena][^rai]
-
-To mitigate problem (a), we have automatize the process to test various values for k through a program detailed in the [Appendix A](#appendix-a). Results are depicted in Figure 11. For reproducibility of results, we used the same seeds to generate the centroids.
+Despites K-Means is simple it shares a few limitations with the greedy method. (a) K-Means may converge to a local suboptimal and (b) there is no efficient and universal method for identifying the value k for clustering tuning.[^rai] To mitigate both problems, we automatize the process through a program detailed in the [Appendix A](#appendix-a-k-means-clustering-program-explanation), which instantiates the K-Means by using a specific `init='k-means++'` method to strategically initialize the centroid. This methods reduces the risk to converge to a local suboptimal. Additionally, for reproducibility of results, all tests have been carried out using the same seed to generate the centroids. Thus, anyone can download the program, the input file from the dispatcher and obtain our same results.
 
 ###### Discussion and limitations
+(b) It is affected by the shape, size, density of clusters; (c) It is sensitive to outliers.[^saxena][^rai]
 
+SPIEGARE IL GRAFICO FINALE
 ![Bubble K-Means](/definition/images/clusters/Bubble.png)
 *Figure 12: *
 
@@ -370,7 +370,7 @@ INSERIRE I RANKING DELLE PROPRIETA4 ALL4INTERNO DI QUESTA IMMAGINE
 ![Allen Principles Schema (Local)](/definition/images/SSI_process_flow/SSI_process_flow_raw.png)
 *SSI properties mapped within the general SSI process flow.[^allen]*
 
-## Appendix: K-Means Clustering Program Explanation
+## Appendix A: K-Means Clustering Program Explanation
 
 ### Overview
 
