@@ -2,7 +2,6 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import numpy as np
 
-# Dati basati sulla prima immagine
 principles = [
     "Persistence", "Usability and consistency", "Existence and persistence", "Portability", "Access and availability", "Cost", "Transparency", "Security and protection", "Decentralization and autonomy", "Verifiability and authenticity", "Consent", "Privacy and minimal disclosure", "Ownership and control",
     "Interoperability", "Standard"
@@ -10,7 +9,6 @@ principles = [
 
 steps = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
 
-# Valori del gruppo a cui ogni principio appartiene in ogni step (estratti dalla tabella della prima immagine)
 group_assignments = [
     [0,1,1,3,4,4,4,4,4,4,4,4,4,4,4],  # Access and availability
     [0,1,2,2,2,2,2,2,2,2,2,2,2,2,2],  # Existence and persistence
@@ -29,21 +27,19 @@ group_assignments = [
     [0,1,1,3,3,5,5,3,3,3,3,3,3,3,3]  # Portability
 ]
 
-# Creazione del grafico
 fig, ax = plt.subplots(figsize=(15, 10))
 for i, principle in enumerate(principles):
     ax.plot(steps, group_assignments[i], marker="o", alpha=0.8, linewidth=2)
 
-# Personalizzazione
-title = ""
-ax.set_title(title, fontsize=16, weight='bold')
+ax.set_title("", fontsize=16, weight='bold')
 ax.set_xlabel("Values of the parameter k", fontsize=14)
 ax.set_ylabel("Groups", fontsize=14)
 ax.set_xticks(steps)
 ax.set_yticks(range(0, 15))
 ax.grid(visible=True, alpha=0.3)
 
-# Aggiunta dei principi sulla griglia a destra
+ax.text(16, 15, "Principles", fontsize=12, fontweight="bold", verticalalignment='bottom')
+
 y_positions = range(0, 15)
 for y_pos, principle in zip(y_positions, principles):
     ax.text(16, y_pos, principle, verticalalignment='center', fontsize=10)
