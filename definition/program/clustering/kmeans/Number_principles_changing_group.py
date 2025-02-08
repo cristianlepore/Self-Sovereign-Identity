@@ -7,7 +7,7 @@ steps = np.array(list(range(1, 16)))
 group_counts_clusters = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
 
 # Data for second chart: principles changing group
-group_counts_principles = np.array([12, 3, 6, 1, 2, 2, 6, 1, 1, 1, 1, 1, 1, 1, 1])
+group_counts_principles = np.array([0, 12, 3, 6, 1, 2, 2, 6, 1, 1, 1, 1, 1, 1, 1])
 
 # Generate smooth curve using cubic spline interpolation for the second dataset
 smooth_steps = np.linspace(steps.min(), steps.max(), 300)  # More points for smoothness

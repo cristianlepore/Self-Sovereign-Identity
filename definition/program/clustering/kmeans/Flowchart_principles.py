@@ -69,14 +69,14 @@ for i, principle in enumerate(principles_left):
 
 # Left-side labels (original order)
 ax.set_yticks(range(len(principles_left)))
-ax.set_yticklabels(principles_left, fontsize=6)
+ax.set_yticklabels(principles_left, fontsize=8)
 ax.set_ylabel("")
 
 # Right-side labels (desired order)
 ax2 = ax.twinx()
 ax2.set_ylim(ax.get_ylim())  
 ax2.set_yticks(range(len(principles_right)))
-ax2.set_yticklabels(principles_right, fontsize=6)
+ax2.set_yticklabels(principles_right, fontsize=8)
 ax2.set_ylabel("")
 ax2.yaxis.set_label_position("right")
 ax2.yaxis.tick_right()

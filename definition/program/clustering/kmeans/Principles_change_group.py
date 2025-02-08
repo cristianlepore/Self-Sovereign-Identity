@@ -3,12 +3,10 @@ import numpy as np
 
 # Definition of principles and steps
 principles = [
-    "Access and availability", "Existence and persistence", "Security and protection", "Interoperability", 
-    "Ownership and control", "Persistence", "Cost", "Standard", "Usability and consistency", "Transparency", 
-    "Consent", "Decentralization and Autonomy", "Privacy and minimal disclosure", "Verifiability and Authenticity", "Portability"
+    "Access and availability", "Existence and persistence", "Security and protection", "Interoperability", "Ownership and control", "Persistence", "Cost", "Standard", "Usability and consistency", "Transparency", "Consent", "Decentralization and Autonomy", "Privacy and minimal disclosure", "Verifiability and Authenticity", "Portability"
 ]
 
-steps = list(range(0, 15))
+steps = list(range(1, 16))
 
 group_assignments = [
     [0,1,1,3,4,4,4,4,4,4,4,4,4,4,4],  # Access and availability
@@ -28,12 +26,15 @@ group_assignments = [
     [0,1,1,3,3,5,5,3,3,3,3,3,3,3,3]  # Portability
 ]
 
-# Identify changes between steps
+# Identify changes between steps and assign to the next step
 change_points = []
+change_counts = [0] * len(principles)  # Counter for changes per principle
+
 for step in range(len(steps) - 1):
     for i, principle in enumerate(principles):
         if group_assignments[i][step] != group_assignments[i][step + 1]:
-            change_points.append((step + 1, i))
+            change_points.append((step + 2, i))  # Assigning to the next step
+            change_counts[i] += 1  # Increment change counter
 
 # Visualize changes in a graph
 fig, ax = plt.subplots(figsize=(10, 6))
@@ -51,7 +52,17 @@ ax.legend(loc='upper right', fontsize=10, frameon=True)
 # Add grid for better readability
 ax.grid(True, linestyle='--', alpha=0.6)
 
-plt.xticks(rotation=45, ha='right')
+# Add title for the occurrences column above the text on the left
+ax.text(-0.5, -2, "", fontsize=10, fontweight='bold', color='black', horizontalalignment='center')
+
+# Add change counts as text outside the left-hand side of the graph with reduced column width
+for i, count in enumerate(change_counts):
+    ax.text(-0.5, i, f"({count})", verticalalignment='center', fontsize=10, color='black')
+
+# Adjust limits to fit the additional column
+ax.set_xlim(-0.7, len(steps) + 2)
+
+plt.xticks(rotation=0, ha='right')
 plt.tight_layout()
 plt.show()
 
@@ -62,7 +73,12 @@ for step in range(len(steps) - 1):
     for i, principle in enumerate(principles):
         if group_assignments[i][step] != group_assignments[i][step + 1]:
             changed_principles.append(principle)
-    changes[f"Step {steps[step]} -> Step {steps[step + 1]}"] = changed_principles
+    changes[f"Step {steps[step + 1]}"] = changed_principles  # Assigning to the next step
 
 for transition, changed in changes.items():
     print(f"{transition}: {', '.join(changed) if changed else 'No changes'}")
+
+# Print the total count of changes per principle
+print("\nTotal number of changes per principle:")
+for principle, count in zip(principles, change_counts):
+    print(f"{principle}: {count}")

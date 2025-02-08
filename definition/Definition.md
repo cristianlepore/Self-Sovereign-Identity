@@ -189,23 +189,63 @@ K-Means is an iterative method that can find a local minimum but has a less rigi
 
 This produces a separation of the objects into groups from which the metric to be minimized can be calculated.
 
-Despites K-Means is simple it shares a few limitations with the greedy method. (a) K-Means may converge to a local suboptimal and (b) there is no efficient and universal method to tune the value k.[^rai] To mitigate both problems, we have created a program as in the [Appendix A](#appendix-a-k-means-clustering-program-explanation), which instantiates the K-Means by using a specific `init='k-means++'` method to strategically initialize the centroid. This methods reduces the risk to converge to a local suboptimal. Results are reproduceble because all tests have been carried out using the same seed to generate the centroids. Thus, anyone can download the program, the input file from the dispatcher and obtain our same results.
+Despites K-Means is simple to use, it lacks of an efficient and universal procedure to tune the value k for clustering.[^rai] Hence, to test various values of k, we have created a program as in the [Appendix A](#appendix-a-k-means-clustering-program-explanation), that instantiates the K-Means by using a specific `init='k-means++'` method to strategically initialize the centroid. While testing different values of the parameter k, we have collected results and plot different charts for discussion. All results are reproduceble because tests have been carried out using the same seed to generate the centroids. Thus, anyone can download the program, the input file from the dispatcher and obtain our same results.
 
-So, we have tested results with different values for k, and collected retsults.
+While collecting data, we collect data and analyze knowledge by answering the following WH questions about manner (how), choices (which), and time (when):[^villiers][^robinson]
+- How do clusters change as the parameter *k* varies? *(discussed in Figure 10)*  
+- How many principles belong to each cluster? *(discussed in Figure 10)*  
+- Which principles demonstrate the most stability or volatility *(discussed in Figure 11)*  
+- How often do principles move? *(discussed in Figure 11)*  
+- How do the principles evolve across groups? *(discussed in Figures 12)*
+- When do principles transition to another cluster? *(discussed in Figures 13)*  
+
+Finding an answer to these questions is instrumental to tune the parameter k and figure out the best set of clusters.
+
+**How do clusters change as the parameter *k* varies?**
+**How many principles belong to each cluster?**
+The chart in Figure 10 illustrates the behavior of clustering as the parameter k increases. It answers the two questions through the blue and red line. (1) The blue line represents the factual number of clusters formed, which grows linearly with k, while (2) the red line depicts the number of principles that change clusters, reflecting the stability of cluster assignments. The x-axis shows the values of k, and the y-axis indicates the respective counts.
+
+Two regions are visible in the chart:
+- Underfitting (low k): At smaller kk values, the clustering is too coarse, with fewer clusters (blue line), resulting in significant instability as evident from the high fluctuations in the red line. This suggests that the model fails to represent the diversity in the data, grouping dissimilar data points together.
+
+- Overfitting (high k): At larger kk values, the blue line indicates the continuous growth of the number of clusters, often splitting even similar data points into separate clusters. While the red line stabilizes (indicating fewer changes in group assignments), the excessive number of clusters reduces the model's ability to generalize, leading to over-fragmentation and a loss of interpretability.
+
+Let's put this in perspective of our two lines.
+
+The **blue line**'s linear increase demonstrates how the clustering algorithm forces the creation of more clusters as k grows. At low k, there are too few clusters to capture the natural groupings in the data, leading to an underfitting scenario. As k rises, the number of clusters becomes more appropriate (indicated by reduced changes in the red line), achieving better data representation in the optimal range.
+
+However, at higher values of k, the continued growth in the number of clusters becomes problematic. Aftermath k=9, even subtle differences between data points are treated as distinct clusters. This suggests that while the clustering is stable, it is no longer meaningful, as the algorithm starts splitting existing natural clusters unnecessarily, leading to overfitting.
+
+The balance between these two extremes (underfitting and overfitting) is achieved in the optimal range for k, where the blue line grows moderately, and the red line shows minimal fluctuations. This range ensures the clustering effectively captures the data's structure without over-complicating it.
+
+The **red line** provides critical insights into cluster stability. At low k, clustering is too coarse, leading to instability in group assignments as shown by the fluctuating red line. The red line fluctuates significantly, indicating frequent changes in cluster assignments. This instability occurs because the number of clusters is too small to represent the data’s underlying structure accurately, forcing the model to assign principles inconsistently. As k increases, the red line stabilizes, suggesting an optimal range for k where clustering balances stability and complexity. This improvement results from the clustering algorithm better capturing the data's structure with additional clusters.Beyond this range, in the overfitting region, the clustering becomes overly granular, increasing the number of clusters unnecessarily while the red line flattens, indicating few or no changes in cluster assignments. Despites this reflects high stability, it coincides with an excessive number of clusters (blue line), leading to over-fragmentation that captures noise rather than meaningful patterns.
+
+**Discussion**
+The optimal range for k lies where the red line stabilizes after significant fluctuations, but before reaching the overfitting region. This range represents a balance between cluster stability and meaningful grouping. Together with the blue line, the red line helps identify a k value that provides consistent and interpretable clustering results.
 
 ![Numerb of principles changing group](/definition/images/clusters/k-means/Number_principles_changing_group.png)
-*Figure 10: *
+*Figure 10: Analysis of clustering stability and complexity as k varies.*
+
+The next chart in Figure 11 answers the following WH questions: *which principles demonstrate the most stability or volatility? How often do principles move?*
+The chart illustrates the behavior of principles as the parameter \( k \) changes. The x-axis represents the values of \( k \) (ranging from 1 to 15), while the y-axis lists the principles, such as "Portability," "Transparency," and "Privacy and Minimal Disclosure." The number in parentheses next to each principle indicates the total occurrences of group changes for that principle across all kk-values. Blue dots mark specific \( k \)-values where a principle changed its group compared to the previous step. Principles with higher occurrence numbers, like "Standard" (5) and "Interoperability" (5), show multiple group changes, making them highly dynamic and sensitive to \( k \). Conversely, principles like "Persistence" (0) exhibits complete stability, showing no group changes across all \( k \)-values, indicating its less sensitiveness to variations in \( k \). Some principles, like "Transparency" and *"Ownership and Control," show sporadic changes across \( k \)-values, while others, like "Cost" and "Cost" exhibit concentrated changes within specific \( k \)-ranges, suggesting thresholds where they become less stable. Certain \( k \)-values, such as \( k = 2, 4, 8 \), see multiple principles changing groups simultaneously, indicating critical points of restructuring. This chart provides insights into the dynamic behavior of principles as \( k \) varies, highlighting stability with \( k \) ranging from 5 to 7, and volatility in group membership before and after these values. These insights help differentiate stable principles from volatile ones and identify optimal ranges of \( k \).
 
 ![Principles change group](/definition/images/clusters/k-means/Principles_change_group.png)
-*Figure 11: *
+*Figure 11: Principles vs. parameter \( k \): occurrences of group changes.*
+
+A further analysis that may give insights about tuning \( k \), concerns the study of the evolution of principles across groups as a function of the parameter \( k \). As usual, \( k \) values ranging from 1 to 15 on the x-axis and group indices on the y-axis. Each principle is represented by a uniquely colored line. Most lines show a general upward trend as \( k \) increases, indicating incremental changes across groups. Some principles, like "Decentralization and Autonomy" and "Verifiability and Authenticity," show irregular variations, suggesting group-specific dependencies. Meanwhile, principles such as "Standard" and "Transparency" display consistent growth patterns. The differing slopes and intersections highlight varying priorities and potential conflicts or alignments of principles across groups.
+
+A distinctive feature of this chart is that it highlights two important insights that merit attention in our analysis. Two principles shift back and forth between two groups between steps 5 and 8. This may be due to the fact that as we add centroids, they "attract" principles inconsistently. Even though we lack information about the exact positioning of our data in space, this could indicate instability in the clustering process. The second notable aspect is the presence of numerous steep vertical lines crossing the grid after step 7. We have observed a similar pattern in previous charts, where individual principles were "attracted" to a new cluster one at a time. This phenomenon may be attributed to the high number of centroids.
+
+From this chart, we can infer that before step 5, principles pursue a recognizable path to clustering. After step 5, clustering induces different behaviors among principles. Based on this observation, we believe that \( k \)=5 is an appropriate choice to balance between underfitting and overfitting in our clustering approach. However, we want to investigate this opion further through our last chart.
 
 ![Principles change group](/definition/images/clusters/k-means/Principles_workflow_groups.png)
-*Figure 12: *
+*Figure 12: Evaluation of Principles across groups.*
 
 ![Principles change group](/definition/images/clusters/k-means/Flowchart_principles.png)
 *Figure 13: *
 
 ###### Discussion and limitations
+besides (a) K-Means may converge to a local suboptimal and (b) there is no efficient and universal method to tune the value k.
 (b) It is affected by the shape, size, density of clusters; (c) It is sensitive to outliers.[^saxena][^rai]
 
 
@@ -537,6 +577,8 @@ The breakdown of responses to the 20 questions in the questionnaire.
 
 [^mahalakshmi]: Mahalakshmi, B., and K. Duraiswamy. "An overview of categorization techniques." International Journal of Modern Engineering Research (IJMER) 2.5 (2012).
 
+[^villiers]: De Villiers, Jill. "Why questions?." University of Massachusetts Occasional Papers in Linguistics 17.1 (1991): 8.
+
 [^ARF]: EUDI Wallet. Architecture and Rererence Framework v 1.4.1 https://eu-digital-identity-wallet.github.io/eudi-doc-architecture-and-reference-framework/1.4.0/ Accessed on December 28, 2024.
 
 [^badzek]: Badzek, Laurie, et al. "Ethical, legal, and social issues in the translation of genomics into health care." Journal of Nursing Scholarship 45.1 (2013): 15-24.
@@ -602,3 +644,5 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^park]: Park, Dohyung, Constantine Caramanis, and Sujay Sanghavi. "Greedy subspace clustering." Advances in neural information processing systems 27 (2014).
 
 [^bishop]: Bishop, Christopher M. Pattern recognition and machine learning by Christopher M. Bishop. Springer Science+ Business Media, LLC, 2006.
+
+[^robinson]: Robinson, Joan. "What are the questions?." What are the Questions and Other Essays. Routledge, 2016. 2-32.
