@@ -243,21 +243,27 @@ From this chart, we can infer that before step 5, principles pursue a recognizab
 
 This kind of information is shown in figure 13, with each colored line representing a principle, and its position indicating its cluster at a specific \( k \). The transitions of lines reflect changes in cluster membership. Parallel lines represent a desirable behavior, while deep, steep vertical lines indicate principles that have been reassigned to a new cluster due to a high number of centroids.
 
-Before step 4, the movement of lines reflects the gradual grouping of principles. For example, between steps 3 and 4, the large number of lines moving upward and downward illustrates this phenomenon. Step 4 shows little adjustment. After step 5, one line, followed by more, gradually moves upward, crossing multiple lines in the grid. This phenomenon becomes particularly noticeable from step 7 onward, where a few lines from the bottom rise to the top of the chart. This final behavior is undesirable, as it suggests over-segmentation. For this reason, we have confirmed our previous decision to use k=5 as the optimal value for tuning k.
+Before step 4, the movement of lines reflects the gradual grouping of principles. For example, between steps 3 and 4, the large number of lines moving upward and downward illustrates this phenomenon. Step 4 shows little adjustment. After step 5, one line, followed by more, gradually moves upward, crossing multiple lines in the grid. This phenomenon becomes particularly noticeable from step 7 onward, where a few lines from the bottom rise to the top of the chart. This final behavior is undesirable, as it suggests over-segmentation. For this reason, we have confirmed our previous decision to use k=5 as a tradeoff betweeh a goog d grouping exercise and an excessive number of clusters.
 
 ![Principles change group](/definition/images/clusters/k-means/Flowchart_principles.png)
 *Figure 13: Dynamic flow of principles among clusters.*
 
+###### Clusters
+
+Now that we have tuned the parameter K, we can use our program to produce our five groups. However, to assign a name to each category, we have rendered results into a bubble chart that maps research articles across principles and categories. Bubble sizes indicate the number of articles, with larger bubbles representing more studies. Within the chart, the rectangles frame the five groups as the result of the K-Means.
+
+In particular, our rectangles correspond to the larger bubbles, which represent more citations from authors. We use this insight to select the most appropriate name for each group—specifically, the category name shared by the largest number of authors. For example, the name for the first three principles will be "Controllability," while the second group will be called "Portability," followed by "Security," "Sustainability," and "Usability." This procedure allows us to have groups and names for cluster that are consistent with the literature, decreasing subjective analysis.
+
 ![Bubble K-Means](/definition/images/clusters/k-means/Bubble.png)
 *Figure 14: *
 
-![Clustering](/definition/images/clusters/Graph_theory.png)
-*Figure 7: *
-
-
 ###### Final throughs
-besides (a) K-Means may converge to a local suboptimal and (b) there is no efficient and universal method to tune the value k.
-(b) It is affected by the shape, size, density of clusters; (c) It is sensitive to outliers.[^saxena][^rai]
+Besides the lack of an efficient and universal method to tune the value of k, our analysis led us to identify five groups of principles, which we have named based on past literature. We still do not have any insight into how the dataset is positioned in the space, as K-Means is influenced by the shape, size, and density of clusters [^saxena][^rai]. To gain a better understanding of the data space, we use another clustering technique before concluding with a comparison of Greedy, K-Means, and Graph theory.
+
+##### C) Graph Theory
+
+![Graph](/definition/images/clusters/graph_theory/Graph_theory.png)
+*Figure 7: *
 
 
 
