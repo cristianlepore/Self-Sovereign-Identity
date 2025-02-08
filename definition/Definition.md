@@ -236,26 +236,30 @@ A further analysis that may give insights about tuning \( k \), concerns the stu
 
 A distinctive feature of this chart is that it highlights two important insights that merit attention in our analysis. Two principles shift back and forth between two groups between steps 5 and 8. This may be due to the fact that as we add centroids, they "attract" principles inconsistently. Even though we lack information about the exact positioning of our data in space, this could indicate instability in the clustering process. The second notable aspect is the presence of numerous steep vertical lines crossing the grid after step 7. We have observed a similar pattern in previous charts, where individual principles were "attracted" to a new cluster one at a time. This phenomenon may be attributed to the high number of centroids.
 
-From this chart, we can infer that before step 5, principles pursue a recognizable path to clustering. After step 5, clustering induces different behaviors among principles. Based on this observation, we believe that \( k \)=5 is an appropriate choice to balance between underfitting and overfitting in our clustering approach. However, we want to investigate this opion further through our last chart.
+From this chart, we can infer that before step 5, principles pursue a recognizable path to clustering. After step 5, clustering induces different behaviors among principles. Based on this observation, we believe that \( k \)=5 is an appropriate choice to balance between underfitting and overfitting in our clustering approach. However, we want to investigate this opion further through a dynamic behavior of principles, as they are grouped into clusters.
 
 ![Principles change group](/definition/images/clusters/k-means/Principles_workflow_groups.png)
 *Figure 12: Evaluation of Principles across groups.*
 
-![Principles change group](/definition/images/clusters/k-means/Flowchart_principles.png)
-*Figure 13: *
+This kind of information is shown in figure 13, with each colored line representing a principle, and its position indicating its cluster at a specific \( k \). The transitions of lines reflect changes in cluster membership. Parallel lines represent a desirable behavior, while deep, steep vertical lines indicate principles that have been reassigned to a new cluster due to a high number of centroids.
 
-###### Discussion and limitations
+Before step 4, the movement of lines reflects the gradual grouping of principles. For example, between steps 3 and 4, the large number of lines moving upward and downward illustrates this phenomenon. Step 4 shows little adjustment. After step 5, one line, followed by more, gradually moves upward, crossing multiple lines in the grid. This phenomenon becomes particularly noticeable from step 7 onward, where a few lines from the bottom rise to the top of the chart. This final behavior is undesirable, as it suggests over-segmentation. For this reason, we have confirmed our previous decision to use k=5 as the optimal value for tuning k.
+
+![Principles change group](/definition/images/clusters/k-means/Flowchart_principles.png)
+*Figure 13: Dynamic flow of principles among clusters.*
+
+![Bubble K-Means](/definition/images/clusters/k-means/Bubble.png)
+*Figure 14: *
+
+![Clustering](/definition/images/clusters/Graph_theory.png)
+*Figure 7: *
+
+
+###### Final throughs
 besides (a) K-Means may converge to a local suboptimal and (b) there is no efficient and universal method to tune the value k.
 (b) It is affected by the shape, size, density of clusters; (c) It is sensitive to outliers.[^saxena][^rai]
 
 
-
-SPIEGARE IL GRAFICO FINALE
-![Bubble K-Means](/definition/images/clusters/k-means/Bubble.png)
-*Figure 12: *
-
-![Clustering](/definition/images/clusters/Graph_theory.png)
-*Figure 7: *
 
 1) Graph theory represents points as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
 
