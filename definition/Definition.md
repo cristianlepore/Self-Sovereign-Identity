@@ -160,25 +160,42 @@ The study of literature highlighted how scattered the domain of interest is and 
 In the absence of features for categorization, we can leverage a clustering technique to identify groups and assign names based on heuristics. Clustering is equivalent to breaking the graph into connected components, one for each cluster.[^rai] Clustering helps uncover similarities between objects that initially appear dissimilar, finding arbitrary shaped clusters, with a minimum input requirement. To achieve this, we treat our data as a set of points where each point is closer (or more similar) to one or more other points.[^rai]
 
 #### Clustering techniques
-We aim to divide data into groups of similar objects by aligning principles and categories through the lens of author mentions. Traditionally clustering techniques are not straightforward, nor canonical, so we have compared three different clustering techniques described in [^bishop][^park][^saxena][^rai]: Greedy,[^park] K-Means,[^saxena][^rai] and Graph Theory.[^saxena] We selected a local Greedy for its simplicity, K-Means for its ability to minimize intra-cluster distances and convenience in working with numericar values. Finally, the Graph Theory represents clusters as graphs. However, they all have limitations that we will discuss in the different subsections; for example, the K-Means has limitation in handling outliers and  Graph Theory in detecting overlapping clusters.[^saxena] We finally compared results from the three different techniques to decide our final groups.
+We aim to divide data into groups of similar objects by aligning principles and categories through the lens of author mentions. Traditionally clustering techniques are not straightforward, nor canonical, so we have compared three different clustering techniques described in [^bishop][^park][^saxena][^rai]: Greedy,[^park] K-Means,[^saxena][^rai] and Graph clustering.[^saxena] We selected a local Greedy for its simplicity, K-Means for its ability to minimize intra-cluster distances and convenience in working with numericar values. Finally, the Graph clustering represents clusters as graphs. However, they all have limitations that we will discuss in the different subsections; for example, the K-Means has limitation in handling outliers and  Graph clustering in detecting overlapping clusters.[^saxena] We finally compared results from the three different techniques to decide our final groups.
 
 ##### A) Greedy clustering
-The greedy local approach makes decisions based on the best immediate (local) choice at each step, aiming to achieve a globally optimal solution.[^bishop] it is simple and ease of use, so we manually applied this technique to the heatmap shown in Figure 9. This heatmap illustrates the alignment of principles and categories through the lens of author mentions. It is visualized as a matrix, where the intensity of blue represents the frequency of author mentions. Principles are listed along the rows, while categories span the columns. The values in each cell indicate the number of authors supporting a specific combination. A gradient from white to dark blue represents the range of values, from 0 (no mentions) to 7 (highest mentions).
+The greedy is a heuristic method that assigns points to clusters in a greedy fashion, making decisions based on the best immediate (local) choice at each step.[^bishop] It is simple and ease of use, often based on a similarity or distance metric. It can be easy to apply by visualizing data on a heatmap, as in Figure 9. Our heatmap illustrates the alignment of principles and categories through the lens of author mentions. It is visualized as a matrix, where the intensity of blue represents the frequency of author mentions. Principles are listed along the rows, while categories span the columns. The values in each cell indicate the number of authors supporting a specific combination. A gradient from white to dark blue represents the range of values, from 0 (no mentions) to 7 (highest mentions).
 
-The chart confirms the trend that we have already discussed with categories such as "Controllability,", "Security," "Foundational," but this time it is possible to highlight closely related principles. For example, "Persistence," "Security and protection," "Privacy and minimal disclosure" are closely related by the darkest color on the same column. Additionally, principles like "Existence and representation," "Ownership and control," and "Consent" emerge as critical themes, strongly linked to "Controllability" and "Foundational" elements. In contrast, categories such as "Compliance," "Adoption," and "Zero-cost" show limited engagement, indicating potential areas for further exploration or innovation.
+![Heatmap](/definition/images/clusters/greedy/Heatmap.png)
+*Figure 9: Author mentions across principles and categories.*
 
-We run the algorithm, by selecting the column in the heatmap with the highest number of occurrences and grouping rows that minimize the distance from that column. In this case, the darkest cell - representing the highest value - lies at the intersection of "Security and protection" and "Security." From there, we move up and down within the same column, selecting principles that close the gap, namely "Persistence," "Privacy and minimal disclosure," and "Verifiability and authenticity." These principles form the "Security" category, named after the column.
+###### Applying the greedy clustering
+Our greedy method is based on the definition of Euclidean distance between two rows of the heatmap. The Euclidean distance is the straight-line distance between two points in a multi-dimensional space.[^simson] Although it is not the only heuristic for matrices, other distances, such as Cosine similarity [^Rahutomo] and Jaccard similarity [^Ivchenko], can be applied. However, the Euclidean distance is simple to compute between two vectors **v** and **w** in an n-dimensional space is given by:[^smith]
+
+$$
+d(\mathbf{v}, \mathbf{w}) = \sqrt{\sum_{i=1}^{n} (v_i - w_i)^2} \quad \text{(1)}
+$$
+
+Where:
+- \( \mathbf{v} = (v_1, v_2, \dots, v_n) \) is the first vector.
+- \( \mathbf{w} = (w_1, w_2, \dots, w_n) \) is the second vector.
+- \( d(\mathbf{v}, \mathbf{w}) \) represents the Euclidean distance between the two vectors.
+
+The method starts by selecting the column in the heatmap with the highest number of occurrences and grouping rows that minimize the Euclidean distance between two rows. The identity matrix below reports the Euclidean distance between rows calculated through the formula (1). The 50th percentile is the heuristic that we use to divides our dataset into equal halves.
+
+- $50^{\text{th}}$ percentile $= 5.2$
+
+In this case, the darkest cell - representing the highest value - lies at the intersection of "Security and protection" and "Security." From there, we move up and down within the same column, selecting principles that close the gap, namely "Persistence," "Privacy and minimal disclosure," and "Verifiability and authenticity." These principles form the "Security" category, named after the column.
+
+![Heatmap](/definition/images/clusters/greedy/Euclidean_matrix.png)
+*Figure 10: Euclidean distance between rows.*
 
 We then repeat the process, moving to the first column and selecting the two rows with the highest values. Continuing to move up and down, we include the closest value: "Existence and representation." This group is named after its corresponding column: "Controllability." The final list of groups is presented in Table 5, along with a comparison of the other clustering results.
 
 ###### Discussion and limitations
 Although the greedy approach is efficient and effective for certain problems, it has a rigid structure that relies on the next local best step to find a locally optimal solution, while it may not account for the overall problem structure.[^rai] Since we do not know the data distribution, a locally optimal solution may differ from the globally optimal one.[^park] Furthermore, the greedy approach lacks backtracking or global adjustments - it considers only the present step without planning ahead, which can lead to suboptimal results. Therefore, we aim to explore alternative, not greedy, techniques that have a less rigid structure and may lead to different clusterings.
 
-![Heatmap](/definition/images/clusters/greedy/Heatmap.png)
-*Figure 9: Author mentions across principles and categories.*
-
 ##### B) K-Means
-K-Means is an iterative method that can find a local minimum but has a less rigid structure compared to a purely local greedy. It generates clusters in the form of centroids and minimize the intra-cluster distances; namely, the distance between objects of the same cluster.[^rai] It is popular for its simplicity and works conveniently with numerical attributes.[^rai] The letter k in K-Means represents the number of centroids, and is a parameter defined at priori. The K-Means iterates as follows:[^saxena]
+K-Means is an iterative method that can find a local minimum but has a less rigid structure compared to a purely local greedy. It generates partitions form initial centroids and minimize the intra-cluster distances; namely, the distance between objects of the same cluster.[^rai] It is popular for its simplicity and works conveniently with numerical attributes.[^rai] The letter k in K-Means represents the number of centroids, and is a parameter defined at priori. The K-Means iterates as follows:[^saxena]
 1. Initialization: Choose the number of clusters K. 
 2. Select k random points as initial centroids. These points represent initial group centroids.
 3. Calculate the objects distance to centroids.
@@ -259,13 +276,13 @@ Rectangles are in proximity of larger bubbles, which represent more citations fr
 ###### Final thoughts
 Besides the lack of an efficient and universal method to tune the value of k, our analysis led us to identify five groups of principles, which have been named based on past literature works. Despites the K-Means is influenced by the shape, size, and density of clusters,[^saxena][^rai] the number of clusters has been tuned through a comprehensive analysis of the dataset with the lens of the parameter k.
 
-To gain a better understanding of the data space, we use another clustering technique before concluding with a comparison of Greedy, K-Means, and Graph theory.
+To gain a better understanding of the data space, we use another clustering technique before concluding with a comparison of Greedy, K-Means, and Graph clustering.
 
-##### C) Graph Theory
-Graph theory represents points as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
+##### C) Graph clustering
+Graph clustering represents points as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
 
 ![Graph](/definition/images/clusters/graph_theory/Graph_theory.png)
-*Figure 7: *
+*Figure 15: *
 
 Figure 3 shows the final result of our grouping process. The group's name is derived from the literature.
 
@@ -573,7 +590,9 @@ The breakdown of responses to the 20 questions in the questionnaire.
 
 [^cucko]: Čučko, Š., Bećirović, Š., Kamišalić, A., Mrdović, S., & Turkanović, M. (2022). Towards the classification of self-sovereign identity properties. IEEE access, 10, 88306-88329.
 
-[^toth]:Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27. 
+[^toth]: Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27. 
+
+[^smith]: Smith, Karl (2013), Precalculus: A Functional Approach to Graphing and Problem Solving, Jones & Bartlett Publishers, p. 8, ISBN 978-0-7637-5177-7
 
 [^south]: South, Laura, et al. "Effective use of Likert scales in visualization evaluations: A systematic review." Computer Graphics Forum. Vol. 41. No. 3. 2022.
 
@@ -637,6 +656,10 @@ The breakdown of responses to the 20 questions in the questionnaire.
 
 [^w3c]: Verifiable Credentials Data Model v1.1. W3C Recommendation 03 March 2022. https://www.w3.org/TR/vc-data-model/, accessed on 2024-02-01
 
+[^simson]: Simson, Robert, ed. The elements of Euclid. Desilver, Thomas, 1838.
+
+[^Rahutomo]: Rahutomo, Faisal, Teruaki Kitasuka, and Masayoshi Aritsugi. "Semantic cosine similarity." The 7th international student conference on advanced science and technology ICAST. Vol. 4. No. 1. South Korea: University of Seoul, 2012.
+
 [^muhle]: Mühle, Alexander, et al. "A survey on essential components of a self-sovereign identity." Computer Science Review 30 (2018): 80-86. 
 
 [^sheldrake]: Sheldrake, Philip. "Generative identity—beyond self-sovereignty." 2019, 
@@ -654,3 +677,5 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^bishop]: Bishop, Christopher M. Pattern recognition and machine learning by Christopher M. Bishop. Springer Science+ Business Media, LLC, 2006.
 
 [^robinson]: Robinson, Joan. "What are the questions?." What are the Questions and Other Essays. Routledge, 2016. 2-32.
+
+[^Ivchenko]: Ivchenko, G. I., and S. A. Honov. "On the jaccard similarity test." Journal of Mathematical Sciences 88 (1998): 789-794.
