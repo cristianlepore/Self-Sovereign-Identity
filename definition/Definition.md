@@ -249,15 +249,17 @@ Before step 4, the movement of lines reflects the gradual grouping of principles
 
 ###### Clusters
 
-Now that we have tuned the parameter K, we can use our program to produce our five groups. However, to assign a name to each category, we have mapped research articles across principles and categories. Bubble sizes indicate the number of articles, with larger bubbles representing more studies.
+We set the parameter k=5 to the [program](#appendix-a-k-means-clustering-program-explanation) to render fie groups. However, to assign a name to each category, we have mapped research articles across principles and categories. We do not discuss further this chart because it conveys the same information of Figure 9. Bubbles indicate the number of articles, with larger bubbles representing more studies.
 
-Rectangles are in proximity of larger bubbles, which represent more citations from authors. We use this insight to select the most appropriate name for each group - specifically, the category name shared by the largest number of authors. For example, the name for the first three principles will be "Controllability," while the second group will be called "Portability," followed by "Security," "Sustainability," and "Usability." This procedure allows us to have groups and names for cluster that are consistent with the literature, decreasing subjective analysis.
+Rectangles are in proximity of larger bubbles, which represent more citations from authors. To pick the name for the cluster, the largest bubble in the frame projects a horizontal line that feeds the category - the category name shared by the largest number of authors. For example, the name for the first three principles will be "Controllability," while the second group will be called "Portability," followed by "Security," "Sustainability," and "Usability." This procedure allows us to have groups and names for clusters that are consistent with the literature.
 
 ![Bubble K-Means](/definition/images/clusters/k-means/Bubble.png)
 *Figure 14: Map of principles and categories.*
 
 ###### Final thoughts
-Besides the lack of an efficient and universal method to tune the value of k, our analysis led us to identify five groups of principles, which we have named based on past literature. We still do not have any insight into how the dataset is positioned in the space, as K-Means is influenced by the shape, size, and density of clusters [^saxena][^rai]. To gain a better understanding of the data space, we use another clustering technique before concluding with a comparison of Greedy, K-Means, and Graph theory.
+Besides the lack of an efficient and universal method to tune the value of k, our analysis led us to identify five groups of principles, which have been named based on past literature works. Despites the K-Means is influenced by the shape, size, and density of clusters,[^saxena][^rai] the number of clusters has been tuned through a comprehensive analysis of the dataset with the lens of the parameter k.
+
+To gain a better understanding of the data space, we use another clustering technique before concluding with a comparison of Greedy, K-Means, and Graph theory.
 
 ##### C) Graph Theory
 Graph theory represents points as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
