@@ -188,7 +188,7 @@ Processing on the heatmap of figure 9 is not straigthforward. Thus, we created t
 
 Clustering based on the $25^{\text{th}}, 50^{\text{th}}, 75^{\text{th}}$ percentiles follows a structured process that begins with extracting the distance matrix from the heatmap. This matrix represents pairwise distances between principles, where lower values indicate greater similarity. The first step involves computing the $25^{\text{th}} / 50^{\text{th}} / 75^{\text{th}}$ percentiles of all non-diagonal values, which serve as thresholds for hierarchical clustering. 
 
-The clustering process starts with the first row of the matrix, identifying principles with distances less than or equal to the $25^{\text{th}}$ percentile and grouping them into an initial cluster. This process continues for each principle, forming multiple small clusters. Next, the clustering expands using the $50^{\text{th}}$ percentile, merging or enlarging existing clusters based on the updated threshold. Finally, the $75^{\text{th}}$ percentile is applied to further broaden the clusters, allowing for looser groupings where principles share more distant but still relevant connections.
+The clustering process starts with the first row of the matrix, identifying principles with distances less than or equal to the $25^{\text{th}}$ percentile and grouping them into an initial cluster. This process continues moving to the next free line, and forming a new cluster. Next, the clustering expands using the $50^{\text{th}}$ percentile, merging or enlarging existing clusters based on the updated threshold. Finally, the $75^{\text{th}}$ percentile is applied to further broaden the clusters, allowing for looser groupings where principles share more distant but still relevant connections.
 
 ![Heatmap](/definition/images/clusters/greedy/Euclidean_matrix.png)
 *Figure 10: Euclidean distance between rows.*
@@ -196,7 +196,7 @@ The clustering process starts with the first row of the matrix, identifying prin
 ###### Discussion and limitations
 The resulting clusters reflect different levels of relatedness: the $25^{\text{th}}$ percentile defines tightly bound principles, the $50^{\text{th}}$ percentile captures moderate relationships, and the $75^{\text{th}}$ percentile forms broader groupings. This method provides a structured way to classify principles based on their similarities while maintaining flexibility across different levels of granularity.
 
-Although the greedy approach is efficient and does not require to predefine the number of clusters, it has a rigid structure that relies on the next local best step to find a locally optimal solution, while it may not account for the overall problem structure.[^rai] Since we do not know the data distribution, a locally optimal solution may differ from the globally optimal one.[^park] Furthermore, the greedy approach lacks backtracking or global adjustments - it considers only the present step without planning ahead, which can lead to suboptimal results. Therefore, we aim to explore alternative, not greedy, techniques that have a less rigid structure and may lead to different clusterings.
+Although the greedy approach is efficient and does not require to predefine the number of clusters, it has a rigid structure that relies on the next local best step to find a locally optimal solution, while it may not account for the overall problem structure.[^rai] The heuristic to select the next new row may have a great impact on the final result, and since we do not know the data distribution, a locally optimal solution may differ from the globally optimal one.[^park] Furthermore, the greedy approach lacks backtracking or global adjustments - it considers only the present step without planning ahead, which can lead to suboptimal results. Therefore, we aim to explore alternative techniques that may lead to a different clustering.
 
 ##### B) K-Means
 K-Means is an iterative method that can find a local minimum but has a less rigid structure compared to a purely local greedy. It generates partitions form initial centroids and minimize the intra-cluster distances; namely, the distance between objects of the same cluster.[^rai] It is popular for its simplicity and works conveniently with numerical attributes.[^rai] The letter k in K-Means represents the number of centroids, and is a parameter defined at priori. The K-Means iterates as follows:[^saxena]
@@ -268,7 +268,7 @@ Before step 4, the movement of lines reflects the gradual grouping of principles
 ![Principles change group](/definition/images/clusters/k-means/Flowchart_principles.png)
 *Figure 13: Dynamic flow of principles among clusters.*
 
-###### Clusters
+###### Dicussion and limitations
 
 We set the parameter k=5 to the [program](#appendix-a-k-means-clustering-program-explanation) to render fie groups. However, to assign a name to each category, we have mapped research articles across principles and categories. We do not discuss further this chart because it conveys the same information of Figure 9. Bubbles indicate the number of articles, with larger bubbles representing more studies.
 
@@ -277,12 +277,11 @@ Rectangles are in proximity of larger bubbles, which represent more citations fr
 ![Bubble K-Means](/definition/images/clusters/k-means/Bubble.png)
 *Figure 14: Map of principles and categories.*
 
-###### Final thoughts
 Besides the lack of an efficient and universal method to tune the value of k, our analysis led us to identify five groups of principles, which have been named based on past literature works. Despites the K-Means is influenced by the shape, size, and density of clusters,[^saxena][^rai] the number of clusters has been tuned through a comprehensive analysis of the dataset with the lens of the parameter k.
 
 To gain a better understanding of the data space, we use another clustering technique before concluding with a comparison of Greedy, K-Means, and Graph clustering.
 
-##### C) Graph clustering
+##### C) Louvain clustering
 Graph clustering represents points as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
 
 ![Graph](/definition/images/clusters/graph_theory/Heatmap.png)

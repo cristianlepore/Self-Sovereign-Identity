@@ -28,7 +28,7 @@ categories = [
     "Transparency", "Persistence", "Portability", "Interoperability",
     "Consent", "Security and protection", "Privacy and minimal disclosure",
     "Cost", "Standard", "Decentralization and Autonomy",
-    "Verifiability and Authenticity", "Usability and consistency"
+    "DD", "Usability and consistency"
 ]
 
 # Convert to DataFrame

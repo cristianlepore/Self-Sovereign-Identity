@@ -73,13 +73,15 @@ nx.draw_networkx_edges(G, pos, alpha=0.6, width=edge_widths, edge_color="gray")
 nx.draw_networkx_nodes(G, pos, node_color=node_colors, node_size=800, edgecolors="black")
 
 # Draw labels
-nx.draw_networkx_labels(G, pos, font_size=10, font_weight="bold")
+nx.draw_networkx_labels(G, pos, font_size=6, font_weight="bold")
 
 # Add legend for clusters
 legend_labels = {i: f"Cluster {i+1}" for i in range(num_clusters)}
 handles = [plt.Line2D([0], [0], marker="o", color="w", markerfacecolor=cluster_colors[i], markersize=10) for i in range(num_clusters)]
-plt.legend(handles, legend_labels.values(), title="Clusters", loc="best", fontsize=10)
+plt.legend(handles, legend_labels.values(), title="Clusters", loc="best", fontsize=8)
 
-# Title
-plt.title("Graph Clustering of Principles (Louvain Method)", fontsize=14)
+# Remove frame around the plot
+plt.gca().set_frame_on(False)
+
+# Show the plot
 plt.show()
