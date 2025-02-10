@@ -208,6 +208,9 @@ K-Means is an iterative method that can find a local minimum but has a less rigi
 
 This produces a separation of the objects into groups from which the metric to be minimized can be calculated.
 
+![Heatmap](/definition/images/clusters/k-means/workflow/K-Means_flow.png)
+*Figure 10: Euclidean distance between rows.*
+
 Despites K-Means is simple to use, it lacks of an efficient and universal procedure to tune the value k for clustering.[^rai] Hence, to test various values of k, we have created a program as in the [Appendix A](#appendix-a-k-means-clustering-program-explanation), that instantiates the K-Means by using a specific `init='k-means++'` method to strategically initialize the centroids. While testing different values of the parameter k, we have collected results and plot different charts for discussion. All results are reproduceble because tests have been carried out using the same seed to generate the centroids. Thus, anyone can download the program, the input file from the dispatcher and obtain our same results.
 
 We reinforced the knowledge on the dataset by answering the following WH questions about manner (how), choices (which), and time (when):[^villiers][^robinson]
