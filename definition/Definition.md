@@ -176,9 +176,9 @@ d(\mathbf{v}, \mathbf{w}) = \sqrt{\sum_{i=1}^{n} (v_i - w_i)^2} \quad \text{(1)}
 $$
 
 Where:
-- \( \mathbf{v} = (v_1, v_2, \dots, v_n) \) is the first vector.
-- \( \mathbf{w} = (w_1, w_2, \dots, w_n) \) is the second vector.
-- \( d(\mathbf{v}, \mathbf{w}) \) is the Euclidean distance between the two vectors.
+- \( v = (v_{1}, v_{2}, ... , v_{n}) \) is the first vector.
+- \( w = (w_{1}, w_{2}, ... , w_{n}) \) is the second vector.
+- \( d(v, w) \) is the Euclidean distance between the two vectors.
 
 Processing on the heatmap of figure 9 is not straigthforward. Thus, we created the index matrix for the Euclidean distance as in Figure 10, calculated through the formula (1). Three heuristics feature our distance metric: $25^{\text{th}}$ percentile, $50^{\text{th}}$ percentile and $75^{\text{th}}$ percentile. The first metric tends to produce smaller clusters, the second and the last metrics cluster points in a loosely decoupled way.
 
@@ -285,7 +285,7 @@ Rectangles are in proximity of larger bubbles, which represent more citations fr
 
 Besides the lack of an efficient and universal method to tune the value of k, our analysis led us to identify five groups of principles, which have been named based on past literature works. Despites the K-Means is influenced by the shape, size, and density of clusters,[^saxena][^rai] the number of clusters has been tuned through a comprehensive analysis of the dataset with the lens of the parameter k.
 
-To gain a better understanding of the data space, we use another clustering technique before concluding with a comparison of Greedy, K-Means, and Graph clustering.
+The K-Means is propably the best well-known partinitoning methods that is quite greedy. However, besides the greedy with distance metric, another hierarchical clustering approach is the Louvain clustering, which differently from the previous two methods does not require to set initial parameters.
 
 ##### C) Louvain clustering
 Graph clustering represents points as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
