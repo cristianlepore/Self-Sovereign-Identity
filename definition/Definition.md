@@ -178,7 +178,7 @@ $$
 Where:
 - \( \mathbf{v} = (v_1, v_2, \dots, v_n) \) is the first vector.
 - \( \mathbf{w} = (w_1, w_2, \dots, w_n) \) is the second vector.
-- \( d(\mathbf{v}, \mathbf{w}) \) represents the Euclidean distance between the two vectors.
+- \( d(\mathbf{v}, \mathbf{w}) \) is the Euclidean distance between the two vectors.
 
 Processing on the heatmap of figure 9 is not straigthforward. Thus, we created the index matrix for the Euclidean distance as in Figure 10, calculated through the formula (1). Three heuristics feature our distance metric: $25^{\text{th}}$ percentile, $50^{\text{th}}$ percentile and $75^{\text{th}}$ percentile. The first metric tends to produce smaller clusters, the second and the last metrics cluster points in a loosely decoupled way.
 
@@ -186,7 +186,7 @@ Processing on the heatmap of figure 9 is not straigthforward. Thus, we created t
 - $50^{\text{th}}$ percentile $= 5.4$
 - $75^{\text{th}}$ percentile $= 6.4$
 
-Clustering based on the $25^{\text{th}}, 50^{\text{th}}, 75^{\text{th}}$ percentiles follows a structured process that begins with extracting the distance matrix from the heatmap. This matrix represents pairwise distances between principles, where lower values indicate greater similarity. The first step involves computing the $25^{\text{th}} / 50^{\text{th}} / 75^{\text{th}}$ percentiles of all non-diagonal values, which serve as thresholds for hierarchical clustering. 
+Clustering based on the $25^{\text{th}}, 50^{\text{th}}, 75^{\text{th}}$ percentiles follows a structured process that begins with extracting the distance matrix from the heatmap. This matrix represents pairwise distances between principles, where lower values indicate greater similarity. The first step involves computing the $25^{\text{th}} / 50^{\text{th}} / 75^{\text{th}}$ percentiles of all non-diagonal values, which serve as thresholds for hierarchical clustering.
 
 The clustering process starts with the first row of the matrix, identifying principles with distances less than or equal to the $25^{\text{th}}$ percentile and grouping them into an initial cluster. This process continues moving to the next free line, and forming a new cluster. Next, the clustering expands using the $50^{\text{th}}$ percentile, merging or enlarging existing clusters based on the updated threshold. Finally, the $75^{\text{th}}$ percentile is applied to further broaden the clusters, allowing for looser groupings where principles share more distant but still relevant connections.
 
@@ -195,6 +195,9 @@ The clustering process starts with the first row of the matrix, identifying prin
 
 ###### Discussion and limitations
 The resulting clusters reflect different levels of relatedness: the $25^{\text{th}}$ percentile defines tightly bound principles, the $50^{\text{th}}$ percentile captures moderate relationships, and the $75^{\text{th}}$ percentile forms broader groupings. This method provides a structured way to classify principles based on their similarities while maintaining flexibility across different levels of granularity.
+
+![Heatmap](/definition/images/clusters/greedy/Clustering.png)
+*Figure 11: The clustering of principles according to the greedy method.*
 
 Although the greedy approach is efficient and does not require to predefine the number of clusters, it has a rigid structure that relies on the next local best step to find a locally optimal solution, while it may not account for the overall problem structure.[^rai] The heuristic to select the next new row may have a great impact on the final result, and since we do not know the data distribution, a locally optimal solution may differ from the globally optimal one.[^park] Furthermore, the greedy approach lacks backtracking or global adjustments - it considers only the present step without planning ahead, which can lead to suboptimal results. Therefore, we aim to explore alternative techniques that may lead to a different clustering.
 
@@ -209,7 +212,7 @@ K-Means is an iterative method that can find a local minimum but has a less rigi
 This produces a separation of the objects into groups from which the metric to be minimized can be calculated.
 
 ![Heatmap](/definition/images/clusters/k-means/workflow/K-Means_flow.png)
-*Figure 10: Euclidean distance between rows.*
+*Figure 11: The workflow of the K-Means clustering.*
 
 Despites K-Means is simple to use, it lacks of an efficient and universal procedure to tune the value k for clustering.[^rai] Hence, to test various values of k, we have created a program as in the [Appendix A](#appendix-a-k-means-clustering-program-explanation), that instantiates the K-Means by using a specific `init='k-means++'` method to strategically initialize the centroids. While testing different values of the parameter k, we have collected results and plot different charts for discussion. All results are reproduceble because tests have been carried out using the same seed to generate the centroids. Thus, anyone can download the program, the input file from the dispatcher and obtain our same results.
 
