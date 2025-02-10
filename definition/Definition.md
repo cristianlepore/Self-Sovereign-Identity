@@ -169,7 +169,7 @@ The greedy is a heuristic method that assigns points to clusters in a greedy fas
 *Figure 9: Author mentions across principles and categories.*
 
 ###### Applying the greedy clustering
-Our greedy method is based on the definition of Euclidean distance between two rows of the heatmap. The Euclidean distance is the straight-line distance between two points in a multi-dimensional space.[^simson] Although it is not the only heuristic for matrices, other distances, such as Cosine similarity [^Rahutomo] and Jaccard similarity [^Ivchenko], can be applied. However, the Euclidean distance is simple to compute between two vectors **v** and **w** in an n-dimensional space is given by:[^smith]
+The greedy approach clusters rows from Figure 9 that minimize the Euclidean distance. The Euclidean distance is the straight-line distance between two rows.[^simson] It is not the only heuristic for matrices, other distances, such as Cosine similarity [^Rahutomo] and Jaccard similarity [^Ivchenko], can be applied. However, the Euclidean distance is simple to compute between two vectors **v** and **w** in an n-dimensional space:[^smith]
 
 $$
 d(\mathbf{v}, \mathbf{w}) = \sqrt{\sum_{i=1}^{n} (v_i - w_i)^2} \quad \text{(1)}
@@ -180,7 +180,7 @@ Where:
 - \( \mathbf{w} = (w_1, w_2, \dots, w_n) \) is the second vector.
 - \( d(\mathbf{v}, \mathbf{w}) \) represents the Euclidean distance between the two vectors.
 
-The method starts by selecting the column in the heatmap with the highest number of occurrences and grouping rows that minimize the Euclidean distance between two rows. The identity matrix below reports the Euclidean distance between rows calculated through the formula (1). The 50th percentile is the heuristic that we use to divides our dataset into equal halves.
+Processing on the heatmap of figure 9 is not straigthforward. Thus, we created the index matrix for the Euclidean distance as in Figure 10, calculated through the formula (1). The 50th percentile divides our dataset into equal halves.
 
 - $50^{\text{th}}$ percentile $= 5.2$
 
@@ -280,6 +280,9 @@ To gain a better understanding of the data space, we use another clustering tech
 
 ##### C) Graph clustering
 Graph clustering represents points as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
+
+![Graph](/definition/images/clusters/graph_theory/Heatmap.png)
+*Figure 15: *
 
 ![Graph](/definition/images/clusters/graph_theory/Graph_theory.png)
 *Figure 15: *
