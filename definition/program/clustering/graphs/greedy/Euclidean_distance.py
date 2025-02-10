@@ -1,6 +1,7 @@
 import seaborn as sns
 import matplotlib.pyplot as plt
 import pandas as pd
+import numpy as np
 from scipy.spatial.distance import pdist, squareform
 
 # Dati di input (come prima)
@@ -49,3 +50,12 @@ plt.ylabel("Principles", fontsize=12)  # Y-axis label
 plt.xticks(rotation=45, ha='right')
 
 plt.show()
+
+distances = distance_matrix[np.triu_indices(len(categories), k=1)]
+
+percentili = np.percentile(distances, [25, 50, 75])
+
+print(f"25° percentile: {percentili[0]}")
+print(f"50° percentile (mediana): {percentili[1]}")
+print(f"75° percentile: {percentili[2]}")
+
