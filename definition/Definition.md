@@ -110,6 +110,11 @@ Some authors address a broad range of principles, demonstrating a comprehensive 
 ![Category frequency](/definition/images/principles_selection/Bubble.png)
 *Figure 5: The distribution of principles and authors.*
 
+We calculate entropy as a measure of the degree of uncertainty or disorder in the distribution of principles among the authors [^pal] and consider principles with an entropy higher than 0.5, meaning they are fairly or significantly distributed across authors.
+
+![Entropy](/definition/images/principles_selection/)
+*Figure 6: The distribution of principles and authors.*
+
 ### 1.3.4 Categorization
 A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] In our case, the subjects and the objects are the principles and the SSI field respectively. However, a category is featured by attributes or specific properties that must be described at priori. In our case, past studies categorized the SSI principles as reported in the [Related Works](#12-related-works), but they missed to provide criteria for their content analysis. For this reason, our first goal is to analyze past studies to see if aggregated results may exhibit similarities of behaviours from authors, and categorizations.[^rai] Once done it, we aim to extract common features and categorize principles based on these features. Instrumental for this analysis is the creation of [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which outlines the categories from our literature review.
 
@@ -700,3 +705,5 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^robinson]: Robinson, Joan. "What are the questions?." What are the Questions and Other Essays. Routledge, 2016. 2-32.
 
 [^Ivchenko]: Ivchenko, G. I., and S. A. Honov. "On the jaccard similarity test." Journal of Mathematical Sciences 88 (1998): 789-794.
+
+[^pal]: Pal, Nikhil R., and Sankar K. Pal. "Entropy: A new definition and its applications." IEEE transactions on systems, man, and cybernetics 21.5 (1991): 1260-1270.

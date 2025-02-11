@@ -40,3 +40,6 @@ plt.gca().invert_yaxis()
 
 plt.grid(axis='x', linestyle='--', alpha=0.7)
 plt.show()
+
+media_occurrences = np.mean(sum_values)
+print(f"Media delle occorrenze dei principi per autore: {media_occurrences:.2f}")
