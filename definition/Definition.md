@@ -107,7 +107,7 @@ A key highlight of this chart is the clustering of dots around principles like t
 
 Some authors address a broad range of principles, demonstrating a comprehensive approach, while others focus more narrowly, emphasizing specific areas of interest. This chart not only reveals the priorities of individual authors but also illustrates broader trends in the SSI field, offering insights into what is most valued as this framework continues to evolve.
 
-![Category frequency](/definition/images/recording_of_principles/Bubble.png)
+![Category frequency](/definition/images/principles_selection/Bubble.png)
 *Figure 5: The distribution of principles and authors.*
 
 ### 1.3.4 Categorization
