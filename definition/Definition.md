@@ -288,7 +288,14 @@ Besides the lack of an efficient and universal method to tune the value of k, ou
 The K-Means is propably the best well-known partinitoning methods that is quite greedy. However, besides the greedy with distance metric, another hierarchical clustering approach is the Louvain clustering, which differently from the previous two methods does not require to set initial parameters.
 
 ##### C) Louvain clustering
-Graph clustering represents points as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
+The Louvain algorithm is a greedy agglomerative hierarchical clustering approach which utilizes the modularity measure.[^held]
+
+It was originally designed for unweighted, undirected graphs but can easily be adapted to weighted and directed graphs.[^held] In our case, a graph represents principles as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
+
+In this method, the partition is initialized with every node in its own cluster. Then, for each node the modularity gain for shifting it to neighboring clusters is computed. The largest positive gain is chosen and the node is moved. This is done until no node is moved in a full iteration. Then, the graph is modified in a way that every cluster is merged into a single node, while intra-cluster edges are added as loops and inter-cluster edges between the same clusters are merged into a single edge and have there weights added.
+
+
+
 
 ![Graph](/definition/images/clusters/graph_theory/Heatmap.png)
 *Figure 15: *
@@ -601,6 +608,8 @@ The breakdown of responses to the 20 questions in the questionnaire.
 ## References
 
 [^cucko]: Čučko, Š., Bećirović, Š., Kamišalić, A., Mrdović, S., & Turkanović, M. (2022). Towards the classification of self-sovereign identity properties. IEEE access, 10, 88306-88329.
+
+[^held]: Held, Pascal, Benjamin Krause, and Rudolf Kruse. "Dynamic clustering in social networks using louvain and infomap method." 2016 Third European Network Intelligence Conference (ENIC). IEEE, 2016.
 
 [^toth]: Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27. 
 
