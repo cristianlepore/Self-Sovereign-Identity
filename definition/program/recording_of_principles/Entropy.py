@@ -23,13 +23,20 @@ data = {
 # Create a DataFrame
 df = pd.DataFrame(data)
 
-# Create a figure and axis to display the table
-fig, ax = plt.subplots(figsize=(10, 8))  # Size of the image
-ax.axis('tight')  # Disable axis
-ax.axis('off')  # Disable axis labels
+# Create the bar chart
+plt.figure(figsize=(12, 8))  # Set the size of the plot
+plt.barh(df["Attribute"], df["Value"], color='skyblue')  # Horizontal bar chart
 
-# Create the table
-table = ax.table(cellText=df.values, colLabels=df.columns, cellLoc='center', loc='center', colColours=['#f1f1f1']*2)
+# Add labels and title
+plt.xlabel('Entropy')
+plt.ylabel('Principles')
+plt.title('')
 
-# Display the table
+# Invert the Y-axis to display bars from top to bottom
+plt.gca().invert_yaxis()
+
+# Adjust the layout for better display
+plt.tight_layout()
+
+# Display the plot
 plt.show()

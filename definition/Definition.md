@@ -121,12 +121,12 @@ $$
 
 which calculates the entropy as a measure of the degree of uncertainty of a principle, based on the authors' citations. A high entropy corresponds to a principle cited by manies, while a low value corresponds to a few citations. The entropy does not reflect the frequency, rather is a measeure of how messy is the distribution of probability. So, for a principles that is "predictable", namely frequently cited, the entropy will be low; In the same way, for principles that are almost always false, the entropy will be low as well. The reason is that their degree of predictability is the same. This is visible for principles like "Ownership and Control" and "Simple."
 
+![Entropy](/definition/images/principles_selection/Entropy.png)
+*Figure 6: The full list of principles and their entropy.*
+
 Even further methods have been considered, but their analysis was not carried on. For example, the Principal Component Analysis (PCA) aims to produce new dimensions by combining the existing principles. These new dimensions will compromise the rest of our analysis on categorizations, because we deal with new principles and cannot rely on literature works. Also make it difficult to ground a definition of principle based on the literature becaue it shiffle the cards. Correlating principles with a study correlation was dismissed because it highlights latent relationships between principles - principles who may exhibit similar behaviors - and we do not want to speculate on that now.
 
-Additionally, we did not consider the importance of author based on their citation becuse some of our works from literature were carried out by community groups like the Trust Over IP, and becase the identity field is young and immature. A bias on authors may shade the relevance of an article. Finally, we did not cluster principles for the same reason we do not rely on correlations.
-
-![Entropy](/definition/images/principles_selection/)
-*Figure 6: The full list of principles and their entropy.*
+Additionally, we did not consider the importance of author based on their citation becuse some of our works from literature were carried out by community groups like the Trust Over IP,[^toip] and becase the identity field is young and immature. A bias on authors may shade the relevance of an article. Finally, we did not cluster principles for the same reason we do not rely on correlations.
 
 ### 1.3.4 Categorization
 A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] In our case, the subjects and the objects are the principles and the SSI field respectively. However, a category is featured by attributes or specific properties that must be described at priori. In our case, past studies categorized the SSI principles as reported in the [Related Works](#12-related-works), but they missed to provide criteria for their content analysis. For this reason, our first goal is to analyze past studies to see if aggregated results may exhibit similarities of behaviours from authors, and categorizations.[^rai] Once done it, we aim to extract common features and categorize principles based on these features. Instrumental for this analysis is the creation of [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which outlines the categories from our literature review.
@@ -171,7 +171,7 @@ The chart also reveals additional insights into the number of categories per aut
 ![Category frequency](/definition/images/clusters/Distribution_authors_contribution.png)
 *Figure 8: Distribution of principles across categories by authors.*
 
-##### Main takeout
+#### Main takeout
 
 The study of literature highlighted how scattered the domain of interest is and how loosely connected the principles, categories, and authors are. We failed to outline features for categorization, but we discovered common trends: "Controllability," "Foundational," "Sustainability", "Portability", and "Security" receive substantial attention. On the other hand, "Acceptance," "Zero-cost," "Compliance," and "Privacy" are sparsely addressed.
 
