@@ -23,17 +23,17 @@ data = {
 # Create a DataFrame
 df = pd.DataFrame(data)
 
-# Create the bar chart
+# Create the bar chart (now vertical with principles on the X-axis)
 plt.figure(figsize=(12, 8))  # Set the size of the plot
-plt.barh(df["Attribute"], df["Value"], color='skyblue')  # Horizontal bar chart
+plt.bar(df["Attribute"], df["Value"], color='skyblue', edgecolor='black')  # Vertical bar chart with black borders
 
 # Add labels and title
-plt.xlabel('Entropy')
-plt.ylabel('Principles')
+plt.ylabel('Entropy')
+plt.xlabel('Principles')
 plt.title('')
 
-# Invert the Y-axis to display bars from top to bottom
-plt.gca().invert_yaxis()
+# Rotate X-axis labels to make them readable
+plt.xticks(rotation=45, ha="right")
 
 # Adjust the layout for better display
 plt.tight_layout()
