@@ -110,10 +110,23 @@ Some authors address a broad range of principles, demonstrating a comprehensive 
 ![Category frequency](/definition/images/principles_selection/Bubble.png)
 *Figure 5: The distribution of principles and authors.*
 
-We calculate entropy as a measure of the degree of uncertainty or disorder in the distribution of principles among the authors [^pal] and consider principles with an entropy higher than 0.5, meaning they are fairly or significantly distributed across authors.
+The distribution of principles from the lens of articles may help analyzing the uncertainty or disorder in the citation of principles from authors. The frequency of citations of principles per authors outlines a path in which the first fifteeen principles are more cited than the remaining 19. Indeed, after "Verifiability and Authenticity,", the numebr of citation per principle drops. A metric could suggest to cut principles in that point, in which principles are cited by more than 5 authors, as visualized in Figure 5.
+
+###### Dismissed analysis
+Another metric concerns the evaluation of the degree of uncertainty of principles, known as entropy,[^pal] from the formula of Shannon[^lundheim]
+
+$$
+\text{(1)} \quad H(p) = -\sum_{i=1}^{n} p_i \log_2 (p_i)
+$$
+
+which calculates the entropy as a measure of the degree of uncertainty of a principle, based on the authors' citations. A high entropy corresponds to a principle cited by manies, while a low value corresponds to a few citations. The entropy does not reflect the frequency, rather is a measeure of how messy is the distribution of probability. So, for a principles that is "predictable", namely frequently cited, the entropy will be low; In the same way, for principles that are almost always false, the entropy will be low as well. The reason is that their degree of predictability is the same. This is visible for principles like "Ownership and Control" and "Simple."
+
+Even further methods have been considered, but their analysis was not carried on. For example, the Principal Component Analysis (PCA) aims to produce new dimensions by combining the existing principles. These new dimensions will compromise the rest of our analysis on categorizations, because we deal with new principles and cannot rely on literature works. Also make it difficult to ground a definition of principle based on the literature becaue it shiffle the cards. Correlating principles with a study correlation was dismissed because it highlights latent relationships between principles - principles who may exhibit similar behaviors - and we do not want to speculate on that now.
+
+Additionally, we did not consider the importance of author based on their citation becuse some of our works from literature were carried out by community groups like the Trust Over IP, and becase the identity field is young and immature. A bias on authors may shade the relevance of an article. Finally, we did not cluster principles for the same reason we do not rely on correlations.
 
 ![Entropy](/definition/images/principles_selection/)
-*Figure 6: The distribution of principles and authors.*
+*Figure 6: The full list of principles and their entropy.*
 
 ### 1.3.4 Categorization
 A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] In our case, the subjects and the objects are the principles and the SSI field respectively. However, a category is featured by attributes or specific properties that must be described at priori. In our case, past studies categorized the SSI principles as reported in the [Related Works](#12-related-works), but they missed to provide criteria for their content analysis. For this reason, our first goal is to analyze past studies to see if aggregated results may exhibit similarities of behaviours from authors, and categorizations.[^rai] Once done it, we aim to extract common features and categorize principles based on these features. Instrumental for this analysis is the creation of [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which outlines the categories from our literature review.
@@ -165,6 +178,8 @@ The study of literature highlighted how scattered the domain of interest is and 
 In the absence of features for categorization, we can leverage a clustering technique to identify groups and assign names based on heuristics. Clustering is equivalent to breaking the graph into connected components, one for each cluster.[^rai] Clustering helps uncover similarities between objects that initially appear dissimilar, finding arbitrary shaped clusters, with a minimum input requirement. To achieve this, we treat our data as a set of points where each point is closer (or more similar) to one or more other points.[^rai]
 
 #### Clustering techniques
+PERCH7 NON ABBIAMO USATO ENTROPIA
+
 We aim to group similar objects by aligning principles and categories through the lens of author mentions. Traditional clustering techniques are neither straightforward nor canonical, so we have compared three different approaches described in [^bishop][^park][^saxena][^rai]: Greedy clustering with distance metrics,[^park] K-Means,[^saxena][^rai] and Louvain clustering.[^saxena] Greedy clustering is a hierarchical method known for its simplicity. K-Means is a partitioning technique that minimizes intra-cluster distances but requires the number of clusters, k, to be predefined. Louvain clustering, on the other hand, is an unsupervised partitioning method that does not require specifying the number of clusters in advance. However, each of these methods has limitations, which we will discuss in the following subsections. For example, K-Means struggles with handling outliers, while Louvain clustering is sensitive to cluster shape and size and has difficulty detecting overlapping clusters.[^saxena] Finally, we compared the results from all three techniques to determine the most suitable grouping for our data.
 
 ##### A) Greedy clustering
@@ -177,7 +192,7 @@ The greedy is a heuristic method that assigns points to clusters in a greedy fas
 The greedy approach clusters rows from Figure 9 that minimize the Euclidean distance. The Euclidean distance is the straight-line distance between two rows.[^simson] It is not the only heuristic for matrices, other distances, such as Cosine similarity [^Rahutomo] and Jaccard similarity [^Ivchenko], can be applied. However, the Euclidean distance is simple to compute between two vectors **v** and **w** in an n-dimensional space:[^smith]
 
 $$
-d(\mathbf{v}, \mathbf{w}) = \sqrt{\sum_{i=1}^{n} (v_i - w_i)^2} \quad \text{(1)}
+\text{(2)} \quad d(\mathbf{v}, \mathbf{w}) = \sqrt{\sum_{i=1}^{n} (v_i - w_i)^2}
 $$
 
 Where:
@@ -629,6 +644,8 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^allen]: Allen, Christopher. "The path to self-sovereign identity." Life with Alacrity (2016).
 
 [^mahalakshmi]: Mahalakshmi, B., and K. Duraiswamy. "An overview of categorization techniques." International Journal of Modern Engineering Research (IJMER) 2.5 (2012).
+
+[^lundheim]: Lundheim, Lars. "On Shannon and" Shannon's Formula"." Telektronikk 98.1 (2002): 20-29.
 
 [^villiers]: De Villiers, Jill. "Why questions?." University of Massachusetts Occasional Papers in Linguistics 17.1 (1991): 8.
 
