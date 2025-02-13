@@ -84,10 +84,7 @@ The merging process has collapsed some of the principles naming together and shr
 
 The following image summarizes our findings. Allen's principles are followed by approximately 80% of authors (around 13 authors), whereas extending 24 principles is adopted by fewer than 10% of authors (fewer than 2 authors).
 
-| **Category**                          | **Frequency** | **Authors** |
-|---------------------------------------|-------------------|-------------------|
-| Allen's principles   | ≈ 80% of authors | ≈ 13 autors |
-| Extending 24 principles  | < 10% of authors | < 2 authors |
+![Principles selection table.](/definition/images/principles_selection/Principles_selection_table.png)
 
 ### 1.3.3 Selection
 
