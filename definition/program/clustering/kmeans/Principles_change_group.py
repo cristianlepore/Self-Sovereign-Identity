@@ -43,7 +43,7 @@ ax.scatter(
     [x[1] for x in change_points], 
     color='blue', 
     marker=(3, 0, 270),  # Triangle pointing left
-    label='Principle that changed groups\nfrom the previous step.'
+    label='Principle that changed group\nfrom the previous step.'
 )  
 ax.set_xticks(steps)
 ax.set_yticks(range(len(principles)))
