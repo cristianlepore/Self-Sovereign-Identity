@@ -38,7 +38,13 @@ for step in range(len(steps) - 1):
 
 # Visualize changes in a graph
 fig, ax = plt.subplots(figsize=(10, 6))
-ax.scatter([x[0] for x in change_points], [x[1] for x in change_points], color='blue', label='Principle that changed groups\nfrom the previous step.')  
+ax.scatter(
+    [x[0] for x in change_points], 
+    [x[1] for x in change_points], 
+    color='blue', 
+    marker=(3, 0, 270),  # Triangle pointing left
+    label='Principle that changed groups\nfrom the previous step.'
+)  
 ax.set_xticks(steps)
 ax.set_yticks(range(len(principles)))
 ax.set_yticklabels(principles)
