@@ -69,6 +69,9 @@ Table 1 summarizes the names of the properties and contributions identified thro
 [Click to view the table 1.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles/Principles1.html) *Comparison of identified properties in various sources.*
 [Table 1 alternative version.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles/Principles2.html) *Alternative view of Table 1. It conveys the same information.*
 
+![Occurrences of all works and principles](/definition/images/principles_recording/Principles_recording.png)
+*Figure 1: The number of principles by author.*
+
 ### 1.3.2 Merging
 
 Difference in the naming of properties across various authors can be observed. However, many of these properties convey the same or similar meanings. To avoid pitfalls, Figure 2 provides a holistic view of how different authors conceptualize identity properties, showing their overlaps and interconnections. The image presents a causal loop diagram illustrating the relationships between various properties of identity systems as defined by different authors, using overlapping colored regions to represent different contributions: Gray (Allen),[^allen] Blue (Toth and Kalman),[^toth] Green (Ferdous et al.),[^ferdous] Orange (Sovrin),[^sovrin] Yellow (Andrieu et al.),[^andrieu] and Red (Stokkink and Pouwelse).[^stokkink] The diagram maps key identity properties such as security, privacy, decentralization, and verifiability, with arrows indicating their interdependencies. On the right, a modified properties list enumerates 11 essential identity system attributes, including existence and representation, ownership and control, access and availability, portability, interoperability, consent, security and protection, privacy and minimal disclosure, usability and consistency, decentralization and autonomy, and verifiability and authenticity.
