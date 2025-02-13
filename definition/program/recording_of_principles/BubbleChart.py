@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
+import matplotlib.lines as mlines
 
 autori = ["Tobin and Reed", "Andrieu et al.", "Ferdous et al.", "Mühle et al.", "Gilani et al.", "Naik and Jenkins", "Sheldrake", "Toth and Kalman", "eSSIF-Lab", "ToIP", "Sovrin", "BkThDVr", "Glöckler et al.", "Pava-Díaz et al.", "Satybaldy et al.", "Stokkink and Pouwelse", "Čučko et al.", "Allen"]
 
@@ -37,6 +38,9 @@ ax.set_xticks(range(len(principi)))
 ax.set_xticklabels(principi, rotation=45, ha="right")
 ax.set_yticks(range(len(autori)))
 ax.set_yticklabels(autori)
+
+legend_marker = mlines.Line2D([], [], color='blue', marker='o', linestyle='None', markersize=10, alpha=0.6, label="Instance of a principle")
+plt.legend(handles=[legend_marker], loc="upper right", title="")
 
 ax.set_title("")
 plt.xlabel("Principles")
