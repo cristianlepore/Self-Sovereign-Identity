@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 from sklearn.manifold import TSNE
 from sklearn.cluster import KMeans
 
-# Creazione del DataFrame
+# Data setup (same as provided)
 data = {
         "Existence and representation": [4, 3, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         "Ownership and control":        [5, 3, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -31,29 +31,35 @@ categories = [
 
 df = pd.DataFrame(data, index=categories)
 
-# Trasporre il DataFrame per applicare t-SNE ai principi (colonne)
 df_transposed = df.T
 
-# Applicare t-SNE ai principi
+# Apply t-SNE to reduce dimensions
 tsne = TSNE(n_components=2, perplexity=5, random_state=42)
 tsne_results = tsne.fit_transform(df_transposed)
 
-# Applicare K-Means per clusterizzare i principi
-num_clusters = 5  # Puoi cambiare il numero di cluster
+# Apply KMeans clustering
+num_clusters = 5  # Number of clusters
 kmeans = KMeans(n_clusters=num_clusters, random_state=42)
 clusters = kmeans.fit_predict(tsne_results)
 
-# Visualizzazione dei risultati con i cluster
-plt.figure(figsize=(12, 8))
-scatter = plt.scatter(tsne_results[:, 0], tsne_results[:, 1], c=clusters, cmap="viridis", s=100)
+# Define distinct colors for each cluster
+cluster_colors = ['#FF6347', '#4682B4', '#32CD32', '#FFD700', '#8A2BE2']  # Red, Blue, Green, Yellow, Purple
 
-# Etichettiamo i punti con i nomi dei principi
+# Plot the results
+plt.figure(figsize=(12, 8))
+for i in range(num_clusters):
+    # Select data points belonging to the current cluster
+    cluster_points = tsne_results[clusters == i]
+    plt.scatter(cluster_points[:, 0], cluster_points[:, 1], c=[cluster_colors[i]], label=f'Cluster {i + 1}', s=100)
+
+# Annotate the principles
 principles = df.columns
 for i, principle in enumerate(principles):
     plt.text(tsne_results[i, 0], tsne_results[i, 1], principle, fontsize=9, ha='right')
 
-plt.xlabel("t-SNE Dimensione 1")
-plt.ylabel("t-SNE Dimensione 2")
-plt.title("Clusterizzazione dei principi con t-SNE + K-Means")
-plt.colorbar(scatter, label="Cluster")
+# Add labels and title
+plt.xlabel("Dimension 1")
+plt.ylabel("Dimension 2")
+plt.title("")
+plt.legend()
 plt.show()

@@ -1,4 +1,3 @@
-usare TSNE per verificare clustering con K MEANS: https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
-Testare diversi valori di seed per K Means
+concludere discussione su graph louvain clustering
 poi le tabelle di confronto finale e discussione
 mettere le definizione originali dei principi SSI in sezione 1.3.4 con le frasi originali.

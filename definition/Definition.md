@@ -335,7 +335,7 @@ Before step 4, the movement of lines reflects the gradual grouping of principles
 
 ###### Dicussion and limitations
 
-We set the parameter k=5 to the [program](#appendix-a-k-means-clustering-program-explanation) to render fie groups. However, to assign a name to each category, we have mapped research articles across principles and categories. We do not discuss further this chart because it conveys the same information of Figure 9. Bubbles indicate the number of articles, with larger bubbles representing more studies.
+For the aforementioned reasons, the parameter k is sets to 5 and run the [program](#appendix-a-k-means-clustering-program-explanation). However, to assign a name to each category, we have mapped research articles across principles and categories. We do not discuss further this chart because it conveys the same information of Figure 9. Bubbles indicate the number of articles, with larger bubbles representing more studies.
 
 Rectangles are in proximity of larger bubbles, which represent more citations from authors. To pick the name for the cluster, the largest bubble in the frame projects a horizontal line that feeds the category - the category name shared by the largest number of authors. For example, the name for the first three principles will be "Controllability," while the second group will be called "Portability," followed by "Security," "Sustainability," and "Usability." This procedure allows us to have groups and names for clusters that are consistent with the literature.
 
@@ -344,7 +344,14 @@ Rectangles are in proximity of larger bubbles, which represent more citations fr
 
 Besides the lack of an efficient and universal method to tune the value of k, our analysis led us to identify five groups of principles, which have been named based on past literature works. Despites the K-Means is influenced by the shape, size, and density of clusters,[^saxena][^rai] the number of clusters has been tuned through a comprehensive analysis of the dataset with the lens of the parameter k.
 
-The K-Means is propably the best well-known partinitoning methods that is quite greedy. However, besides the greedy with distance metric, another hierarchical clustering approach is the Louvain clustering, which differently from the previous two methods does not require to set initial parameters.
+To validate our analysis, a double check of K-Means with the t-SNE method for dimensionality reduction may help to visualize the clusters, while trying to preserve the relationships between the data points as much as possible. The image shows a scatter plot of terms clustered into five distinct groups. The clusters are color-coded: Cluster 1 (red) includes "Security and protection," "Persistence," and "Privacy and minimal disclosure," Cluster 2 (green) contains "Ownership and control" and "Consent," Cluster 3 (yellow) includes "Access and availability," "Verifiability and Authenticity," and "Usability and consistency," Cluster 4 (purple) features "Transparency," "Portability," and "Interoperability," and Cluster 5 (blue) includes "Cost" and "Standard." The plot’s x-axis is labeled "Dimension 1," and the y-axis is labeled "Dimension 2," representing the reduced dimensions of these terms.
+
+The key difference with previously mentioned plot is the 
+
+![Bubble K-Means](/definition/images/clusters/k-means/TSNE.png)
+*Figure 15: t-SNE with K-Means to visualize the data points.*
+
+Besides the greedy with distance metric, another hierarchical clustering approach is the Louvain clustering, which differently from the previous two methods does not require to set initial parameters.
 
 ##### C) Louvain clustering
 The Louvain algorithm is a greedy agglomerative hierarchical clustering approach which utilizes the modularity measure.[^held]
