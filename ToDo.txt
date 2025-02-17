@@ -1,4 +1,3 @@
-provare a togliere outliers con isolation forest o z-score, frequenze o DBSCAN
 usare TSNE per verificare clustering con K MEANS: https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
 provare TSNE dopo aver tolot outliers
 Testare diversi valori di seed per K Means

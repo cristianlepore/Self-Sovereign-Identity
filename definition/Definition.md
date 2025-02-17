@@ -99,11 +99,26 @@ As a result, the merging process has shrinked the list of principles by 34%, lea
 
 [Click to view the table 2.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html) *Comparison of identified properties grouping from various sources.*
 
-The following image summarizes our findings. Allen's principles are followed by approximately 80% of authors (around 13 authors), whereas extending 24 principles is adopted by fewer than 10% of authors (fewer than 2 authors).
+The Figure 3 provides an overview of the distribution of principles across studies aftermath the removal of duplicates. This image offers insights into the alignment of various authors with these principles. The rows represent different authors or studies, while the columns correspond to specific principles such as transparency, interoperability, and decentralization. Blue dots indicate which principles each author addresses.
+
+A key highlight of this chart is the clustering of dots around principles like transparency, interoperability, and privacy, which most contributors clearly consider essential. In contrast, principles such as cost, decentralization, and usability receive less attention, suggesting they are either less emphasized or considered secondary by many.
+
+![Category frequency](/definition/images/principles_selection/Bubble.png)
+*Figure 3: The distribution of principles and authors.*
+
+Some authors address a broad range of principles, demonstrating a comprehensive approach, while others focus more narrowly, emphasizing specific areas of interest. This chart not only reveals the priorities of individual authors but also illustrates broader trends in the SSI field, offering insights into what is most valued as this framework continues to evolve.
+
+The following table summarizes the findings from the previous image. Allen's principles are followed by approximately 80% of authors (around 13 authors), whereas extending 24 principles is adopted by fewer than 10% of authors (fewer than 2 authors).
 
 ![Principles selection table.](/definition/images/principles_selection/Principles_selection_table.png)
 
+The distribution of principles from the lens of articles may help analyzing the uncertainty or disorder in the citation of principles from authors. The frequency of citations of principles per authors outlines a path in which the first fifteeen principles are more cited than the remaining 19. Indeed, after "Verifiability and Authenticity,", the numebr of citation per principle drops. A metric could suggest to cut principles in that point, in which principles are cited by more than 5 authors, as visualized in Figure 3.
+
 ### 1.3.3 Selection
+The study of outliers helps to detect anomalies in the number of principles mentioned by each author. The Z-score, also known as the standard score, indicates which values are considered outliers based on how far they deviate from the mean, and helps to detect anomalies. In this case, a standard threshold greater than $3$ is commonly used with normally distributed dataset.[^coster] However, our dataset does not follow a normal distribution, as shown in Figure 4. Indeed, the black curve in Figure 4 represents the density estimation, with a skewed distribution, and some scattered higher values. When the distribution does not follow a Gaussian, a Z-score with a fixed threshold can be misleading. Rather a method for detecting outliers based on the local density of the data can be safer, such as the Local Outlier Factor (LOF). We teste the LoF with the Euclidean distance metric on the whole number of features, obtaining no outliers. For this reason, the candidate dataset from the selection process will correspond to the dataset of Figure 3.
+
+![Principles selection](/definition/images/principles_recording/Distribution.png)
+*Figure 4: The distribution of principles.*
 
 The chart in Figure 3 illustrates the frequency of citation for the 34 principles across the studies that we have considered, distinguishing between *Allen Principles* (in blue) and *Extending Principles* (in yellow). The x-axis lists the principles, while the y-axis represents their frequency of occurrence. The *Allen Principles*, such as "Existence and Representation," "Ownership and Control," "Transparency," and "Interoperability, show a significantly higher occurrence, indicating a strong foundation in existing literature, maybe based on the fact that those principles have been around for longer. In contrast, the *Extending Principles*, including "Cost," "Scalable," "Trust," and "Verifiability and Authenticity," show greater variability; for example, 19 out of the 24 extending principles, were cited by fewer than five authors. The analysis suggests the centrality of the Allen Principles which remain dominant, while emerging principles contribute to the evolving discourse in the field.
 
@@ -118,17 +133,6 @@ A shortened list of principles allows for a comparative analysis of their distri
 
 ![Occurrences of principles](/definition/images/principles_selection/Occurrences_principles.png)
 *Figure 4: A histogram of the number of principles cited per author.*
-
-The information presented in the previous charts (Figure 3 and Figure 4) is further detailed in Figure 5, which provides an overview of the distribution of principles across studies. Unlike the earlier charts, this one offers insights into the alignment of various authors with these principles. The rows represent different authors or studies, while the columns correspond to specific principles such as transparency, interoperability, and decentralization. Blue dots indicate which principles each author addresses.
-
-A key highlight of this chart is the clustering of dots around principles like transparency, interoperability, and privacy, which most contributors clearly consider essential. In contrast, principles such as cost, decentralization, and usability receive less attention, suggesting they are either less emphasized or considered secondary by many.
-
-Some authors address a broad range of principles, demonstrating a comprehensive approach, while others focus more narrowly, emphasizing specific areas of interest. This chart not only reveals the priorities of individual authors but also illustrates broader trends in the SSI field, offering insights into what is most valued as this framework continues to evolve.
-
-![Category frequency](/definition/images/principles_selection/Bubble.png)
-*Figure 5: The distribution of principles and authors.*
-
-The distribution of principles from the lens of articles may help analyzing the uncertainty or disorder in the citation of principles from authors. The frequency of citations of principles per authors outlines a path in which the first fifteeen principles are more cited than the remaining 19. Indeed, after "Verifiability and Authenticity,", the numebr of citation per principle drops. A metric could suggest to cut principles in that point, in which principles are cited by more than 5 authors, as visualized in Figure 5.
 
 ###### Dismissed analysis
 Another metric concerns the evaluation of the degree of uncertainty of principles, known as entropy,[^pal] from the formula of Shannon[^lundheim]
@@ -714,6 +718,8 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^satybaldy]: Satybaldy, A., Nowostawski, M., & Ellingsen, J. (2020). Self-sovereign identity systems: Evaluation framework. Privacy and Identity Management. Data for Better Living: AI and Privacy: 14th IFIP WG 9.2, 9.6/11.7, 11.6/SIG 9.2. 2 International Summer School, Windisch, Switzerland, August 19–23, 2019, Revised Selected Papers 14, 447-461.
 
 [^ward]: Ward, C. D., Welch, B., Conley, A., Smith, P. J., & Greby, S. (2017). It’s About Time: Examining the Effect of Interviewer-Quoted Survey Completion Time Estimates on Survey Efficiency. Survey practice, 10(2).
+
+[^coster]: De Coster, Liesbeth, et al. "On the optimal z-score threshold for SISCOM analysis to localize the ictal onset zone." EJNMMI research 8 (2018): 1-8.
 
 [^mol]:Van Mol, C. (2017). Improving web survey efficiency: the impact of an extra reminder and reminder content on web survey response. International Journal of social research Methodology, 20(4), 317-327.
 
