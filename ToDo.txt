@@ -1,6 +1,5 @@
 usare TSNE per verificare clustering con K MEANS: https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html
 Testare diversi valori di seed per K Means
-Fare analisi con pagerank
 spiegare perchè no usato entropia nel clustering
 poi le tabelle di confronto finale e discussione
 fare un pseudocode dei vari algoritmi

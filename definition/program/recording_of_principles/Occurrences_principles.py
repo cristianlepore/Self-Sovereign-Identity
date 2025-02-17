@@ -24,22 +24,34 @@ dati = np.array([
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],  # Allen
 ])
 
+# Compute occurrences per author
 sum_values = np.sum(dati[::-1], axis=1)
 
+# Calculate mean, median, and standard deviation
+media_occurrences = np.mean(sum_values)
+mediana_occurrences = np.median(sum_values)
+std_dev_occurrences = np.std(sum_values)
+
+# Create figure and plot
 plt.figure(figsize=(10, 6))
 bars = plt.barh(range(len(autori)), sum_values, color='skyblue', edgecolor="black", height=0.6)
+
+# Add mean and median lines
+plt.axvline(media_occurrences, color='green', linestyle='dashed', linewidth=1.5, label=f'Mean: {media_occurrences:.2f}')
+plt.axvline(mediana_occurrences, color='red', linestyle='dashed', linewidth=1.5, label=f'Median: {mediana_occurrences:.2f}')
+
+# Labels and title
 plt.xlabel("Occurrences of principles")
 plt.ylabel("Authors")
 plt.title("")
 
-# Imposta le etichette invertendo l'asse
+# Set y-axis labels with reversed order
 plt.yticks(range(len(autori)), autori[::-1])  
+plt.gca().invert_yaxis()  # Invert y-axis
 
-# Inverti l'asse Y per far apparire l'ultimo autore in cima
-plt.gca().invert_yaxis()
-
+# Grid and legend
 plt.grid(axis='x', linestyle='--', alpha=0.7)
-plt.show()
+plt.legend()
 
-media_occurrences = np.mean(sum_values)
-print(f"Media delle occorrenze dei principi per autore: {media_occurrences:.2f}")
+# Show plot
+plt.show()
