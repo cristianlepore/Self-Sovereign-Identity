@@ -210,21 +210,19 @@ The study of literature highlighted how scattered the domain of interest is and 
 In the absence of features for categorization, we can leverage a clustering technique to identify groups and assign names based on heuristics. Clustering is equivalent to breaking the graph into connected components, one for each cluster.[^rai] Clustering helps uncover similarities between objects that initially appear dissimilar, finding arbitrary shaped clusters, with a minimum input requirement. To achieve this, we treat our data as a set of points where each point is closer (or more similar) to one or more other points.[^rai]
 
 #### Clustering techniques
-PERCH7 NON ABBIAMO USATO ENTROPIA
-
-We aim to group similar objects by aligning principles and categories through the lens of author mentions. Traditional clustering techniques are neither straightforward nor canonical, so we have compared three different approaches described in [^bishop][^park][^saxena][^rai]: Greedy clustering with distance metrics,[^park] K-Means,[^saxena][^rai] and Louvain clustering.[^saxena] Greedy clustering is a hierarchical method known for its simplicity. K-Means is a partitioning technique that minimizes intra-cluster distances but requires the number of clusters, k, to be predefined. Louvain clustering, on the other hand, is an unsupervised partitioning method that does not require specifying the number of clusters in advance. However, each of these methods has limitations, which we will discuss in the following subsections. For example, K-Means struggles with handling outliers, while Louvain clustering is sensitive to cluster shape and size and has difficulty detecting overlapping clusters.[^saxena] Finally, we compared the results from all three techniques to determine the most suitable grouping for our data.
+We aim to group similar objects by aligning principles and categories through the lens of author mentions. Traditional clustering techniques are neither straightforward nor canonical, so we have compared three different approaches described in [^bishop][^park][^saxena][^rai]: Greedy clustering,[^park] K-Means,[^saxena][^rai] and Louvain clustering.[^saxena] Greedy clustering is a hierarchical method that explores a tree and requires setting parameters for the number of clusters. K-Means is a partitioning technique that minimizes intra-cluster distances and maximize the inter-cluster distances, but require a fine tuning of the parameter $k$. Louvain, on the other hand, is an unsupervised partitioning method that does not require specifying any setting. However, each of these methods has limitations, which we will be discussed in the following subsections. For example, K-Means struggles with handling outliers, while Louvain clustering is sensitive to cluster shape and size and has difficulty detecting overlapping clusters.[^saxena] Finally, we compared the results from all three techniques to determine the most suitable grouping for our data.
 
 ##### A) Greedy clustering
-The greedy is a heuristic method that assigns points to clusters in a greedy fashion, making decisions based on the best immediate (local) choice at each step.[^bishop] It is simple and ease of use, often based on a similarity or distance metric. It can be easy to apply by visualizing data on a heatmap, as in Figure 9. Our heatmap illustrates the alignment of principles and categories through the lens of author mentions. It is visualized as a matrix, where the intensity of blue represents the frequency of author mentions. Principles are listed along the rows, while categories span the columns. The values in each cell indicate the number of authors supporting a specific combination. A gradient from white to dark blue represents the range of values, from 0 (no mentions) to 7 (highest mentions).
+The greedy is a heuristic method that assigns points to clusters in a greedy fashion, making decisions based on the best immediate (local) choice at each step.[^bishop] It is simple and ease of use, often based on a similarity or distance metric. It can be easy to apply by visualizing data on a heatmap, as in Figure 9. Our heatmap illustrates the alignment of principles and categories through the lens of author mentions. It is visualized as a matrix, where the intensity of blue represents the frequency of author mentions. Principles are listed along the rows, while categories span the columns. The values in each cell indicate the number of authors supporting a specific combination. A gradient from white to dark blue represents the range of values, from 0 (no mentions) to 7 (highest mentions). The distance metric of our choice was either the Euclidean distance and the Entropy distance.
 
 ![Heatmap](/definition/images/clusters/greedy/Heatmap.png)
 *Figure 9: Author mentions across principles and categories.*
 
-###### Applying the greedy clustering
-The greedy approach clusters rows from Figure 9 that minimize the Euclidean distance. The Euclidean distance is the straight-line distance between two rows.[^simson] It is not the only heuristic for matrices, other distances, such as Cosine similarity [^Rahutomo] and Jaccard similarity [^Ivchenko], can be applied. However, the Euclidean distance is simple to compute between two vectors **v** and **w** in an n-dimensional space:[^smith]
+###### Applying the Euclidean distance
+The Euclidean distance is convinient to apply due to its siplicity. The Euclidean distance computes the straight-line distance between two vectors **v** and **w** in an n-dimensional space:[^smith][^simson]
 
 $$
-\text{(2)} \quad d(\mathbf{v}, \mathbf{w}) = \sqrt{\sum_{i=1}^{n} (v_i - w_i)^2}
+\text{(3)} \quad d(\mathbf{v}, \mathbf{w}) = \sqrt{\sum_{i=1}^{n} (v_i - w_i)^2}
 $$
 
 Where:
@@ -245,11 +243,20 @@ The clustering process starts with the first row of the matrix, identifying prin
 ![Heatmap](/definition/images/clusters/greedy/Euclidean_matrix.png)
 *Figure 10: Euclidean distance between rows.*
 
-###### Discussion and limitations
 The resulting clusters reflect different levels of relatedness: the $25^{\text{th}}$ percentile defines tightly bound principles, the $50^{\text{th}}$ percentile captures moderate relationships, and the $75^{\text{th}}$ percentile forms broader groupings. This method provides a structured way to classify principles based on their similarities while maintaining flexibility across different levels of granularity.
 
 ![Heatmap](/definition/images/clusters/greedy/Clustering.png)
 *Figure 11: The clustering of principles according to the greedy method.*
+
+###### Entropy distance
+If data in the chart are counts (frequency distributions), the entropy helps capture the degree of variability of each principle across the categories. So that, if two principles have similar distribution patterns (even if not identical in absolute values), their entropy will be similar, and they can be grouped together. This version of the entropy distance from the Jensen-Shannon Divergence function [^menendez] provides a more stable version than the classical Kullback-Leibler (KL) for entropy computation.[^erven]
+
+The image presents a clustered heatmap, where hierarchical relationships between variables unfold through a structured blend of color and form. The x-axis represents distinct dimensions, while the y-axis encapsulates principles. A dendrogram on the left weaves connections between elements, grouping those with shared characteristics. The interplay of colors, ranging from pale white to deep blue, reveals the intensity of relationships - darker shades marking stronger associations. Scattered across the grid, pockets of heightened correlation emerge, hinting at focal points of significance, while vast expanses of lighter hues depict areas of minimal interaction. Together, these elements craft a visual narrative of structured dependencies, revealing hidden patterns within the data.
+
+![Heatmap](/definition/images/clusters/greedy/Entropy.png)
+*Figure 12: The clustering of principles according to the greedy method.*
+
+###### Discussion
 
 Although the greedy approach is efficient and does not require to predefine the number of clusters, it has a rigid structure that relies on the next local best step to find a locally optimal solution, while it may not account for the overall problem structure.[^rai] The heuristic to select the next new row may have a great impact on the final result, and since we do not know the data distribution, a locally optimal solution may differ from the globally optimal one.[^park] Furthermore, the greedy approach lacks backtracking or global adjustments - it considers only the present step without planning ahead, which can lead to suboptimal results. Therefore, we aim to explore alternative techniques that may lead to a different clustering.
 
@@ -679,6 +686,8 @@ The breakdown of responses to the 20 questions in the questionnaire.
 
 [^toth]: Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27. 
 
+[^erven]: Van Erven, Tim, and Peter Harremos. "Rényi divergence and Kullback-Leibler divergence." IEEE Transactions on Information Theory 60.7 (2014): 3797-3820.
+
 [^smith]: Smith, Karl (2013), Precalculus: A Functional Approach to Graphing and Problem Solving, Jones & Bartlett Publishers, p. 8, ISBN 978-0-7637-5177-7
 
 [^south]: South, Laura, et al. "Effective use of Likert scales in visualization evaluations: A systematic review." Computer Graphics Forum. Vol. 41. No. 3. 2022.
@@ -734,6 +743,8 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^essif]: eSSIF-Lab Principles, https://essif-lab.github.io/framework/docs/essifLab-principles, accessed on 2025-01-29.
 
 [^tobin]: Tobin, A., & Reed, D. (2016). The inevitable rise of self-sovereign identity. The Sovrin Foundation, 29(2016), 18.
+
+[^menendez]: Menéndez, María Luisa, et al. "The jensen-shannon divergence." Journal of the Franklin Institute 334.2 (1997): 307-318.
 
 [^satybaldy]: Satybaldy, A., Nowostawski, M., & Ellingsen, J. (2020). Self-sovereign identity systems: Evaluation framework. Privacy and Identity Management. Data for Better Living: AI and Privacy: 14th IFIP WG 9.2, 9.6/11.7, 11.6/SIG 9.2. 2 International Summer School, Windisch, Switzerland, August 19–23, 2019, Revised Selected Papers 14, 447-461.
 
