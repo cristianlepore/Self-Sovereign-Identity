@@ -346,17 +346,15 @@ Besides the lack of an efficient and universal method to tune the value of k, ou
 
 To validate our analysis, a double check of K-Means with the t-SNE method for dimensionality reduction may help to visualize the clusters, while trying to preserve the relationships between the data points as much as possible. The image shows a scatter plot of terms clustered into five distinct groups. The clusters are color-coded: Cluster 1 (red) includes "Security and protection," "Persistence," and "Privacy and minimal disclosure," Cluster 2 (green) contains "Ownership and control" and "Consent," Cluster 3 (yellow) includes "Access and availability," "Verifiability and Authenticity," and "Usability and consistency," Cluster 4 (purple) features "Transparency," "Portability," and "Interoperability," and Cluster 5 (blue) includes "Cost" and "Standard." The plot’s x-axis is labeled "Dimension 1," and the y-axis is labeled "Dimension 2," representing the reduced dimensions of these terms.
 
-The key difference with previously mentioned plot is the 
+The key difference from the previous plot is the split of the fourth cluster into two groups, with 'Cost' and 'Standard' staying apart and forming a new cluster, while 'Access and availability' groups with the fifth cluster. This change may be due to information loss during the dimensionality reduction process, which is a convention that is convenient for visualizing data points but may lead to distortions.
 
 ![Bubble K-Means](/definition/images/clusters/k-means/TSNE.png)
 *Figure 15: t-SNE with K-Means to visualize the data points.*
 
-Besides the greedy with distance metric, another hierarchical clustering approach is the Louvain clustering, which differently from the previous two methods does not require to set initial parameters.
+Besides these greedy clustering algorithms, another hierarchical clustering approach is the Louvain clustering, which differently from the previous two methods, does not require to set initial parameters.
 
 ##### C) Louvain clustering
-The Louvain algorithm is a greedy agglomerative hierarchical clustering approach which utilizes the modularity measure.[^held]
-
-It was originally designed for unweighted, undirected graphs but can easily be adapted to weighted and directed graphs.[^held] In our case, a graph represents principles as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
+The Louvain algorithm is a greedy agglomerative hierarchical clustering approach which utilizes the modularity measure.[^held] Originally designed for unweighted, undirected graphs, it can be easily adapted to weighted and directed graphs.[^held] In our case, a graph represents principles as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
 
 In this method, the partition is initialized with every node in its own cluster. Then, for each node the modularity gain for shifting it to neighboring clusters is computed. The largest positive gain is chosen and the node is moved. This is done until no node is moved in a full iteration. Then, the graph is modified in a way that every cluster is merged into a single node, while intra-cluster edges are added as loops and inter-cluster edges between the same clusters are merged into a single edge and have there weights added.
 
@@ -500,8 +498,6 @@ Sustainability and Adoption
 
 ![Properties ranking and grouping](/definition/images/importance_group/ImportantGroups.png)
 *Figure 8. The most and least important group according to our survey.*
-
-SCRIVERE IL GRAFICO 3 CON IL CONFRONTO CON I PRECEDENTI PAPERS.
 
 ### 1.3.6 Final defintion of properties
 
