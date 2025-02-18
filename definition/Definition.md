@@ -393,6 +393,8 @@ High correlation with K-Means (0.88), Louvain (0.70), and Greedy + Entropy (0.73
 
 Based on the analysis of the confusion matrix, K-Means, Louvain, and Entropy-based methods seem to agree well, suggesting they capture a meaningful structure in the data. t-SNE serves as a validation method and aligns well with these methods, confirming their reliability. Percentile-based methods (25th, 50th, 75th) do not align strongly with other clustering methods, meaning they may not be ideal for clustering in this scenario. If the goal is to obtain a clustering similar to t-SNE, K-Means and Louvain are the most suitable choices. However, if an alternative perspective on the data structure is desired, Greedy methods (especially Greedy 75th) may provide unique insights.
 
+
+
 ![Final list of principles and clustering (Local)](/definition/images/final_list_properties/Final_list_properties.png)
 *Figure 4: The final grouping.*
 
