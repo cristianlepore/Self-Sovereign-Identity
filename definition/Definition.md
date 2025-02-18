@@ -351,25 +351,27 @@ The key difference from the previous plot is the split of the fourth cluster int
 ![Bubble K-Means](/definition/images/clusters/k-means/TSNE.png)
 *Figure 15: t-SNE with K-Means to visualize the data points.*
 
-Besides these greedy clustering algorithms, another hierarchical clustering approach is the Louvain clustering, which differently from the previous two methods, does not require to set initial parameters.
+Besides these greedy clustering, another hierarchical clustering approach is the Louvain clustering, which differently from the previous two methods, does not require to set initial parameters.
 
 ##### C) Louvain clustering
-The Louvain algorithm is a greedy agglomerative hierarchical clustering approach which utilizes the modularity measure.[^held] Originally designed for unweighted, undirected graphs, it can be easily adapted to weighted and directed graphs.[^held] In our case, a graph represents principles as vertices connected by edges. The edges are weighted based on the number of instances of articles from authors. For example, if three articles use the category 'Controllability,' the corresponding edge will have a weight of three. While this method is visually appealing and easy to understand, it does not scale well to hundreds of nodes.
+The Louvain algorithm is a greedy agglomerative hierarchical clustering approach which utilizes the modularity measure.[^held] It is a clustering appraoch for community detection in graphs, used to identify groups of strongly connected nodes. It is based on the optimization of modularity, a measure of community quality, and follows a hierarchical method that operates in two main phases, repeated iteratively until convergence.[^held] 
 
-In this method, the partition is initialized with every node in its own cluster. Then, for each node the modularity gain for shifting it to neighboring clusters is computed. The largest positive gain is chosen and the node is moved. This is done until no node is moved in a full iteration. Then, the graph is modified in a way that every cluster is merged into a single node, while intra-cluster edges are added as loops and inter-cluster edges between the same clusters are merged into a single edge and have there weights added.
+In the 1) local aggregation phase, each node starts as a separate community. Then, for each node, the algorithm evaluates whether moving it to a neighboring community increases modularity. The node is assigned to the community that maximizes modularity gain, and the process continues until no node can be moved to further improve modularity.
 
+In the 2) coarsening phase, a new graph is constructed where each detected community becomes a super-node. The edge weights between super-nodes correspond to the sum of the edge weights between the original communities. The algorithm is then applied again to the aggregated network, and this process repeats until modularity no longer improves significantly.
 
+Louvain Clustering is scalable, and differently from previous approaches, it does not require the number of communities to be predefined, and provides a hierarchical structure of communities.
 
-
-![Graph](/definition/images/clusters/graph_theory/Heatmap.png)
-*Figure 15: *
+The network graph illustrates the relationships between different concepts, categorized into three clusters. Nodes represent individual concepts, while edges indicate their connections, with varying thickness reflecting the strength of these relationships. Key bridging nodes, such as "Access and availability" and "Persistence," connect different clusters, emphasizing their central role. The visualization highlights how security, usability, transparency, and decentralization interact, providing insight into dependencies and potential trade-offs in system design or decision-making.
 
 ![Graph](/definition/images/clusters/graph_theory/Graph_theory.png)
-*Figure 15: *
+*Figure 16: Application of the Louvain clustering.*
 
-Figure 3 shows the final result of our grouping process. The group's name is derived from the literature.
+#### Discussion
 
-TABELLA DI CONFRONTO 
+
+
+
 ![Final list of principles and clustering (Local)](/definition/images/final_list_properties/Final_list_properties.png)
 *Figure 4: The final grouping.*
 
