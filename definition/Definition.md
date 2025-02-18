@@ -47,9 +47,9 @@ Keywords were refined and shuffled to avoid wildcards; for instance, Self-Sovere
 
 *6. Selection.* We have extracted the most relevant properties using a heuristic.
 
-*7. Categorization.* We propose a categorization of properties that illuminates the relationship between the principles and Self-Sovereign Identity.
+*7. Definition of principles.* We summarized the definitions of properties from authors while retaining their essence.
 
-*8. Definition of principles.* We summarized the definitions of properties from authors while retaining their essence.
+*8. Categorization.* We propose a categorization of properties that illuminates the relationship between the principles and Self-Sovereign Identity.
 
 *9. Expert validation.* We proposed a questionnaire to investigate the identified SSI properties and assess their importance. The outcome served also to refine their definitions.
 
@@ -160,7 +160,29 @@ Other ranking methods based on weighted author publications were considered out 
 
 Further methods were considered but not pursued, primarily because **Principal Component Analysis** (PCA) produces new dimensions by combining existing principles. Similar to t-SNE, these new dimensions may lead to information loss and compromise the rest of our analysis. Indeed, the goal is to preserve the original definition of principles. Principle correlation and **clustering** highlight latent relationships—principles that may exhibit similar behaviors—which is beyond the scope of this study at this stage.
 
-### 1.3.4 Categorization
+### 1.3.4 Definition of principles
+
+We have combined the definitions of principles from 18 works, condensing them for quick comprehension while preserving their essence. This merging was done by referring to the authors' definitions as summarized in [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html). By combining definitions from at least two authors, we aimed to give a concise defintion. In some cases, we encountered similar definitions from more than two authors. To ensure consistency during the merging phase, we used uniform wording and synonyms. For example, we standardized the terms "users", "individuals", and roles like "holder" by referring to them as "entities."
+
+| Property | Definition |
+|----------|----------|
+| Ownership and Control | Entities must have full control and ultimate ownership of their Self-Sovereign Identity. This includes secure algorithms that maintain the validity of the identity and its claims, whether self-asserted or issued by a third party.[^allen][^ferdous] | 
+| Existence and Representation | Entities must be able to verify their existence by presenting attributes to service providers and generating multiple identities as needed.[^allen][^sheldrake] |
+| Privacy and Minimal Disclosure | The SSI solution should not include any method for associating biometric data with an underlying identity. Personal and confidential identity-related data should only be shared with the owner’s consent, and only the minimum necessary information should be shared with third parties.[^naik][^toth] | 
+| Interoperability | Identities  should  be  as  widely  usable as possible.[^stokkink] The systems shall enable digital identity data for an entity to be represented, exchanged, secured, protected, and verified interoperably.[^toip][^allen] | 
+| Security and Protection | The security of an identity and its related communication is paramount for any SSI solution. The system must prioritizing censorship-resistant methods that promote individual rights and freedom through cryptographically secure connections and communications.[^naik][^pava] |
+| Portability | Identities must be portable. Entities should be able to securely transfer or move their identity data to agents or systems of their choice.[^cucko][^glockler] |
+| Consent | Entities must provide explicit consent for the collection, use, and sharing of their identity data, with the option to opt in or opt out at a later time.[^cucko][^allen] |
+| Verifiability and Authenticity | Entities should be able to reliably prove their identity.[^cucko] Any identity should be verifiable through its credentials on the Web, in a manner similar to how a physical credential represents a real-world identity.[^naik] |
+| Transparency | Systems and algorithms must be transparent.[^stokkink] The systems used to manage and operate a network of identities should be open, both in terms of their functionality and in how they are managed and updated.[^allen] |
+| Persistence | Identities must be long-lived. A self-sovereign identity must ensuring that identities endure for as long as needed by the owner.[^pava][^allen] |
+| Standard | A self-sovereign identity must be based on open standards to ensure maximum portability,[^cucko] interoperability and adoption as well as sustainability.[^ferdous] | 
+| Cost | An identity should be provided to general users free of charge, with no hidden costs, licensing fees, or other financial charges.[^naik] Any proposed standard for self-sovereign identity must be adoptable at an extremely low cost.[^andrieu] | 
+| Decentralization and Autonomy | A Self-Sovereign Identity must enable complete autonomy in managing and administering identity information, without relying on a centralized system to represent, control, or verify an entity's digital identity data.[^sovrin][^essif][^ferdous] | 
+| Access and Availability | Identity must always be available to entities, which in turn must have unrestricted access to their identity information. Entities should be able to retrieve all information, including claims and assertions.[^ferdous][^tobin] | 
+| Usability and Consistency | Entities should be able to count on a consistent experience across various technology platforms and services, with the system prioritizing the usability and accessibility of agents and other SSI components.[^satybaldy][^sovrin] |
+
+### 1.3.5 Categorization
 A category is useful to "*illuminate a relationship between the subjects and objects of knowledge.*"[^mahalakshmi] In our case, the subjects and the objects are the principles and the SSI field respectively. However, a category is featured by attributes or specific properties that must be described at priori. In our case, past studies categorized the SSI principles as reported in the [Related Works](#12-related-works), but they missed to provide criteria for their content analysis. For this reason, our first goal is to analyze past studies to see if aggregated results may exhibit similarities of behaviours from authors, and categorizations.[^rai] Once done it, we aim to extract common features and categorize principles based on these features. Instrumental for this analysis is the creation of [Table 4](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1), which outlines the categories from our literature review.
 
 [Click to view the table 4 with 15 properties only.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_classification/Principles_classification1) *The principles and their categories.*
@@ -403,34 +425,12 @@ Aftermath the analysis, the K-Means clustering with a subtle modification was us
 ![Final list of principles and clustering (Local)](/definition/images/clusters/Bubble.png)
 *Figure 19: Final list of groups and their names.*
 
-This choice reflects the need to guarantee that all groups have more than a principle, and welcomes a proper naming of principles based on their defintions and labels.
+This choice reflects the need to guarantee that all groups have more than a principle, and welcomes a proper naming of principles based on their defintions and labels. The image visually categorizes key principles of Self-Sovereign Identity (SSI) into five distinct groups, each represented by a different color. These groups highlight essential aspects of SSI, such as user control, security, usability, sustainability, and portability. The **Controllability** section emphasizes an individual’s authority over their digital identity, while **Security** focuses on protecting data, ensuring persistence, and maintaining privacy. **Usability** addresses factors that contribute to a seamless experience, such as decentralization and accessibility. **Sustainability** considers the long-term viability of SSI systems, particularly in terms of cost and standardization. Finally, **Portability** ensures that identities can be easily transferred and function across different platforms while maintaining transparency and interoperability. The structured layout visually distinguishes these categories, illustrating how they interconnect to create a robust and user-centric identity framework.
 
 ![Final list of principles and clustering (Local)](/definition/images/final_list_properties/Final_list_properties.png)
 *Figure 4: The final grouping.*
 
-### 1.3.4 Definition of principles
-
-We have combined the definitions of principles from 18 works, condensing them for quick comprehension while preserving their essence. This merging was done by referring to the authors' definitions as summarized in [Table 2](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/tables/principles_semplification/Principles_semplification2.html). By combining definitions from at least two authors, we aimed to give a concise defintion. In some cases, we encountered similar definitions from more than two authors. To ensure consistency during the merging phase, we used uniform wording and synonyms. For example, we standardized the terms "users", "individuals", and roles like "holder" by referring to them as "entities."
-
-| Property | Definition |
-|----------|----------|
-| Ownership and Control | Entities must have full control and ultimate ownership of their Self-Sovereign Identity. This includes secure algorithms that maintain the validity of the identity and its claims, whether self-asserted or issued by a third party.[^allen][^ferdous] | 
-| Existence and Representation | Entities must be able to verify their existence by presenting attributes to service providers and generating multiple identities as needed.[^allen][^sheldrake] |
-| Privacy and Minimal Disclosure | The SSI solution should not include any method for associating biometric data with an underlying identity. Personal and confidential identity-related data should only be shared with the owner’s consent, and only the minimum necessary information should be shared with third parties.[^naik][^toth] | 
-| Interoperability | Identities  should  be  as  widely  usable as possible.[^stokkink] The systems shall enable digital identity data for an entity to be represented, exchanged, secured, protected, and verified interoperably.[^toip][^allen] | 
-| Security and Protection | The security of an identity and its related communication is paramount for any SSI solution. The system must prioritizing censorship-resistant methods that promote individual rights and freedom through cryptographically secure connections and communications.[^naik][^pava] |
-| Portability | Identities must be portable. Entities should be able to securely transfer or move their identity data to agents or systems of their choice.[^cucko][^glockler] |
-| Consent | Entities must provide explicit consent for the collection, use, and sharing of their identity data, with the option to opt in or opt out at a later time.[^cucko][^allen] |
-| Verifiability and Authenticity | Entities should be able to reliably prove their identity.[^cucko] Any identity should be verifiable through its credentials on the Web, in a manner similar to how a physical credential represents a real-world identity.[^naik] |
-| Transparency | Systems and algorithms must be transparent.[^stokkink] The systems used to manage and operate a network of identities should be open, both in terms of their functionality and in how they are managed and updated.[^allen] |
-| Persistence | Identities must be long-lived. A self-sovereign identity must ensuring that identities endure for as long as needed by the owner.[^pava][^allen] |
-| Standard | A self-sovereign identity must be based on open standards to ensure maximum portability,[^cucko] interoperability and adoption as well as sustainability.[^ferdous] | 
-| Cost | An identity should be provided to general users free of charge, with no hidden costs, licensing fees, or other financial charges.[^naik] Any proposed standard for self-sovereign identity must be adoptable at an extremely low cost.[^andrieu] | 
-| Decentralization and Autonomy | A Self-Sovereign Identity must enable complete autonomy in managing and administering identity information, without relying on a centralized system to represent, control, or verify an entity's digital identity data.[^sovrin][^essif][^ferdous] | 
-| Access and Availability | Identity must always be available to entities, which in turn must have unrestricted access to their identity information. Entities should be able to retrieve all information, including claims and assertions.[^ferdous][^tobin] | 
-| Usability and Consistency | Entities should be able to count on a consistent experience across various technology platforms and services, with the system prioritizing the usability and accessibility of agents and other SSI components.[^satybaldy][^sovrin] |
-
-### 1.3.5 Expert validation
+### 1.3.6 Expert validation
 
 To validate the proposed principles, we conducted a survey targeting experts attending the digital identity keynote at the ARES Conference 2024, held from July 29 to August 2 in Vienna, Austria. In parallel to a survey, we considered other methods of gathering input from participants, for example interviews. Despite the need for careful design to achieve a good response rate,[^ward] we preferred surveys over interviews because they allow participants to share their opinions without bias or fear of judgment, making them more likely to select their preferred options freely.[^mol] Additionally, since ARES is an international conference, conducting interviews in English could introduce biases due to language barriers, wording issues, and potential misunderstandings. Time was another critical factor we considered. Indeed, conference attendees may not have been willing to dedicate significant time to interviews. In contrast, a survey could reach a broader audience and allow participants to complete the questionnaire at their convenience. Due to these factors, we ultimately opted for a survey.
 
@@ -534,7 +534,7 @@ Sustainability and Adoption
 ![Properties ranking and grouping](/definition/images/importance_group/ImportantGroups.png)
 *Figure 8. The most and least important group according to our survey.*
 
-### 1.3.6 Final defintion of properties
+### 1.3.7 Final defintion of properties
 
 The definitions presented in [Section 1.3.5](#135-refining-principles) were abbreviated as much as possible intentionally, due to their use in the questionnaire. In this Section, we want to enhance them in accordance with the results of the respondents, as we obtained valuable insights from experts in the fields of IdM and SSI, expressing their concerns and possible misunderstandings of an individual property. 
 
