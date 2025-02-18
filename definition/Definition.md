@@ -360,17 +360,38 @@ In the 1) local aggregation phase, each node starts as a separate community. The
 
 In the 2) coarsening phase, a new graph is constructed where each detected community becomes a super-node. The edge weights between super-nodes correspond to the sum of the edge weights between the original communities. The algorithm is then applied again to the aggregated network, and this process repeats until modularity no longer improves significantly.
 
-Louvain Clustering is scalable, and differently from previous approaches, it does not require the number of communities to be predefined, and provides a hierarchical structure of communities.
+Louvain Clustering is scalable, and differently from previous approaches, it does not require the number of communities to be predefined, and provides a hierarchical structure of communities.[^kosowski]
 
 The network graph illustrates the relationships between different concepts, categorized into three clusters. Nodes represent individual concepts, while edges indicate their connections, with varying thickness reflecting the strength of these relationships. Key bridging nodes, such as "Access and availability" and "Persistence," connect different clusters, emphasizing their central role. The visualization highlights how security, usability, transparency, and decentralization interact, providing insight into dependencies and potential trade-offs in system design or decision-making.
 
 ![Graph](/definition/images/clusters/graph_theory/Graph_theory.png)
-*Figure 16: Application of the Louvain clustering.*
+*Figure 16: Application of the Louvain clustering on our dataset.*
 
 #### Discussion
 
+Each of the above approches to clustering has its own pros and cons, and comparing the six methods may provide insights in light of which set of clusters to adopt. The objective is to shed light on the differet clustering, and study the correlation of groups using a statistical measure like the Normalized Mutual Information (NMI). This analysis is not about the quality of clustering approaches; indeed a higher value of cells corresponds to a similarity between two clusterings, and it is not an indicator of the quality of the clustering. The t-SNE is added for a further comparison.
 
+The NMI compares the similarity between two clustering results. It returns values between $0$ and $1$ as a value that indicates two clustering methods yield similar information about the data distribution. Differently from other statistical measures like ARI which is affected by dense clusters, the NMI is more robust when the number of clusters vary greatly.
 
+![Graph](/definition/images/clusters/Confusion_matrix.png)
+*Figure 17: Confusion matrix with Normalized Mutual Information (NMI).*
+
+1. Greedy Algorithms (25th, 50th, 75th percentiles).
+These three Greedy approaches show relatively high correlation among themselves (e.g., 0.57 between Greedy 25th and Greedy 50th) but lower correlation with other algorithms. Greedy 25th and Greedy 50th are more similar to each other than to Greedy 75th. The correlation with t-SNE is moderate (0.45 for Greedy 25th and 0.23 for Greedy 75th), suggesting that these methods may capture different structures in the dataset.
+
+2. KMNS (K-Means).
+K-Means has moderate correlations with Louvain (0.74), Greedy + Entropy (0.79), and t-SNE (0.88). This suggests that K-Means clustering is quite similar to graph-based methods (Louvain) and the t-SNE embedding.
+
+3. Louvain (Graph-based methods).
+Strongly correlated with Greedy + Entropy (0.90), indicating that both methods capture similar structures. High correlation with t-SNE (0.73), suggesting that Louvain is a good method for representing the dataset's structure in a reduced space.
+
+4. Greedy + Entropy.
+Highest correlation with Louvain (0.90) and K-Means (0.79). Good similarity with t-SNE (0.73), making it one of the most representative methods for the dataset.
+
+1. t-SNE.
+High correlation with K-Means (0.88), Louvain (0.70), and Greedy + Entropy (0.73). Lower correlations with Greedy methods (especially Greedy 75th) suggest that these methods capture structures different from those highlighted by t-SNE.
+
+Based on the analysis of the confusion matrix, K-Means, Louvain, and Entropy-based methods seem to agree well, suggesting they capture a meaningful structure in the data. t-SNE serves as a validation method and aligns well with these methods, confirming their reliability. Percentile-based methods (25th, 50th, 75th) do not align strongly with other clustering methods, meaning they may not be ideal for clustering in this scenario. If the goal is to obtain a clustering similar to t-SNE, K-Means and Louvain are the most suitable choices. However, if an alternative perspective on the data structure is desired, Greedy methods (especially Greedy 75th) may provide unique insights.
 
 ![Final list of principles and clustering (Local)](/definition/images/final_list_properties/Final_list_properties.png)
 *Figure 4: The final grouping.*
@@ -718,6 +739,8 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^toth]: Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27. 
 
 [^toip]: Trust Over IP Foundation. Principles of self-sovereign identity (ssi). https://trustoverip.org/wp-content/uploads/2021/10/ ToIP-Principles-of-SSI.pdf, 2024. Accessed: 2024-12-24 
+
+[^kosowski]: Kosowski, Adrian, et al. "On the power of Louvain for graph clustering." Advances in Neural Information Processing Systems 33 (2020).
 
 [^ferdous]: Ferdous, Md Sadek, Farida Chowdhury, and Madini O. Alassafi. "In search of self-sovereign identity leveraging blockchain technology." IEEE access 7 (2019): 103059-103079.
 

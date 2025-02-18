@@ -64,8 +64,6 @@ g.ax_heatmap.collections[0].colorbar.remove()
 g.ax_heatmap.set_xlabel("Categories", fontsize=12)
 g.ax_heatmap.set_ylabel("Principles", fontsize=12)
 
-plt.title("")
-
 plt.show()
 
 cluster_df = pd.DataFrame({"Principle": principles, "Cluster": clusters})
