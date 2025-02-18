@@ -369,31 +369,41 @@ The network graph illustrates the relationships between different concepts, cate
 
 #### Discussion
 
-Each of the above approches to clustering has its own pros and cons, and comparing the six methods may provide insights in light of which set of clusters to adopt. The objective is to shed light on the differet clustering, and study the correlation of groups using a statistical measure like the Normalized Mutual Information (NMI). This analysis is not about the quality of clustering approaches; indeed a higher value of cells corresponds to a similarity between two clusterings, and it is not an indicator of the quality of the clustering. The t-SNE is added for a further comparison.
+Each of the above approches to clustering has its own pros and cons, and comparing the similarity of the six methods may provide insights about which set of clusters are more similar. The objective is to shed light on the different clustering, and study the correlation of groups using a statistical measure like the Normalized Mutual Information (NMI). The folowing similarity matrix does not provide insight about the quality of clustering approaches; higher values correspond to higher similarity between clusterings, and it is not an indicator of the quality of the clustering approach. The t-SNE is added for a further comparison.
 
 The NMI compares the similarity between two clustering results. It returns values between $0$ and $1$ as a value that indicates two clustering methods yield similar information about the data distribution. Differently from other statistical measures like ARI which is affected by dense clusters, the NMI is more robust when the number of clusters vary greatly.
 
-![Graph](/definition/images/clusters/Confusion_matrix.png)
-*Figure 17: Confusion matrix with Normalized Mutual Information (NMI).*
+![Graph](/definition/images/clusters/Similarity_matrix.png)
+*Figure 17: Similarity matrix with Normalized Mutual Information (NMI).*
 
 1. Greedy Algorithms (25th, 50th, 75th percentiles).
 These three Greedy approaches show relatively high correlation among themselves (e.g., 0.57 between Greedy 25th and Greedy 50th) but lower correlation with other algorithms. Greedy 25th and Greedy 50th are more similar to each other than to Greedy 75th. The correlation with t-SNE is moderate (0.45 for Greedy 25th and 0.23 for Greedy 75th), suggesting that these methods may capture different structures in the dataset.
 
-2. KMNS (K-Means).
+1. KMNS (K-Means).
 K-Means has moderate correlations with Louvain (0.74), Greedy + Entropy (0.79), and t-SNE (0.88). This suggests that K-Means clustering is quite similar to graph-based methods (Louvain) and the t-SNE embedding.
 
-3. Louvain (Graph-based methods).
+1. Louvain (Graph-based methods).
 Strongly correlated with Greedy + Entropy (0.90), indicating that both methods capture similar structures. High correlation with t-SNE (0.73), suggesting that Louvain is a good method for representing the dataset's structure in a reduced space.
 
-4. Greedy + Entropy.
+1. Greedy + Entropy.
 Highest correlation with Louvain (0.90) and K-Means (0.79). Good similarity with t-SNE (0.73), making it one of the most representative methods for the dataset.
 
 1. t-SNE.
 High correlation with K-Means (0.88), Louvain (0.70), and Greedy + Entropy (0.73). Lower correlations with Greedy methods (especially Greedy 75th) suggest that these methods capture structures different from those highlighted by t-SNE.
 
-Based on the analysis of the confusion matrix, K-Means, Louvain, and Entropy-based methods seem to agree well, suggesting they capture a meaningful structure in the data. t-SNE serves as a validation method and aligns well with these methods, confirming their reliability. Percentile-based methods (25th, 50th, 75th) do not align strongly with other clustering methods, meaning they may not be ideal for clustering in this scenario. If the goal is to obtain a clustering similar to t-SNE, K-Means and Louvain are the most suitable choices. However, if an alternative perspective on the data structure is desired, Greedy methods (especially Greedy 75th) may provide unique insights.
+Based on the analysis of the similarity matrix, K-Means, Louvain, and Entropy-based methods seem to agree well, suggesting they capture a meaningful structure in the data. T-SNE serves as a validation method and aligns well with these methods, confirming their reliability. Percentile-based methods (25th, 50th, 75th) do not align strongly with other clustering methods, meaning they may not be ideal for clustering in this scenario. If the goal is to obtain a clustering similar to t-SNE, K-Means and Louvain are the most suitable choices. However, if an alternative perspective on the data structure is desired, Greedy methods (especially Greedy 75th) may provide unique insights.
 
+The above information is confirmed by the similarity of distribution that shows a peak around 0.3 and a second lower peak around 0.7 in proximity of the K-Means, Louvain and Greedy + Entropy clustering. A two-peak distribution may suggest that approaches are capturing different structures of the data. At the same time, some algoruthms show similar patterns, like K-Means and Louvain.
 
+![Graph](/definition/images/clusters/Similarity_distribution.png)
+*Figure 18: Similarity distribution from the similarity matrix.*
+
+Aftermath the analysis, the K-Means clustering with a subtle modification was used as a candidate for our clustering. Alghouthg its simplicity, the greedy algorithms have been considering capturing a different structure of data, and their local optimal seems very different from the global suboptimal. Louvain provides only three clusters, while the remaining Greedy + Entropy has been deeply considered to become candidate. We included indeed, some of its suggesting analusys within our final clusters, by moving Access and Avaialbility within the group Usability. The final list of clusters and principles is shown below, where names of the categories correspond to the name of the category assigned by the majority of authors for the literature review. They are pitched by a horizontal line from the largest point on the chart to meet the name fo the category on the left.
+
+![Final list of principles and clustering (Local)](/definition/images/clusters/Bubble.png)
+*Figure 19: Final list of groups and their names.*
+
+This choice reflects the need to guarantee that all groups have more than a principle, and welcomes a proper naming of principles based on their defintions and labels.
 
 ![Final list of principles and clustering (Local)](/definition/images/final_list_properties/Final_list_properties.png)
 *Figure 4: The final grouping.*
