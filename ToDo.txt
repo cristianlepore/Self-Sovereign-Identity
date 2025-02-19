@@ -1,4 +1,3 @@
-mettere le definizione originali dei principi SSI in sezione 1.3.4 con le frasi originali.
 fare il grafico dei risultati della survey
 capire se fare una similarità di analisi del testo per definire i principi o abbreviarli.
 ricalcolare il grafico della piramide con i nuovi clusters
