@@ -156,9 +156,9 @@ High entropy corresponds to a principle cited by many, while a low value corresp
 
 **PageRank** may provide a reasonably good ranking of principles based on their relevance. It helps search engines like Google decide which pages to display first when users search for a particular keyword.[^rogers] However, after receiving a ranking, it is necessary to set a threshold, which brings us back to the initial problem. Since ranking is not part of this analytical step, this method was promptly discarded.
 
-Other ranking methods based on weighted author publications were considered out of scope because the identity field is still immature, and bias toward certain authors may obscure the relevance of an article.
+Other ranking methods based on weighted author publications were considered out of scope because the identity field is still immature, and bias toward certain authors may obscure the relevance of an article - some authors may have been in the field from a very short time.
 
-Further methods were considered but not pursued, primarily because **Principal Component Analysis** (PCA) produces new dimensions by combining existing principles. Similar to t-SNE, these new dimensions may lead to information loss and compromise the rest of our analysis. Indeed, the goal is to preserve the original definition of principles. Principle correlation and **clustering** highlight latent relationships—principles that may exhibit similar behaviors—which is beyond the scope of this study at this stage.
+Further methods were considered but not pursued, primarily because **Principal Component Analysis** (PCA) produces new dimensions by combining existing principles. Similar to t-SNE, these new dimensions may lead to information loss and compromise the rest of our analysis. Indeed, the goal is to preserve the original definition of principles. Principle correlation and **clustering** highlight latent relationships - principles that may exhibit similar behaviors—which is beyond the scope of this study at this stage.
 
 ### 1.3.4 Definition of principles
 
