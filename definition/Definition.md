@@ -477,7 +477,7 @@ Concerning with business models: 48% of respondents would appreciate a direct in
 
 [Click to view the table 5.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/Survey.html) *Ranking of identified properties.*
 
-The image in Figure 23 is a bar chart that compares various principles based on their average ratings, with extending bars representing the standard deviation. The x-axis lists principles, while the y-axis represents their respective average calculated considering the numerical representation of the Likert anchor.
+The image in Figure 23 is a bar chart that compares various principles based on their average ratings, with extending bars representing the standard deviation. The standard deviation describes the amount of variation in voting principles,[^wachs] naming the higher the standard deviation, the more dispersed the votes are. The x-axis lists principles, while the y-axis represents their respective average calculated considering the numerical representation of the Likert anchor.
 
 Among the highest-rated principles, Privacy and Minimal Disclosure leads with an average score of 4.96, followed by Portability at 4.92. Other principles scoring relatively high include Persistence (4.70) and Cost (4.55). In the mid-range, principles such as Access and Availability (4.18), Usability and Consistency (4.07), Security and Protection (4.07), and Consent (4.00) show moderate importance.
 
@@ -488,68 +488,63 @@ The analysis of standard deviation indicates different levels of uncertainty in 
 ![Properties ranking](images/survey/Results.png)
 *Figure 23. Comparison of principles based on Average Ratings with Standard Deviation.*
 
-The figure below shows a breakdown of the votes for each property.
+The figure below shows a breakdown of the votes for each property, evaluating the importance of different properties. The Likert anchors were summarized in five levels: Not Important (irrelevant), Slightly Important (unnecessary), Moderately Important (useful), Important (desirable), and Very Important (mandatory).
 
-This bar chart presents the results of a survey conducted among 27 respondents, evaluating the importance of different system properties. Each property was rated across five levels: Not Important (irrelevant), Slightly Important (unnecessary), Moderately Important (useful), Important (desirable), and Very Important (mandatory).  
-  
-Key properties such as **Privacy and Minimal Disclosure, Portability, and Persistence** received the highest importance ratings, with most respondents marking them as **Very Important (mandatory)**. On the other hand, properties like **Standards, Interoperability, and Ownership and Control** had more mixed responses, with some respondents deeming them **Not Important or Slightly Important**. **Existence and Representation** had the lowest perceived importance, with a significant portion of respondents rating it as **Not Important or Slightly Important**.  
+Key properties such as Privacy and Minimal Disclosure, Portability, and Persistence received the highest importance ratings, with most respondents marking them as Very Important (mandatory). On the other hand, properties like Standards, Interoperability, and Ownership and Control had more mixed responses, with some respondents deeming them Not Important or Slightly Important. Existence and Representation had the lowest perceived importance, with a significant portion of respondents rating it as Not Important or Slightly Important.
 
-This data provides insights into the priorities of the surveyed group, highlighting which aspects are considered essential in the evaluated system or framework.
-
+This data provides insights into the priorities of the surveyed group, highlighting which aspects are considered essential.
 
 ![Level of importance](images/survey/LevelOfImportance.png)
 *Figure 24. Perceived level of importance for properties.*
 
-The most and least important properties, as well as their intersection, is presented below.
+The most and least important properties, as well as their intersection, are presented below as a Venn diagram illustrating the ranking of Self-Sovereign Identity principles based on importance. The orange frame represents the most important principles, including privacy and minimal disclosure, security and protection, persistence, portability, and verifiability/authenticity. The blue frame highlights the least important principles, including existence and representation, standard, interoperability, consent, and transparency. The intersection of both frames contains mid-ranked principles such as access and availability, decentralization and autonomy, cost, ownership and control, and usability/consistency. The diagram visually demonstrates the varying levels of importance of SSI principles based on ranking and standard deviation.
 
 ![Properties ranking](images/survey/ImportantProperties.png)
 *Figure 25. The most and least important properties of both rankings.*
 
-As last think, we have leveraged the findings from our survey to analyze the importance of clusters. For this objective, we have assigned a weight to the properties in the most important and least important frames. A weight of three to the most important properties, and one to the least important properties. As a consequence, a weight of two is assigned to properties at the intersection of the two frames.
-
-Hence, we go through the five clusters, sum up results for each property and normalize to obtain a comparable result.
+Assigning weights from 3 to 1 to the most important and least important principles, and sum up each principle's weight, we obtain a comparable result of the importance of each cluster.
 
 Controllability:  
 | Property | Weight |
 |-----------|-----------|
-| Consent | 1 |
 | Existence and representation | 1 |
 | Ownership and control | 2 |
+| Consent | 1 |
 | AVG | 1.3 |
 
 Security
 | Property | Weight |
 |-----------|-----------|
+| Security and protection | 3 |
 | Persistence | 3 |
 | Privacy and minimal disclosure | 3 |
-| Security and protection | 3 |
 | AVG | 3 |
 
-Usability and Agency
+Usability
 | Property | Weight |
 |-----------|-----------|
 | Decentralization and Autonomy | 2 |
-| Usability and consistency | 2 |
 | Verifiability and Authenticity | 2 |
-| AVG | 2 |
-
-Mobility
-| Property | Weight |
-|-----------|-----------|
+| Usability and consistency | 2 |
 | Access and availability | 2 |
 | AVG | 2 |
 
-Sustainability and Adoption
+Portability
+| Property | Weight |
+|-----------|-----------|
+| Portability | 3 |
+| Transparency | 1 |
+| Interoperability | 1 |
+| AVG | 1.7 |
+
+Sustainability
 | Property | Weight |
 |-----------|-----------|
 | Cost | 2 |
-| Interoperability | 1 |
-| Portability | 3 |
 | Standard | 1 |
-| Transparency | 1 |
-| AVG | 1.6 |
+| AVG | 1.5 |
 
-![Properties ranking and grouping](/definition/images/importance_group/ImportantGroups.png)
+![Properties ranking and grouping](/definition/images/survey/ImportantGroups.png)
 *Figure 26. The most and least important group according to our survey.*
 
 ### 1.3.7 Final definition of properties
@@ -741,6 +736,8 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^cucko]: Čučko, Š., Bećirović, Š., Kamišalić, A., Mrdović, S., & Turkanović, M. (2022). Towards the classification of self-sovereign identity properties. IEEE access, 10, 88306-88329.
 
 [^held]: Held, Pascal, Benjamin Krause, and Rudolf Kruse. "Dynamic clustering in social networks using louvain and infomap method." 2016 Third European Network Intelligence Conference (ENIC). IEEE, 2016.
+
+[^wachs]: Wachs, Steven. "What is a standard deviation and how do i compute it." Integral Concepts, Inc (2009).
 
 [^toth]: Toth, Kalman C., and Alan Anderson-Priddy. "Self-sovereign digital identity: A paradigm shift for identity." IEEE Security & Privacy 17.3 (2019): 17-27. 
 
