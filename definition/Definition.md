@@ -467,25 +467,43 @@ Survey completion time: on average, respondents took 11.48 minutes to answer all
 
 ###### Results and discussion
 
-More than 50% of respondents hold an identity wallet, and 37% believe wallets are more secure than traditional authentication mechanisms. Among wallet users, fewer than 45% use wallets to present online certificates.
+The breakdown of responses to the 20 questions in the questionnaire is available in [Appendix B](#appendix-b-questionnaire-responses). 
 
-As for business models of wallets and service deployment, 48% of respondents would like to see direct government involvement in the deployment of identity wallets, while 59% would like governments to contribute to developing the necessary infrastructure. The majority of respondents expressed a preference for paying for an identity wallet rather than receiving advertisements.
+About 50% of respondents hold an identity wallet, and 37% believe wallets provides a more reliable authentication method, while fewer than 45% of users presents online certificates through wallets.
 
-The breakdown of responses to the 20 questions in the questionnaire is available in [Appendix B](#appendix-b).
+Concerning with business models: 48% of respondents would appreciate a direct involvement from governments in the deployment of identity wallets, while 59% would like governments to develop the necessary infrastructure of services. Finally, the majority of respondents expressed a preference for paying for an identity wallet rather than receiving advertisements.
 
 [Table 5](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/Survey.html) shows the results of respondend related to the 15 proposed properties and their ranking based on the avarage and the standard deviation.
 
 [Click to view the table 5.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/Survey.html) *Ranking of identified properties.*
 
+The image in Figure 23 is a bar chart that compares various principles based on their average ratings, with extending bars representing the standard deviation. The x-axis lists principles, while the y-axis represents their respective average calculated considering the numerical representation of the Likert anchor.
+
+Among the highest-rated principles, Privacy and Minimal Disclosure leads with an average score of 4.96, followed by Portability at 4.92. Other principles scoring relatively high include Persistence (4.70) and Cost (4.55). In the mid-range, principles such as Access and Availability (4.18), Usability and Consistency (4.07), Security and Protection (4.07), and Consent (4.00) show moderate importance.
+
+Lower-rated principles include Transparency (3.77), Verifiability and Authenticity (3.74), and Decentralization and Autonomy (3.18). The least valued principles, with scores below 3, are Standard (2.66), Interoperability (2.74), Ownership and Control (2.70), and Existence and Representation (2.53).
+
+The analysis of standard deviation indicates different levels of uncertainty in ratings. Higher-rated principles tend to have smaller margins, suggesting more consensus, while lower-rated principles generally exhibit larger deviation, indicating a wider range of opinions.
+
+![Properties ranking](images/survey/Results.png)
+*Figure 23. Comparison of principles based on Average Ratings with Standard Deviation.*
+
 The figure below shows a breakdown of the votes for each property.
 
-![Level of importance](survey/LevelOfImportance.png)
-*Figure 6. Perceived level of importance for properties.*
+This bar chart presents the results of a survey conducted among 27 respondents, evaluating the importance of different system properties. Each property was rated across five levels: Not Important (irrelevant), Slightly Important (unnecessary), Moderately Important (useful), Important (desirable), and Very Important (mandatory).  
+  
+Key properties such as **Privacy and Minimal Disclosure, Portability, and Persistence** received the highest importance ratings, with most respondents marking them as **Very Important (mandatory)**. On the other hand, properties like **Standards, Interoperability, and Ownership and Control** had more mixed responses, with some respondents deeming them **Not Important or Slightly Important**. **Existence and Representation** had the lowest perceived importance, with a significant portion of respondents rating it as **Not Important or Slightly Important**.  
+
+This data provides insights into the priorities of the surveyed group, highlighting which aspects are considered essential in the evaluated system or framework.
+
+
+![Level of importance](images/survey/LevelOfImportance.png)
+*Figure 24. Perceived level of importance for properties.*
 
 The most and least important properties, as well as their intersection, is presented below.
 
-![Properties ranking](survey/ImportantProperties.png)
-*Figure 7. The most and least important properties of both rankings.*
+![Properties ranking](images/survey/ImportantProperties.png)
+*Figure 25. The most and least important properties of both rankings.*
 
 As last think, we have leveraged the findings from our survey to analyze the importance of clusters. For this objective, we have assigned a weight to the properties in the most important and least important frames. A weight of three to the most important properties, and one to the least important properties. As a consequence, a weight of two is assigned to properties at the intersection of the two frames.
 
@@ -532,7 +550,7 @@ Sustainability and Adoption
 | AVG | 1.6 |
 
 ![Properties ranking and grouping](/definition/images/importance_group/ImportantGroups.png)
-*Figure 8. The most and least important group according to our survey.*
+*Figure 26. The most and least important group according to our survey.*
 
 ### 1.3.7 Final definition of properties
 
@@ -710,7 +728,7 @@ A copy of the survey given to respondents at the International Workshop on Emerg
 ![Likert scale image](survey/Likert_scale.PNG)
 ![Survey part 2](survey/Survey.png)
 
-## Appendix B
+## Appendix B: Questionnaire responses
 
 The breakdown of responses to the 20 questions in the questionnaire.
 

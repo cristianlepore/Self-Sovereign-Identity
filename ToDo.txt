@@ -1,4 +1,3 @@
-fare il grafico dei risultati della survey
-capire se fare una similarità di analisi del testo per definire i principi o abbreviarli.
 ricalcolare il grafico della piramide con i nuovi clusters
 SCRIVERE IL ranking dei clusters dalla survey con un confronto con i precedenti papers se ha senso
+capire se fare una similarità di analisi del testo per definire i principi o abbreviarli.
