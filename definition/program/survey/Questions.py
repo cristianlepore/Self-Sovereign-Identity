@@ -21,18 +21,14 @@ data = {
         "Verifiability and Authenticity"
     ],
     "Keywords (occurrences)": [
-        "independent (2), existence (2), represented (1), kernal (1), supported (1), "
-        "public (1), accessible (1), limited (1), ecosystem (1), entity (1), human (1), "
-        "legal (1), natural (1), physical (1), number (1), prioritizing (1), person (1), "
-        "representation (1), ensuring (1), aspects (1)",
+        "independent (2), existence (2), represented (1), supported (1), aspects (1), "
+        "public (1), accessible (1), limited (1), ecosystem (1), entity (1), legal (1), "
+        "natural (1), physical (1), number (1)",
         
-        "control (9), owned (3), claims (2), data (2), sovereign (2), privacy (1), celebrity (1), "
-        "wallet (1), subject (1), third party (1), agents (1), guardians (1), empower (1), exert (1), "
-        "rights (1), delegating (1)",
+        "control (9), owned (3), claims (2), privacy (1), celebrity (1), rights (1), "
+        "wallet (1), subject (1), third party (1), agents (1), empower (1), exert (1)",
 
-        "access (7), identity (7), user/users (5), data (5), information (2),  public/accessible (2)," 
-        "solutions/services (2), usability/accessibility (2), discrimination (1), queries (1),"
-        "sovereignty (1), systems (1), location/device (1), tasks (1)",
+        "access (7), public/accessible (2), solutions/services (2), usability/accessibility (2)," "discrimination (1), queries (1), systems (1), location/device (1), tasks (1)",
 
         "system(s) (7), algorithm(s) (6), transparent/transparency (4), free (4), open-source (4), "
         "protocol(s) (3), architecture independent (3), proprietorship (1), stakeholders (1), rules, policies (1), "
@@ -80,8 +76,8 @@ data = {
         "relying parties (2), verification (1), proof (1), authenticity (1), claims (1)"
     ],
     "Question": [
-        "To what extent do you agree that an entity's representation in a public ecosystem is always "
-        "independent of its physical and legal existence?",
+        "To what extent do you agree that an entity - whether human, legal, natural, physical, "
+        "or digital - must have an independent existence and have many different identities?",
         
         "To what extent do you agree that individuals should always have control over their digital identity "
         "data, like passports or identity certificates?",
