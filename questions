@@ -1,0 +1,290 @@
+Existence and representation:  
+
+independent (2)
+existence (2)
+represented (1)
+supported (1)
+public (1)
+accessible (1)
+limited (1)
+ecosystem (1)
+entity (1)
+legal (1)
+natural (1)
+physical (1)
+number (1)
+aspects (1)
+
+To what extent do you agree that an entity - whether human, legal, natural, physical, or digital - must have an independent existence and have many different identities?
+
+***********************************
+
+Ownership and Control
+
+control (9)
+owned (3)
+claims (2)
+privacy (1)
+celebrity (1)
+wallet (1)
+subject (1)
+third party (1)
+agents (1)
+guardians (1)
+empower (1)
+exert (1)
+rights (1)
+
+To what extent do you agree that individuals should be able to exert control over their digital identity data, like passports and identity certificates?
+
+***********************************
+
+Access and Availability
+
+access (7)
+solutions/services (2)
+public/accessible (2)
+usability/accessibility (2)
+discrimination (1)
+queries (1)
+systems (1)
+location/device (1)
+tasks (1)
+
+To what extent should users have access and availability of their identity information across platforms?
+
+***********************************
+
+Transparency
+
+system(s) (7)
+algorithm(s) (6)
+transparent/transparency (4)
+free (4)
+open-source (4)
+protocol(s) (3)
+architecture independent (3)
+proprietorship (1)
+stakeholders (1)
+rules, policies (1)
+incentives (1)
+public validation (1)
+software developers (1)
+
+To what extent do you trust that the systems and algorithms used are transparent, following open-source protocols and free access principles, while ensuring architecture independence and enabling public validation for stakeholders?
+
+***********************************
+
+Persistence
+
+owner (3)
+persistent (2)
+long-lived (3)
+right to be forgotten (2)
+claims (3)
+remove (2)
+SSI system (1)
+
+Does the owner of a long-lived identity have the right to be forgotten, allowing them to remove all associated claims, even if issued by another owner and being persistent or long-lived?
+
+***********************************
+
+Portability
+
+transportable (5)
+data (3)
+portable (2)
+control (2)
+services (2)
+persistence (2)
+platform (2)
+standardisation (1)
+SSI ecosystem (1)
+third-party entity (1)
+
+Can transportable services operate on a fully portable platform without relying on a third-party entity?
+
+***********************************
+
+Interoperability
+
+interoperability (4)
+systems (3)
+global (3)
+web (2)
+providers (2)
+data (2)
+self-sovereign (2)
+enterprise (1)
+government (1)
+transport (1)
+
+To what extent do you consider interoperability between systems important for enabling data exchange across web providers, enterprises, government, and transport sectors without relying on a third-party entity?
+
+***********************************
+
+Consent
+
+consent (6)
+data (4)
+sharing (2)
+third party (1)
+private information (1)
+access (1)
+personal data (1)
+disclose (1)
+
+How often do you give consent before sharing your personal data or private information with a third party?
+
+***********************************
+
+Security and Protection
+
+censorship-resistant systems (2)
+individual rights (2)
+cryptographic mechanisms (1)
+CIA (Confidentiality, Integrity, Authenticity) (1)
+non-repudiation (1)
+secure manner (1)
+secure channel (1)
+rights holders (1)
+identity data (1)
+identifiers (1)
+encryption keys (1)
+end-to-end encryption (1)
+freedom (1)
+decentralized environments (1)
+protocol level (1)
+identity network (1)
+identity authentication (1)
+independent algorithms (1)
+force-resilient (1)
+decentralized manner (1)
+
+How securely does a decentralized identity system protect individual rights and rights of users through censorship-resistant systems, identity authentication, and end-to-end encryption in a decentralized manner?
+
+***********************************
+
+Privacy and Minimal Disclosure
+
+disclosure (5)
+data (7)
+minimized/minimization (6)
+privacy (4)
+information (4)
+selective disclosure (3)
+correlation (3)
+pseudonymity (1)
+confidentiality (1)
+integrity (1)
+authenticity (1)
+nonrepudiation (1)
+robustness (1)
+anonymity (1)
+attributes (1)
+claims (2)
+zero-knowledge (1)
+
+To what extent do you ensure that data disclosure is minimized by using selective disclosure, and other privacy preserving techniques?
+
+***********************************
+
+Standard
+
+open standards (2)
+portability (2)
+open (2)
+interoperability (2)
+adoption (1)
+sustainability (1)
+persistence (1)
+entities (1)
+represented (1)
+exchanged (1)
+secured (1)
+protected (1)
+verified (1)
+public (1)
+royalty-free standards (1)
+
+
+Do open standards and royalty-free standards enable entities to be represented, exchanged, secured, and verified openly?
+
+***********************************
+
+Cost
+
+cost (5)
+adoption (3)
+create/creation (2)
+manage/management (2)
+minimized/minimum (2)
+fees/financial charges (1)
+resources/implementations (1)
+IT help desks (1)
+benefits (1)
+
+To what extent decentralized identity minimize costs, making it easier to manage resources while reducing IT help desk reliance and maximizing benefits?
+
+***********************************
+
+Usability and Consistency
+
+user experience (4)
+recover (3)
+owners (2)
+reassert (2)
+control (2)
+manage (2)
+credentials (2)
+usability (2)
+loss (3)
+wallet (2)
+agents (2)
+components (2)
+sovereign (1)
+key (1)
+mobile/device (1)
+ecosystem (1)
+accessibility (1)
+technology (1)
+services (1)
+interfaces (1)
+entities (1)
+complexity (1)
+
+How comfortable do you feel with the usability and user experience of mobile/device wallet interfaces in managing credentials, recovering from loss, and reasserting control within a sovereign ecosystem of services and agents?
+
+***********************************
+
+Decentralization and Autonomy
+
+party/parties (5)
+autonomy (3)
+self-sovereign (2)
+independent (1)
+capabilities (1)
+laws, rules, and regulations (1)
+consequences (1)
+ecosystem (1)
+centralized system (1)
+third party (1)
+
+Do you agree that parties in the ecosystem should have the autonomy to act as self-sovereign entities, independent of a centralized system and third parties, while respecting laws, rules, and regulations?
+
+***********************************
+
+Verifiability and Authenticity
+
+owners (3)
+verifiable (2)
+credentials (2)
+issuer (2)
+digital identities (2)
+relying parties (2)
+verification (1)
+proof (1)
+authenticity (1)
+claims (1)
+
+Do you believe that owners should provide verifiable credentials from a trusted issuer to ensure authenticity and enable relying parties to perform verification based on proof of their claims?
