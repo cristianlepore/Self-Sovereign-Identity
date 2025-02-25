@@ -51,7 +51,7 @@ systems (1)
 location/device (1)
 tasks (1)
 
-To what extent should users have access and availability of their identity information across platforms?
+To what extent should users have unrestricted access and retrieval of their identity information from different places?
 
 ***********************************
 
@@ -65,27 +65,24 @@ open-source (4)
 protocol(s) (3)
 architecture independent (3)
 proprietorship (1)
-stakeholders (1)
 rules, policies (1)
 incentives (1)
 public validation (1)
-software developers (1)
 
-To what extent do you trust that the systems and algorithms used are transparent, following open-source protocols and free access principles, while ensuring architecture independence and enabling public validation for stakeholders?
+To what extent do you trust that the systems used to administer and operate a network of identities are transparent, following open-source protocols, while enabling public validation for stakeholders?
 
 ***********************************
 
 Persistence
 
 owner (3)
-persistent (2)
 long-lived (3)
-right to be forgotten (2)
 claims (3)
+persistent (2)
+right to be forgotten (2)
 remove (2)
-SSI system (1)
 
-Does the owner of a long-lived identity have the right to be forgotten, allowing them to remove all associated claims, even if issued by another owner and being persistent or long-lived?
+Does a person have the right to hold a long-lived identity, allowing their claims to persist?
 
 ***********************************
 
@@ -99,10 +96,9 @@ services (2)
 persistence (2)
 platform (2)
 standardisation (1)
-SSI ecosystem (1)
 third-party entity (1)
 
-Can transportable services operate on a fully portable platform without relying on a third-party entity?
+Can an identity be transportable between different platforms without restrictions?
 
 ***********************************
 

@@ -31,17 +31,15 @@ data = {
         "access (7), public/accessible (2), solutions/services (2), usability/accessibility (2)," "discrimination (1), queries (1), systems (1), location/device (1), tasks (1)",
 
         "system(s) (7), algorithm(s) (6), transparent/transparency (4), free (4), open-source (4), "
-        "protocol(s) (3), architecture independent (3), proprietorship (1), stakeholders (1), rules, policies (1), "
-        "incentives (1), public validation (1), software developers (1)",
+        "protocol(s) (3), architecture independent (3), proprietorship (1), rules, policies (1), "
+        "incentives (1), public validation (1)",
         
-        "owner (3), persistent (2), long-lived (3), right to be forgotten (2), claims (3), remove (2), "
-        "SSI system (1)",
+        "owner (3), persistent (2), long-lived (3), claims (3), right to be forgotten (2), remove (2)",
 
         "transportable (5), data (3), portable (2), control (2), services (2), persistence (2), "
-        "platform (2), standardisation (1), SSI ecosystem (1), third-party entity (1)",
+        "platform (2), standardisation (1), third-party entity (1)",
         
-        "interoperability (4), systems (3), global (3), web (2), providers (2), data (2), self-sovereign (2), "
-        "enterprise (1), government (1), transport (1)",
+        "interoperability (4), systems (3), global (3), web (2), providers (2), data (2), enterprise (1), " "government (1), transport (1)",
 
         "consent (6), data (4), sharing (2), third party (1), private information (1), access (1), personal data (1), disclose (1)",
         
