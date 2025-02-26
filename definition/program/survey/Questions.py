@@ -21,57 +21,36 @@ data = {
         "Verifiability and Authenticity"
     ],
     "Keywords (occurrences)": [
-        "independent (2), existence (2), represented (1), supported (1), aspects (1), "
-        "public (1), accessible (1), limited (1), ecosystem (1), entity (1), legal (1), "
-        "natural (1), physical (1), number (1)",
+        "existence (4), independent (2), representation (2), form (2), ecosystem (1), legal (1), natural (1), physical (1), person (1), ensuring (1), independence (1), aspects (1), kernel (1), supported (1), accessible (1), create (1), intervention (1), third (1), party (1), characteristics (1), assert (1), quasi-representation (1)",
         
-        "control (9), owned (3), claims (2), privacy (1), celebrity (1), rights (1), "
-        "wallet (1), subject (1), third party (1), agents (1), empower (1), exert (1)",
+        "control (10), owners (4), claims (4), ultimate (2), authority (2), access (2), subject (2), personal (2), confidential (2), usage (2), sharing (2)",
 
-        "access (7), public/accessible (2), solutions/services (2), usability/accessibility (2)," "discrimination (1), queries (1), systems (1), location/device (1), tasks (1)",
+        "access (8), claims (2), solution (2), assertions (1), services (1), discrimination (1), ethnicity (1), gender (1), socio-economic (1), status (1), language (1), ecosystem (1), usability (1), accessibility (1), agents (1), components (1), rights (1), holders (1), consistency (1), experience (1), systems (1), employees (1), location (1), device (1), tasks (1), places (1), attributes (1)",
 
-        "system(s) (7), algorithm(s) (6), transparent/transparency (4), free (4), open-source (4), "
-        "protocol(s) (3), architecture independent (3), proprietorship (1), rules, policies (1), "
-        "incentives (1), public validation (1)",
+        "systems (6), algorithms (6), open-source (4), transparent (4), independent (3), architecture (3), ecosystem (2), protocols (2), free (2), operate (2), managed (2), administered (2), network (2), stakeholders (1), verification (1), validation (1), licensing (1), incentives (1), components (1), governance (1)",
         
-        "owner (3), persistent (2), long-lived (3), claims (3), right to be forgotten (2), remove (2)",
+        "long-lived (3), owner (3), claims (2), persistent (2), modified (2)",
 
-        "transportable (5), data (3), portable (2), control (2), services (2), persistence (2), "
-        "platform (2), standardisation (1), third-party entity (1)",
+        "transportable (5), platform (3), ensure (3), services (3), control (3), transferable (2), ecosystem (2), systems (2), agents (2), persistence (2), digital (2), medium (2), remains (2), ensuring (2)",
         
-        "interoperability (4), systems (3), global (3), web (2), providers (2), data (2), enterprise (1), " "government (1), transport (1)",
+        "interoperably (6), global (4), systems (4), solutions (3), providers (3), web (3), international (3), transport (2), model (2), layer (2), control (2), boundaries (2), protocols (2), ecosystem (2), ensuring (2), compatible (2), enterprises (2), government (2), organisations (2), employed (2), securely (2), interact (2), correspond (2), services (2), represented (2), exchanged (2), secured (2), protected (2), verified (2), standards (2), available (2), losing (2), cross (2), public (2)",
 
-        "consent (6), data (4), sharing (2), third party (1), private information (1), access (1), personal data (1), disclose (1)",
+        "disclosure (9), minimum (7), privacy (6), minimized (4), selective (3), correlation (3), claims (3), individuals (2), anonymity (2), pseudonymity (1), biometric (1), confidentiality (1), integrity (1), authenticity (1), nonrepudiation (1), robustness (1), transparency (1), empower (1), attributes (1), granularity (1), refusal (1), mechanism (1), underlying (1), correlation-independent (1), verification (1)",
         
-        "censorship-resistant systems (2), individual rights (2), cryptographic mechanisms (1), "
-        "CIA (Confidentiality, Integrity, Authenticity) (1), non-repudiation (1), secure manner (1), "
-        "secure channel (1), rights holders (1), identity data (1), identifiers (1), encryption keys (1), "
-        "end-to-end encryption (1), freedom (1), decentralized environments (1), protocol level (1), "
-        "identity network (1), identity authentication (1), independent algorithms (1), force-resilient (1), "
-        "decentralized manner (1)",
+        "rights (5), secure (3), protected (3), network (3), censorship-resistant (2), decentralized (2), encryption (2), mechanisms (1), cryptographic (1), confidentiality (1), integrity (1), authenticity (1), non-repudiation (1), transmitted (1), channel (1), ecosystem (1), empower (1), holders (1), motion (1), control (1), identifiers (1), keys (1), employ (1), end-to-end (1), interactions (1), prioritizing (1), systems (1), promote (1), freedom (1), environments (1), protocol (1), conflict (1), preserving (1), freedoms (1), authentication (1), independent (1), algorithms (1), force-resilient (1)",
         
-        "disclosure (5), data (7), minimized/minimization (6), privacy (4), information (4), "
-        "selective disclosure (3), correlation (3), pseudonymity (1), confidentiality (1), integrity (1), "
-        "authenticity (1), nonrepudiation (1), robustness (1), anonymity (1), attributes (1), claims (2), "
-        "zero-knowledge (1)",
+        "disclosure (9), minimum (7), privacy (6), minimized (4), selective (3), correlation (3), claims (3), anonymity (2), pseudonymity (1), biometric (1), confidentiality (1), integrity (1), authenticity (1), nonrepudiation (1), robustness (1), transparency (1), ecosystem (1), empower (1), attributes (1), granularity (1), refusal (1), mechanism (1), underlying (1), correlation-independent (1), verification (1)",
         
-        "open standards (2), portability (2), open (2), interoperability (2), adoption (1), sustainability (1), "
-        "persistence (1), entities (1), represented (1), exchanged (1), secured (1), protected (1), verified (1), "
-        "public (1), royalty-free standards (1)",
+        "open (3), standards (3), portability (2), interoperability (2), identities (2), must (2), based (2), ensure (2), maximal (1), maximum (1), adoption (1), sustainability (1), persistence (1), entities (1), represented (1), exchanged (1), secured (1), protected (1), verified (1), using (1), public (1), royalty-free (1)",
         
-        "cost (5), adoption (3), create/creation (2), manage/management (2), minimized/minimum (2), "
-        "fees/financial charges (1), resources/implementations (1), IT help desks (1), benefits (1)",
+        "cost (6), adoption (4), create (2), management (2), minimize (2), resources (2)",
         
-        "user experience (4), recover (3), owners (2), reassert (2), control (2), manage (2), credentials (2), "
-        "usability (2), loss (3), wallet (2), agents (2), components (2), sovereign (1), key (1), "
-        "mobile/device (1), ecosystem (1), accessibility (1), technology (1), services (1), interfaces (1), "
-        "entities (1), complexity (1)",
+        "user experience (5), recover (4), owners (3), credentials (3), usability (3), consistent (3), control (2), agents (2), ecosystem (1), expectations (2), complexity (1), interfaces (1), effectively (1), algorithms (1), holders (1), mobile/device (1), collaborating parties (1), resilient (1), technology platforms (1), birth certificates (1), mobile (1), key (1), intuitive (1), platforms (1), components (1), lost key (1)",
         
-        "party/parties (5), autonomy (3), self-sovereign (2), independent (1), capabilities (1), "
-        "laws, rules, and regulations (1), consequences (1), ecosystem (1), centralized system (1), third party (1)",
+        "autonomy (3), party/parties (5), relying (2), entity (2), independent (1), administration (1), management (1), compliance (1), regulations (1), consequences (1), ecosystem (1), centralized (1), control (1), verify (1), represent (1)",
         
-        "owners (3), verifiable (2), credentials (2), issuer (2), digital identities (2), "
-        "relying parties (2), verification (1), proof (1), authenticity (1), claims (1)"
+        "verifiable (3), owners (3), proof (2), credentials (2), verifiability (2), controlled (2), relying parties (2), authenticity (1), spoofing (1), preventing (1), ecosystem (1), objective (1), credential (1), cryptographically (1), secured (1), verification (1), empower (1), truthfully (1), evidence (1), signed (1), holders (1), real world (1), physical (1), claims (1), prove (1), true (1)"
+
     ],
     "Question": [
         "To what extent do you agree that an entity - whether human, legal, natural, physical, "
