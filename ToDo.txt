@@ -1,3 +1,5 @@
+riscrivere la survey con le domande giuste e mettere l'immagine
+riverificare tabella survey con i dati corretti
 scrivere le definizioni finali
 SCRIVERE IL ranking dei clusters dalla survey con un confronto con i precedenti papers se ha senso, dire che ARES è in security field.
 Specificare come il ranking e standard deviation sono state calcolate nella tabella 5
