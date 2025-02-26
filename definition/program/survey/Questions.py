@@ -62,7 +62,7 @@ data = {
         
         "Should identities persist as long as users wish?",
 
-        "Can an identity be transportable from one platform to another platform?",
+        "Should an identity be transportable from one platform to another platform?",
         
         "To what extent should identities enable data exchange across providers without relying on a third-party entity?",
 

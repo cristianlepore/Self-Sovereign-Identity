@@ -442,10 +442,9 @@ Given this short premise, the purpose of a survey was to gain a broader understa
 The ARES Conference hosted the *International Workshop on Emerging Digital Identities**,[^ares] with a keynote featuring Self-Sovereign identity technologies and the European framework eIDAS.[^sharif] A QR code was distributed to participants, inviting them to electronically answer a list of questions designed to evaluate the properties of SSI. Respondents could fill their name or remain anonymous. The online questionnaire, created using Microsoft Forms,[^microsoft] was available throughout the entire conference, from July 29 to August 2, 2024. At the end of the available period, results were collected and analyzed.
 
 ###### Questionnaire structure
-The first five questions of the questionnaire aims to collect general knowledge of participants to the field of identity. The remaining fifteen questions assessed the degree of pertinence of the SSI principles. Questions on SSI principles were designed by extracting keywords from the original definition of principles, as reported by authors, and using them to formulate questions. The next table reports the keywords, and the corresponding question created by leveraging the keywords. The keywords were used as a reference, sometimes substituted by synonims in the phase of constructing the question. Only featuring words of each defintion have been reported and so used for the construction of our questions, while some verbs and repeated keywords like identity/ies, sovereignity, SSI, user/s, data, information, etc. have been removed.
+The first five questions of the questionnaire aims to collect general knowledge of participants to the field of identity. The remaining fifteen questions assessed the degree of pertinence of the SSI principles. Questions on SSI principles were designed by extracting keywords from the original definition of principles, as reported by authors, and using them to formulate questions. The next table reports the keywords, and the corresponding question created by leveraging the keywords. The keywords were used as a reference, sometimes substituted by synonims in the phase of constructing the question. Some verbs and featuring words like identity/ies, sovereignity, SSI, user/s, data, information, etc. have been removed for brevity.
 
-![Survey questions Part 1](/definition/images/survey/Questions_part1.png)
-![Survey questions part 2](/definition/images/survey/Questions_part2.png)
+![Survey questions Part 1](/definition/images/survey/Questions.png)
 
 For each question, a Likert scale measures the level of importance of a principle.[^south] The Likert scale consists of one or more statements or questions accompanied by a range of response options. The scale values typically range from (i) Strongly Disagree, (ii) Disagree, (iii) Neutral, (iv) Agree, and (v) Strongly Agree, or they may also be interpreted as (i) Irrelevant, (ii) Slightly Relevant (Unnecessary), (iii) Moderately Relevant (Useful), (iv) Relevant (Desirable), and (v) Very Relevant (Mandatory).[^joshi] In our case, we maintained the same five-point scale but adapted it to fit the questions while preserving the intended meaning for respondents. 
 
@@ -484,9 +483,9 @@ Concerning with business models: 48% of respondents would appreciate a direct in
 
 The image in Figure 23 is a bar chart that compares various principles based on their average ratings, with extending bars representing the standard deviation. The standard deviation describes the amount of variation in voting principles,[^wachs] naming the higher the standard deviation, the more dispersed the votes are. The x-axis lists principles, while the y-axis represents their respective average calculated considering the numerical representation of the Likert anchor.
 
-Among the highest-rated principles, Privacy and Minimal Disclosure leads with an average score of 4.96, followed by Portability at 4.92. Other principles scoring relatively high include Persistence (4.70) and Cost (4.55). In the mid-range, principles such as Access and Availability (4.18), Usability and Consistency (4.07), Security and Protection (4.07), and Consent (4.00) show moderate importance.
+Among the highest-rated principles, Portability at 4.92 followed by Persistence (4.70). Other principles scoring relatively high include Cost (4.55) and Access (4.18). In the mid-range, principles such as Usability and Consistency (4.07), Security and Protection (4.07), and Consent (4.00) show moderate importance.
 
-Lower-rated principles include Transparency (3.77), Verifiability and Authenticity (3.74), and Decentralization and Autonomy (3.18). The least valued principles, with scores below 3, are Standard (2.66), Interoperability (2.74), Ownership and Control (2.70), and Existence and Representation (2.53).
+Lower-rated principles include Transparency (3.77), Verifiability and Authenticity (3.74), and Decentralization and Autonomy (3.18). The least valued principles, with scores below 3, are Standard (2.66), Interoperability (2.74), Ownership and Control (2.70), Existence and Representation (2.53), Privacy and minimal disclosure (1.04).
 
 The analysis of standard deviation indicates different levels of uncertainty in ratings. Higher-rated principles tend to have smaller margins, suggesting more consensus, while lower-rated principles generally exhibit larger deviation, indicating a wider range of opinions.
 
@@ -522,8 +521,8 @@ Security
 |-----------|-----------|
 | Security and protection | 3 |
 | Persistence | 3 |
-| Privacy and minimal disclosure | 3 |
-| AVG | 3 |
+| Privacy and minimal disclosure | 2 |
+| AVG | 2.7 |
 
 Usability
 | Property | Weight |
