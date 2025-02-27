@@ -570,16 +570,12 @@ As a result of the survey, properties that received at least one vote as irrelev
 | Interoperability | A self-sovereign identity must be designed in such a way that it can achieve the maximum level of interoperability. It must also be widely available, crossing international boundaries to create global identities. It is backward compatible with legacy identity systems for a period of time to ensure a smoother interaction between those systems and a self-sovereign system. | Moderately important for many respondents, this property is a summary of the work from all authors. | 
 | Consent | Users must give deliberate consent for the collection, use, and share of personal data. Additionally, they should be able to opt-out for consent at a later stage. | Consent ranged halfway among respondents, and this definition extend the literature with an emphasys on that fact that users can opt-out for consent at a later stage. |
 | Security ~~and protection~~ | Identities should be protected against suppression of the list of attributes, identity providers and service providers with latest cryptographic mechanisms, prioritizing censorship-resistant systems that promote individual rights and freedom in decentralized environments. | Many people assessed this principle as important. However, our defintion does not consider end-to-end encryption mechanisms nor encryption keys like in [^toip][^sovrin] nor protocols [^satybaldy]. |
-| Privacy **protection**~~and Minimal Disclosure~~ | 
+| ~~Privacy and~~ Minimal Disclosure | Identity must be flexible enough to ensure a user can achieve her desired goal by leveraging the minimum amount of identity data, a techniaque known as minimal disclosure. Service providers should provide means for users to share only the minimal amount of information to carry on their desired task. | The principle of data minimization requires large intertwine between technology and governance. Respondents to the survey raised this point and as the principles is not really well performed. The majority of authors mention minimal disclosure as a privacy enhancing principle. For this reason, a shorten label for the principle is using just the term minimal disclosure. We avoid terms such as pseudonimyty as their meaning may change between legal and technical experts.[^gilani] |
+| Standard | Identity systems must be based on open standards to ensure portability, interoperability, and persistence. | The majority of respondents are neutral on this point, therefore we just summarized the definition from authors. |
+| Cost | Entities must be able to performe crucial operation without cost barriers. Mechanisms for creating, maintaining, and sustaining the system should have minimal or no costs. |  | 
 
 
 
-The privacy of entities should be protected through the use of **technique that allow to minimize the disclosure of personal information**. |  |
-
-
-
-| Cost | **Entities must be able to performe crucial operation without cost barriers.** Mechanisms for creating, maintaining, and sustaining the system should have minimal or no costs. | Sustainability | 
-| Standard | An e-identity system must use globally recognized standards. | Sustainability |
 | ~~Decentralization and~~ Autonomy | Entities should have autonomy over their identity data without relying on any third party. **They must be the only one being resposible for all operations about their identity.** | Usability | 
 | Verifiability ~~and Authenticity~~ | Entities should be able to reliably verify users' identities and must provide proof of the authenticity of their personal data. | Usability |
 
