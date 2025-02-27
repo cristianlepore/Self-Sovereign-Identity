@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import textwrap
 
+def wrap_text(text, width=60):
+    return "\n".join(textwrap.wrap(text, width))
+
 data = {
     "Principles": [
         "Existence and representation",
@@ -52,7 +55,7 @@ data = {
         "verifiable (3), owners (3), proof (2), credentials (2), verifiability (2), controlled (2), relying parties (2), authenticity (1), spoofing (1), preventing (1), ecosystem (1), objective (1), credential (1), cryptographically (1), secured (1), verification (1), empower (1), truthfully (1), evidence (1)"
     ],
     "Question": [
-        "To what extent should users be able to have multiple independent identities?",
+        "To what extent should users be able to have multiple identities?",
         
         "To what extent users must be the ultimate authority on their identity?",
 
@@ -84,16 +87,12 @@ data = {
     ]
 }
 
-def wrap_text(text, width=60):
-    return "\n".join(textwrap.wrap(text, width))
-
 data["Keywords (occurrences)"] = [wrap_text(text, width=60) for text in data["Keywords (occurrences)"]]
 data["Question"] = [wrap_text(text, width=80) for text in data["Question"]]
 
 df = pd.DataFrame(data)
 
 fig, ax = plt.subplots(figsize=(14, 14))  
-
 ax.axis("tight")
 ax.axis("off")
 
@@ -110,11 +109,17 @@ for i in range(len(df) + 1):
         if i == 0:
             cell.set_facecolor("#cccccc")  
             cell.set_text_props(weight="bold")
+        elif i % 2 == 0:  # Alternating row colors
+            cell.set_facecolor("#e6e6e6")  
         else:
             cell.set_facecolor("#f9f9f9")  
 
 for i in range(1, len(df) + 1):  
+    max_lines = max(
+        df.iloc[i-1, :].apply(lambda x: len(str(x).split("\n")))
+    )
+    row_height = max(0.07, 0.025 * max_lines)  # Adjust row height dynamically
     for j in range(len(df.columns)):
-        table[i, j].set_height(0.16)  
+        table[i, j].set_height(row_height)
 
 plt.show()
