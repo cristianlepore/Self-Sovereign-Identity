@@ -84,15 +84,33 @@ data = {
         "Do you agree that an identity system must fully support the autonomy of identity information?",
         
         "Do you agree that digital identities are controlled by the owner and that relying parties should receive objective evidence about the truthfulness of their owners?"
+    ],
+    "Rationale": [
+        "Users should have the right to exist digitally without external validation.",
+        "Users must retain control over their personal identity data to prevent misuse.",
+        "Ensuring fair access to identity services is crucial for inclusion and rights.",
+        "Transparency in identity systems helps build trust and accountability.",
+        "Digital identities should not be arbitrarily revoked or altered by third parties.",
+        "Users should be able to move their identities across platforms without restrictions.",
+        "Interoperability allows different identity systems to function seamlessly.",
+        "Users should have full awareness and choice in granting access to their identity data.",
+        "Security measures must be in place to prevent unauthorized identity access.",
+        "Privacy principles must ensure minimal exposure of personal information.",
+        "Standards enable consistency, usability, and long-term sustainability.",
+        "Identity systems should minimize costs for users and organizations.",
+        "Usability ensures that digital identity solutions are accessible to all users.",
+        "Decentralization prevents single points of failure and promotes autonomy.",
+        "Verifiability ensures that identities remain trustworthy and authentic."
     ]
 }
 
 data["Keywords (occurrences)"] = [wrap_text(text, width=60) for text in data["Keywords (occurrences)"]]
 data["Question"] = [wrap_text(text, width=80) for text in data["Question"]]
+data["Rationale"] = [wrap_text(text, width=80) for text in data["Rationale"]]
 
 df = pd.DataFrame(data)
 
-fig, ax = plt.subplots(figsize=(14, 14))  
+fig, ax = plt.subplots(figsize=(16, 16))  
 ax.axis("tight")
 ax.axis("off")
 
@@ -100,8 +118,7 @@ table = ax.table(cellText=df.values, colLabels=df.columns, cellLoc="left", loc="
 
 table.auto_set_font_size(False)
 table.set_fontsize(8)
-
-table.auto_set_column_width([0, 1, 2])
+table.auto_set_column_width([0, 1, 2, 3])
 
 for i in range(len(df) + 1):  
     for j in range(len(df.columns)):
