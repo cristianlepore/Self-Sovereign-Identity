@@ -1,4 +1,3 @@
-SCRIVERE IL ranking dei clusters con un confronto con i precedenti papers se ha senso, dire che ARES è in security field.
-Discutere i risultati della survey.
-Specificare come il ranking e standard deviation sono state calcolate nella tabella 5
+Specificare come ho assegnato i punti ai principi per il raning clusters.
+Discutere i risultati della survey, dire che ARES è in Security.
 Aggiungere conclusioni o discussione finale

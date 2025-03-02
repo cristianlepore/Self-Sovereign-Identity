@@ -481,9 +481,35 @@ Concerning with business models: 48% of respondents would appreciate a direct in
 
 [Click to view the table 5.](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/Survey.html) *Ranking of identified properties.*
 
-The image in Figure 23 is a bar chart that compares various principles based on their average ratings, with extending bars representing the standard deviation. The standard deviation describes the amount of variation in voting principles,[^wachs] naming the higher the standard deviation, the more dispersed the votes are. The x-axis lists principles, while the y-axis represents their respective average calculated considering the numerical representation of the Likert anchor.
+The image in Figure 23 compares principles based on their average ratings, with extending bars representing the standard deviation. The weighted average considers the frequency of each value and is calculated as:
 
-Among the highest-rated principles, Portability at 4.92 followed by Persistence (4.70). Other principles scoring relatively high include Cost (4.55) and Access (4.18). In the mid-range, principles such as Usability and Consistency (4.07), Security and Protection (4.07), and Consent (4.00) show moderate importance.
+\[
+\text{AVG} = \frac{\sum (x_i \times w_i)}{\sum w_i}
+\]
+
+Where:
+- \( x_i \) = each value (1, 2, 3, 4, 5)
+- \( w_i \) = the number of people who voted for each value (weights)
+- \( \sum w_i \) = total number of people (27 in this case)
+
+The steps require to multiply each rating by the number of people who voted for it. Sum up these products, and divide by the total number of people.
+
+The standard deviation describes the amount of variation in voting principles,[^wachs] naming the higher the standard deviation, the more dispersed the votes are. The standard deviation measures the spread of values around the weighted mean:[^chan]
+
+\[
+\sigma = \sqrt{\frac{\sum w_i (x_i - \mu)^2}{\sum w_i}}
+\]
+
+Where:
+- \( \sigma \) = weighted standard deviation
+- \( \mu \) = weighted mean (computed in step 1)
+- \( x_i \) = each value (1, 2, 3, 4, 5)
+- \( w_i \) = number of people who voted for each value
+- \( \sum w_i \) = total number of people
+
+To compute the standard deviation, first, subtract the weighted mean from each value to determine its deviation from the average. Then, square each deviation to ensure all differences are positive and multiply the result by the corresponding weight, reflecting the number of people who voted for that value. Next, sum all the weighted squared differences and divide by the total number of people to normalize the variance. Finally, take the square root of this result to obtain the standard deviation, which quantifies the spread of the values around the weighted mean.
+
+The x-axis lists principles, while the y-axis represents their respective average calculated considering the numerical representation of the Likert anchor. Among the highest-rated principles, Portability at 4.92 followed by Persistence (4.70). Other principles scoring relatively high include Cost (4.55) and Access (4.18). In the mid-range, principles such as Usability and Consistency (4.07), Security and Protection (4.07), and Consent (4.00) show moderate importance.
 
 Lower-rated principles include Transparency (3.77), Verifiability and Authenticity (3.74), and Decentralization and Autonomy (3.18). The least valued principles, with scores below 3, are Standard (2.66), Interoperability (2.74), Ownership and Control (2.70), Existence and Representation (2.53), Privacy and minimal disclosure (1.04).
 
@@ -851,6 +877,8 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^han]: Han, Jiawei, Jian Pei, and Hanghang Tong. Data mining: concepts and techniques. Morgan kaufmann, 2022.
 
 [^wattenberg]: Wattenberg, Martin, Fernanda Viégas, and Ian Johnson. "How to use t-SNE effectively." Distill 1.10 (2016): e2.
+
+[^chan]: Chan, Tony F., and John Gregg Lewis. "Computing standard deviations: accuracy." Communications of the ACM 22.9 (1979): 526-531.
 
 [^rogers]: Rogers, Ian. "The Google Pagerank algorithm and how it works." (2002).
 
