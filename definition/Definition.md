@@ -527,54 +527,58 @@ This data provides insights into the priorities of the surveyed group, highlight
 ![Level of importance](images/survey/LevelOfImportance.png)
 *Figure 24. Perceived level of importance for properties.*
 
-The most and least important properties, as well as their intersection, are presented below as a Venn diagram illustrating the ranking of Self-Sovereign Identity principles based on importance. The orange frame represents the most important principles, including privacy and minimal disclosure, security and protection, persistence, portability, and verifiability/authenticity. The blue frame highlights the least important principles, including existence and representation, standard, interoperability, consent, and transparency. The intersection of both frames contains mid-ranked principles such as access and availability, decentralization and autonomy, cost, ownership and control, and usability/consistency. The diagram visually demonstrates the varying levels of importance of SSI principles based on ranking and standard deviation.
+The most and least important properties, as well as their intersection, are presented below as a Venn diagram illustrating the ranking of Self-Sovereign Identity principles based on importance. The orange frame represents the most important principles, including privacy and minimal disclosure, security and protection, persistence, portability, and verifiability/authenticity. The blue frame highlights the least important principles, including existence and representation, standard, interoperability, consent, and transparency. The intersection of both frames contains mid-ranked principles such as access and availability, decentralization and autonomy, cost, ownership and control, and usability/consistency. The diagram visually demonstrates the varying levels of importance of SSI principles based on ranking and standard deviation from [table 5](https://cristianlepore.github.io/Self-Sovereign-Identity/definition/survey/Survey.html). The blue circle is the rank of principles based on the Avarage, while the Orange circle is based on the Standard Deviation.
 
 ![Properties ranking](images/survey/ImportantProperties.png)
 *Figure 25. The most and least important properties of both rankings.*
 
-Assigning weights from 3 to 1 to the most important and least important principles, and sum up each principle's weight, we obtain a comparable result of the importance of each cluster.
+The diagram serves as a valuable tool for emphasizing the significance of properties and clusters by assigning scores to principles based on their positions within the blue and orange circles. The blue circle reflects the rankings provided by survey respondents, indicating the relative importance of each principle. In contrast, the orange circle represents the influence of standard deviation on these rankings. 
 
-Controllability:  
+To assign scores, the most important principles receive a score of +1, while the least important principles are assigned -1. The standard deviation contributes 35% of the mean for each principle, which means the position of each principle in the orange circle adjusts its score by +/- 0.35 based on its placement within the diagram. This adjustment accounts for variability and uncertainty in the data. In other words, the threshold of 0.35 was chosen based on how much the standard deviation, on average, influences the values of the principles, as derived from Figrure 23.
+
+The final ranking of the clusters is then determined by summing the individual scores of all the principles within each cluster. This allows for a comprehensive and dynamic final ranking that incorporates both the importance of the principles and the variability introduced by the standard deviation, offering a more nuanced view of the data.
+
+**Controllability** 
 | Property | Weight |
 |-----------|-----------|
-| Existence and representation | 1 |
-| Ownership and control | 2 |
-| Consent | 1 |
-| AVG | 1.3 |
+| Existence and representation | -1 |
+| Ownership and control | 0 |
+| Consent | -0.35 |
+| AVG | -0.45 |
 
-Security
+**Security**
 | Property | Weight |
 |-----------|-----------|
-| Security and protection | 3 |
-| Persistence | 3 |
-| Privacy and minimal disclosure | 2 |
-| AVG | 2.7 |
+| Security and protection | 1 |
+| Persistence | 1.35 |
+| Privacy and minimal disclosure | 0 |
+| AVG | 0.78 |
 
-Usability
+**Usability**
 | Property | Weight |
 |-----------|-----------|
-| Decentralization and Autonomy | 2 |
-| Verifiability and Authenticity | 2 |
-| Usability and consistency | 2 |
-| Access and availability | 2 |
-| AVG | 2 |
+| Decentralization and Autonomy | 0.35 |
+| Verifiability and Authenticity | N/A |
+| Usability and consistency | 1 |
+| Access and availability | 0 |
+| AVG | 0.45 |
 
-Portability
+**Portability**
 | Property | Weight |
 |-----------|-----------|
-| Portability | 3 |
-| Transparency | 1 |
-| Interoperability | 1 |
-| AVG | 1.7 |
+| Portability | 1.35 |
+| Transparency | -0.35 |
+| Interoperability | -1.35 |
+| AVG | -0.12 |
 
-Sustainability
+**Sustainability**
 | Property | Weight |
 |-----------|-----------|
-| Cost | 2 |
-| Standard | 1 |
-| AVG | 1.5 |
+| Cost | 0 |
+| Standard | -1 |
+| AVG | -0.5 |
 
-The image presents a hierarchical ranking of clusters based on their importance according to our survey. At the top, Security (Score: 3) is ranked as the most important, followed by Usability (Score: 2). In the middle, Portability (Score: 1.7) and Sustainability (Score: 1.5) hold moderate importance. At the bottom, Controllability (Score: 1.3) is ranked as the least important. The ranking follows a descending order from top to bottom, where security is prioritized the most and controllability the least.
+The image presents a hierarchical ranking of clusters based on their importance according to our survey. At the top, Security is ranked as the most important, followed by Usability. In the middle, Portability and Controllability hold moderate importance. At the bottom, Sustainability is ranked as the least important. The ranking follows a descending order from top to bottom, where security is prioritized the most and controllability the least.
 
 ![Properties ranking and grouping](/definition/images/survey/ImportantGroups.png)
 *Figure 26. The most and least important group according to our survey.*

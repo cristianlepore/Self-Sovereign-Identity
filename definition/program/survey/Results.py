@@ -34,5 +34,8 @@ for bar in bars:
                 textcoords="offset points",
                 ha='center', va='bottom')
 
+incidenza_media = sum((sd / avg) * 100 for sd, avg in zip(sd_values, avg_values)) / len(avg_values)
+print(f"L'incidenza media della deviazione standard è: {incidenza_media:.2f}%")
+
 plt.tight_layout()
 plt.show()
