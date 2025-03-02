@@ -583,6 +583,40 @@ The image presents a hierarchical ranking of clusters based on their importance 
 ![Properties ranking and grouping](/definition/images/survey/ImportantGroups.png)
 *Figure 26. The most and least important group according to our survey.*
 
+#### Discussion
+
+The expert validation serves as a crucial step in refining the principles of Self-Sovereign Identity. By engaging domain experts, the study aimed to assess the relevance, prioritization, and applicability of the identified principles within real-world SSI implementations. The survey responses provided meaningful insights into the perception of these principles, revealing areas of consensus as well as divergence among experts.  
+
+##### Key findings
+
+The validation process confirmed that some principles are regarded as the most critical in the context of SSI. These principles emphasize the fundamental tenets of user autonomy, data security, and the ability to maintain control over identity information across different platforms. Portability and Persistence were particularly highlighted as essential, aligning with the core objectives of SSI in providing decentralization. 
+
+On the other hand, principles such as existence and representation, standards, and interoperability received lower importance rankings. In particular, Privacy and Minimal disclosure ranks as last. This is probbably due to the lack of use of data minimization techniques in current systems. This also suggests that while these aspects are necessary for the technical implementation of SSI systems, they may not be perceived as immediate priorities from a user or application perspective. The lower ranking of interoperability is particularly interesting, as it underscores a persistent challenge in the SSI landscape: ensuring seamless integration across different ecosystems while maintaining user control and security.  
+
+Another noteworthy trend was the emphasis on security-related principles, including protection and verifiability. Experts acknowledged that security is a foundational element in SSI systems, as the success of decentralized identity solutions relies heavily on their ability to prevent fraud, ensure authenticity, and withstand cyber threats.
+
+##### Implications and refinements
+
+The expert feedback provided valuable insights to the categorization of SSI principles.
+
+1. **Refining the importance of sustainability** – Sustainability, which includes cost-effectiveness and long-term viability, was ranked lower in priority. This suggests that while economic feasibility is an important consideration, it is not yet a primary driver of SSI adoption. However, as SSI matures, considerations such as the financial sustainability of decentralized identity ecosystems may become more relevant, particularly in enterprise and government-driven implementations.  
+
+2. **Clarifying the scope of interoperability** – Given the mixed opinions on interoperability, future research should explore whether this principle is undervalued due to its technical nature or whether it is currently overshadowed by more immediate concerns such as privacy and security. Since interoperability is critical for widespread adoption, additional focus on defining its scope and practical implementation strategies could help bridge the gap between technical feasibility and real-world applicability.  
+
+3. **Balancing usability and security** – While security was ranked among the most important principles, experts also highlighted the necessity of maintaining usability and consistency within SSI frameworks. This reinforces the idea that complex security mechanisms should not come at the expense of user experience. Future SSI solutions should strive to balance strong security features with intuitive interfaces, ensuring that users can easily manage their identities without technical barriers.  
+
+##### Limitations and Future Research Directions
+
+Additionally, the ranking methodology used in this study provided a structured way to assess the importance of principles, but qualitative insights were somewhat limited. A more interactive approach, such as in-depth interviews or expert workshops, could provide deeper insights into the rationale behind the rankings and uncover additional nuances in how these principles are perceived and applied.  
+
+Furthermore, the evolution of SSI standards and regulations will play a crucial role in shaping the importance of different principles over time. As more governments and organizations adopt SSI-based identity solutions, interoperability, compliance, and standardization may gain greater significance. Tracking these developments and updating the SSI principles accordingly will be necessary to ensure continued relevance.  
+
+##### Conclusion
+
+The expert validation process provided a structured and empirical basis for refining the principles of Self-Sovereign Identity. The findings confirmed that user-centric principles such as portability, and persistence of identity are paramount, while technical aspects such as standards and interoperability require further exploration to bridge conceptual and practical gaps. Security was recognized as a crucial component, though its integration must be balanced with usability to facilitate adoption.
+
+Moving forward, a more extensive validation effort with a larger and more diverse group of experts will enhance the robustness of these findings. Additionally, further research into the interplay between these principles—such as the trade-offs between security, usability, and interoperability—will provide deeper insights into the future of SSI frameworks. By continuously refining and validating these principles, SSI can evolve into a widely accepted and effective identity management paradigm that truly empowers individuals in the digital age.
+
 ### 1.3.7 Final definition of properties
 
 The definitions presented in [Section 1.3.5](#135-refining-principles) were abbreviated as much as possible intentionally, due to their use in the questionnaire. In this Section, we want to enhance them in accordance with the results of the respondents, as we obtained valuable insights from experts in the fields of IdM and SSI, expressing their concerns and possible misunderstandings of an individual property. 
