@@ -532,53 +532,76 @@ The most and least important properties, as well as their intersection, are pres
 ![Properties ranking](images/survey/ImportantProperties.png)
 *Figure 25. The most and least important properties of both rankings.*
 
-The diagram serves as a valuable tool for emphasizing the significance of properties and clusters by assigning scores to principles based on their positions within the blue and orange circles. The blue circle reflects the rankings provided by survey respondents, indicating the relative importance of each principle. In contrast, the orange circle represents the influence of standard deviation on these rankings. 
+The diagram serves as a valuable tool for emphasizing the significance of properties and clusters by assigning scores to principles based on the Decision-Making Multicriteria method called Weighted Scoring Method.[^markowitz][^roll]. The weighted scoring method ranks and prioritizes elements based on multiple criteria. In this case, we evaluates principles based on their average importance rating (AVG) and their variability (SD, standard deviation). The blue circle reflects the rankings provided by survey respondents, indicating the relative importance of each principle. In contrast, the orange circle represents the influence of standard deviation on these rankings.
 
-To assign scores, the most important principles receive a score of +1, while the least important principles are assigned -1. The standard deviation contributes 35% of the mean for each principle, which means the position of each principle in the orange circle adjusts its score by +/- 0.35 based on its placement within the diagram. This adjustment accounts for variability and uncertainty in the data. In other words, the threshold of 0.35 was chosen based on how much the standard deviation, on average, influences the values of the principles, as derived from Figrure 23.
+Principles are gathered by the aforementioned clusters, and a scores (S) computed for each of them as:
+
+\[
+S = \text{AVG} - \text{SD}
+\]
+
+where:  
+- AVG (Average Score) represents the mean importance of the principle based on survey responses.
+- SD (Standard Deviation) represents the variability in responses. A lower SD means higher agreement among respondents.
+
+
+A high average (AVG) score suggests that a principle is generally regarded as important by respondents. Conversely, a low standard deviation (SD) indicates strong consensus, meaning that most respondents provided similar ratings with little variation. By subtracting the SD from the AVG, we emphasize principles that are not only highly ranked but also consistently rated, ensuring that the most valued and widely agreed-upon principles receive higher priority.
+
+To compare scores on a 0-1 scale, we use Min-Max normalization:  
+
+\[
+S_{\text{norm}} = \frac{S - S_{\min}}{S_{\max} - S_{\min}}
+\]
+
+where:  
+- \( S_{\max} \) and \( S_{\min} \) are the highest and lowest weighted scores, respectively.  
+- This scales all scores between 0 (least important) and 1 (most important).
+
+This method prioritezes principles that are both highly valued and widely agreed upon. This means we’re looking for those with *high perceived importance and low disagreement* among respondents. Based on our analysis, *Portability* emerged as the top-ranked principle, with a perfect normalized score of *1.000*, indicating that it is not only considered the most important but also has strong consensus. On the other hand, *Privacy and minimal disclosure* ranked the lowest, with a normalized score of *0.000*, meaning it was rated as less important and had a higher level of disagreement among respondents.
 
 The final ranking of the clusters is then determined by summing the individual scores of all the principles within each cluster. This allows for a comprehensive and dynamic final ranking that incorporates both the importance of the principles and the variability introduced by the standard deviation, offering a more nuanced view of the data.
 
 **Controllability** 
-| Property | Weight |
-|-----------|-----------|
-| Existence and representation | -1 |
-| Ownership and control | 0 |
-| Consent | -0.35 |
-| AVG | -0.45 |
+| Property | S | Normalized |
+|-----------|-----------|-----------|
+| Existence and representation | 1.25 | 0.11 |
+| Ownership and control | 1.94 | 0.30 |
+| Consent | 2.47 | 0.44 |
+| AVG | 1.88 | 0.28 |
 
 **Security**
-| Property | Weight |
-|-----------|-----------|
-| Security and protection | 1 |
-| Persistence | 1.35 |
-| Privacy and minimal disclosure | 0 |
-| AVG | 0.78 |
+| Property | S | Normalized |
+|-----------|-----------|-----------|
+| Security and protection | 2.72 | 0.51 |
+| Persistence | 3.65 | 0.76 |
+| Privacy and minimal disclosure | 0.00 | 0.00 |
+| AVG | 2.12 | 0.42 |
 
 **Usability**
-| Property | Weight |
-|-----------|-----------|
-| Decentralization and Autonomy | 0.35 |
-| Verifiability and Authenticity | N/A |
-| Usability and consistency | 1 |
-| Access and availability | 0 |
-| AVG | 0.45 |
+| Property | S | Normalized |
+|-----------|-----------|-----------|
+| Decentralization and Autonomy | 2.27 | 0.38 |
+| Verifiability and Authenticity | 2.47 | 0.44 |
+| Usability and consistency | 2.60 | 0.47 |
+| Access and availability | 2.27 | 0.38 |
+| AVG | 2.44 | 0.41 | 
 
 **Portability**
-| Property | Weight |
-|-----------|-----------|
-| Portability | 1.35 |
-| Transparency | -0.35 |
-| Interoperability | -1.35 |
-| AVG | -0.12 |
+| Property | S | Normalized |
+|-----------|-----------|-----------|
+| Portability | 4.54 | 1.00 |
+| Transparency | 2.18 | 0.36 |
+| Interoperability | 1.20 | 0.09 |
+| AVG | 2.64 | 0.48 |
 
 **Sustainability**
-| Property | Weight |
-|-----------|-----------|
-| Cost | 0 |
-| Standard | -1 |
-| AVG | -0.5 |
+| Property | S | Normalized |
+|-----------|-----------|-----------|
+| Cost | 2.67 | 0.49 |
+| Standard | 1.83 | 0.27 |
+| AVG | 2.25 | 0.38 |
 
-The image presents a hierarchical ranking of clusters based on their importance according to our survey. At the top, Security is ranked as the most important, followed by Usability. In the middle, Portability and Controllability hold moderate importance. At the bottom, Sustainability is ranked as the least important. The ranking follows a descending order from top to bottom, where security is prioritized the most and controllability the least.
+The image presents a hierarchical ranking of clusters based on their importance according to our survey. At the top, Portability is ranked as the most important, probably pushed by the principle that ranked very high; followed by Security. The cluster Security was probably penalized by a low score from the principle of Data Minimization. In the middle, Usability and Sustainability hold moderate importance. At the bottom, Controllability is ranked as the least important. The ranking follows a descending order from top to bottom, where security is prioritized the most and controllability the least.
 
 ![Properties ranking and grouping](/definition/images/survey/ImportantGroups.png)
 *Figure 26. The most and least important group according to our survey.*
@@ -932,6 +955,8 @@ The breakdown of responses to the 20 questions in the questionnaire.
 
 [^han]: Han, Jiawei, Jian Pei, and Hanghang Tong. Data mining: concepts and techniques. Morgan kaufmann, 2022.
 
+[^roll]: Roll, Richard. "A mean/variance analysis of tracking error." (1992): 13-22.
+
 [^wattenberg]: Wattenberg, Martin, Fernanda Viégas, and Ian Johnson. "How to use t-SNE effectively." Distill 1.10 (2016): e2.
 
 [^chan]: Chan, Tony F., and John Gregg Lewis. "Computing standard deviations: accuracy." Communications of the ACM 22.9 (1979): 526-531.
@@ -939,3 +964,5 @@ The breakdown of responses to the 20 questions in the questionnaire.
 [^rogers]: Rogers, Ian. "The Google Pagerank algorithm and how it works." (2002).
 
 [^gilani]: Gilani, Komal, et al. "A survey on blockchain-based identity management and decentralized privacy for personal data." 2020 2nd Conference on Blockchain Research & Applications for Innovative Networks and Services (BRAINS). IEEE, 2020.
+
+[^markowitz]: Markowitz, Harry M. "Mean—variance analysis." Finance (1989): 194-198.
