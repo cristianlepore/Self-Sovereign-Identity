@@ -31,13 +31,14 @@ We build on the past exercise from [^lepore] by conducting both quantitative and
 *1. RQ1: What are the principles of Self-Sovereign Identity?*
 *2. RQ2: Can we assess any identity system based on these principles?*
 
-[Section 1](definition/Definition.md) combines past works to present widely agreed-upon list of principles for Self-Sovereign Identity and categorize them using an objective method. This addresses RQ1. [Section 2](model/Model.md) introduces a model for assessing e-identity solutions, focusing on the promise of user control over information. The idea is to find an answer for RQ2. Finally, [Section 3](testing/Testing.md) explores the testing phase, where the model is applied to evaluate existing solutions in the field of identity.
+[Section 1](definition/Definition.md) combines past works to present widely agreed-upon list of principles for Self-Sovereign Identity and categorize them using an objective method. This addresses RQ1. [Section 2](mapping/Mapping.md) maps those principles of Self-Sovreign Identity within the Trust Over IP framework. This may lead to a better understanding of the concept of SSI in a broader concept, and facilitates the adoption of decentralized identity with existing systems. Despites these benefits, the mapping exercise is propedeutic to designing a model for assessing e-identity solutions, focusing on the promise of user control over information, as we show in [Section 3](model/Model.md). The idea is to find an answer for RQ2. Finally, [Section 4](testing/Testing.md) explores the testing phase, where the model is applied to evaluate existing solutions in the field of identity.
 
 ## Paper structure
 
 1. [Definition of Self-Sovereign Identity](definition/Definition.md)
-2. [Model to assess e-identity solutions](model/Model.md)
-3. [Testing](testing/Testing.md)
+2. [Mapping of principles within the Trust Over IP](mapping/Mapping.md)
+3. [Model to assess e-identity solutions](model/Model.md)
+4. [Testing](testing/Testing.md)
 
 From here on, we will use the terms 'principle', 'property', and 'criterion' interchangeably to refer to the instance of the principles of SSI. The meaning will be clear to the reader based on the context, and any ambiguity will be addressed as needed. For brevity, we will also frequently abbreviate 'Self-Sovereign Identity' as SSI.
 
