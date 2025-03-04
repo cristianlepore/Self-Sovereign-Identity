@@ -1,23 +1,73 @@
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn.metrics.pairwise import cosine_similarity
+@prefix : <http://example.org/ssi#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-# Definizione dei vettori Word2Vec simulati per i concetti
-portability = np.array([-0.25, 0.75, 0.33, -0.12, 0.61])
-trust_infra = np.array([0.42, -0.13, 0.68, 0.21, -0.33])
-credential_ex = np.array([0.37, 0.81, 0.29, -0.15, 0.57])
+:SSIPrinciple rdf:type owl:Class ;
+    rdfs:label "Self-Sovereign Identity Principle" .
 
-# Calcolo della similarità coseno
-similarities = cosine_similarity([portability], [trust_infra, credential_ex])[0]
+# Principi fondamentali
+:Existence rdf:type owl:Class ;
+    rdfs:subClassOf :SSIPrinciple ;
+    rdfs:label "Existence" .
 
-# Creazione del grafico
-labels = ["Trust Infrastructure", "Credential Exchange"]
-scores = similarities
+:Control rdf:type owl:Class ;
+    rdfs:subClassOf :SSIPrinciple ;
+    rdfs:label "Control" .
 
-plt.figure(figsize=(6,4))
-plt.bar(labels, scores, color=['blue', 'green'])
-plt.ylim(0, 1)
-plt.xlabel("ToIP Layers")
-plt.ylabel("Cosine Similarity")
-plt.title("Mapping della Portabilità di SSI su ToIP")
-plt.show()
+:Access rdf:type owl:Class ;
+    rdfs:subClassOf :SSIPrinciple ;
+    rdfs:label "Access" .
+
+# Principi operativi
+:Persistence rdf:type owl:Class ;
+    rdfs:subClassOf :SSIPrinciple ;
+    rdfs:label "Persistence" .
+
+:Portability rdf:type owl:Class ;
+    rdfs:subClassOf :SSIPrinciple ;
+    rdfs:label "Portability" .
+
+:Interoperability rdf:type owl:Class ;
+    rdfs:subClassOf :SSIPrinciple ;
+    rdfs:label "Interoperability" .
+
+# Principi etici e di sicurezza
+:Transparency rdf:type owl:Class ;
+    rdfs:subClassOf :SSIPrinciple ;
+    rdfs:label "Transparency" .
+
+:Consent rdf:type owl:Class ;
+    rdfs:subClassOf :SSIPrinciple ;
+    rdfs:label "Consent" .
+
+:Minimization rdf:type owl:Class ;
+    rdfs:subClassOf :SSIPrinciple ;
+    rdfs:label "Minimization" .
+
+:Protection rdf:type owl:Class ;
+    rdfs:subClassOf :SSIPrinciple ;
+    rdfs:label "Protection" .
+
+# Relazioni tra i principi
+:hasPrerequisite rdf:type owl:ObjectProperty ;
+    rdfs:domain :SSIPrinciple ;
+    rdfs:range :SSIPrinciple ;
+    rdfs:label "has prerequisite" .
+
+:facilitates rdf:type owl:ObjectProperty ;
+    rdfs:domain :SSIPrinciple ;
+    rdfs:range :SSIPrinciple ;
+    rdfs:label "facilitates" .
+
+:isHinderedBy rdf:type owl:ObjectProperty ;
+    rdfs:domain :SSIPrinciple ;
+    rdfs:range :SSIPrinciple ;
+    rdfs:label "is hindered by" .
+
+# Esempi di relazioni tra principi
+:Control :hasPrerequisite :Existence .
+:Consent :facilitates :Minimization .
+:Portability :facilitates :Interoperability .
+:Transparency :facilitates :Consent .
