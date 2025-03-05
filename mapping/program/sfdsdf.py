@@ -1,73 +1,22 @@
-@prefix : <http://example.org/ssi#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+from graphviz import Digraph
 
-:SSIPrinciple rdf:type owl:Class ;
-    rdfs:label "Self-Sovereign Identity Principle" .
+dot = Digraph()
 
-# Principi fondamentali
-:Existence rdf:type owl:Class ;
-    rdfs:subClassOf :SSIPrinciple ;
-    rdfs:label "Existence" .
+dot.node("Identity", shape="oval", style="filled", fillcolor="gold")
 
-:Control rdf:type owl:Class ;
-    rdfs:subClassOf :SSIPrinciple ;
-    rdfs:label "Control" .
+principles = ["Existence", "Control", "Access", "Transparency", "Persistence",
+              "Portability", "Interoperability", "Consent", "MinimalDisclosure", "RightsProtection"]
 
-:Access rdf:type owl:Class ;
-    rdfs:subClassOf :SSIPrinciple ;
-    rdfs:label "Access" .
+for p in principles:
+    dot.node(p, shape="circle", style="filled", fillcolor="lightblue")
+    dot.edge("Identity", p, label="follows")
 
-# Principi operativi
-:Persistence rdf:type owl:Class ;
-    rdfs:subClassOf :SSIPrinciple ;
-    rdfs:label "Persistence" .
+dot.edge("Control", "Consent", label="hasSubPrinciple")
+dot.edge("Control", "MinimalDisclosure", label="hasSubPrinciple")
 
-:Portability rdf:type owl:Class ;
-    rdfs:subClassOf :SSIPrinciple ;
-    rdfs:label "Portability" .
+influences = ["Security", "Privacy", "Usability"]
+for i in influences:
+    dot.node(i, shape="box", style="filled", fillcolor="gray")
+    dot.edge("Principle", i, label="influences")
 
-:Interoperability rdf:type owl:Class ;
-    rdfs:subClassOf :SSIPrinciple ;
-    rdfs:label "Interoperability" .
-
-# Principi etici e di sicurezza
-:Transparency rdf:type owl:Class ;
-    rdfs:subClassOf :SSIPrinciple ;
-    rdfs:label "Transparency" .
-
-:Consent rdf:type owl:Class ;
-    rdfs:subClassOf :SSIPrinciple ;
-    rdfs:label "Consent" .
-
-:Minimization rdf:type owl:Class ;
-    rdfs:subClassOf :SSIPrinciple ;
-    rdfs:label "Minimization" .
-
-:Protection rdf:type owl:Class ;
-    rdfs:subClassOf :SSIPrinciple ;
-    rdfs:label "Protection" .
-
-# Relazioni tra i principi
-:hasPrerequisite rdf:type owl:ObjectProperty ;
-    rdfs:domain :SSIPrinciple ;
-    rdfs:range :SSIPrinciple ;
-    rdfs:label "has prerequisite" .
-
-:facilitates rdf:type owl:ObjectProperty ;
-    rdfs:domain :SSIPrinciple ;
-    rdfs:range :SSIPrinciple ;
-    rdfs:label "facilitates" .
-
-:isHinderedBy rdf:type owl:ObjectProperty ;
-    rdfs:domain :SSIPrinciple ;
-    rdfs:range :SSIPrinciple ;
-    rdfs:label "is hindered by" .
-
-# Esempi di relazioni tra principi
-:Control :hasPrerequisite :Existence .
-:Consent :facilitates :Minimization .
-:Portability :facilitates :Interoperability .
-:Transparency :facilitates :Consent .
+dot.render("ssi_knowledge_graph", format="png", cleanup=False)  # Genera il file PNG
