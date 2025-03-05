@@ -1,7 +1,18 @@
 fare le ontologie dei principi
+creare proprietà per i principi
 fare ontologie del ToIP
-fare distance delle parole tra principi e layers ToIP, con varie tecniche
-riportare i risultati come relazioni in ontologie
-testarlo con protege
+creare proprietà per i liveli ToIP
+
+definire regole per il mapping
+
+	fare distance delle parole tra principi e layers ToIP, con varie tecniche
+	riportare i risultati come relazioni in ontologie
+
+testare mapping con un reasoner (protege)
 fare potenzialmente query con SPARQL
-verificare i risultati con dei reasoner automatici
+visualizzare risultati visivamente
+
+Dopo il mapping posso estrarre requisiti infrastrutturali:
+	es. Il livello di infrastruttura deve supportare protocolli decentralizzati per garantire la persistenza dell’identità.
+	es. Il livello di infrastruttura deve proteggere le credenziali tramite algoritmi crittografici.
+Usare SPARQL per generare i requisiti direttamente dall'ontologia
