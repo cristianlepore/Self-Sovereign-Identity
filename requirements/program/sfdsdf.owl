@@ -1,106 +1,80 @@
-@prefix : <http://example.org/ssi-toip#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
 
-<http://example.org/ssi-toip>
-    rdf:type owl:Ontology ;
-    rdfs:comment "Ontology for mapping Self-Sovereign Identity (SSI) principles to the Trust Over IP (ToIP) framework." .
+  <!-- Definizione delle Classi -->
+  <rdf:Description rdf:about="#User">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Utente</rdfs:label>
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="#Attribute">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Attributo</rdfs:label>
+  </rdf:Description>
 
-# Definizione delle classi principali
+  <rdf:Description rdf:about="#IdentityProvider">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Fornitore di Identità</rdfs:label>
+  </rdf:Description>
 
-:PrincipioSSI rdf:type owl:Class ;
-    rdfs:label "Principio di Self-Sovereign Identity" ;
-    rdfs:comment "Un principio chiave della Self-Sovereign Identity." .
+  <rdf:Description rdf:about="#ServiceProvider">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Fornitore di Servizi</rdfs:label>
+  </rdf:Description>
 
-:LivelloToIP rdf:type owl:Class ;
-    rdfs:label "Livello ToIP" ;
-    rdfs:comment "Un livello del modello Trust Over IP (ToIP)." .
+  <rdf:Description rdf:about="#DigitalIdentity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Identità Digitale</rdfs:label>
+  </rdf:Description>
 
-:Requisito rdf:type owl:Class ;
-    rdfs:label "Requisito" ;
-    rdfs:comment "Un requisito derivato dai principi SSI e dai livelli ToIP." .
+  <rdf:Description rdf:about="#SelfSovereignIdentity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label>Self-Sovereign Identity</rdfs:label>
+  </rdf:Description>
 
-# Sottoclassi per i livelli ToIP
+  <!-- Definizione delle Proprietà -->
+  <rdf:Description rdf:about="#HasAttribute">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#User"/>
+    <rdfs:range rdf:resource="#Attribute"/>
+    <rdfs:label>Ha Attributo</rdfs:label>
+  </rdf:Description>
 
-:InfrastructureLayer rdf:type owl:Class ;
-    rdfs:subClassOf :LivelloToIP ;
-    rdfs:label "Livello 1 - Infrastructure" .
+  <rdf:Description rdf:about="#IssuesAttribute">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#IdentityProvider"/>
+    <rdfs:range rdf:resource="#Attribute"/>
+    <rdfs:label>Rilascia Attributo</rdfs:label>
+  </rdf:Description>
 
-:UtilityLayer rdf:type owl:Class ;
-    rdfs:subClassOf :LivelloToIP ;
-    rdfs:label "Livello 2 - Utility" .
+  <rdf:Description rdf:about="#RequiresIdentity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#ServiceProvider"/>
+    <rdfs:range rdf:resource="#DigitalIdentity"/>
+    <rdfs:label>Richiede Identità</rdfs:label>
+  </rdf:Description>
 
-:GovernanceLayer rdf:type owl:Class ;
-    rdfs:subClassOf :LivelloToIP ;
-    rdfs:label "Livello 3 - Governance" .
+  <rdf:Description rdf:about="#ControlsIdentity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#SelfSovereignIdentity"/>
+    <rdfs:range rdf:resource="#DigitalIdentity"/>
+    <rdfs:label>Controlla Identità</rdfs:label>
+  </rdf:Description>
 
-:ApplicationLayer rdf:type owl:Class ;
-    rdfs:subClassOf :LivelloToIP ;
-    rdfs:label "Livello 4 - Application" .
+  <rdf:Description rdf:about="#CombinesAttributes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#User"/>
+    <rdfs:range rdf:resource="#Attribute"/>
+    <rdfs:label>Combinazione di Attributi</rdfs:label>
+  </rdf:Description>
 
-# Relazioni tra principi SSI e livelli ToIP
+  <rdf:Description rdf:about="#SharesIdentity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#User"/>
+    <rdfs:range rdf:resource="#ServiceProvider"/>
+    <rdfs:label>Condivide Identità</rdfs:label>
+  </rdf:Description>
 
-:applicaA rdf:type owl:ObjectProperty ;
-    rdfs:domain :PrincipioSSI ;
-    rdfs:range :LivelloToIP ;
-    rdfs:label "applica a" ;
-    rdfs:comment "Collega un principio SSI a un livello ToIP dove è rilevante." .
-
-# Proprietà per la derivazione dei requisiti
-
-:derivaRequisito rdf:type owl:ObjectProperty ;
-    rdfs:domain :PripioSSI ;
-    rdfs:range :Requisito ;
-    rdfs:label "deriva requisito" ;
-    rdfs:comment "Indica che un requisito è derivato da un principio SSI." .
-
-:richiedeCrittografia rdf:type owl:DatatypeProperty ;
-    rdfs:domain :PrincipioSSI ;
-    rdfs:range xsd:boolean ;
-    rdfs:label "richiede crittografia" ;
-    rdfs:comment "Indica se il principio necessita di crittografia per essere implementato." .
-
-:necessitaProtezioneDati rdf:type owl:DatatypeProperty ;
-    rdfs:domain :LivelloToIP ;
-    rdfs:range xsd:boolean ;
-    rdfs:label "necessita protezione dati" ;
-    rdfs:comment "Indica se il livello ToIP ha bisogno di protezione dati per funzionare." .
-
-# Esempi di istanze di principi, livelli e requisiti
-
-:Security rdf:type :PrincipioSSI ;
-    rdfs:label "Security" ;
-    :applicaA :InfrastructureLayer , :UtilityLayer ;
-    :richiedeCrittografia "true"^^xsd:boolean ;
-    :derivaRequisito :RequisitoSicurezza .
-
-:Control rdf:type :PrincipioSSI ;
-    rdfs:label "Control" ;
-    :applicaA :ApplicationLayer ;
-    :derivaRequisito :RequisitoControllo .
-
-:Interoperability rdf:type :PrincipioSSI ;
-    rdfs:label "Interoperability" ;
-    :applicaA :UtilityLayer ;
-    :derivaRequisito :RequisitoInteroperabilita .
-
-:Consent rdf:type :PrincipioSSI ;
-    rdfs:label "Consent" ;
-    :applicaA :GovernanceLayer ;
-    :derivaRequisito :RequisitoConsenso .
-
-# Definizione dei requisiti derivati
-
-:RequisitoSicurezza rdf:type :Requisito ;
-    rdfs:label "Il sistema deve implementare crittografia avanzata per proteggere i dati dell'identità digitale." .
-
-:RequisitoControllo rdf:type :Requisito ;
-    rdfs:label "Gli utenti devono avere il pieno controllo sulle loro identità digitali attraverso interfacce intuitive." .
-
-:RequisitoInteroperabilita rdf:type :Requisito ;
-    rdfs:label "Il sistema deve garantire la compatibilità tra diversi provider di identità digitale." .
-
-:RequisitoConsenso rdf:type :Requisito ;
-    rdfs:label "Gli utenti devono poter concedere e revocare il consenso all'uso dei propri dati in qualsiasi momento." .
+</rdf:RDF>
