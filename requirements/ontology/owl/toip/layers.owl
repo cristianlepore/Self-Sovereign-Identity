@@ -1,0 +1,160 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#">
+
+    <!-- Layer 1: Trust Support -->
+    <rdf:Description rdf:about="#Layer1_TrustSupport">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Layer 1: Trust Support</rdfs:label>
+    </rdf:Description>
+
+    <!-- Identifiers -->
+    <rdf:Description rdf:about="#Identifier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Identifier</rdfs:label>
+    </rdf:Description>
+
+    <!-- Trust Anchors -->
+    <rdf:Description rdf:about="#TrustAnchor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Trust Anchor</rdfs:label>
+    </rdf:Description>
+
+    <!-- Verifiable Data Registries -->
+    <rdf:Description rdf:about="#VerifiableDataRegistry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Verifiable Data Registry</rdfs:label>
+    </rdf:Description>
+
+    <!-- Layer 2: Trust Spanning -->
+    <rdf:Description rdf:about="#Layer2_TrustSpanning">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Layer 2: Trust Spanning</rdfs:label>
+    </rdf:Description>
+
+    <!-- Agents -->
+    <rdf:Description rdf:about="#Agent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Agent</rdfs:label>
+    </rdf:Description>
+
+    <!-- Wallet -->
+    <rdf:Description rdf:about="#Wallet">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Wallet</rdfs:label>
+    </rdf:Description>
+
+    <!-- DIDComm -->
+    <rdf:Description rdf:about="#DIDComm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>DIDComm Protocol</rdfs:label>
+    </rdf:Description>
+
+    <!-- Layer 3: Trust Tasks -->
+    <rdf:Description rdf:about="#Layer3_TrustTasks">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Layer 3: Trust Tasks</rdfs:label>
+    </rdf:Description>
+
+    <!-- Credential -->
+    <rdf:Description rdf:about="#Credential">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Credential</rdfs:label>
+    </rdf:Description>
+
+    <!-- Credential Format -->
+    <rdf:Description rdf:about="#CredentialFormat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Credential Format</rdfs:label>
+    </rdf:Description>
+
+    <!-- Proof Mechanism -->
+    <rdf:Description rdf:about="#ProofMechanism">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Proof Mechanism</rdfs:label>
+    </rdf:Description>
+
+    <!-- Layer 4: Trust Applications -->
+    <rdf:Description rdf:about="#Layer4_TrustApplications">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Layer 4: Trust Applications</rdfs:label>
+    </rdf:Description>
+
+    <!-- Trust Assumption -->
+    <rdf:Description rdf:about="#TrustAssumption">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Trust Assumption</rdfs:label>
+    </rdf:Description>
+
+    <!-- Threat -->
+    <rdf:Description rdf:about="#Threat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <rdfs:label>Threat</rdfs:label>
+    </rdf:Description>
+
+    <!-- Proprietà -->
+    <!-- Layer 1 -->
+    <rdf:Description rdf:about="#hasIdentifier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Layer1_TrustSupport"/>
+        <rdfs:range rdf:resource="#Identifier"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#hasTrustAnchor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Layer1_TrustSupport"/>
+        <rdfs:range rdf:resource="#TrustAnchor"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#hasVerifiableDataRegistry">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Layer1_TrustSupport"/>
+        <rdfs:range rdf:resource="#VerifiableDataRegistry"/>
+    </rdf:Description>
+
+    <!-- Layer 2 -->
+    <rdf:Description rdf:about="#hasAgent">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Layer2_TrustSpanning"/>
+        <rdfs:range rdf:resource="#Agent"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#hasWallet">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Layer2_TrustSpanning"/>
+        <rdfs:range rdf:resource="#Wallet"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#usesDIDComm">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Layer2_TrustSpanning"/>
+        <rdfs:range rdf:resource="#DIDComm"/>
+    </rdf:Description>
+
+    <!-- Layer 3 -->
+    <rdf:Description rdf:about="#hasCredentialFormat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Layer3_TrustTasks"/>
+        <rdfs:range rdf:resource="#CredentialFormat"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#hasProofMechanism">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Layer3_TrustTasks"/>
+        <rdfs:range rdf:resource="#ProofMechanism"/>
+    </rdf:Description>
+
+    <!-- Layer 4 -->
+    <rdf:Description rdf:about="#hasTrustAssumption">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Layer4_TrustApplications"/>
+        <rdfs:range rdf:resource="#TrustAssumption"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#hasThreat">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <rdfs:domain rdf:resource="#Layer4_TrustApplications"/>
+        <rdfs:range rdf:resource="#Threat"/>
+    </rdf:Description>
+
+</rdf:RDF>

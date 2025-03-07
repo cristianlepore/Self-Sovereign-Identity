@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.org/ssi#"
+     xml:base="http://example.org/ssi"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+   <owl:Ontology rdf:about="http://example.org/ssi#">
+        <rdfs:comment>Ontology to model the interaction between Issuer, Holder, and Verifier in a SSI system.</rdfs:comment>
+    </owl:Ontology>
+
+
+    <!-- Definition of classes -->
+    <owl:Class rdf:about="#Issuer"/>
+    <owl:Class rdf:about="#Holder"/>
+    <owl:Class rdf:about="#Verifier"/>
+    <owl:Class rdf:about="#Credential"/>
+    <owl:Class rdf:about="#Presentation"/>
+    <owl:Class rdf:about="#Attribute"/>
+
+
+    <!-- Disjointnessconstraints -->
+    <rdf:Description rdf:about="#Issuer">
+        <owl:disjointWith rdf:resource="#Holder"/>
+        <owl:disjointWith rdf:resource="#Verifier"/>
+    </rdf:Description>
+    
+    <rdf:Description rdf:about="#Holder">
+        <owl:disjointWith rdf:resource="#Issuer"/>
+        <owl:disjointWith rdf:resource="#Verifier"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="#Verifier">
+        <owl:disjointWith rdf:resource="#Issuer"/>
+        <owl:disjointWith rdf:resource="#Holder"/>
+    </rdf:Description>
+
+
+    <!-- Properties to request and issue an assertion -->
+    <owl:ObjectProperty rdf:about="#requestsAssertion">
+        <rdfs:domain rdf:resource="#Holder"/>
+        <rdfs:range rdf:resource="#Issuer"/>
+        <rdfs:comment>An Holder requests attributes to an Issuer</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#issuesAssertion">
+        <rdfs:domain rdf:resource="#Issuer"/>
+        <rdfs:range rdf:resource="#Credential"/>
+        <rdfs:comment>An Issuer issues a credential for a Holder</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#containsAttribute">
+        <rdfs:domain rdf:resource="#Credential"/>
+        <rdfs:range rdf:resource="#Attribute"/>
+        <rdfs:comment>A credential contains a list of attributes</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#receivesCredential">
+        <rdfs:domain rdf:resource="#Holder"/>
+        <rdfs:range rdf:resource="#Credential"/>
+        <rdfs:comment>An Holder receives a credential</rdfs:comment>
+    </owl:ObjectProperty>
+
+
+    <!-- Properties to request and issue an presentation -->
+    <owl:ObjectProperty rdf:about="#requestsPresentation">
+        <rdfs:domain rdf:resource="#Verifier"/>
+        <rdfs:range rdf:resource="#Holder"/>
+        <rdfs:comment>A Verifier requests attributes to a Holder</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#issuesPresentation">
+        <rdfs:domain rdf:resource="#Holder"/>
+        <rdfs:range rdf:resource="#Presentation"/>
+        <rdfs:comment>A Holder generates and shares a presentation derived from a credential with a Verifier.</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#containsAttribute">
+        <rdfs:domain rdf:resource="#Presentation"/>
+        <rdfs:range rdf:resource="#Attribute"/>
+        <rdfs:comment>A presentation contains a list of attributes</rdfs:comment>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="#verifiesPresentation">
+        <rdfs:domain rdf:resource="#Verifier"/>
+        <rdfs:range rdf:resource="#Presentation"/>
+        <rdfs:comment>A Verifiers verifies a presentation</rdfs:comment>
+    </owl:ObjectProperty>
+
+
+    <!-- Holder stores attributes -->
+    <owl:ObjectProperty rdf:about="#holdsAttribute">
+        <rdfs:domain rdf:resource="#Holder"/>
+        <rdfs:range rdf:resource="#Attribute"/>
+        <rdfs:comment>A Holder stores attributes</rdfs:comment>
+    </owl:ObjectProperty>
+
+</rdf:RDF>
