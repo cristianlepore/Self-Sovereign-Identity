@@ -1,0 +1,35 @@
+TECH-FREE LAYERS DESCRIPTION OF THE TOIP
+
+The Trust Over IP (ToIP) is a late-generation model resulting from the collaboration of organizations and individual contributors from various research fields. The model is a dual-layered stack that integrates technical verifiability and human accountability at every layer.
+
+The stack features a four-layer hourglass, which is commonly used to describe the design of the TCP-IP Internet stack, where a large number of protocols at the top and bottom narrow to only one protocol in the middle: the IP protocol.
+A similar shape is now being used to lay interoperability across trust systems by the Trust Over IP.
+
+Layer 1. Trust Support.
+In the ToIP model, the bottom layer, the layer 1, suggests supporting items for trust tasks. This layer provides public utilities and anchor points for trust system items on a persistent layer.
+It includes technical items that root identity for as long as users wish.
+
+This layer is also called Trust Support layer and provides a way to identify participants and verify the provenance of these identities through trust anchors. This layer provides a trusted foundation upon which the subsequent layers are constructed. The layer features several properties:
+- Identification. Every party represents themselves with a globally unique self-generated identity handle. Recipients communicating with the party use this identifier to derive public attributes (e.g., public key). Issuers create long-lived identifiers shared broadly, while other entities may create new identifiers for each communication. Trust anchors affirm the provenance of identities.
+- Trust anchors. They are “trusted components” that serve as starting points for establishing trust across the other layers. These trusted components guarantee record’s immutability and auditability. Trust anchors anchor identities and public attributes.
+
+Layer 2. Trust Spanning.
+The second layer is agent-to-agent communication, which provides a standard way to establish secure communication between two endpoints. It is also the hourglass neck. The hourglass neck must be as thin as possible, and must abstract from the specific implementation underneath while supporting the composition of items from the layer 3 and layer 4.
+Layer 2 focuses solely on facilitating communication between agents of Layer 3. The communication between agents must happen through encrypt messages exchanged between entities.
+
+Layer 3. Trust Tasks.
+The third layer is where e-identity data is exchanged between parties. It involves the type of data with credential formats and entities: issuer, holder, and verifier.
+Layer 3 facilitates the credential exchange. It defines the standardized, interoperable credential formats (e.g., driver’s licenses). It also specifies verification mechanisms (e.g., signatures), credential management protocols (collection, storage, presentation), and optional extensions to the core process.
+- Credential Formats. Credentials adhere to a standardized format comprising credential metadata, claims, and proof. Credential metadata encompasses the issuer’s identity, credential type (e.g., driver’s license), and issuance date, among other details. Claims represent the identity attributes verified by the issuer (e.g., name, birthdate, address, licence no.). The proof ensures the credentials are tamper-proof for integrity and provenance. Presentations are temporary, ephemeral documents containing verifiable credentials that service providers request. Some works consider presentations synonymous with verifiable credentials.
+- Verification Mechanisms (Proofs). Credentials contain a verification mechanism as a proof of the credential’s authenticity. This proof may be provided through a signature, where the issuer signs the entire credential (metadata and claims) with their private key. Service providers verify the credential’s authenticity by retrieving the issuer’s public key from their DID. 
+All surveyed credential profiles use signatures as a verification mechanism, although some do not present the signature to the service provider; instead, the identity owner presents a zero-knowledge proof of knowledge of a valid signature.
+- Protocols. Protocols define the procedures controlling the exchange of credentials, encompassing how identity owners request credentials from issuers, how service providers request presentations from identity owners, and how identity owners present credentials to service providers. 
+- Extensions. Extensions add additional SSI features to the credential exchange. Our discussion utilizes these extensions to introduce threats and analyze their risk and mitigations to derive various trust models.
+
+Layer 4. Trust Applications.
+Credential formats, verification mechanism, and protocols, depend on ecosystem applications, such as healthcare systems and educational sector. Therefore, technology items may vary slightly between vertical stacks for different industries. The task of layer four is to combine the technology items from the previous layers in a convenient and easy-to-use way.
+Layer 4 depicts the identity applications ecosystem (e.g., government, health, banking). Each application is considered to have Trust Assumptions. They define trusted and untrusted parties, interactions, and components. 
+Deriving Trust Requirements from Trust Assumptions. Intuitively, a trust assumption implies a threat – e.g., suggesting the credential presented to the service provider could be fraudulent. In fact, we can derive that a trust assumption (or lack thereof) implies the application accepting the presence of a threat. Threats pose a risk to some participants and must be addressed through constraints. That is, a Layer 4 application that distrusts identity owners and assumes they may present fraudulent credentials mandates the implementation of tamper-proof credentials in Layer 3. Based on this observation, in our analysis of trust requirements
+for trust models, we consider that the human trust assumptions made in Layer 4 are stated as threats, which defines constraints that need to be addressed by the components of Layers 1-3. Trust assumptions in Layer 4 determine the use of components in the other layers.
+
+Human mandates and policies intertwine with technology in each of these layers. Namely, each layer delves with both technical and governance requirements.
