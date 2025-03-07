@@ -1,0 +1,55 @@
+TECH-FREE LAYERS DESCRIPTION OF THE TOIP
+
+The Trust Over IP (ToIP) is a late-generation framework resulting from the collaboration of organizations and individual contributors from various research fields. The framework proposes a dual-layered stack that integrates technical verifiability and human accountability at every layer. So that, every layer includes technical and legal considerations and requirements for the design of interoperable trust systems. This framework empowers, but it is not limited to, practitioners who aim to build new decentralized identity systems based on Self-Sovereign Identity.
+
+The ToIP features a hourglass model, similar to what has been used for years over the Internet with the TCP-IP stack, in which technological and governance requirements converge to a narrow list of features right in the middle, contributing to shape a hourglass. The hourglass was used in the Internet, and it is now being used to lay interoperability across trust systems in the Trust Over IP framework.
+
+The ToIP consists of four layers, providing strong requirements for technical and governance items, and designed from bottom to top, as follows:
+
+The ToIP technology stack
+Layer 1. Trust Support.
+In the ToIP model, the bottom layer is the layer 1. It provides requirements for trust support for the above layers. In particular, they provide requirement for public utilities and anchor points for trust system items on a persistent layer. The persistent layer includes technical items and governance aspects that root identity for a long period of time.
+This layer is also called Trust Support layer and provides a way to identify participants and verify the provenance of these identities through trust anchors. This layer provides a trusted foundation upon which the subsequent layers are constructed. These are the basic properties:
+- Identification. Every party represents themselves with a globally unique self-generated identity handle. Recipients communicating with the party use identifiers to derive public attributes (e.g., public key). 
+- Issuers create long-lived identifiers shared broadly, while other entities may create new identifiers for each communication. 
+- Trust anchors. They are “trusted components” that serve as starting points for establishing trust across the other layers. They affirm the provenance of identities. These trusted components guarantee record’s immutability and auditability. Trust anchors anchor identities and public attributes.
+- Trust computing services. Cryptographic operations, key management, biometric operations.
+- Secure storage services. Cryptographic keys, secrets, credentials, encrypted data.
+- Network transport protocols.
+Designing principles
+
+Layer 2. Trust Spanning.
+The second layer is agent-to-agent communication, which provides a standard way to establish trusted connection between two endpoints. It is also the hourglass neck. The hourglass neck must be as thin as possible, and must abstract access to the strust support of the layer underneath, while supporting composable protocols for specific repeatable trust task on layer 3.
+Layer 2 focuses solely on facilitating communication between agents of Layer 3. The communication between agents must happen through encrypt messages exchanged between entities.
+
+Layer 3. Trust Tasks.
+A trust task is an element, or component, of an application htat consists of one or more well-defined atomic actions that support the overall trust objectives of the application.
+The third layer is where e-identity data is exchanged between parties. It involves the type of data with credential formats and entities: issuer, holder, and verifier.
+Other than facilitating the credential exchange, layer 3 defines standardized for interoperable credential formats and specifies verification mechanisms (e.g., signatures), credential management protocols (collection, storage, presentation), and optional extensions to the core process.
+- Credential Formats. Credentials adhere to a standardized format comprising credential metadata, claims, and proof. Credential metadata encompasses the issuer’s identity, credential type (e.g., driver’s license), and issuance date, among other details. Claims represent the identity attributes verified by the issuer (e.g., name, birthdate, address, licence no.). The proof ensures the credentials are tamper-proof for integrity and provenance. Presentations are temporary, ephemeral documents containing verifiable credentials that service providers request. Some works consider presentations synonymous with verifiable credentials.
+- Verification Mechanisms (Proofs). Credentials contain a verification mechanism as a proof of the credential’s authenticity. This proof may be provided through a signature, where the issuer signs the entire credential (metadata and claims) with their private key. Service providers verify the credential’s authenticity by retrieving the issuer’s public key from their DID. All surveyed credential profiles use signatures as a verification mechanism, although some do not present the signature to the service provider; instead, the identity owner presents a zero-knowledge proof of knowledge of a valid signature.
+- Protocols. Protocols define the procedures controlling the exchange of credentials, encompassing how identity owners request credentials from issuers, how service providers request presentations from identity owners, and how identity owners present credentials to service providers. 
+- Extensions. Extensions add additional SSI features to the credential exchange.
+- Credential exchange protocols: issuer, offer, present credentials.
+- Payment protocols.
+- Secure messaging.
+- Streaming data protocols.
+
+Layer 4. Trust Applications.
+Credential formats, verification mechanism, and protocols, depend on ecosystem applications, such as healthcare systems and educational sector. Therefore, technology items may vary slightly between vertical stacks for different industries. The task of layer four is to combine the technology items from the previous layers in a convenient and easy-to-use way.
+Layer 4 depicts the identity applications ecosystem (e.g., government, health, banking). Each application is considered to have Trust Assumptions. They define trusted and untrusted parties, interactions, and components. 
+
+Human mandates and policies intertwine with technology in each of these layers. Namely, each layer delves with both technical and governance requirements.
+
+The ToIP governance stack
+Layer 1: Trust support.
+Trust at any higher layer is only as strong as the parties' confidence in any shared trust roots or trust anchors. In decentralized digital trust infrastructure, it means confidence in the governance frameworks for both: a) the trusted computing and secure storage elements of private digital wallets, and b) the utilities that serve as public or private verifiable data registries for storing decentralized identifiers, trust anchors, and other shared sources of truth.
+
+Layer 2. Trust spanning.
+As the "active" component of a digital wallet, a digital agent that speaks the ToIP trust spanning protocol is second only to an operating system as the software component that most needs to be trusted by its controller. Mandating governance requirements for digital agents and digital wallets is what enables trust to move out to the decentralized "edges" of the network.
+
+Layer 3. Trust task.
+Every real-world trust task - from issuing a verifiable credential to initiating a payment to participating in an auction - requires actors (individuals or organizations) to behave by a known set of policies and rules. So, by definition, the level of trust the parties can achieve depends on their level of confidence in a shared governance framework (formal or informal, manual or algorithmic) for that trust task.
+
+Layer 4. Trust Applications.
+At the application layer, governance frameworks can establish the rules for how one or more ToIP-enabled applications can interoperate and collaborate within and across digital trust ecosystems. Such ecosystems can be very narrow - such as within a single company, town or university - or they can be very broad, such as digital health or vaccination credentials that are recognized and accepted worldwide. Such governance frameworks can also mandate the use of specific user interface affordances for ToIP-enable applications, such as QR codes, trust marks, or accessibility requirements.

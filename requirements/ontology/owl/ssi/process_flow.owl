@@ -20,7 +20,7 @@
     <owl:Class rdf:about="#Attribute"/>
 
 
-    <!-- Disjointnessconstraints -->
+    <!-- Disjointness constraints -->
     <rdf:Description rdf:about="#Issuer">
         <owl:disjointWith rdf:resource="#Holder"/>
         <owl:disjointWith rdf:resource="#Verifier"/>
