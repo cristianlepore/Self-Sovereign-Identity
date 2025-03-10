@@ -1,22 +1,47 @@
+
 TECH-FREE LAYERS DESCRIPTION OF THE TOIP
 
-The Trust Over IP (ToIP) is a late-generation framework resulting from the collaboration of organizations and individual contributors from various research fields. The framework proposes a dual-layered stack that integrates technical verifiability and human accountability at every layer. So that, every layer includes technical and legal considerations and requirements for the design of interoperable trust systems. This framework empowers, but it is not limited to, practitioners who aim to build new decentralized identity systems based on Self-Sovereign Identity.
+Collaboration and Origins: The Trust Over IP (ToIP) framework is the result of collaboration between organizations and individual contributors from various research fields.
 
-The ToIP features a hourglass model, similar to what has been used for years over the Internet with the TCP-IP stack, in which technological and governance requirements converge to a narrow list of features right in the middle, contributing to shape a hourglass. The hourglass was used in the Internet, and it is now being used to lay interoperability across trust systems in the Trust Over IP framework.
+Two-halves Structure: ToIP proposes a two-layered stack that integrates technical verifiability and human accountability at every layer.
 
-The ToIP consists of four layers, providing strong requirements for technical and governance items, and designed from bottom to top, as follows:
+Technical and Legal Considerations: Each layer includes technical and legal considerations and requirements for the design of interoperable trust systems.
 
-The ToIP technology stack
-Layer 1. Trust Support.
-In the ToIP model, the bottom layer is the layer 1. It provides requirements for trust support for the above layers. In particular, they provide requirement for public utilities and anchor points for trust system items on a persistent layer. The persistent layer includes technical items and governance aspects that root identity for a long period of time.
-This layer is also called Trust Support layer and provides a way to identify participants and verify the provenance of these identities through trust anchors. This layer provides a trusted foundation upon which the subsequent layers are constructed. These are the basic properties:
-- Identification. Every party represents themselves with a globally unique self-generated identity handle. Recipients communicating with the party use identifiers to derive public attributes (e.g., public key). 
-- Issuers create long-lived identifiers shared broadly, while other entities may create new identifiers for each communication. 
-- Trust anchors. They are “trusted components” that serve as starting points for establishing trust across the other layers. They affirm the provenance of identities. These trusted components guarantee record’s immutability and auditability. Trust anchors anchor identities and public attributes.
-- Trust computing services. Cryptographic operations, key management, biometric operations.
-- Secure storage services. Cryptographic keys, secrets, credentials, encrypted data.
-- Network transport protocols.
-Designing principles
+Support for Building Decentralized Systems: The framework is useful, but not limited to, practitioners aiming to build new decentralized identity systems based on Self-Sovereign Identity (SSI).
+
+Hourglass Model: ToIP uses an hourglass model, similar to the one used in the TCP/IP protocol for the Internet, where technological and governance requirements converge to a narrow list of features in the middle, contributing to interoperability.
+
+Four-layers Structure: ToIP consists of four layers that provide strong requirements for technical and governance elements.
+
+****************************
+****************************
+****************************
+
+TECH HALF
+Layer 1.
+Trust support which provides the trusted foundation for the other layers above.
+
+It provides requirements for public utilities and anchor points for trust system items on a persistent layer that roots identity for a long period of time.
+
+Identification. Identify participants. Every party represents themselves with a globally unique self-generated identity handle.
+
+Recipients communicating with the party use identifiers to derive public attributes (e.g., public key). 
+
+Verification provenance of identitifiers through trust anchors.
+
+Persistence identifiers: Issuers create long-lived identifiers. New identifier for each communication.
+
+Trust anchors. Trusted components that establish trust across for the other layers. These trusted components guarantee record’s immutability and auditability. They anchors identities and attributes.
+
+Trust computing services. Cryptographic operations, key management, biometric operations.
+
+Secure storage services. Cryptographic keys, secrets, credentials, encrypted data.
+
+Network transport protocols.
+
+****************************
+****************************
+****************************
 
 Layer 2. Trust Spanning.
 The second layer is agent-to-agent communication, which provides a standard way to establish trusted connection between two endpoints. It is also the hourglass neck. The hourglass neck must be as thin as possible, and must abstract access to the strust support of the layer underneath, while supporting composable protocols for specific repeatable trust task on layer 3.

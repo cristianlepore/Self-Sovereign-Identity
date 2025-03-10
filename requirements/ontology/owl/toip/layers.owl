@@ -1,160 +1,58 @@
+<?xml version="1.0"?>
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
          xmlns:owl="http://www.w3.org/2002/07/owl#">
 
-    <!-- Layer 1: Trust Support -->
-    <rdf:Description rdf:about="#Layer1_TrustSupport">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Layer 1: Trust Support</rdfs:label>
-    </rdf:Description>
+    <owl:Ontology rdf:about="">
+        <rdfs:comment>Ontology describing the properties and structure of the Trust Over IP (ToIP) framework.</rdfs:comment>
+    </owl:Ontology>
 
-    <!-- Identifiers -->
-    <rdf:Description rdf:about="#Identifier">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Identifier</rdfs:label>
-    </rdf:Description>
+    <!-- ToIP Properties -->
+    <owl:Class rdf:ID="ToIPProperty">
+        <rdfs:label>ToIP Property</rdfs:label>
+        <rdfs:comment>Represents a general property of the ToIP framework.</rdfs:comment>
+    </owl:Class>
 
-    <!-- Trust Anchors -->
-    <rdf:Description rdf:about="#TrustAnchor">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Trust Anchor</rdfs:label>
-    </rdf:Description>
+    <owl:Class rdf:ID="DecentralizedSystems">
+        <rdfs:subClassOf rdf:resource="#ToIPProperty"/>
+        <rdfs:label>Decentralized Systems</rdfs:label>
+        <rdfs:comment>Describes the decentralization characteristic of ToIP-based systems.</rdfs:comment>
+    </owl:Class>
 
-    <!-- Verifiable Data Registries -->
-    <rdf:Description rdf:about="#VerifiableDataRegistry">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Verifiable Data Registry</rdfs:label>
-    </rdf:Description>
+    <owl:Class rdf:ID="InteroperableSystems">
+        <rdfs:subClassOf rdf:resource="#ToIPProperty"/>
+        <rdfs:label>Interoperable Systems</rdfs:label>
+        <rdfs:comment>Represents the interoperability feature of ToIP.</rdfs:comment>
+    </owl:Class>
 
-    <!-- Layer 2: Trust Spanning -->
-    <rdf:Description rdf:about="#Layer2_TrustSpanning">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Layer 2: Trust Spanning</rdfs:label>
-    </rdf:Description>
+    <owl:Class rdf:ID="TechnicalConsiderations">
+        <rdfs:subClassOf rdf:resource="#ToIPProperty"/>
+        <rdfs:label>Technical Considerations</rdfs:label>
+        <rdfs:comment>Encapsulates technical design and requirements of the ToIP framework.</rdfs:comment>
+    </owl:Class>
 
-    <!-- Agents -->
-    <rdf:Description rdf:about="#Agent">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Agent</rdfs:label>
-    </rdf:Description>
+    <owl:Class rdf:ID="GovernanceConsiderations">
+        <rdfs:subClassOf rdf:resource="#ToIPProperty"/>
+        <rdfs:label>Governance Considerations</rdfs:label>
+        <rdfs:comment>Includes governance rules and policies within the ToIP framework.</rdfs:comment>
+    </owl:Class>
 
-    <!-- Wallet -->
-    <rdf:Description rdf:about="#Wallet">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Wallet</rdfs:label>
-    </rdf:Description>
+    <!-- ToIP Structure Overview -->
+    <owl:Class rdf:ID="ToIPStructure">
+        <rdfs:label>ToIP Structure</rdfs:label>
+        <rdfs:comment>Represents the structural components of the ToIP framework.</rdfs:comment>
+    </owl:Class>
 
-    <!-- DIDComm -->
-    <rdf:Description rdf:about="#DIDComm">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>DIDComm Protocol</rdfs:label>
-    </rdf:Description>
+    <owl:Class rdf:ID="HourglassModel">
+        <rdfs:subClassOf rdf:resource="#ToIPStructure"/>
+        <rdfs:label>Hourglass Model</rdfs:label>
+        <rdfs:comment>Describes the hourglass-shaped model used in ToIP.</rdfs:comment>
+    </owl:Class>
 
-    <!-- Layer 3: Trust Tasks -->
-    <rdf:Description rdf:about="#Layer3_TrustTasks">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Layer 3: Trust Tasks</rdfs:label>
-    </rdf:Description>
-
-    <!-- Credential -->
-    <rdf:Description rdf:about="#Credential">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Credential</rdfs:label>
-    </rdf:Description>
-
-    <!-- Credential Format -->
-    <rdf:Description rdf:about="#CredentialFormat">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Credential Format</rdfs:label>
-    </rdf:Description>
-
-    <!-- Proof Mechanism -->
-    <rdf:Description rdf:about="#ProofMechanism">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Proof Mechanism</rdfs:label>
-    </rdf:Description>
-
-    <!-- Layer 4: Trust Applications -->
-    <rdf:Description rdf:about="#Layer4_TrustApplications">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Layer 4: Trust Applications</rdfs:label>
-    </rdf:Description>
-
-    <!-- Trust Assumption -->
-    <rdf:Description rdf:about="#TrustAssumption">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Trust Assumption</rdfs:label>
-    </rdf:Description>
-
-    <!-- Threat -->
-    <rdf:Description rdf:about="#Threat">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-        <rdfs:label>Threat</rdfs:label>
-    </rdf:Description>
-
-    <!-- Proprietà -->
-    <!-- Layer 1 -->
-    <rdf:Description rdf:about="#hasIdentifier">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="#Layer1_TrustSupport"/>
-        <rdfs:range rdf:resource="#Identifier"/>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="#hasTrustAnchor">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="#Layer1_TrustSupport"/>
-        <rdfs:range rdf:resource="#TrustAnchor"/>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="#hasVerifiableDataRegistry">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="#Layer1_TrustSupport"/>
-        <rdfs:range rdf:resource="#VerifiableDataRegistry"/>
-    </rdf:Description>
-
-    <!-- Layer 2 -->
-    <rdf:Description rdf:about="#hasAgent">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="#Layer2_TrustSpanning"/>
-        <rdfs:range rdf:resource="#Agent"/>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="#hasWallet">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="#Layer2_TrustSpanning"/>
-        <rdfs:range rdf:resource="#Wallet"/>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="#usesDIDComm">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="#Layer2_TrustSpanning"/>
-        <rdfs:range rdf:resource="#DIDComm"/>
-    </rdf:Description>
-
-    <!-- Layer 3 -->
-    <rdf:Description rdf:about="#hasCredentialFormat">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="#Layer3_TrustTasks"/>
-        <rdfs:range rdf:resource="#CredentialFormat"/>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="#hasProofMechanism">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="#Layer3_TrustTasks"/>
-        <rdfs:range rdf:resource="#ProofMechanism"/>
-    </rdf:Description>
-
-    <!-- Layer 4 -->
-    <rdf:Description rdf:about="#hasTrustAssumption">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="#Layer4_TrustApplications"/>
-        <rdfs:range rdf:resource="#TrustAssumption"/>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="#hasThreat">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-        <rdfs:domain rdf:resource="#Layer4_TrustApplications"/>
-        <rdfs:range rdf:resource="#Threat"/>
-    </rdf:Description>
+    <owl:Class rdf:ID="FourLayers">
+        <rdfs:subClassOf rdf:resource="#ToIPStructure"/>
+        <rdfs:label>Four Layers</rdfs:label>
+        <rdfs:comment>Represents the four-layer structure of the ToIP framework.</rdfs:comment>
+    </owl:Class>
 
 </rdf:RDF>
